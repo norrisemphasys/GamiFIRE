@@ -34,6 +34,21 @@ public class LoginViews : MonoBehaviour
     public Button signInButtonSignIn;
     public Button forgotPasswordButton;
 
+    [Header("Forgot Password")]
+    [Space(5)]
+
+    [SerializeField] RectTransform forgotPasswordRect;
+
+    [SerializeField] GameObject typeEmailRect;
+    [SerializeField] GameObject typeNewPasswordRect;
+
+    [SerializeField] TMP_InputField confirmEmailInput;
+    [SerializeField] TMP_InputField newPasswordInput;
+
+    public Button confirmEmailButton;
+    public Button confirmPasswordButton;
+    public Button closeButton;
+
     public string signUpEmail { get { return emailInputSignUp?.text; } }
     public string signUpUsername { get { return usernameInputSignUp?.text; } }
     public string signUpPassword { get { return passwordInputSignUp?.text; } }
@@ -41,11 +56,18 @@ public class LoginViews : MonoBehaviour
     public string signInUsername { get { return usernameInputSignIn?.text; } }
     public string signInPassword { get { return passwordInputSignIn?.text; } }
 
+    public string forgotPasswordEmail { get { return confirmEmailInput?.text; } }
+    public string newPassword { get { return newPasswordInput?.text; } }
+
 
     public void Init()
     {
         signInRect.DOScale(Vector3.zero, 0);
         signUpRect.DOScale(Vector3.zero, 0);
+        forgotPasswordRect.DOScale(Vector3.zero, 0);
+
+        ShowConfirmEmail(true);
+        ShowNewPassword(false);
     }
 
     public void Show(bool show, UnityAction callback = null)
@@ -88,5 +110,24 @@ public class LoginViews : MonoBehaviour
         {
             callback?.Invoke();
         });
+    }
+
+    public void ShowForgotPassword(bool show, UnityAction callback = null)
+    {
+        forgotPasswordRect.DOScale(show ? Vector3.one : Vector3.zero, 0.2f)
+        .OnComplete(() =>
+        {
+            callback?.Invoke();
+        });
+    }
+
+    public void ShowConfirmEmail(bool show)
+    {
+        typeEmailRect.SetActive(show);
+    }
+
+    public void ShowNewPassword(bool show)
+    {
+        typeNewPasswordRect.SetActive(show);
     }
 }

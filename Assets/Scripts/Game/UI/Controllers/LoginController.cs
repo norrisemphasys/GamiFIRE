@@ -1,3 +1,4 @@
+using Proyecto26;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -37,6 +38,11 @@ public class LoginController : MonoBehaviour
 
         view.signInButtonSignUp.onClick.AddListener(OnClickShowSignIn);
         view.signUpButtonSignUp.onClick.AddListener(OnClickSignUpNewUser);
+
+        view.confirmEmailButton.onClick.AddListener(OnClickConfirmEmail);
+        view.confirmPasswordButton.onClick.AddListener(OnClickNewPassword);
+
+        view.closeButton.onClick.AddListener(OnClickCloseForgotPassword);
     }
 
     void RemoveListener()
@@ -47,16 +53,21 @@ public class LoginController : MonoBehaviour
 
         view.signInButtonSignUp.onClick.RemoveListener(OnClickShowSignIn);
         view.signUpButtonSignUp.onClick.RemoveListener(OnClickSignUpNewUser);
+
+        view.confirmEmailButton.onClick.RemoveListener(OnClickConfirmEmail);
+        view.confirmPasswordButton.onClick.RemoveListener(OnClickNewPassword);
+
+        view.closeButton.onClick.RemoveListener(OnClickCloseForgotPassword);
     }
 
     void OnClickSignUpNewUser()
     {
         if (view.signUpEmail == string.Empty)
-            return;
+            return; // Show popup Error
         if (view.signUpPassword == string.Empty)
-            return;
+            return; // Show popup Error
         if (view.signUpUsername == string.Empty)
-            return;
+            return; // Show popup Error
 
         // Add new user to database.
         User newUser = new User
@@ -67,24 +78,52 @@ public class LoginController : MonoBehaviour
             Password = Utils.GetMD5Hash(view.signUpPassword)
         };
 
-        DBManager.GetUser(newUser, (res)=>
+        DBManager.GetUserByObject(newUser, (res)=>
         {
             if (res == null)
-                DBManager.AddNewUser(newUser);
+                DBManager.AddEditUser(newUser);
             else
-                Debug.Log("User already exist");
+                Debug.Log("User already exist.");
         });
     }
 
     void OnClickLogin()
     {
-        // Login user account 
-        // Add user verification
+        if (view.signInUsername == string.Empty)
+            return; // Show popup Error
+        if (view.signInPassword == string.Empty)
+            return; // Show popup Error
+
+        DBManager.GetUserByName(view.signInUsername, (res) =>
+        {
+            if (res == null)
+            {
+                // Show popup wrong username or password
+                Debug.Log("Wrong username or password.");
+            }
+            else
+            {
+                if (Utils.VerifyMD5Hash(view.signInPassword, res.Password))
+                {
+                    // Login user account
+                    Debug.Log("Login user account.");
+                    UserManager.instance.SetCurrentUser(res);
+                }
+                else
+                {
+                    // Show popup wrong username or password
+                    Debug.Log("Wrong username or password.");
+                }
+            }
+        });
     }
 
     void OnClickForgotPassword()
     {
-
+        view.ShowSignIn(false, () =>
+        {
+            view.ShowForgotPassword(true);
+        });
     }
 
     void OnClickShowSignUp()
@@ -98,6 +137,45 @@ public class LoginController : MonoBehaviour
     void OnClickShowSignIn()
     {
         view.ShowSignUp(false, () =>
+        {
+            view.ShowSignIn(true);
+        });
+    }
+
+    void OnClickConfirmEmail()
+    {
+        // Add email verification
+
+        DBManager.GetUserByEmail(view.forgotPasswordEmail, res => 
+        {
+            if (res == null)
+                Debug.Log("Email does not exist");
+            else
+            {
+                view.ShowConfirmEmail(false);
+                view.ShowNewPassword(true);
+
+                UserManager.instance.SetCurrentUser(res);
+            }
+        });
+    }
+
+    void OnClickNewPassword()
+    {
+        // Update user password
+        User currentUser = UserManager.instance.currentUser;
+        currentUser.Password = Utils.GetMD5Hash(view.newPassword);
+
+        DBManager.AddEditUser(currentUser, res => 
+        {
+            Debug.Log("User password updated");
+            UserManager.instance.SetCurrentUser(res);
+        });
+    }
+
+    void OnClickCloseForgotPassword()
+    {
+        view.ShowForgotPassword(false, () =>
         {
             view.ShowSignIn(true);
         });
