@@ -78,10 +78,12 @@ public class LoginController : MonoBehaviour
             Password = Utils.GetMD5Hash(view.signUpPassword)
         };
 
+        LoadingManager.instance.ShowLoader(true);
+
         DBManager.GetUserByObject(newUser, (res)=>
         {
             if (res == null)
-                DBManager.AddEditUser(newUser);
+                DBManager.AddEditUser(newUser, (res)=> { LoadingManager.instance.ShowLoader(false); });
             else
                 Debug.Log("User already exist.");
         });
@@ -94,8 +96,12 @@ public class LoginController : MonoBehaviour
         if (view.signInPassword == string.Empty)
             return; // Show popup Error
 
+        LoadingManager.instance.ShowLoader(true);
+
         DBManager.GetUserByName(view.signInUsername, (res) =>
         {
+            LoadingManager.instance.ShowLoader(false);
+
             if (res == null)
             {
                 // Show popup wrong username or password
@@ -145,9 +151,11 @@ public class LoginController : MonoBehaviour
     void OnClickConfirmEmail()
     {
         // Add email verification
+        LoadingManager.instance.ShowLoader(true);
 
         DBManager.GetUserByEmail(view.forgotPasswordEmail, res => 
         {
+            LoadingManager.instance.ShowLoader(false);
             if (res == null)
                 Debug.Log("Email does not exist");
             else
@@ -166,10 +174,13 @@ public class LoginController : MonoBehaviour
         User currentUser = UserManager.instance.currentUser;
         currentUser.Password = Utils.GetMD5Hash(view.newPassword);
 
+        LoadingManager.instance.ShowLoader(true);
+
         DBManager.AddEditUser(currentUser, res => 
         {
             Debug.Log("User password updated");
             UserManager.instance.SetCurrentUser(res);
+            LoadingManager.instance.ShowLoader(false);
         });
     }
 
