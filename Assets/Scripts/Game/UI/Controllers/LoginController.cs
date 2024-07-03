@@ -63,7 +63,11 @@ public class LoginController : MonoBehaviour
     void OnClickSignUpNewUser()
     {
         if (view.signUpEmail == string.Empty)
+        {
+            PopupManager.instance.ShowPopup(PopupView.CreatePopupData("ERROR", "You are missing an information. Make sure to complete the necessary data.", showClose: false, showCancel: false));
             return; // Show popup Error
+        }
+
         if (view.signUpPassword == string.Empty)
             return; // Show popup Error
         if (view.signUpUsername == string.Empty)
