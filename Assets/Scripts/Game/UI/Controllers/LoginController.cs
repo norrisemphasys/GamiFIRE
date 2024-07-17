@@ -19,12 +19,6 @@ public class LoginController : MonoBehaviour
         });
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnDestroy()
     {
         RemoveListener();
@@ -62,16 +56,15 @@ public class LoginController : MonoBehaviour
 
     void OnClickSignUpNewUser()
     {
-        if (view.signUpEmail == string.Empty)
+        if (view.signUpEmail == string.Empty ||
+            view.signUpPassword == string.Empty ||
+            view.signUpUsername == string.Empty)
         {
-            PopupManager.instance.ShowPopup(PopupView.CreatePopupData("ERROR", "You are missing an information. Make sure to complete the necessary data.", showClose: false, showCancel: false));
+            PopupManager.instance.ShowPopup(PopupView.CreatePopupData("ERROR", 
+                "You are missing an information. Make sure to complete the necessary data.", 
+                showClose: false, showCancel: false));
             return; // Show popup Error
         }
-
-        if (view.signUpPassword == string.Empty)
-            return; // Show popup Error
-        if (view.signUpUsername == string.Empty)
-            return; // Show popup Error
 
         // Add new user to database.
         User newUser = new User
@@ -87,29 +80,56 @@ public class LoginController : MonoBehaviour
         DBManager.GetUserByObject(newUser, (res)=>
         {
             if (res == null)
-                DBManager.AddEditUser(newUser, (res)=> { LoadingManager.instance.ShowLoader(false); });
+            {
+                DBManager.AddEditUser(newUser, (res) => { 
+                    LoadingManager.instance.ShowLoader(false);
+
+                    PopupManager.instance.ShowPopup(PopupView.CreatePopupData("INFO",
+                    "New user successfuly created.",
+                    showClose: false, showCancel: false, onClickOk: ()=> 
+                    {
+                        view.ShowSignUp(false, () =>
+                        {
+                            view.ShowSignIn(true);
+                        });
+                    }));
+                });
+            } 
             else
-                Debug.Log("User already exist.");
+            {
+                LoadingManager.instance.ShowLoader(true);
+                PopupManager.instance.ShowPopup(PopupView.CreatePopupData("INFO",
+                "User already exist.",
+                showClose: false, showCancel: false));
+            }
         });
     }
 
     void OnClickLogin()
     {
-        if (view.signInUsername == string.Empty)
+        if (view.signInUsername == string.Empty ||
+            view.signInPassword == string.Empty)
+        {
+            PopupManager.instance.ShowPopup(PopupView.CreatePopupData("ERROR",
+                "You are missing an information. Make sure to complete the necessary data.",
+                showClose: false, showCancel: false));
+
             return; // Show popup Error
-        if (view.signInPassword == string.Empty)
-            return; // Show popup Error
+        }
 
         LoadingManager.instance.ShowLoader(true);
 
         DBManager.GetUserByName(view.signInUsername, (res) =>
         {
-            LoadingManager.instance.ShowLoader(false);
-
             if (res == null)
             {
                 // Show popup wrong username or password
                 Debug.Log("Wrong username or password.");
+                LoadingManager.instance.ShowLoader(false);
+
+                PopupManager.instance.ShowPopup(PopupView.CreatePopupData("ERROR",
+                "Wrong username or password. Please try again.",
+                showClose: false, showCancel: false));
             }
             else
             {
@@ -118,11 +138,26 @@ public class LoginController : MonoBehaviour
                     // Login user account
                     Debug.Log("Login user account.");
                     UserManager.instance.SetCurrentUser(res);
+
+                    view.ShowSignIn(false, () => 
+                    {
+                        LoadSceneManager.instance.LoadSceneLevel(1, 
+                            UnityEngine.SceneManagement.LoadSceneMode.Single ,
+                        () => 
+                        {
+                            LoadingManager.instance.ShowLoader(false);
+                        });
+                    });
                 }
                 else
                 {
                     // Show popup wrong username or password
                     Debug.Log("Wrong username or password.");
+                    LoadingManager.instance.ShowLoader(false);
+
+                    PopupManager.instance.ShowPopup(PopupView.CreatePopupData("ERROR",
+                    "Wrong username or password. Please try again.",
+                    showClose: false, showCancel: false));
                 }
             }
         });

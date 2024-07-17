@@ -63,7 +63,7 @@ public class PopupView : MonoBehaviour
 
     public void Show(bool show, UnityAction onClose = null)
     {
-        popupRect.DOScale(show ? Vector3.one : Vector3.zero, 0.2f).OnComplete(()=> 
+        popupRect.DOScale(show ? Vector3.one : Vector3.zero, 0.1f).OnComplete(()=> 
         {
             if (!show) onClose?.Invoke();
         });
