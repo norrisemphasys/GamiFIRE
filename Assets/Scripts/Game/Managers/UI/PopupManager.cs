@@ -99,7 +99,7 @@ public class PopupManager : MonoSingleton<PopupManager>
     {
         ShowPopup(true, () =>
         {
-            PopupData data = PopupView.CreatePopupData("Test", "This is a test description", 
+            PopupData data = PopupMessage.CreatePopupData("Test", "This is a test description", 
                 onClosePopup: ()=> { _isPopupShowing = false; });
             PopupView view = PopupView.Create(popupViewParent, data);
             AddToPopupQueue(view);

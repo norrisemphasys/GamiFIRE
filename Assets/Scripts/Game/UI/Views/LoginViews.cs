@@ -101,6 +101,9 @@ public class LoginViews : MonoBehaviour
         {
             callback?.Invoke();
         });
+
+        if (!show)
+            ResetSignInView();
     }
 
     public void ShowSignUp(bool show, UnityAction callback = null)
@@ -110,6 +113,9 @@ public class LoginViews : MonoBehaviour
         {
             callback?.Invoke();
         });
+
+        if (!show)
+            ResetSigUpView();
     }
 
     public void ShowForgotPassword(bool show, UnityAction callback = null)
@@ -119,6 +125,9 @@ public class LoginViews : MonoBehaviour
         {
             callback?.Invoke();
         });
+
+        if (!show)
+            ResetForgotPasswordView();
     }
 
     public void ShowConfirmEmail(bool show)
@@ -129,5 +138,24 @@ public class LoginViews : MonoBehaviour
     public void ShowNewPassword(bool show)
     {
         typeNewPasswordRect.SetActive(show);
+    }
+
+    public void ResetSignInView()
+    {
+        usernameInputSignIn.text = string.Empty;
+        passwordInputSignIn.text = string.Empty;
+    }
+
+    public void ResetSigUpView()
+    {
+        emailInputSignUp.text = string.Empty;
+        usernameInputSignUp.text = string.Empty;
+        passwordInputSignUp.text = string.Empty;
+    }
+
+    public void ResetForgotPasswordView()
+    {
+        confirmEmailInput.text = string.Empty;
+        newPasswordInput.text = string.Empty;
     }
 }

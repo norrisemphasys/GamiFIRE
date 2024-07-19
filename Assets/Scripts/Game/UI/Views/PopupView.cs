@@ -37,30 +37,6 @@ public class PopupView : MonoBehaviour
         return view;
     }
 
-    public static PopupData CreatePopupData(string title, string description, string textOk = "OK", string textCancel = "Cancel", 
-        bool showOk = true, bool showCancel = true, bool showClose = true, 
-        UnityAction onClickOk = null, UnityAction onClickCancel = null, UnityAction onClickClose = null, UnityAction onClosePopup = null)
-    {
-        PopupData data = new();
-
-        data.Title = title;
-        data.Description = description;
-        data.TxtButtonOK = textOk;
-        data.TxtButtonCancel = textCancel;
-
-        data.ShowOk = showOk;
-        data.ShowCancel = showCancel;
-        data.ShowClose = showClose;
-
-        data.OnClickOk += onClickOk;
-        data.OnClickCancel += onClickCancel;
-        data.OnClickClose += onClickClose;
-
-        data.OnClosePopup += onClosePopup;
-
-        return data;
-    }
-
     public void Show(bool show, UnityAction onClose = null)
     {
         popupRect.DOScale(show ? Vector3.one : Vector3.zero, 0.1f).OnComplete(()=> 

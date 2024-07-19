@@ -60,9 +60,8 @@ public class LoginController : MonoBehaviour
             view.signUpPassword == string.Empty ||
             view.signUpUsername == string.Empty)
         {
-            PopupManager.instance.ShowPopup(PopupView.CreatePopupData("ERROR", 
-                "You are missing an information. Make sure to complete the necessary data.", 
-                showClose: false, showCancel: false));
+            PopupManager.instance.ShowPopup(PopupMessage.ErrorPopup
+                        ("You are missing an information. Make sure to complete the necessary data."));
             return; // Show popup Error
         }
 
@@ -84,9 +83,8 @@ public class LoginController : MonoBehaviour
                 DBManager.AddEditUser(newUser, (res) => { 
                     LoadingManager.instance.ShowLoader(false);
 
-                    PopupManager.instance.ShowPopup(PopupView.CreatePopupData("INFO",
-                    "New user successfuly created.",
-                    showClose: false, showCancel: false, onClickOk: ()=> 
+                    PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("New user successfuly created.",
+                    ()=> 
                     {
                         view.ShowSignUp(false, () =>
                         {
@@ -98,9 +96,7 @@ public class LoginController : MonoBehaviour
             else
             {
                 LoadingManager.instance.ShowLoader(true);
-                PopupManager.instance.ShowPopup(PopupView.CreatePopupData("INFO",
-                "User already exist.",
-                showClose: false, showCancel: false));
+                PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("User already exist."));
             }
         });
     }
@@ -110,10 +106,8 @@ public class LoginController : MonoBehaviour
         if (view.signInUsername == string.Empty ||
             view.signInPassword == string.Empty)
         {
-            PopupManager.instance.ShowPopup(PopupView.CreatePopupData("ERROR",
-                "You are missing an information. Make sure to complete the necessary data.",
-                showClose: false, showCancel: false));
-
+            PopupManager.instance.ShowPopup(PopupMessage.ErrorPopup
+                ("You are missing an information. Make sure to complete the necessary data."));
             return; // Show popup Error
         }
 
@@ -127,9 +121,8 @@ public class LoginController : MonoBehaviour
                 Debug.Log("Wrong username or password.");
                 LoadingManager.instance.ShowLoader(false);
 
-                PopupManager.instance.ShowPopup(PopupView.CreatePopupData("ERROR",
-                "Wrong username or password. Please try again.",
-                showClose: false, showCancel: false));
+                PopupManager.instance.ShowPopup(PopupMessage.ErrorPopup
+                    ("Wrong username or password. Please try again."));
             }
             else
             {
@@ -155,9 +148,8 @@ public class LoginController : MonoBehaviour
                     Debug.Log("Wrong username or password.");
                     LoadingManager.instance.ShowLoader(false);
 
-                    PopupManager.instance.ShowPopup(PopupView.CreatePopupData("ERROR",
-                    "Wrong username or password. Please try again.",
-                    showClose: false, showCancel: false));
+                    PopupManager.instance.ShowPopup( PopupMessage.ErrorPopup
+                        ("Wrong username or password. Please try again.") );
                 }
             }
         });
@@ -196,7 +188,10 @@ public class LoginController : MonoBehaviour
         {
             LoadingManager.instance.ShowLoader(false);
             if (res == null)
-                Debug.Log("Email does not exist");
+            {
+                PopupManager.instance.ShowPopup(PopupMessage.ErrorPopup
+                        ("Email does not exist. Please try again."));
+            }
             else
             {
                 view.ShowConfirmEmail(false);
@@ -218,6 +213,15 @@ public class LoginController : MonoBehaviour
         DBManager.AddEditUser(currentUser, res => 
         {
             Debug.Log("User password updated");
+
+            PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("Your password has been updated.", ()=> 
+            {
+                view.ShowForgotPassword(false, () =>
+                {
+                    view.ShowSignIn(true);
+                });
+            }));
+
             UserManager.instance.SetCurrentUser(res);
             LoadingManager.instance.ShowLoader(false);
         });
