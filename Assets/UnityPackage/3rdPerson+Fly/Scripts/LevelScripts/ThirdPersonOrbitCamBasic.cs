@@ -29,6 +29,9 @@ public class ThirdPersonOrbitCamBasic : MonoBehaviour
 	// Get the camera horizontal angle.
 	public float GetH => angleH;
 
+	private bool _pause = false;
+	public bool pause { get { return _pause; } set { _pause = value; } }
+
 	void Awake()
 	{
 		// Reference to the camera transform.
@@ -56,16 +59,20 @@ public class ThirdPersonOrbitCamBasic : MonoBehaviour
 
 	void Update()
 	{
-		// Get mouse movement to orbit the camera.
-		// Mouse:
-		angleH += Mathf.Clamp(Input.GetAxis("Mouse X"), -1, 1) * horizontalAimingSpeed;
-		angleV += Mathf.Clamp(Input.GetAxis("Mouse Y"), -1, 1) * verticalAimingSpeed;
-		// Joystick:
-		angleH += Mathf.Clamp(Input.GetAxis(XAxis), -1, 1) * 60 * horizontalAimingSpeed * Time.deltaTime;
-		angleV += Mathf.Clamp(Input.GetAxis(YAxis), -1, 1) * 60 * verticalAimingSpeed * Time.deltaTime;
+		if (!_pause)
+        {
+			// Get mouse movement to orbit the camera.
+			// Mouse:
+			angleH += Mathf.Clamp(Input.GetAxis("Mouse X"), -1, 1) * horizontalAimingSpeed;
+			angleV += Mathf.Clamp(Input.GetAxis("Mouse Y"), -1, 1) * verticalAimingSpeed;
+			// Joystick:
+			angleH += Mathf.Clamp(Input.GetAxis(XAxis), -1, 1) * 60 * horizontalAimingSpeed * Time.deltaTime;
+			angleV += Mathf.Clamp(Input.GetAxis(YAxis), -1, 1) * 60 * verticalAimingSpeed * Time.deltaTime;
 
-		// Set vertical movement limit.
-		angleV = Mathf.Clamp(angleV, minVerticalAngle, targetMaxVerticalAngle);
+			// Set vertical movement limit.
+			angleV = Mathf.Clamp(angleV, minVerticalAngle, targetMaxVerticalAngle);
+
+		}
 
 		// Set camera orientation.
 		Quaternion camYRotation = Quaternion.Euler(0, angleH, 0);

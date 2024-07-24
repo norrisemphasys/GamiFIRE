@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GameManager : MonoSingleton<GameManager>
+{
+    public UIController uiController { get { return FindObjectOfType<UIController>(); } }
+    public PlayerController playerController { get { return FindObjectOfType<PlayerController>(); } }
+
+    public UIState _currentState;
+    public UIState currentState { get { return _currentState; } }
+
+    private UIState _previousState;
+    public UIState previousState { get { return _previousState; } }
+    public void SetGameState(UIState state)
+    {
+        UIState prevState = _currentState;
+        _currentState = state;
+        _previousState = prevState;
+
+        OnStartState();
+#if UNITY_EDITOR
+        Debug.LogError("prev state " + _previousState.ToString()
+                       + " current state " + _currentState.ToString());
+#endif
+    }
+
+    void OnStartState() 
+    {
+
+    }
+}

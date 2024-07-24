@@ -44,6 +44,9 @@ public class BasicBehaviour : MonoBehaviour
 	// Get current default behaviour.
 	public int GetDefaultBehaviour => defaultBehaviour;
 
+	private bool _pause = false;
+	public bool pause { get { return _pause; } set { _pause = value; } }
+
 	void Awake ()
 	{
 		// Set up the references.
@@ -62,6 +65,16 @@ public class BasicBehaviour : MonoBehaviour
 
 	void Update()
 	{
+		if (_pause)
+        {
+			h = v = 0;
+
+			// Set the input axes on the Animator Controller.
+			anim.SetFloat(hFloat, h, 0.1f, Time.deltaTime);
+			anim.SetFloat(vFloat, v, 0.1f, Time.deltaTime);
+			return;
+		}
+
 		// Store the input axes.
 		h = Input.GetAxis("Horizontal");
 		v = Input.GetAxis("Vertical");

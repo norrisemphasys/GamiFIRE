@@ -11,7 +11,10 @@ public class AimBehaviourBasic : GenericBehaviour
 	public Vector3 aimCamOffset   = new Vector3(0f, 0.4f, -0.7f);         // Offset to relocate the camera when aiming.
 
 	private int aimBool;                                                  // Animator variable related to aiming.
-	private bool aim;                                                     // Boolean to determine whether or not the player is aiming.
+	private bool aim;
+
+	private bool _pause = false;
+	public bool pause { get { return _pause; } set { _pause = value; } }// Boolean to determine whether or not the player is aiming.
 
 	// Start is always called after any Awake functions.
 	void Start ()
@@ -20,9 +23,32 @@ public class AimBehaviourBasic : GenericBehaviour
 		aimBool = Animator.StringToHash("Aim");
 	}
 
+	public void SetPause(bool ispause)
+    {
+		pause = ispause;
+
+		if(ispause)
+			StartCoroutine(ToggleAimOn());
+		else
+			StartCoroutine(ToggleAimOff());
+	}
+
 	// Update is used to set features regardless the active behaviour.
-	void Update ()
+	void Update()
 	{
+
+		if(Input.GetKeyDown(KeyCode.P))
+			SetPause(true);
+
+		if(Input.GetKeyDown(KeyCode.O))
+			SetPause(false);
+
+		if (_pause)
+        {
+			behaviourManager.GetAnim.SetBool(aimBool, aim);
+			return;
+		}
+			
 		// Activate/deactivate aim by input.
 		if (Input.GetAxisRaw(aimButton) != 0 && !aim)
 		{
@@ -32,7 +58,6 @@ public class AimBehaviourBasic : GenericBehaviour
 		{
 			StartCoroutine(ToggleAimOff());
 		}
-
 		// No sprinting while aiming.
 		canSprint = !aim;
 
@@ -41,6 +66,7 @@ public class AimBehaviourBasic : GenericBehaviour
 		{
 			aimCamOffset.x = aimCamOffset.x * (-1);
 			aimPivotOffset.x = aimPivotOffset.x * (-1);
+			Debug.Log("AIM");
 		}
 
 		// Set aim boolean on the Animator Controller.
@@ -58,6 +84,7 @@ public class AimBehaviourBasic : GenericBehaviour
 		// Start aiming.
 		else
 		{
+			Debug.Log("Startaiming");
 			aim = true;
 			int signal = 1;
 			aimCamOffset.x = Mathf.Abs(aimCamOffset.x) * signal;
@@ -83,15 +110,20 @@ public class AimBehaviourBasic : GenericBehaviour
 	// LocalFixedUpdate overrides the virtual function of the base class.
 	public override void LocalFixedUpdate()
 	{
-		// Set camera position and orientation to the aim mode parameters.
-		if(aim)
+       /* if (!_pause)
+            return;*/
+
+        // Set camera position and orientation to the aim mode parameters.
+        if (aim)
 			behaviourManager.GetCamScript.SetTargetOffsets (aimPivotOffset, aimCamOffset);
 	}
 
 	// LocalLateUpdate: manager is called here to set player rotation after camera rotates, avoiding flickering.
 	public override void LocalLateUpdate()
 	{
-		AimManagement();
+        if (!_pause)
+            return;
+        AimManagement();
 	}
 
 	// Handle aim parameters when aiming is active.
