@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class MoveObject : MonoBehaviour
 {
+    [SerializeField] bool useLocal;
     [SerializeField] float range;
     [SerializeField] float speed;
+
     private Transform target;
 
     private Vector3 startPosition;
     private float timer;
+
 
     private void Awake()
     {
@@ -30,7 +33,6 @@ public class MoveObject : MonoBehaviour
 
         timer += Time.deltaTime * speed;
         pos.y += Mathf.Sin(timer) * range;
-
         target.position = pos;
     }
 }
