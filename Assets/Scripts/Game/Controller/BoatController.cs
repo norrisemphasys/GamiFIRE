@@ -10,6 +10,7 @@ public class BoatController : MonoBehaviour
     [SerializeField] float distance;
     [SerializeField] float moveSpeed;
     [SerializeField] float titlSpeed;
+    [SerializeField] float lerpDirectionSpeed;
 
     [SerializeField] float bounceSpeed;
     [SerializeField] float bounceRange;
@@ -71,7 +72,7 @@ public class BoatController : MonoBehaviour
         bool isMaxLeftLane = _direction == 1;
         bool isMaxRightLane = _direction == -1;
 
-        _lerpingDirection = Mathf.Lerp(_lerpingDirection, 0f, Time.deltaTime * titlSpeed);
+        _lerpingDirection = Mathf.Lerp(_lerpingDirection, 0f, Time.deltaTime * lerpDirectionSpeed);
 
         Vector3 pos = boatTransform.position;
 
@@ -83,13 +84,23 @@ public class BoatController : MonoBehaviour
         Vector3 euler = boatModel.eulerAngles;
 
         euler.x = _lerpingDirection * tiltX;
-        euler.y = 90 + (_lerpingDirection * tiltY);
-     
+        euler.y = Mathf.Lerp(euler.y, 90 + _lerpingDirection * tiltY, Time.deltaTime * titlSpeed);
+
         boatModel.eulerAngles = euler;
 
         Vector3 boatPos = new Vector3(boatModel.position.x, _boatModelStartPosition.y, boatModel.position.z) ;
         _bounceTimer += Time.deltaTime * bounceSpeed;
         boatPos.y += Mathf.Sin(_bounceTimer) * bounceRange;
         boatModel.position = boatPos;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("trigegr " + other.gameObject.name);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("collision " + collision.gameObject.name);
     }
 }

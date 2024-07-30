@@ -8,9 +8,19 @@ public class TerrainController : MonoBehaviour
     [SerializeField] float terrainDistance;
     [SerializeField] float terrainOffset;
 
+    [SerializeField] float spawnTimer;
     [SerializeField] Material terrainMaterial;
 
+    [SerializeField] Transform obstacleSpawnPosition;
+
+    [SerializeField] bool startSpawnObstacle = false;
+
     private List<GameObject> terrainPool;
+    private List<GameObject> obstaclePool;
+    private List<GameObject> coinPool;
+    private float timer;
+
+    private int currentObstacleIndex = 0;
 
     private void Awake()
     {
@@ -21,6 +31,10 @@ public class TerrainController : MonoBehaviour
     void Start()
     {
         terrainPool = PoolManager.instance.GetObjectPool("Terrain");
+        obstaclePool = PoolManager.instance.GetObjectPool("Obstacle");
+        coinPool = PoolManager.instance.GetObjectPool("Coin");
+
+        timer = 0f;
 
         InitializeTerrain();
     }
@@ -28,6 +42,12 @@ public class TerrainController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdateSpawnObstacle();
+    }
+
+    public void StartSpawnObstacle(bool start)
+    {
+        startSpawnObstacle = start;
     }
 
     void InitializeTerrain()
@@ -47,5 +67,33 @@ public class TerrainController : MonoBehaviour
             to.Initialized(maxDistance, -(terrainDistance + terrainOffset));
             to.StartUpdate(true);
         }
+    }
+
+    void UpdateSpawnObstacle()
+    {
+        if (!startSpawnObstacle)
+            return;
+
+        if(timer + spawnTimer < Time.time)
+        {
+            SpawnObstacle();
+            timer = Time.time;
+        }
+    }
+
+    void SpawnObstacle()
+    {
+        if (currentObstacleIndex >= obstaclePool.Count)
+            currentObstacleIndex = 0;
+
+        GameObject obstacle = obstaclePool[currentObstacleIndex];
+
+        ObstacleObject oo = obstacle.GetComponent<ObstacleObject>();
+
+        oo.ShowObstacle(obstacleSpawnPosition.position, 
+            -(terrainDistance + terrainOffset));
+        oo.StartUpdate(true);
+
+        currentObstacleIndex++;
     }
 }
