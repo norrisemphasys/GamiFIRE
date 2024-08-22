@@ -5,6 +5,9 @@ using System;
 
 public static class GameEvents
 {
+    public static readonly Evt<float> OnChangeTerrainSpeed = new Evt<float>();
+    public static readonly Evt<bool> OnStartIslandTripGame = new Evt<bool>();
+    public static readonly Evt<int> OnCoinCollected = new Evt<int>();
     public static readonly Evt OnSelectObject = new Evt();
 }
 

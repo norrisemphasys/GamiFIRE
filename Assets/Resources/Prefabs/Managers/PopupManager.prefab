@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 5090636313945303769}
   - component: {fileID: 8825069023097494895}
   m_Layer: 0
-  m_Name: PopupCanvas
+  m_Name: PopupManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

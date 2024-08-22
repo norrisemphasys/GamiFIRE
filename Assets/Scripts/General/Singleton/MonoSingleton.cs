@@ -20,13 +20,24 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T
                 // Object not found, we create a temporary one
                 if( _instance == null )
                 {
-                    Debug.LogWarning("No instance of " + typeof(T).ToString() + ", a temporary one is created.");
-                    _instance = new GameObject("Temp Instance of " + typeof(T).ToString(), typeof(T)).GetComponent<T>();
- 					
-                    // Problem during the creation, this should not happen
-                    if( _instance == null )
+
+                    GameObject instancePrefab = Resources.Load("Prefabs/Managers/" + typeof(T).ToString()) as GameObject;
+                    if (instancePrefab != null)
                     {
-                        Debug.LogError("Problem during the creation of " + typeof(T).ToString());
+                        GameObject instanceObject = GameObject.Instantiate(instancePrefab);
+                        _instance = instanceObject.GetComponent<T>();
+                    }
+
+                    if (_instance == null)
+                    {
+                        Debug.LogWarning("No instance of " + typeof(T).ToString() + ", a temporary one is created.");
+                        _instance = new GameObject("Temp Instance of " + typeof(T).ToString(), typeof(T)).GetComponent<T>();
+
+                        // Problem during the creation, this should not happen
+                        if (_instance == null)
+                        {
+                            Debug.LogError("Problem during the creation of " + typeof(T).ToString());
+                        }
                     }
                 }
 				

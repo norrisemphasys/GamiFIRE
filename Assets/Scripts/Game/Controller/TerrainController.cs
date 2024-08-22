@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TerrainController : MonoBehaviour
 {
+    public float TerrainSpeed { get { return terrainsSpeed; } }
+
+
     [SerializeField] PlayerController playerController;
     [SerializeField] float terrainDistance;
     [SerializeField] float terrainOffset;
@@ -15,12 +18,21 @@ public class TerrainController : MonoBehaviour
 
     [SerializeField] bool startSpawnObstacle = false;
 
+    [SerializeField] float terrainsSpeed;
+    [SerializeField] float reduceTerainSpeed;
+
+    [SerializeField] float reduceSpeedTime;
+
     private List<GameObject> terrainPool;
     private List<GameObject> obstaclePool;
     private List<GameObject> coinPool;
     private float timer;
 
     private int currentObstacleIndex = 0;
+
+    private float speedTimer;
+    private bool isSpeedReduce = false;
+
 
     private void Awake()
     {
@@ -35,14 +47,18 @@ public class TerrainController : MonoBehaviour
         coinPool = PoolManager.instance.GetObjectPool("Coin");
 
         timer = 0f;
+        speedTimer = 0f;
 
         InitializeTerrain();
+
+        GameEvents.OnChangeTerrainSpeed.Invoke(terrainsSpeed);
     }
 
     // Update is called once per frame
     void Update()
     {
         UpdateSpawnObstacle();
+        UpdateSpeed();
     }
 
     public void StartSpawnObstacle(bool start)
@@ -95,5 +111,26 @@ public class TerrainController : MonoBehaviour
         oo.StartUpdate(true);
 
         currentObstacleIndex++;
+    }
+
+    public void ReduceSpeed()
+    {
+        isSpeedReduce = true;
+        speedTimer = Time.time;
+
+        GameEvents.OnChangeTerrainSpeed.Invoke(reduceTerainSpeed);
+    }
+
+    public void UpdateSpeed()
+    {
+        if (isSpeedReduce)
+        {
+            if (speedTimer + reduceSpeedTime < Time.time)
+            {
+                GameEvents.OnChangeTerrainSpeed.Invoke(terrainsSpeed);
+                speedTimer = Time.time;
+                isSpeedReduce = false;
+            }
+        }
     }
 }

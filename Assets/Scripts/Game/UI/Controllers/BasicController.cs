@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class BasicController : MonoBehaviour
 {
@@ -23,6 +25,8 @@ public class BasicController : MonoBehaviour
     {
 		if (gameManager == null)
 			gameManager = GameManager.instance;
+
+		uiController = gameManager.uiController;
 	}
 
 	public virtual void Initialize()
@@ -46,6 +50,14 @@ public class BasicController : MonoBehaviour
 		nextState = _state;
 		uiController.Hide(state);
 	}
+
+	protected void AddButtonListener(int idx, Button button, UnityAction<int> callback = null)
+    {
+		button.onClick.AddListener(() =>
+		{
+			callback?.Invoke(idx);
+		});
+    }
 
 	public void ShowNextState(UIState _state)
 	{

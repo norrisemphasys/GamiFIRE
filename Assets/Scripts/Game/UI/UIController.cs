@@ -9,6 +9,9 @@ public class UIController : MonoBehaviour
 
     private Dictionary<UIState, GameObject> uiDictionary = new Dictionary<UIState, GameObject>();
 
+    [SerializeField] UIState initialUIState;
+    [SerializeField] bool useInitUIState = false;
+
     void Awake()
     {
         for (int i = 0; i < UIData.Length; i++)
@@ -17,7 +20,8 @@ public class UIController : MonoBehaviour
 
     void Start()
     {
-        //Show(UIState.MainMenu);
+        if(useInitUIState)
+            Show(initialUIState);
     }
 
     public T GetContoller<T>(UIState state) where T : Component
@@ -44,7 +48,14 @@ public class UIController : MonoBehaviour
     {
         if (uiDictionary.ContainsKey(state))
         {
-            GetContoller<StageController>(state).OnEnter();
+            switch(state)
+            {
+                case UIState.STAGE_SELECT: GetContoller<StageController>(state).OnEnter(); break;
+                case UIState.IT_INGAME: GetContoller<InGameITController>(state).OnEnter(); break;
+                case UIState.IT_TUTORIAL: GetContoller<TutorialITController>(state).OnEnter(); break;
+                case UIState.IT_PAUSE: GetContoller<PauseITController>(state).OnEnter(); break;
+                case UIState.IT_GAMEOVER: GetContoller<GameOverITController>(state).OnEnter(); break;
+            }   
         }
     }
 
@@ -52,10 +63,16 @@ public class UIController : MonoBehaviour
     {
         if (uiDictionary.ContainsKey(state))
         {
-            GetContoller<StageController>(state).OnExit();
+            switch (state)
+            {
+                case UIState.STAGE_SELECT: GetContoller<StageController>(state).OnExit(); break;
+                case UIState.IT_INGAME: GetContoller<InGameITController>(state).OnExit(); break;
+                case UIState.IT_TUTORIAL: GetContoller<TutorialITController>(state).OnExit(); break;
+                case UIState.IT_PAUSE: GetContoller<PauseITController>(state).OnExit(); break;
+                case UIState.IT_GAMEOVER: GetContoller<GameOverITController>(state).OnExit(); break;
+            }
         }
     }
-
 }
 
 [System.Serializable]
@@ -67,5 +84,12 @@ public class UIData
 
 public enum UIState
 {
-    STAGE_SELECT
+    STAGE_SELECT,
+
+    IT_INGAME,
+    IT_TUTORIAL,
+    IT_PAUSE,
+    IT_GAMEOVER,
+
+    NONE
 }

@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6362088327194527807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6362088327194527804}
+  - component: {fileID: 6362088327194527806}
+  m_Layer: 0
+  m_Name: ResourceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6362088327194527804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6362088327194527807}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6362088327194527806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6362088327194527807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c1535c3ef50187428884a8bb473fca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectIslandPool:
+  - name: Terrain
+    count: 6
+    dataObject: {fileID: 7561742898445189838, guid: 55e93826c0ffd314f9fabc9379ed1e98,
+      type: 3}
+    shouldExpand: 0
+    objectParent: {fileID: 0}
+    objectList: []
+  - name: Obstacle
+    count: 20
+    dataObject: {fileID: 1915339702664633149, guid: e48238c9719ce9845bec805e180eab68,
+      type: 3}
+    shouldExpand: 0
+    objectParent: {fileID: 0}
+    objectList: []
+  - name: Coin
+    count: 100
+    dataObject: {fileID: 4308528763159116544, guid: 894395e7a0bee104caa344033ee5f23c,
+      type: 3}
+    shouldExpand: 0
+    objectParent: {fileID: 0}
+    objectList: []
+  - name: CoinHitEffect
+    count: 50
+    dataObject: {fileID: 37804592754265943, guid: 0daeb57e3b098814ab692e4991df9f0b,
+      type: 3}
+    shouldExpand: 1
+    objectParent: {fileID: 0}
+    objectList: []
+  - name: CoinSplashEffect
+    count: 10
+    dataObject: {fileID: 7578884556005692775, guid: 22f8e4e9920276849a776b59d3e5cb01,
+      type: 3}
+    shouldExpand: 1
+    objectParent: {fileID: 0}
+    objectList: []
+  uiDataPool: []
+  effectDataPool: []

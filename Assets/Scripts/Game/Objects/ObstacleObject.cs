@@ -17,10 +17,13 @@ public class ObstacleObject : MonoBehaviour
     private bool startUpdate = false;
 
     private float playerDistance;
+
+    private float currentSpeed;
     // Start is called before the first frame update
     void Awake()
     {
         obstacleTransform = transform;
+        GameEvents.OnChangeTerrainSpeed.AddListener(OnChangeSpeed);
     }
 
     // Update is called once per frame
@@ -28,6 +31,11 @@ public class ObstacleObject : MonoBehaviour
     {
         if (startUpdate)
             UpdateTerrain();
+    }
+
+    void OnChangeSpeed(float modfiedSpeed)
+    {
+        currentSpeed = modfiedSpeed;
     }
 
     void EnableObstacle(bool enable)
@@ -76,6 +84,10 @@ public class ObstacleObject : MonoBehaviour
     {
         coins.Clear();
 
+        int maxCoinCount = 3;
+        float coinDistanceZ = 8f;
+        float coinDistanceX = 10f;
+
         for (int i = 0; i < indexes.Count; i++)
         {
             if (indexes[i] == 0)
@@ -83,14 +95,15 @@ public class ObstacleObject : MonoBehaviour
                 bool createCoin = Random.Range(0, 10) < 2;
                 if(createCoin)
                 {
-                    for (int j = 0; j < 5; j++)
+                    for (int j = 0; j < maxCoinCount; j++)
                     {
                         GameObject coin = PoolManager.instance.GetObject("Coin");
                         if (coinParent == null)
                             coinParent = coin.transform.parent;
 
                         coin.transform.SetParent(this.transform);
-                        coin.transform.localPosition = new Vector3((i - 1) * 10f, 1.25f, (j - 2) * 4f);
+                        coin.transform.localPosition = new Vector3((i - 1) * coinDistanceX, 1, 
+                            (j - (maxCoinCount / 2)) * coinDistanceZ);
 
                         coins.Add(coin);
                     }
@@ -118,11 +131,16 @@ public class ObstacleObject : MonoBehaviour
     public void UpdateTerrain()
     {
         Vector3 pos = obstacleTransform.position;
-        pos.z -= Time.deltaTime * speed;
+        pos.z -= Time.deltaTime * currentSpeed;
 
         if (pos.z < playerDistance)
             StartUpdate(false);
 
         obstacleTransform.position = pos;
+    }
+
+    private void OnDestroy()
+    {
+        GameEvents.OnChangeTerrainSpeed.RemoveListener(OnChangeSpeed);
     }
 }

@@ -7,6 +7,12 @@ public class PoolManager : MonoSingleton<PoolManager>
 {
     public ResourceManager resourceManager;
 
+    public override void Init()
+    {
+        base.Init();
+        GetInstance();
+    }
+
     public void ResetAllObjectList(string name)
     {
         ObjectData data = resourceManager.GetObject(name);

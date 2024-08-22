@@ -13,14 +13,27 @@ public class TerrainObject : MonoBehaviour
     private float maxDistance;
     private float playerDistance;
 
+    private float currentSpeed;
+
     private void Awake()
     {
         terrain = transform;
+        GameEvents.OnChangeTerrainSpeed.AddListener(OnChangeSpeed);
     }
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+
+    private void OnDestroy()
+    {
+        GameEvents.OnChangeTerrainSpeed.RemoveListener(OnChangeSpeed);
+    }
+
+    void OnChangeSpeed(float modfiedSpeed)
+    {
+        currentSpeed = modfiedSpeed;
     }
 
     // Update is called once per frame
@@ -50,7 +63,7 @@ public class TerrainObject : MonoBehaviour
     public void UpdateTerrain() 
     {
         Vector3 pos = terrain.position;
-        pos.z -= Time.deltaTime * speed;
+        pos.z -= Time.deltaTime * currentSpeed;
 
         if (pos.z < playerDistance)
             pos.z = maxDistance;

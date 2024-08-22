@@ -6,6 +6,7 @@ public class GameManager : MonoSingleton<GameManager>
 {
     public UIController uiController { get { return FindObjectOfType<UIController>(); } }
     public PlayerController playerController { get { return FindObjectOfType<PlayerController>(); } }
+    public TerrainController terrainController { get { return FindObjectOfType <TerrainController>();} }
 
     public UIState _currentState;
     public UIState currentState { get { return _currentState; } }
@@ -29,4 +30,7 @@ public class GameManager : MonoSingleton<GameManager>
     {
 
     }
+
+    private bool _winITMode = false;
+    public bool WinITMode { get { return _winITMode; } set { _winITMode = value; }  }
 }

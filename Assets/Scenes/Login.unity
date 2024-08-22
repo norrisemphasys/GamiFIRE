@@ -1390,8 +1390,6 @@ GameObject:
   - component: {fileID: 220964096}
   - component: {fileID: 220964095}
   - component: {fileID: 220964097}
-  - component: {fileID: 220964099}
-  - component: {fileID: 220964098}
   m_Layer: 0
   m_Name: _Managers
   m_TagString: Untagged
@@ -1438,40 +1436,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 911ca2649a90c764eb13b21844da729d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &220964098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 220964094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c1535c3ef50187428884a8bb473fca1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectDefaultDataPool:
-  - name: Terrain
-    count: 6
-    dataObject: {fileID: 0}
-    shouldExpand: 0
-    objectParent: {fileID: 0}
-    objectList: []
-  uiDataPool: []
-  effectDataPool: []
---- !u!114 &220964099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 220964094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d86d45aebad83b47adb66e1d0beb9c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  resourceManager: {fileID: 0}
 --- !u!1 &262150975
 GameObject:
   m_ObjectHideFlags: 0
@@ -3959,51 +3923,6 @@ PrefabInstance:
     - target: {fileID: 2367731096255773562, guid: f754d8975a12ae04bb9dfe0b753f75c9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2367731097250480754, guid: f754d8975a12ae04bb9dfe0b753f75c9,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2367731097250480754, guid: f754d8975a12ae04bb9dfe0b753f75c9,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2367731097250480754, guid: f754d8975a12ae04bb9dfe0b753f75c9,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2367731097250480754, guid: f754d8975a12ae04bb9dfe0b753f75c9,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2367731097250480754, guid: f754d8975a12ae04bb9dfe0b753f75c9,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2367731097250480754, guid: f754d8975a12ae04bb9dfe0b753f75c9,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6465017931848961743, guid: f754d8975a12ae04bb9dfe0b753f75c9,
-        type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6465017931848961743, guid: f754d8975a12ae04bb9dfe0b753f75c9,
-        type: 3}
-      propertyPath: m_Interactable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6465017931848961743, guid: f754d8975a12ae04bb9dfe0b753f75c9,
-        type: 3}
-      propertyPath: m_BlocksRaycasts
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

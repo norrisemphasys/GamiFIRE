@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class BoatController : MonoBehaviour
 {
     [SerializeField] Transform boatModel;
     [SerializeField] Transform boatTransform;
+    [SerializeField] Transform cameraTransform;
 
     [SerializeField] float distance;
     [SerializeField] float moveSpeed;
@@ -20,6 +22,8 @@ public class BoatController : MonoBehaviour
     [SerializeField] float tiltX;
     [SerializeField] float tiltY;
 
+    private Collider boatCollider;
+
     private float _direction;
     private float _currentDirection;
     private float _lerpingDirection;
@@ -30,16 +34,27 @@ public class BoatController : MonoBehaviour
 
     private Vector3 _boatModelStartPosition;
 
+    Animator animator;
+
+    GameManager gameManager;
+
     private void Awake()
     {
         boatTransform = transform;
         _currentDirection = 0;
         _lerpingDirection = 0;
+
+        boatCollider = GetComponent<Collider>();
+        animator = GetComponent<Animator>();
+
+        GameEvents.OnChangeTerrainSpeed.AddListener(OnChangeSpeed);
     }
     // Start is called before the first frame update
     void Start()
     {
         _boatModelStartPosition = boatModel.transform.position;
+
+        gameManager = GameManager.instance;
     }
 
     // Update is called once per frame
@@ -56,7 +71,7 @@ public class BoatController : MonoBehaviour
             _currentDirection += _direction;
             _currentDirection = Mathf.Clamp(_currentDirection, -1, 1);
         }
-           
+
         if (Input.GetKeyDown(KeyCode.D))
         {
             _direction = 1f;
@@ -88,10 +103,32 @@ public class BoatController : MonoBehaviour
 
         boatModel.eulerAngles = euler;
 
-        Vector3 boatPos = new Vector3(boatModel.position.x, _boatModelStartPosition.y, boatModel.position.z) ;
+        Vector3 boatPos = new Vector3(boatModel.position.x, _boatModelStartPosition.y, boatModel.position.z);
         _bounceTimer += Time.deltaTime * bounceSpeed;
         boatPos.y += Mathf.Sin(_bounceTimer) * bounceRange;
         boatModel.position = boatPos;
+    }
+
+    void OnChangeSpeed(float modfiedSpeed)
+    {
+        if (modfiedSpeed == gameManager.terrainController.TerrainSpeed)
+        {
+            PlayIdle();
+            boatCollider.enabled = true;
+        }
+        else
+            boatCollider.enabled = false;
+    }
+
+    void PlayHitEffect()
+    {
+        animator.Play("Hit");
+        cameraTransform.DOShakePosition(1);
+    }
+
+    void PlayIdle()
+    {
+        animator.Play("Idle");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -102,5 +139,29 @@ public class BoatController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("collision " + collision.gameObject.name);
+
+        if (collision.gameObject.tag.Equals("Coin"))
+        {
+            GameObject hitEffect = PoolManager.instance.GetObject("CoinHitEffect");
+            hitEffect.transform.position = collision.transform.position;
+
+            collision.gameObject.SetActive(false);
+
+            GameEvents.OnCoinCollected.Invoke(1);
+        }
+        else if (collision.gameObject.tag.Equals("Obstacle"))
+        {
+            GameObject hitEffect = PoolManager.instance.GetObject("CoinSplashEffect");
+            hitEffect.transform.position = transform.position;
+            gameManager.terrainController.ReduceSpeed();
+            PlayHitEffect();
+
+            GameEvents.OnCoinCollected.Invoke(-3);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        GameEvents.OnChangeTerrainSpeed.RemoveListener(OnChangeSpeed);
     }
 }

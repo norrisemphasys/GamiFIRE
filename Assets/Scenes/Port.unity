@@ -6184,12 +6184,12 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -11539,7 +11539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  nextState: 0
+  nextState: 5
 --- !u!1 &326180892
 GameObject:
   m_ObjectHideFlags: 0
@@ -18680,6 +18680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d725ff76f6339dd48b16a816cf2e5226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useLocal: 0
   range: 0.1
   speed: 2.5
 --- !u!1 &534659582
@@ -47207,6 +47208,8 @@ MonoBehaviour:
   UIData:
   - state: 0
     panel: {fileID: 322546076}
+  initialUIState: 0
+  useInitUIState: 0
 --- !u!1 &1416664968
 GameObject:
   m_ObjectHideFlags: 0
@@ -48044,6 +48047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d725ff76f6339dd48b16a816cf2e5226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useLocal: 0
   range: 0.1
   speed: 1.8
 --- !u!1 &1453314513
@@ -51301,6 +51305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d725ff76f6339dd48b16a816cf2e5226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useLocal: 0
   range: 0.1
   speed: 2
 --- !u!1 &1546521572
@@ -52975,7 +52980,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1592443904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55313,6 +55318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d725ff76f6339dd48b16a816cf2e5226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useLocal: 0
   range: 0.1
   speed: 1.8
 --- !u!1 &1675458918

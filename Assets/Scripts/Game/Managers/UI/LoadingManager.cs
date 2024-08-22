@@ -2,13 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Events;
 
 public class LoadingManager : MonoSingleton<LoadingManager>
 {
-    [SerializeField] CanvasGroup canvasGroup;
+    [SerializeField] CanvasGroup loadingCanvasGroup;
+    [SerializeField] CanvasGroup fadeCanvasGroup;
     [SerializeField] Transform loader;
 
     [SerializeField] bool useTestMode = false;
+
+    private void Awake()
+    {
+        ShowLoadingCanvas(false);
+        ShowFadeCanvas(false);
+    }
 
     private void Update()
     {
@@ -23,27 +31,29 @@ public class LoadingManager : MonoSingleton<LoadingManager>
 #endif
     }
 
-    public void ShowLoader(bool show)
+    public void ShowLoader(bool show, UnityAction callback = null)
     {
         if(show)
         {
-            canvasGroup.blocksRaycasts = true;
-            canvasGroup.interactable = true;
+            ShowLoadingCanvas(true);
+            ShowFadeCanvas(false);
 
             loader.DOKill();
-            loader.DORotate(Vector3.forward * -360f, 1f, RotateMode.FastBeyond360).SetLoops(-1);
+            loader.DORotate(Vector3.forward * -360f, 1f, RotateMode.FastBeyond360)
+                .SetLoops(-1).SetUpdate(true);
         }    
 
-        canvasGroup.DOFade(show ? 1 : 0, 0.2f).OnComplete(()=> 
+        loadingCanvasGroup.DOFade(show ? 1 : 0, 0.2f).OnComplete(()=> 
         {
             if(!show)
             {
-                canvasGroup.blocksRaycasts = false;
-                canvasGroup.interactable = false;
+                ShowLoadingCanvas(false);
+                ShowFadeCanvas(false);
 
                 loader.DOKill();
+                callback?.Invoke();
             }
-        });
+        }).SetUpdate(true);
     }
 
     public void ShowAutoLoader()
@@ -54,5 +64,45 @@ public class LoadingManager : MonoSingleton<LoadingManager>
     public void ShowLoaderWithPercentage(bool show)
     {
 
+    }
+
+    public void FadeIn(UnityAction callback = null)
+    {
+        ShowLoadingCanvas(false);
+        ShowFadeCanvas(true);
+
+        fadeCanvasGroup.DOFade(1, 0.2f).OnComplete(() =>
+        {
+            callback?.Invoke();
+        }).SetUpdate(true);
+    }
+
+    public void FadeOut(UnityAction callback = null) 
+    {
+        fadeCanvasGroup.DOFade(0, 0.2f).OnComplete(() =>
+        {
+            ShowLoadingCanvas(false);
+            ShowFadeCanvas(false);
+
+            callback?.Invoke();
+        }).SetUpdate(true);
+    }
+
+    void ShowLoadingCanvas(bool show)
+    {
+        loadingCanvasGroup.blocksRaycasts = show;
+        loadingCanvasGroup.interactable = show;
+
+        if (!show)
+            loadingCanvasGroup.alpha = 0;
+    }
+
+    void ShowFadeCanvas(bool show)
+    {
+        fadeCanvasGroup.blocksRaycasts = show;
+        fadeCanvasGroup.interactable = show;
+
+        if (!show)
+            fadeCanvasGroup.alpha = 0;
     }
 }

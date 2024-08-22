@@ -41,11 +41,17 @@ public class StageController : BasicController
 	void AddListener()
 	{
 		view.btnBack.onClick.AddListener(OnClickBack);
+
+		for(int i = 0; i < view.btnIslands.Length; i++)
+			AddButtonListener(i, view.btnIslands[i], ClickIsland);
 	}
 
 	void RemoveListener()
 	{
 		view.btnBack.onClick.RemoveListener(OnClickBack);
+
+		for (int i = 0; i < view.btnIslands.Length; i++)
+			view.btnIslands[i].onClick.RemoveAllListeners();
 	}
 
 	void OnClickBack()
@@ -56,5 +62,18 @@ public class StageController : BasicController
 	void OnClickResume()
 	{
 
+	}
+
+	void ClickIsland(int idx)
+    {
+		LoadingManager.instance.FadeIn(() =>
+		{
+			LoadSceneManager.instance.LoadSceneLevel(2,
+				UnityEngine.SceneManagement.LoadSceneMode.Single,
+				() =>
+				{
+					LoadingManager.instance.FadeOut();
+				});
+		});
 	}
 }
