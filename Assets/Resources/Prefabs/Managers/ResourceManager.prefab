@@ -80,5 +80,13 @@ MonoBehaviour:
     shouldExpand: 1
     objectParent: {fileID: 0}
     objectList: []
+  studentObjectIslandPool:
+  - name: Guide
+    count: 20
+    dataObject: {fileID: 7067806128521238259, guid: 2f0cfc42d613e7f46bfb4a8c0ccd59d1,
+      type: 3}
+    shouldExpand: 0
+    objectParent: {fileID: 0}
+    objectList: []
   uiDataPool: []
   effectDataPool: []

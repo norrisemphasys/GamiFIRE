@@ -12,4 +12,14 @@ public class User
 
     public string Password;
 
+/*    public int JobType;
+
+    public int Coin;
+
+    public int Score;
+
+    public int Point;
+
+    public string Costume;*/
+
 }

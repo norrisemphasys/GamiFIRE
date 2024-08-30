@@ -6,6 +6,9 @@ public class ResourceManager : MonoSingleton<ResourceManager>
     [Header("Island Object Pool")]
     public ObjectData[] objectIslandPool;
 
+    [Header("Student Island Object Pool")]
+    public ObjectData[] studentObjectIslandPool;
+
     [Header("UI Pool")]
     public ObjectData[] uiDataPool;
 
@@ -25,6 +28,10 @@ public class ResourceManager : MonoSingleton<ResourceManager>
     public void IntializeIslandObjectData()
     {
         InitializeData(objectIslandPool);
+    }
+    public void IntializeStudentIslandObjectData()
+    {
+        InitializeData(studentObjectIslandPool);
     }
 
     public ObjectData GetObject(string name)
