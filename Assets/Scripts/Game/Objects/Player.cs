@@ -6,13 +6,14 @@ using UnityEngine.Events;
 public class Player : MonoBehaviour
 {
     [SerializeField] CellController cellController;
-    [SerializeField] GameObject guidePrefab;
 
     [SerializeField] int maxGuideCount;
     [SerializeField] Animator animator;
 
     List<Vector3> guidePosition = new List<Vector3>();
     GameObject guideParent;
+
+    bool startJump = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,20 +24,18 @@ public class Player : MonoBehaviour
         cellController.ActivateNextCell();
 
         UpdateLookAt();
-
         CreateGuide();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.P))
+        if(Input.GetKeyDown(KeyCode.P) && !startJump)
         {
             FollowGuide(()=> 
             { 
                 cellController.UpdateCellIndex();
                 CreateGuide();
-                UpdateLookAt();
             });
         }
     }
@@ -60,7 +59,14 @@ public class Player : MonoBehaviour
 
     IEnumerator FollowGuideEnum(UnityAction callback = null)
     {
+        startJump = true;
         animator.SetTrigger("Jump");
+
+        Cell currentCell = cellController.GetCurrentCell();
+        Cell nextCell = cellController.GetNextCell(2);
+
+        Vector3 nextCellPosition = new Vector3(nextCell.transform.position.x, 10, nextCell.transform.position.z);
+        Vector3 direction = nextCellPosition - currentCell.transform.position;
 
         int guideCount = guidePosition.Count;
 
@@ -70,11 +76,13 @@ public class Player : MonoBehaviour
             float eastTime = Utils.InOutQuad(t);
 
             transform.position = Vector3.Lerp(transform.position, guidePosition[i], eastTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(direction), eastTime);
 
             yield return new WaitForSeconds(0.025f);
         }
 
         callback?.Invoke();
+        startJump = false;
     }
 
     void CreateGuide()

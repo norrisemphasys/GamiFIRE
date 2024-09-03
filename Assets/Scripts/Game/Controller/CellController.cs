@@ -79,9 +79,9 @@ public class CellController : MonoBehaviour
         return cellList[currentCellIndex];
     }
 
-    public Cell GetNextCell()
+    public Cell GetNextCell(int increment = 1)
     {
-        int idx = (currentCellIndex + 1) % cellList.Count;
+        int idx = (currentCellIndex + increment) % cellList.Count;
         return cellList[idx];
     }
 

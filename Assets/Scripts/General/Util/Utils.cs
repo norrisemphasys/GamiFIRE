@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using System.Security.Cryptography;
 using System.Text;
+using System.Linq;
 
 public static class Utils
 {
@@ -214,5 +215,84 @@ public static class Utils
 		if (t < 0.5) return InBounce(t * 2) / 2;
 		return 1 - InBounce((1 - t) * 2) / 2;
 	}
+	#endregion
+
+	#region Probability Implementation
+
+	static List<float> cumulativeProbability;
+	public static int GetPrizeByProbability(List<float> probability) //[50,10,20,20]
+	{
+		//if your game will use this a lot of time it is best to build the arry just one time
+		//and remove this function from here.
+		if (!MakeCumulativeProbability(probability))
+			return -1; //when it return false then the list excceded 100 in the last index
+
+		float rnd = UnityEngine.Random.Range(1, 101); //Get a random number between 0 and 100
+
+		for (int i = 0; i < probability.Count; i++)
+		{
+			if (rnd <= cumulativeProbability[i]) //if the probility reach the correct sum
+			{
+				return i; //return the item index that has been chosen 
+			}
+		}
+		return -1; //return -1 if some error happens
+	}
+
+	public static int[] GetRandomDistribution(int sum, int amountOfNumbers)
+	{
+		int[] numbers = new int[amountOfNumbers];
+
+		var random = new System.Random();
+
+		for (int i = 0; i < amountOfNumbers; i++)
+		{
+			numbers[i] = random.Next(sum);
+		}
+
+		var compeleteSum = numbers.Sum();
+
+		// Scale the numbers down to 0 -> sum
+		for (int i = 0; i < amountOfNumbers; i++)
+		{
+			numbers[i] = (int)(((double)numbers[i] / compeleteSum) * sum);
+		}
+
+		// Due to rounding the number will most likely be below sum
+		var resultSum = numbers.Sum();
+
+		// Add +1 until we reach "sum"
+		for (int i = 0; i < sum - resultSum; i++)
+		{
+			numbers[random.Next(0, amountOfNumbers)]++;
+		}
+
+		return numbers;
+	}
+
+	//this function creates the cumulative list
+	static bool MakeCumulativeProbability(List<float> probability)
+	{
+		float probabilitiesSum = 0;
+		if (cumulativeProbability == null)
+			cumulativeProbability = new List<float>(); //reset the Array
+		else
+			cumulativeProbability.Clear();
+
+		for (int i = 0; i < probability.Count; i++)
+		{
+			probabilitiesSum += probability[i]; //add the probability to the sum
+			cumulativeProbability.Add(probabilitiesSum); //add the new sum to the list
+
+			//All Probabilities need to be under 100% or it'll throw an exception
+			if (probabilitiesSum > 100f)
+			{
+				Debug.LogError("Probabilities exceed 100%");
+				return false;
+			}
+		}
+		return true;
+	}
+
 	#endregion
 }

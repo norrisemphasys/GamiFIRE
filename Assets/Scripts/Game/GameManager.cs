@@ -7,6 +7,7 @@ public class GameManager : MonoSingleton<GameManager>
     public UIController uiController { get { return FindObjectOfType<UIController>(); } }
     public PlayerController playerController { get { return FindObjectOfType<PlayerController>(); } }
     public TerrainController terrainController { get { return FindObjectOfType <TerrainController>();} }
+    public SceneController sceneController { get { return FindObjectOfType<SceneController>(); } }
 
     public UIState _currentState;
     public UIState currentState { get { return _currentState; } }

@@ -55,6 +55,9 @@ public class UIController : MonoBehaviour
                 case UIState.IT_TUTORIAL: GetContoller<TutorialITController>(state).OnEnter(); break;
                 case UIState.IT_PAUSE: GetContoller<PauseITController>(state).OnEnter(); break;
                 case UIState.IT_GAMEOVER: GetContoller<GameOverITController>(state).OnEnter(); break;
+                case UIState.ROLL_MENU: GetContoller<RollMenuController>(state).OnEnter(); break;
+                case UIState.SPIN_MENU: GetContoller<SpinMenuController>(state).OnEnter(); break;
+                case UIState.ISLAND_MENU: GetContoller<IslandUIController>(state).OnEnter(); break;
             }   
         }
     }
@@ -70,6 +73,9 @@ public class UIController : MonoBehaviour
                 case UIState.IT_TUTORIAL: GetContoller<TutorialITController>(state).OnExit(); break;
                 case UIState.IT_PAUSE: GetContoller<PauseITController>(state).OnExit(); break;
                 case UIState.IT_GAMEOVER: GetContoller<GameOverITController>(state).OnExit(); break;
+                case UIState.ROLL_MENU: GetContoller<RollMenuController>(state).OnExit(); break;
+                case UIState.SPIN_MENU: GetContoller<SpinMenuController>(state).OnExit(); break;
+                case UIState.ISLAND_MENU: GetContoller<IslandUIController>(state).OnExit(); break;
             }
         }
     }
@@ -90,6 +96,10 @@ public enum UIState
     IT_TUTORIAL,
     IT_PAUSE,
     IT_GAMEOVER,
+
+    ROLL_MENU,
+    SPIN_MENU,
+    ISLAND_MENU,
 
     NONE
 }
