@@ -44,6 +44,12 @@ public class UIController : MonoBehaviour
             uiDictionary[state].GetComponent<BasicController>().OnExit();
     }
 
+    public void ShowHidePreviousState(UIState state)
+    {
+        Hide(GameManager.instance.currentState);
+        Show(state);
+    }
+
     public void Show(UIState state)
     {
         if (uiDictionary.ContainsKey(state))
@@ -58,6 +64,7 @@ public class UIController : MonoBehaviour
                 case UIState.ROLL_MENU: GetContoller<RollMenuController>(state).OnEnter(); break;
                 case UIState.SPIN_MENU: GetContoller<SpinMenuController>(state).OnEnter(); break;
                 case UIState.ISLAND_MENU: GetContoller<IslandUIController>(state).OnEnter(); break;
+                case UIState.SQ_MENU: GetContoller<SQUIController>(state).OnEnter(); break;
             }   
         }
     }
@@ -76,6 +83,7 @@ public class UIController : MonoBehaviour
                 case UIState.ROLL_MENU: GetContoller<RollMenuController>(state).OnExit(); break;
                 case UIState.SPIN_MENU: GetContoller<SpinMenuController>(state).OnExit(); break;
                 case UIState.ISLAND_MENU: GetContoller<IslandUIController>(state).OnExit(); break;
+                case UIState.SQ_MENU: GetContoller<SQUIController>(state).OnExit(); break;
             }
         }
     }
@@ -100,6 +108,7 @@ public enum UIState
     ROLL_MENU,
     SPIN_MENU,
     ISLAND_MENU,
+    SQ_MENU,
 
     NONE
 }

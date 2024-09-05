@@ -51,7 +51,8 @@ public class BasicController : MonoBehaviour
 		uiController.Hide(state);
 	}
 
-	protected void AddButtonListener(int idx, Button button, UnityAction<int> callback = null)
+	protected void AddButtonListener(int idx, Button button, 
+		UnityAction<int> callback = null)
     {
 		button.onClick.AddListener(() =>
 		{

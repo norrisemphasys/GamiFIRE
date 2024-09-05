@@ -17,23 +17,6 @@ public class CellController : MonoBehaviour
     int currentCellIndex = 0;
     int cellCounterIndex = 0;
 
-    private void Awake()
-    {
-        Init();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Init()
     {
         currentCellIndex = 0;

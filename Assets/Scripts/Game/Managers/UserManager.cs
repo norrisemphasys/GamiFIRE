@@ -8,3 +8,12 @@ public class UserManager : MonoSingleton<UserManager>
     public User currentUser { get { return _currentUser; } }
     public void SetCurrentUser(User user) { _currentUser = user; }
 }
+
+
+public enum JobType
+{
+    STUDENT,
+    PROFESSIONAL,
+    AGRICULTRIST,
+    BUSINESSMAN
+}

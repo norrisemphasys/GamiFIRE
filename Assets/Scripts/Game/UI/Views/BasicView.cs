@@ -19,7 +19,7 @@ public class BasicView : MonoBehaviour
         canvasGroup.gameObject.SetActive(false);
 
         if (scaleAnimation)
-            popupPanel.DOScale(0f, 0f);
+            popupPanel.DOScale(0f, 0f).SetUpdate(true);
     }
     
     public virtual void Reset()
