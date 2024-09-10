@@ -88,5 +88,26 @@ MonoBehaviour:
     shouldExpand: 0
     objectParent: {fileID: 0}
     objectList: []
+  - name: RedPlatform
+    count: 10
+    dataObject: {fileID: 3425254591368073627, guid: 3a306e1bfd978ad45a7f167ddea7fa65,
+      type: 3}
+    shouldExpand: 0
+    objectParent: {fileID: 0}
+    objectList: []
+  - name: YellowPlatform
+    count: 10
+    dataObject: {fileID: 1383185943305573926, guid: 424b8c71fe5a11f4f812999776093c1e,
+      type: 3}
+    shouldExpand: 0
+    objectParent: {fileID: 0}
+    objectList: []
+  - name: GreenPlatform
+    count: 10
+    dataObject: {fileID: 4978730173584603122, guid: eadc7155ca50cda4a8d0eec02f4a68db,
+      type: 3}
+    shouldExpand: 0
+    objectParent: {fileID: 0}
+    objectList: []
   uiDataPool: []
   effectDataPool: []

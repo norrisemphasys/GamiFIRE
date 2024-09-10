@@ -35,8 +35,9 @@ public class SQUIController : BasicController
         {
 			AnswerView av = view.btnAnswers[i].GetComponent<AnswerView>();
 			AnswerData data = question.answerData[i];
-			Debug.Log("gp " + data.growthPoint + " ip " + data.innovationPoint + " sp " + data.satisfactionPoint + " mcp " + data.moneyCurrencyPoints);
-			av.SetData(data.answer, data.growthPoint, data.innovationPoint, data.satisfactionPoint, data.moneyCurrencyPoints);
+
+			av.SetData(data.answer, data.growthPoint, data.innovationPoint, 
+				data.satisfactionPoint, data.moneyCurrencyPoints);
 		}
 	}
 
