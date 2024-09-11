@@ -31,7 +31,7 @@ public class RollMenuController : BasicController
 
 	public override void Initialize()
 	{
-
+		OnClickRoll();
 	}
 
 	public void ShowNextMenu()
@@ -59,6 +59,8 @@ public class RollMenuController : BasicController
 
 	IEnumerator RollAnimationEnum()
     {
+		yield return new WaitForSeconds(0.2f);
+
 		startRolling = true;
 		view.StartLoading();
 		int randIDX = 0;
@@ -76,10 +78,11 @@ public class RollMenuController : BasicController
         }
 
 		view.StopLoading();
-		gameManager.sceneController.MoveCounter = randIDX;
+		gameManager.sceneController.MoveCounter = randIDX + 1;
 
 		yield return new WaitForSeconds(2f);
 		startRolling = false;
+		gameManager.sceneController.StartGame = true;
 
 		OnClickDefault(UIState.ISLAND_MENU);
 	}

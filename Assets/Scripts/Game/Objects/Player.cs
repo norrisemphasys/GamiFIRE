@@ -21,10 +21,7 @@ public class Player : MonoBehaviour
         guideParent = new GameObject("GuideParent");
         animator = GetComponent<Animator>();
 
-        cellController.ActivateNextCell();
-
-        UpdateLookAt();
-        CreateGuide();
+        Init();
     }
 
     // Update is called once per frame
@@ -38,6 +35,12 @@ public class Player : MonoBehaviour
                 CreateGuide();
             });
         }
+    }
+
+    public void Init()
+    {
+        //cellController.ActivateNextCell();
+        UpdateLookAt();
     }
 
     void UpdateLookAt()
@@ -54,12 +57,12 @@ public class Player : MonoBehaviour
 
     void FollowGuide(UnityAction callback = null)
     {
+        startJump = true;
         StartCoroutine(FollowGuideEnum(callback));
     }
 
     IEnumerator FollowGuideEnum(UnityAction callback = null)
     {
-        startJump = true;
         animator.SetTrigger("Jump");
 
         Cell currentCell = cellController.GetCurrentCell();
@@ -85,7 +88,7 @@ public class Player : MonoBehaviour
         startJump = false;
     }
 
-    void CreateGuide()
+    public void CreateGuide()
     {
         guidePosition.Clear();
 
@@ -113,5 +116,41 @@ public class Player : MonoBehaviour
         }
 
         guidePosition.Add(nextCellPosition);
+    }
+
+    public void StartMove(int count, UnityAction callback = null)
+    {
+        StartCoroutine(StartMoveEnum(count, callback));
+    }
+
+    IEnumerator StartMoveEnum(int count, UnityAction callback = null)
+    {
+        float moveDelay = 0.5f;
+        Debug.LogError("MOVE COUNT " + count);
+        cellController.ActivateNextCell();
+        CreateGuide();
+
+        for (int i = 0; i < count; i++)
+        {
+            FollowGuide(() =>
+            {
+                bool activateCell = i < count - 1;
+                cellController.UpdateCellIndex(activateCell);
+                if (activateCell)
+                    CreateGuide();
+            });
+
+            yield return new WaitUntil(() => !startJump);
+            yield return new WaitForSeconds(moveDelay);
+        }
+
+        DisableGuide();
+        callback?.Invoke();
+    }
+
+    public void DisableGuide()
+    {
+        PoolManager.instance.ResetAllObjectList("Guide");
+        guidePosition.Clear();
     }
 }

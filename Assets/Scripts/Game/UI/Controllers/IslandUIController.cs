@@ -5,6 +5,8 @@ using UnityEngine;
 public class IslandUIController : BasicController
 {
 	private IslandUIView view;
+	private SceneController sceneController;
+
 	void Awake()
 	{
 		view = GetComponent<IslandUIView>();
@@ -28,7 +30,42 @@ public class IslandUIController : BasicController
 
 	public override void Initialize()
 	{
+		sceneController = gameManager.sceneController;
+		if (gameManager.previousState == UIState.ROLL_MENU)
+            view.SetDiceResult(gameManager.sceneController.MoveCounter);
+        else
+        {
+			sceneController.cameraController.SetCamera(CameraType.ISO);
+			view.SetDiceResult(gameManager.sceneController.MoveCounter);
+		}
+            
+		if(gameManager.sceneController.StartGame)
+        {
+			sceneController.cameraController.SetCamera(CameraType.THIRD_PERSON);
+			sceneController.StartPlayerCellMove(()=> 
+			{
+				ShowCellType();
+				gameManager.sceneController.StartGame = false;
+				//sceneController.cameraController.SetCamera(CameraType.ISO);
+			});
+        }
+	}
 
+	void ShowCellType()
+    {
+		Cell currentCell = sceneController.cellController.GetCurrentCell();
+		switch (currentCell.Type)
+		{
+			case CellType.SCENARIO:
+				OnClickDefault(UIState.SQ_MENU);
+				break;
+			case CellType.SPINNER:
+				OnClickDefault(UIState.SPIN_MENU);
+				break;
+			case CellType.MINIGAME:
+				// To Do:
+				break;
+		}
 	}
 
 	public void ShowNextMenu()
@@ -38,11 +75,16 @@ public class IslandUIController : BasicController
 
 	void AddListener()
 	{
-
+		view.buttonRoll.onClick.AddListener(OnClickRoll);
 	}
 
 	void RemoveListener()
 	{
-
+		view.buttonRoll.onClick.RemoveListener(OnClickRoll);
 	}
+
+	void OnClickRoll()
+    {
+		OnClickDefault(UIState.ROLL_MENU);
+    }
 }

@@ -6,6 +6,7 @@ using DG.Tweening;
 public class CellController : MonoBehaviour
 {
     public List<Cell> cellList = new List<Cell>();
+    public List<CellTypeOccurence> probabilityCellTypeOccurence = new List<CellTypeOccurence>();
 
     [SerializeField] GameObject cellPrefab;
     [SerializeField] Transform cellParent;
@@ -17,17 +18,26 @@ public class CellController : MonoBehaviour
     int currentCellIndex = 0;
     int cellCounterIndex = 0;
 
+    List<float> cellProbability = new List<float>();
+
     public void Init()
     {
         currentCellIndex = 0;
         cellCounterIndex = 0;
 
+        cellProbability.Clear();
+
         ResourceManager.instance.IntializeStudentIslandObjectData();
 
-        for(int i = 0; i < maxCellCount; i++)
+        for (int i = 0; i < probabilityCellTypeOccurence.Count; i++)
+            cellProbability.Add(probabilityCellTypeOccurence[i].percentage);
+
+        for (int i = 0; i < maxCellCount; i++)
         {
             GameObject cellGO = GameObject.Instantiate(cellPrefab);
             Cell cell = cellGO.GetComponent<Cell>();
+
+            cell.SetCellType(Utils.GetPrizeByProbability(cellProbability));
 
             float posIndex = (i / (float)maxCellCount) * Mathf.PI * 2f;
 
@@ -49,12 +59,13 @@ public class CellController : MonoBehaviour
         nextCell.transform.DOLocalMoveY(10, 0.5f);
     }
 
-    public void UpdateCellIndex()
+    public void UpdateCellIndex(bool activateCell = true)
     {
         cellCounterIndex++;
         currentCellIndex = cellCounterIndex % cellList.Count;
 
-        ActivateNextCell();
+        if(activateCell)
+            ActivateNextCell();
     }
 
     public Cell GetCurrentCell()
@@ -75,9 +86,16 @@ public class CellController : MonoBehaviour
     }
 }
 
+[System.Serializable]
+public struct CellTypeOccurence
+{
+    public CellType type;
+    public float percentage;
+}
+
 public enum CellType
 {
-    SCENARIO,
+    SCENARIO = 0,
     SPINNER,
     MINIGAME
 }

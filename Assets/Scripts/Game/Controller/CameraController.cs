@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCamera : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
     [SerializeField] CameraType cameraType;
 
     [SerializeField] Camera isoCamera;
     [SerializeField] Camera thirdPersonCamera;
+    [SerializeField] Camera minigameCamera;
 
     [SerializeField] Transform thirdPersonCameraTarget;
     [SerializeField] Transform isoCameraTraget;
@@ -37,7 +38,7 @@ public class PlayerCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(cameraType == CameraType.THIRD_PERSON)
+        if (cameraType == CameraType.THIRD_PERSON)
         {
             /*  Vector3 targetPosition = new Vector3( thirdPersonCameraTarget.position.x, 
                   thirdPersonCameraTarget.position.y + height, 
@@ -48,18 +49,19 @@ public class PlayerCamera : MonoBehaviour
             thirdPersonCameraTransform.LookAt(thirdPersonCameraTarget.position);
         }
     }
-
     public void SetCamera(CameraType type)
     {
         cameraType = type;
 
         isoCamera.gameObject.SetActive(cameraType == CameraType.ISO);
         thirdPersonCamera.gameObject.SetActive(cameraType == CameraType.THIRD_PERSON);
+        minigameCamera.gameObject.SetActive(cameraType == CameraType.MINI_GAME);
     }
 }
 
 public enum CameraType
 {
     ISO,
-    THIRD_PERSON
+    THIRD_PERSON,
+    MINI_GAME
 }

@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IslandTrip.unity
     guid: acf892131c8f9244da6f54011e28cafa
+  - enabled: 1
+    path: Assets/Scenes/StudentIsland.unity
+    guid: ea54a6a6be27a62428c6631f46b77180
   m_configObjects: {}

@@ -89,6 +89,8 @@ public class SpinMenuController : BasicController
 
 	private IEnumerator Spin()
 	{
+		float showDelay = 2.5f;
+
 		view.ShowParticleSelected(false);
 
 		_isSpinning = true;
@@ -127,6 +129,11 @@ public class SpinMenuController : BasicController
 
 		view.SetResultData(prizeData[itemIndex]);
 		view.ShowParticleSelected(true);
+
+		yield return new WaitForSeconds(showDelay);
+
+		// Temporary
+		OnClickDefault(UIState.ISLAND_MENU);
 
 		yield return null;
 	}

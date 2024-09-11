@@ -56,7 +56,15 @@ public class GameOverITController : BasicController
 
 	void OnClickPoceed()
 	{
-
+		LoadingManager.instance.FadeIn(() =>
+		{
+			LoadSceneManager.instance.LoadSceneLevel(3,
+				UnityEngine.SceneManagement.LoadSceneMode.Single,
+				() =>
+				{
+					LoadingManager.instance.FadeOut();
+				});
+		});
 	}
 
 	void OnClickRestart()

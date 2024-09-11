@@ -5,6 +5,7 @@ using UnityEngine;
 public class Cell : MonoBehaviour
 {
     [SerializeField] CellType type;
+    public CellType Type { get { return type; } }
 
     // Start is called before the first frame update
     void Start()
@@ -16,5 +17,10 @@ public class Cell : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SetCellType(int idx)
+    {
+        type = (CellType)idx;
     }
 }
