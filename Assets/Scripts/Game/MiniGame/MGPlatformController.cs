@@ -35,6 +35,13 @@ public class MGPlatformController : MonoBehaviour
             SpawnPlatform();
     }
 
+    public void ResetPlatforms()
+    {
+        poolManager.ResetAllObjectList("RedPlatform");
+        poolManager.ResetAllObjectList("YellowPlatform");
+        poolManager.ResetAllObjectList("GreenPlatform");
+    }
+
     public GameObject SpawnPlatform(bool usePositionLastIndex = false)
     {
         int rand = Random.Range(0, 3);

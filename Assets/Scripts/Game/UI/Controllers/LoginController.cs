@@ -71,7 +71,16 @@ public class LoginController : MonoBehaviour
             ID = System.Guid.NewGuid().ToString(),
             Username = view.signUpUsername,
             Email = view.signUpEmail,
-            Password = Utils.GetMD5Hash(view.signUpPassword)
+            Password = Utils.GetMD5Hash(view.signUpPassword),
+
+            JobType = 0,
+            Coin = 0,
+            Score = 0,
+            GrowthPoint = 0,
+            InnovationPoint = 0,
+            CurrencyPoint = 0,
+            SatisfactionPoint = 0,
+            Costume = ""
         };
 
         LoadingManager.instance.ShowLoader(true);

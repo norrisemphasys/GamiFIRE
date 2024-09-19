@@ -4,10 +4,22 @@ using UnityEngine;
 
 public class GameManager : MonoSingleton<GameManager>
 {
-    public UIController uiController { get { return FindObjectOfType<UIController>(); } }
+    public UIController uiController 
+    { 
+        get 
+        {
+            GameObject uiGO = GameObject.Find("_Controllers");
+
+            if (uiGO != null)
+                return uiGO.GetComponent<UIController>();
+
+            return FindObjectOfType<UIController>(); 
+        } 
+    }
     public PlayerController playerController { get { return FindObjectOfType<PlayerController>(); } }
     public TerrainController terrainController { get { return FindObjectOfType <TerrainController>();} }
     public SceneController sceneController { get { return FindObjectOfType<SceneController>(); } }
+    public MiniGameController miniGameController { get { return FindObjectOfType<MiniGameController>(); } }
 
     public UIState _currentState;
     public UIState currentState { get { return _currentState; } }

@@ -56,6 +56,8 @@ public class CameraController : MonoBehaviour
         isoCamera.gameObject.SetActive(cameraType == CameraType.ISO);
         thirdPersonCamera.gameObject.SetActive(cameraType == CameraType.THIRD_PERSON);
         minigameCamera.gameObject.SetActive(cameraType == CameraType.MINI_GAME);
+
+        Debug.LogError("camera type " + type);
     }
 }
 

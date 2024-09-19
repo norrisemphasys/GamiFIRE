@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.UI;
 using DG.Tweening;
+using TMPro;
 
 public class BasicView : MonoBehaviour
 {

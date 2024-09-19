@@ -24,6 +24,11 @@ public class UIController : MonoBehaviour
             Show(initialUIState);
     }
 
+    public void ShowCanvas(bool show)
+    {
+        mainCanvas.gameObject.SetActive(show);
+    }
+
     public T GetContoller<T>(UIState state) where T : Component
     {
         if (uiDictionary.ContainsKey(state))
@@ -65,12 +70,18 @@ public class UIController : MonoBehaviour
                 case UIState.SPIN_MENU: GetContoller<SpinMenuController>(state).OnEnter(); break;
                 case UIState.ISLAND_MENU: GetContoller<IslandUIController>(state).OnEnter(); break;
                 case UIState.SQ_MENU: GetContoller<SQUIController>(state).OnEnter(); break;
+
+                // MINI GAME
+                case UIState.MGIGONE_MENU: GetContoller<MGIGOneController>(state).OnEnter(); break;
+                case UIState.MGMM_MENU: GetContoller<MGMMController>(state).OnEnter(); break;
+                case UIState.MGGO_MENU: GetContoller<MGGOController>(state).OnEnter(); break;
             }   
         }
     }
 
     public void Hide(UIState state)
     {
+        Debug.LogError("HIDE " + state);
         if (uiDictionary.ContainsKey(state))
         {
             switch (state)
@@ -84,6 +95,11 @@ public class UIController : MonoBehaviour
                 case UIState.SPIN_MENU: GetContoller<SpinMenuController>(state).OnExit(); break;
                 case UIState.ISLAND_MENU: GetContoller<IslandUIController>(state).OnExit(); break;
                 case UIState.SQ_MENU: GetContoller<SQUIController>(state).OnExit(); break;
+
+                // MINI GAME
+                case UIState.MGIGONE_MENU: GetContoller<MGIGOneController>(state).OnExit(); break;
+                case UIState.MGMM_MENU: GetContoller<MGMMController>(state).OnExit(); break;
+                case UIState.MGGO_MENU: GetContoller<MGGOController>(state).OnExit(); break;
             }
         }
     }
@@ -109,6 +125,11 @@ public enum UIState
     SPIN_MENU,
     ISLAND_MENU,
     SQ_MENU,
+
+    //MINI GAME
+    MGIGONE_MENU,
+    MGMM_MENU,
+    MGGO_MENU,
 
     NONE
 }

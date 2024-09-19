@@ -15,6 +15,7 @@ public class IslandUIController : BasicController
 
 	public override void OnEnter()
 	{
+		Debug.LogError("On enter island menu");
 		base.OnEnter();
 		view.Show();
 
@@ -44,9 +45,10 @@ public class IslandUIController : BasicController
 			sceneController.cameraController.SetCamera(CameraType.THIRD_PERSON);
 			sceneController.StartPlayerCellMove(()=> 
 			{
-				ShowCellType();
 				gameManager.sceneController.StartGame = false;
-				//sceneController.cameraController.SetCamera(CameraType.ISO);
+				sceneController.cameraController.SetCamera(CameraType.ISO);
+
+				ShowCellType();
 			});
         }
 	}
@@ -64,6 +66,10 @@ public class IslandUIController : BasicController
 				break;
 			case CellType.MINIGAME:
 				// To Do:
+				view.Hide();
+				RemoveListener();
+
+				gameManager.miniGameController.Load(MiniGameType.MG_ONE);
 				break;
 		}
 	}

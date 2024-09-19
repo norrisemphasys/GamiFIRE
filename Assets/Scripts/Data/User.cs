@@ -12,14 +12,19 @@ public class User
 
     public string Password;
 
-/*    public int JobType;
+    public int JobType;
 
     public int Coin;
 
     public int Score;
 
-    public int Point;
+    public int GrowthPoint;
 
-    public string Costume;*/
+    public int InnovationPoint;
 
+    public int CurrencyPoint;
+
+    public int SatisfactionPoint;
+
+    public string Costume;
 }

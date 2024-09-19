@@ -31,7 +31,7 @@ public class BasicController : MonoBehaviour
 
 	public virtual void Initialize()
 	{
-
+		
 	}
 
 	public virtual void OnEnter()
@@ -48,9 +48,16 @@ public class BasicController : MonoBehaviour
 	protected void OnClickDefault(UIState _state, float time = 1)
 	{
 		nextState = _state;
+		Debug.LogError("go name " + uiController.gameObject.name);
 		uiController.Hide(state);
 	}
 
+	protected void OnClickDefault(UIController controller, UIState _state)
+    {
+		nextState = _state;
+		Debug.LogError("go name " + controller.gameObject.name);
+		controller.Hide(state);
+	}
 	protected void AddButtonListener(int idx, Button button, 
 		UnityAction<int> callback = null)
     {

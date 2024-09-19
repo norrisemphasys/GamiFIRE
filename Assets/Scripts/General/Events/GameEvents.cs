@@ -9,6 +9,16 @@ public static class GameEvents
     public static readonly Evt<bool> OnStartIslandTripGame = new Evt<bool>();
     public static readonly Evt<int> OnCoinCollected = new Evt<int>();
     public static readonly Evt OnSelectObject = new Evt();
+
+
+    //MINI GAME CONTROLLS
+
+    public static readonly Evt<MiniGame.PlatformType> OnPressA = new Evt<MiniGame.PlatformType>();
+    public static readonly Evt<MiniGame.PlatformType> OnPressS = new Evt<MiniGame.PlatformType>();
+    public static readonly Evt<MiniGame.PlatformType> OnPressD = new Evt<MiniGame.PlatformType>();
+
+    public static readonly Evt<bool> OnGameOverMiniGame = new Evt<bool>();
+    public static readonly Evt<int> OnMovePlayerCount = new Evt<int>();
 }
 
 public class Evt
