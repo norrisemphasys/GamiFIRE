@@ -75,6 +75,11 @@ public class UIController : MonoBehaviour
                 case UIState.MGIGONE_MENU: GetContoller<MGIGOneController>(state).OnEnter(); break;
                 case UIState.MGMM_MENU: GetContoller<MGMMController>(state).OnEnter(); break;
                 case UIState.MGGO_MENU: GetContoller<MGGOController>(state).OnEnter(); break;
+
+                // MAIN
+                case UIState.LOGIN: GetContoller<LoginController>(state).OnEnter(); break;
+                case UIState.GENDER_MENU: GetContoller<GenderMenuController>(state).OnEnter(); break;
+                case UIState.JOB_MENU: GetContoller<JobMenuController>(state).OnEnter(); break;
             }   
         }
     }
@@ -100,6 +105,11 @@ public class UIController : MonoBehaviour
                 case UIState.MGIGONE_MENU: GetContoller<MGIGOneController>(state).OnExit(); break;
                 case UIState.MGMM_MENU: GetContoller<MGMMController>(state).OnExit(); break;
                 case UIState.MGGO_MENU: GetContoller<MGGOController>(state).OnExit(); break;
+
+                // MAIN
+                case UIState.LOGIN: GetContoller<LoginController>(state).OnExit(); break;
+                case UIState.GENDER_MENU: GetContoller<GenderMenuController>(state).OnExit(); break;
+                case UIState.JOB_MENU: GetContoller<JobMenuController>(state).OnExit(); break;
             }
         }
     }
@@ -130,6 +140,11 @@ public enum UIState
     MGIGONE_MENU,
     MGMM_MENU,
     MGGO_MENU,
+
+    // MAIN,
+    LOGIN,
+    JOB_MENU,
+    GENDER_MENU,
 
     NONE
 }

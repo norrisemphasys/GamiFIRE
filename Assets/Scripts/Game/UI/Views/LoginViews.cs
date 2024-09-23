@@ -6,10 +6,8 @@ using TMPro;
 using DG.Tweening;
 using UnityEngine.Events;
 
-public class LoginViews : MonoBehaviour
+public class LoginViews : BasicView
 {
-    [SerializeField] CanvasGroup canvasGroup;
-
     [Header("Sign Up")]
     [Space(5)]
 
@@ -62,36 +60,12 @@ public class LoginViews : MonoBehaviour
 
     public void Init()
     {
-        signInRect.DOScale(Vector3.zero, 0);
-        signUpRect.DOScale(Vector3.zero, 0);
-        forgotPasswordRect.DOScale(Vector3.zero, 0);
+        signInRect.DOScale(Vector3.zero, 0).SetUpdate(true);
+        signUpRect.DOScale(Vector3.zero, 0).SetUpdate(true);
+        forgotPasswordRect.DOScale(Vector3.zero, 0).SetUpdate(true);
 
         ShowConfirmEmail(true);
         ShowNewPassword(false);
-    }
-
-    public void Show(bool show, UnityAction callback = null)
-    {
-        if(!show)
-        {
-            canvasGroup.interactable = false;
-            canvasGroup.blocksRaycasts = false;
-
-            canvasGroup.gameObject.SetActive(false);
-        }
-        else
-            canvasGroup.gameObject.SetActive(true);
-
-        canvasGroup.DOFade(show ? 1 : 0, 0.5f).OnComplete(()=> 
-        {
-            if (show)
-            {
-                canvasGroup.interactable = true;
-                canvasGroup.blocksRaycasts = true;
-            }
-
-            callback?.Invoke();
-        });
     }
 
     public void ShowSignIn(bool show, UnityAction callback = null)
@@ -100,7 +74,7 @@ public class LoginViews : MonoBehaviour
         .OnComplete(() =>
         {
             callback?.Invoke();
-        });
+        }).SetUpdate(true);
 
         if (!show)
             ResetSignInView();
@@ -112,7 +86,7 @@ public class LoginViews : MonoBehaviour
         .OnComplete(()=> 
         {
             callback?.Invoke();
-        });
+        }).SetUpdate(true);
 
         if (!show)
             ResetSigUpView();
@@ -124,7 +98,7 @@ public class LoginViews : MonoBehaviour
         .OnComplete(() =>
         {
             callback?.Invoke();
-        });
+        }).SetUpdate(true);
 
         if (!show)
             ResetForgotPasswordView();

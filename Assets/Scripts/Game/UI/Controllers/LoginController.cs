@@ -3,25 +3,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LoginController : MonoBehaviour
+public class LoginController : BasicController
 {
-    [SerializeField] private LoginViews view;
+    private LoginViews view;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        view = GetComponent<LoginViews>();
         view.Init();
-        view.Show(true, () => 
-        {
-            view.ShowSignIn(true);
-
-            AddListener();
-        });
     }
 
-    private void OnDestroy()
+    public override void OnEnter()
+    {
+        base.OnEnter();
+        view.Show(()=> 
+        {
+            view.ShowSignIn(true);
+        });
+
+        AddListener();
+        Initialize();
+    }
+
+    public override void OnExit()
     {
         RemoveListener();
+        view.Hide(ShowNextMenu);
+    }
+
+    public override void Initialize()
+    {
+    }
+
+    public void ShowNextMenu()
+    {
+        uiController.Show(nextState);
     }
 
     void AddListener()
@@ -72,8 +88,10 @@ public class LoginController : MonoBehaviour
             Username = view.signUpUsername,
             Email = view.signUpEmail,
             Password = Utils.GetMD5Hash(view.signUpPassword),
+            isAnExistingAccount = false,
 
             JobType = 0,
+            Gender = 0,
             Coin = 0,
             Score = 0,
             GrowthPoint = 0,
@@ -92,7 +110,7 @@ public class LoginController : MonoBehaviour
                 DBManager.AddEditUser(newUser, (res) => { 
                     LoadingManager.instance.ShowLoader(false);
 
-                    PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("New user successfuly created.",
+                    PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("New user successfuly created. Login your account to get started.",
                     ()=> 
                     {
                         view.ShowSignUp(false, () =>
@@ -138,18 +156,26 @@ public class LoginController : MonoBehaviour
                 if (Utils.VerifyMD5Hash(view.signInPassword, res.Password))
                 {
                     // Login user account
-                    Debug.Log("Login user account.");
+                    Debug.Log("Login user account." + res.isAnExistingAccount);
                     UserManager.instance.SetCurrentUser(res);
 
-                    view.ShowSignIn(false, () => 
+                    if(res.isAnExistingAccount)
                     {
-                        LoadSceneManager.instance.LoadSceneLevel(1, 
-                            UnityEngine.SceneManagement.LoadSceneMode.Single ,
-                        () => 
+                        view.ShowSignIn(false, () =>
                         {
-                            LoadingManager.instance.ShowLoader(false);
+                            LoadSceneManager.instance.LoadSceneLevel(1,
+                                UnityEngine.SceneManagement.LoadSceneMode.Single,
+                            () =>
+                            {
+                                LoadingManager.instance.ShowLoader(false);
+                            });
                         });
-                    });
+                    }
+                    else
+                    {
+                        OnClickDefault(UIState.GENDER_MENU);
+                        LoadingManager.instance.ShowLoader(false);
+                    }  
                 }
                 else
                 {

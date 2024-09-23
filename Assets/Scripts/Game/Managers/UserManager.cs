@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class UserManager : MonoSingleton<UserManager>
 {
@@ -8,21 +9,42 @@ public class UserManager : MonoSingleton<UserManager>
     public User currentUser { get { return _currentUser; } }
     public void SetCurrentUser(User user) { _currentUser = user; }
 
-    public void SaveUser()
+    public void SaveUser(UnityAction callback = null)
     {
-
+        DBManager.AddEditUser(_currentUser, (res) => 
+        {
+            SetCurrentUser(res);
+            callback?.Invoke();
+        });
     }
 
     public void LoadUser()
     {
        
     }
+
+    public void SetGender(int idx)
+    {
+        _currentUser.Gender = idx;
+    }
+
+    public void SetJobType(int idx)
+    {
+        _currentUser.JobType = idx;
+    }
 }
 
 public enum JobType
 {
-    STUDENT,
+    STUDENT = 0,
     PROFESSIONAL,
     AGRICULTRIST,
     BUSINESSMAN
+}
+
+public enum Gender
+{
+    MALE = 0,
+    FEMAL,
+    NON_BINARY
 }

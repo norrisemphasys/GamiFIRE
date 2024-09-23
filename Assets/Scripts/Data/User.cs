@@ -12,7 +12,11 @@ public class User
 
     public string Password;
 
+    public bool isAnExistingAccount;
+
     public int JobType;
+
+    public int Gender;
 
     public int Coin;
 
