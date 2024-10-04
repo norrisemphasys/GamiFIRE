@@ -161,4 +161,8 @@ public class MGIGOneController : BasicController
 	{
 		OnClickDefault(UIState.IT_INGAME);
 	}
+	private void OnDestroy()
+	{
+		RemoveListener();
+	}
 }

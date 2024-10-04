@@ -6,9 +6,9 @@ public class CameraController : MonoBehaviour
 {
     [SerializeField] CameraType cameraType;
 
-    [SerializeField] Camera isoCamera;
-    [SerializeField] Camera thirdPersonCamera;
-    [SerializeField] Camera minigameCamera;
+    public Camera isoCamera;
+    public Camera thirdPersonCamera;
+    public Camera minigameCamera;
 
     [SerializeField] Transform thirdPersonCameraTarget;
     [SerializeField] Transform isoCameraTraget;

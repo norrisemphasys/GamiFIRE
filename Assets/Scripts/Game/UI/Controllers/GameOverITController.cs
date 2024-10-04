@@ -14,6 +14,7 @@ public class GameOverITController : BasicController
 
 	public override void OnEnter()
 	{
+		Debug.LogError("Game over controller");
 		base.OnEnter();
 		view.Show();
 
@@ -58,12 +59,10 @@ public class GameOverITController : BasicController
 	{
 		LoadingManager.instance.FadeIn(() =>
 		{
-			LoadSceneManager.instance.LoadSceneLevel(3,
-				UnityEngine.SceneManagement.LoadSceneMode.Single,
-				() =>
-				{
-					LoadingManager.instance.FadeOut();
-				});
+			UserManager.instance.SaveUser(()=> 
+			{
+				LoadIslandScene();
+			});
 		});
 	}
 
@@ -71,14 +70,33 @@ public class GameOverITController : BasicController
 	{
 		LoadingManager.instance.FadeIn(() =>
 		{
-			LoadSceneManager.instance.LoadSceneLevel(2,
-				UnityEngine.SceneManagement.LoadSceneMode.Single,
-				() =>
-				{
-					LoadingManager.instance.FadeOut();
-				});
+			UserManager.instance.SaveUser(()=> 
+			{
+				ResetScene();
+			});
 		});
 	}
+
+	void ResetScene()
+    {
+		LoadSceneManager.instance.LoadSceneLevel(2,
+		UnityEngine.SceneManagement.LoadSceneMode.Single,
+		() =>
+		{
+			LoadingManager.instance.FadeOut();
+		});
+	}
+
+	void LoadIslandScene()
+    {
+		LoadSceneManager.instance.LoadSceneLevel(3,
+		UnityEngine.SceneManagement.LoadSceneMode.Single,
+		() =>
+		{
+			LoadingManager.instance.FadeOut();
+		});
+	}
+
 
 	void OnClickHome()
     {
@@ -86,11 +104,11 @@ public class GameOverITController : BasicController
 		LoadingManager.instance.FadeIn(() =>
 		{
 			LoadSceneManager.instance.LoadSceneLevel(1,
-				UnityEngine.SceneManagement.LoadSceneMode.Single,
-				() =>
-				{
-					LoadingManager.instance.FadeOut();
-				});
+			UnityEngine.SceneManagement.LoadSceneMode.Single,
+			() =>
+			{
+				LoadingManager.instance.FadeOut();
+			});
 		});
 	}
 }

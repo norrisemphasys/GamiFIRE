@@ -52,14 +52,41 @@ public class PauseITController : BasicController
 
 	void OnClickContinue()
 	{
-		OnClickDefault(UIState.IT_INGAME);
+        switch (gameManager.currentScene)
+        {
+			case SCENE_TYPE.LOGIN_SCENE:
+				break;
+			case SCENE_TYPE.PORT_SCENE:
+				break;
+			case SCENE_TYPE.ISLAND_TRIP_SCENE:
+				OnClickDefault(UIState.IT_INGAME);
+				break;
+			case SCENE_TYPE.ISLAND_SCENE:
+				OnClickDefault(UIState.ISLAND_MENU);
+				break;
+        }
 	}
 
 	void OnClickRestart()
 	{
+		int loadIndex = 0;
+		switch (gameManager.currentScene)
+		{
+			case SCENE_TYPE.LOGIN_SCENE:
+				break;
+			case SCENE_TYPE.PORT_SCENE:
+				break;
+			case SCENE_TYPE.ISLAND_TRIP_SCENE:
+				loadIndex = 2;
+				break;
+			case SCENE_TYPE.ISLAND_SCENE:
+				loadIndex = 3;
+				break;
+		}
+
 		LoadingManager.instance.FadeIn(()=>
 		{
-			LoadSceneManager.instance.LoadSceneLevel(2,
+			LoadSceneManager.instance.LoadSceneLevel(loadIndex,
 				UnityEngine.SceneManagement.LoadSceneMode.Single,
 				() =>
 				{
@@ -71,15 +98,34 @@ public class PauseITController : BasicController
 
 	void OnClickGiveup()
     {
+		int loadIndex = 0;
+		switch (gameManager.currentScene)
+		{
+			case SCENE_TYPE.LOGIN_SCENE:
+				break;
+			case SCENE_TYPE.PORT_SCENE:
+				break;
+			case SCENE_TYPE.ISLAND_TRIP_SCENE:
+				loadIndex = 1;
+				break;
+			case SCENE_TYPE.ISLAND_SCENE:
+				loadIndex = 1;
+				break;
+		}
+
 		Time.timeScale = 1;
 		LoadingManager.instance.FadeIn(() =>
 		{
-			LoadSceneManager.instance.LoadSceneLevel(1,
+			LoadSceneManager.instance.LoadSceneLevel(loadIndex,
 				UnityEngine.SceneManagement.LoadSceneMode.Single,
 				() =>
 				{
 					LoadingManager.instance.FadeOut();
 				});
 		});
+	}
+	private void OnDestroy()
+	{
+		RemoveListener();
 	}
 }

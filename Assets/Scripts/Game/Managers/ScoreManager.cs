@@ -6,6 +6,11 @@ public class ScoreManager : MonoSingleton<ScoreManager>
 {
     private UserManager userManager;
 
+    private PrizeType _currentBonusType = PrizeType.NONE;
+    private float _bonusPercentage = 0;
+
+    private bool _hasUser => userManager.currentUser != null;
+
     public override void Init()
     {
         base.Init();
@@ -15,7 +20,8 @@ public class ScoreManager : MonoSingleton<ScoreManager>
 
     public void AddCoin(int coin)
     {
-        userManager.currentUser.Coin += coin;
+        AddCurrencyPoint(coin);
+        //userManager.currentUser.Coin += coin;
     }
 
     public void AddScore(int score)
@@ -25,21 +31,70 @@ public class ScoreManager : MonoSingleton<ScoreManager>
 
     public void AddGrowthPoint(int point)
     {
-        userManager.currentUser.GrowthPoint += point;
+        if(_hasUser)
+        {
+            userManager.currentUser.GrowthPoint += GetBonusPointByType(point);
+
+            if (userManager.currentUser.GrowthPoint < 0)
+                userManager.currentUser.GrowthPoint = 0;
+        }
     }
 
     public void AddInnovationPoint(int point)
     {
-        userManager.currentUser.InnovationPoint += point;
+        if (_hasUser)
+        {
+            userManager.currentUser.InnovationPoint += GetBonusPointByType(point);
+
+            if (userManager.currentUser.InnovationPoint < 0)
+                userManager.currentUser.InnovationPoint = 0;
+        }
     }
 
     public void AddCurrencyPoint(int point)
     {
-        userManager.currentUser.CurrencyPoint += point;
+        if (_hasUser)
+        {
+            userManager.currentUser.CurrencyPoint += GetBonusPointByType(point);
+
+            if (userManager.currentUser.CurrencyPoint < 0)
+                userManager.currentUser.CurrencyPoint = 0;
+        }
     }
 
     public void AddSatisfactionPoint(int point)
     {
-        userManager.currentUser.SatisfactionPoint += point;
+        if (_hasUser)
+        {
+            userManager.currentUser.SatisfactionPoint += GetBonusPointByType(point);
+
+            if (userManager.currentUser.SatisfactionPoint < 0)
+                userManager.currentUser.SatisfactionPoint = 0;
+        }
+    }
+
+    public void SetBonus(float percentage, PrizeType type)
+    {
+        _bonusPercentage = percentage;
+        _currentBonusType = type;
+    }
+
+    public int GetBonusPointByType(int value)
+    {
+        int newValue = value;
+        switch(_currentBonusType)
+        {
+            case PrizeType.COIN_BOOSTER:
+                float percentageValue = value * _bonusPercentage;
+                newValue = Mathf.RoundToInt(percentageValue) + value;
+                return newValue;
+            case PrizeType.GROWTH_POINT:
+            case PrizeType.INNOVATION_POINT:
+            case PrizeType.SATISFACTION_POINT:
+                newValue = value + (int)_bonusPercentage;
+                return newValue;
+        }
+
+        return newValue;
     }
 }

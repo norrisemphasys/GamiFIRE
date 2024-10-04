@@ -26,5 +26,7 @@ public class MGInputController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.D))
             GameEvents.OnPressA.Invoke(MiniGame.PlatformType.GREEN);
+
+        GameEvents.OnMouseMove.Invoke(Input.mousePosition);
     }
 }

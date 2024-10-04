@@ -56,7 +56,7 @@ public class StageController : BasicController
 
 	void OnClickBack()
 	{
-		OnExit();
+		OnClickDefault(UIState.PORT_INGAME);
 	}
 
 	void OnClickResume()

@@ -31,6 +31,8 @@ public class IslandUIController : BasicController
 
 	public override void Initialize()
 	{
+		Time.timeScale = 1;
+
 		sceneController = gameManager.sceneController;
 		if (gameManager.previousState == UIState.ROLL_MENU)
             view.SetDiceResult(gameManager.sceneController.MoveCounter);
@@ -51,6 +53,15 @@ public class IslandUIController : BasicController
 				ShowCellType();
 			});
         }
+
+		User currentUser = UserManager.instance.currentUser;
+		if (currentUser != null)
+			view.UpdateUserPoints(currentUser);
+
+		UserManager.instance.SaveUser(()=>
+		{
+			// Update User to server
+		});
 	}
 
 	void ShowCellType()
@@ -69,7 +80,8 @@ public class IslandUIController : BasicController
 				view.Hide();
 				RemoveListener();
 
-				gameManager.miniGameController.Load(MiniGameType.MG_ONE);
+				//gameManager.miniGameController.Load(MiniGameType.MG_ONE);
+				gameManager.miniGameController.RandomLoad();
 				break;
 		}
 	}
@@ -82,15 +94,26 @@ public class IslandUIController : BasicController
 	void AddListener()
 	{
 		view.buttonRoll.onClick.AddListener(OnClickRoll);
+		view.buttonPause.onClick.AddListener(OnClickPause);
 	}
 
 	void RemoveListener()
 	{
 		view.buttonRoll.onClick.RemoveListener(OnClickRoll);
+		view.buttonPause.onClick.RemoveListener(OnClickPause);
 	}
 
 	void OnClickRoll()
     {
 		OnClickDefault(UIState.ROLL_MENU);
     }
+
+	void OnClickPause()
+    {
+		OnClickDefault(UIState.IT_PAUSE);
+    }
+	private void OnDestroy()
+	{
+		RemoveListener();
+	}
 }

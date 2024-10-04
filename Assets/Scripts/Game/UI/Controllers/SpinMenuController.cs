@@ -46,6 +46,8 @@ public class SpinMenuController : BasicController
 		_isSpinning = false;
 		_totalAngle = 360 / sectionCount;
 
+		view.EnableSpinButton(true);
+
 		InitializePrizePercentage();
 		InitializeDataInfo();
 	}
@@ -91,6 +93,7 @@ public class SpinMenuController : BasicController
 	{
 		float showDelay = 2.5f;
 
+		view.EnableSpinButton(false);
 		view.ShowParticleSelected(false);
 
 		_isSpinning = true;
@@ -127,15 +130,34 @@ public class SpinMenuController : BasicController
 		_prevIndex = itemIndex;
 		_isSpinning = false;
 
-		view.SetResultData(prizeData[itemIndex]);
+		PrizeData data = prizeData[itemIndex];
+
+		view.SetResultData(data);
 		view.ShowParticleSelected(true);
 
 		yield return new WaitForSeconds(showDelay);
 
-		// Temporary
-		OnClickDefault(UIState.ISLAND_MENU);
+		ScoreManager.instance.SetBonus(data.prize, data.type);
+
+		if (data.type == PrizeType.SCENARIO_QUESTION)
+        {
+			OnClickDefault(UIState.SQ_MENU);
+		}
+		else if(data.type == PrizeType.REPEAT_SPIN)
+        {
+			view.EnableSpinButton(true);
+		}
+		else
+        {
+			// Temporary
+			OnClickDefault(UIState.ISLAND_MENU);
+		}
 
 		yield return null;
+	}
+	private void OnDestroy()
+	{
+		RemoveListener();
 	}
 }
 
@@ -161,4 +183,5 @@ public enum PrizeType
 	INNOVATION_POINT,
 	SATISFACTION_POINT,
 	REPEAT_SPIN,
+	NONE
 }

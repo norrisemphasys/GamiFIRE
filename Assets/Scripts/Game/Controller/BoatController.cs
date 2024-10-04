@@ -156,7 +156,7 @@ public class BoatController : MonoBehaviour
             gameManager.terrainController.ReduceSpeed();
             PlayHitEffect();
 
-            GameEvents.OnCoinCollected.Invoke(-3);
+            GameEvents.OnCoinCollected.Invoke(-2);
         }
     }
 

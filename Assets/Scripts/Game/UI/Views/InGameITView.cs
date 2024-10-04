@@ -36,14 +36,21 @@ public class InGameITView : BasicView
         textTotalCoin.text = string.Format("{0} / {1}", coin, maxCoin);
     }
 
-    public void SetUsername(string name)
+    public void UpdateUser(User user)
+    {
+        SetUsername(user.Username);
+        SetJob(user.JobType);
+    }
+
+    void SetUsername(string name)
     {
         textUserName.text = name;
     }
 
-    public void SetJob()
+    public void SetJob(int idx)
     {
-
+        JobType job = (JobType)idx;
+        textJob.text = job.ToString();
     }
 
     public void SetTimeTraveled(float time, bool init = false)

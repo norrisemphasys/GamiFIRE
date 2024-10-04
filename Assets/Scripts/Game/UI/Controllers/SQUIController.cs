@@ -5,6 +5,7 @@ using UnityEngine;
 public class SQUIController : BasicController
 {
 	private SQUIView view;
+	ScoreManager scoreManager;
 
 	void Awake()
 	{
@@ -29,6 +30,8 @@ public class SQUIController : BasicController
 
 	public override void Initialize()
 	{
+		scoreManager = ScoreManager.instance;
+
 		QuestionSO question = gameManager.sceneController.GetCurrentQuestion();
 
 		for(int i = 0; i < view.btnAnswers.Length; i++)
@@ -61,11 +64,24 @@ public class SQUIController : BasicController
 	void OnClickAnswer(int idx)
     {
 		Debug.Log("Answer IDX " + idx);
+
+		QuestionSO question = gameManager.sceneController.GetCurrentQuestion();
+		AnswerData data = question.answerData[idx];
+
+		scoreManager.AddCurrencyPoint(data.moneyCurrencyPoints);
+		scoreManager.AddGrowthPoint(data.growthPoint);
+		scoreManager.AddInnovationPoint(data.innovationPoint);
+		scoreManager.AddSatisfactionPoint(data.satisfactionPoint);
+
 		OnClickDefault(UIState.ISLAND_MENU);
 	}
 
 	void OnClickContinue()
 	{
 		OnClickDefault(UIState.ISLAND_MENU);
+	}
+	private void OnDestroy()
+	{
+		RemoveListener();
 	}
 }

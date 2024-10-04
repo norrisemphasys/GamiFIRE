@@ -109,5 +109,12 @@ MonoBehaviour:
     shouldExpand: 0
     objectParent: {fileID: 0}
     objectList: []
+  - name: Egg
+    count: 20
+    dataObject: {fileID: 783593222049848329, guid: 3d649f66eb3f83644a559bd2b55ac4f5,
+      type: 3}
+    shouldExpand: 0
+    objectParent: {fileID: 0}
+    objectList: []
   uiDataPool: []
   effectDataPool: []

@@ -936,7 +936,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132707027}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -9932,7 +9932,7 @@ MonoBehaviour:
   playerController: {fileID: 0}
   terrainDistance: 120
   terrainOffset: 30
-  spawnTimer: 0.8
+  spawnTimer: 1.2
   terrainMaterial: {fileID: 2100000, guid: 20b9d6272f4083047b23a055df8c3da3, type: 2}
   obstacleSpawnPosition: {fileID: 1632293506}
   startSpawnObstacle: 0

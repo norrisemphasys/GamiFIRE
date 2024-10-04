@@ -6,11 +6,17 @@ using UnityEngine.Events;
 public class UserManager : MonoSingleton<UserManager>
 {
     private User _currentUser;
-    public User currentUser { get { return _currentUser; } }
+    public User currentUser { get { return _currentUser; } set { _currentUser = value; } }
     public void SetCurrentUser(User user) { _currentUser = user; }
 
     public void SaveUser(UnityAction callback = null)
     {
+        if (_currentUser == null)
+        {
+            callback?.Invoke();
+            return;
+        }
+
         DBManager.AddEditUser(_currentUser, (res) => 
         {
             SetCurrentUser(res);

@@ -92,7 +92,7 @@ public class ObstacleObject : MonoBehaviour
         {
             if (indexes[i] == 0)
             {
-                bool createCoin = Random.Range(0, 10) < 2;
+                bool createCoin = Random.Range(0, 10) < 4;
                 if(createCoin)
                 {
                     for (int j = 0; j < maxCoinCount; j++)

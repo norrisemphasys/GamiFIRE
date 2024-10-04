@@ -21,7 +21,10 @@ public class UIController : MonoBehaviour
     void Start()
     {
         if(useInitUIState)
+        {
+            ShowCanvas(useInitUIState);
             Show(initialUIState);
+        }
     }
 
     public void ShowCanvas(bool show)
@@ -61,11 +64,17 @@ public class UIController : MonoBehaviour
         {
             switch(state)
             {
+                // PORT
                 case UIState.STAGE_SELECT: GetContoller<StageController>(state).OnEnter(); break;
+                case UIState.PORT_INGAME: GetContoller<InGamePortController>(state).OnEnter(); break;
+
+                // ISLAND TRIP
                 case UIState.IT_INGAME: GetContoller<InGameITController>(state).OnEnter(); break;
                 case UIState.IT_TUTORIAL: GetContoller<TutorialITController>(state).OnEnter(); break;
                 case UIState.IT_PAUSE: GetContoller<PauseITController>(state).OnEnter(); break;
                 case UIState.IT_GAMEOVER: GetContoller<GameOverITController>(state).OnEnter(); break;
+
+                // ISLAND
                 case UIState.ROLL_MENU: GetContoller<RollMenuController>(state).OnEnter(); break;
                 case UIState.SPIN_MENU: GetContoller<SpinMenuController>(state).OnEnter(); break;
                 case UIState.ISLAND_MENU: GetContoller<IslandUIController>(state).OnEnter(); break;
@@ -73,6 +82,7 @@ public class UIController : MonoBehaviour
 
                 // MINI GAME
                 case UIState.MGIGONE_MENU: GetContoller<MGIGOneController>(state).OnEnter(); break;
+                case UIState.MGIGTWO_MENU: GetContoller<MGIGTwoController>(state).OnEnter(); break;
                 case UIState.MGMM_MENU: GetContoller<MGMMController>(state).OnEnter(); break;
                 case UIState.MGGO_MENU: GetContoller<MGGOController>(state).OnEnter(); break;
 
@@ -91,11 +101,17 @@ public class UIController : MonoBehaviour
         {
             switch (state)
             {
+                // PORT
                 case UIState.STAGE_SELECT: GetContoller<StageController>(state).OnExit(); break;
+                case UIState.PORT_INGAME: GetContoller<InGamePortController>(state).OnExit(); break;
+
+                // ISLAND TRIP
                 case UIState.IT_INGAME: GetContoller<InGameITController>(state).OnExit(); break;
                 case UIState.IT_TUTORIAL: GetContoller<TutorialITController>(state).OnExit(); break;
                 case UIState.IT_PAUSE: GetContoller<PauseITController>(state).OnExit(); break;
                 case UIState.IT_GAMEOVER: GetContoller<GameOverITController>(state).OnExit(); break;
+
+                // ISLAND
                 case UIState.ROLL_MENU: GetContoller<RollMenuController>(state).OnExit(); break;
                 case UIState.SPIN_MENU: GetContoller<SpinMenuController>(state).OnExit(); break;
                 case UIState.ISLAND_MENU: GetContoller<IslandUIController>(state).OnExit(); break;
@@ -103,6 +119,7 @@ public class UIController : MonoBehaviour
 
                 // MINI GAME
                 case UIState.MGIGONE_MENU: GetContoller<MGIGOneController>(state).OnExit(); break;
+                case UIState.MGIGTWO_MENU: GetContoller<MGIGTwoController>(state).OnExit(); break;
                 case UIState.MGMM_MENU: GetContoller<MGMMController>(state).OnExit(); break;
                 case UIState.MGGO_MENU: GetContoller<MGGOController>(state).OnExit(); break;
 
@@ -145,6 +162,12 @@ public enum UIState
     LOGIN,
     JOB_MENU,
     GENDER_MENU,
+
+    // PORT
+    PORT_INGAME,
+
+    MGIGTWO_MENU,
+    MGIGTHREE_MENU,
 
     NONE
 }

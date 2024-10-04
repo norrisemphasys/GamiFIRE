@@ -86,4 +86,9 @@ public class RollMenuController : BasicController
 
 		OnClickDefault(UIState.ISLAND_MENU);
 	}
+
+    private void OnDestroy()
+    {
+		RemoveListener();
+    }
 }

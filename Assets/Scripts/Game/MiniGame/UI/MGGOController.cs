@@ -36,7 +36,7 @@ public class MGGOController : BasicController
 	{
 		Debug.LogError("Show next menu " + nextState);
 		gameManager.uiController.Show(nextState);
-		gameManager.miniGameController.UnLoad(MiniGameType.MG_ONE);
+		gameManager.miniGameController.UnLoad(gameManager.miniGameController.CurrentType);
 	}
 
 	void AddListener()
@@ -52,5 +52,9 @@ public class MGGOController : BasicController
 	void OnClickBack() 
 	{
 		OnClickDefault(UIState.ISLAND_MENU);
+	}
+	private void OnDestroy()
+	{
+		RemoveListener();
 	}
 }

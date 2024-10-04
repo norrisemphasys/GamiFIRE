@@ -39,6 +39,13 @@ public class GameManager : MonoSingleton<GameManager>
 #endif
     }
 
+    public override void Init()
+    {
+        base.Init();
+
+        currentScene = (SCENE_TYPE)UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
+    }
+
     void OnStartState() 
     {
 
@@ -50,5 +57,17 @@ public class GameManager : MonoSingleton<GameManager>
     private JobType _islandType = JobType.STUDENT;
     public JobType IslandType { get { return _islandType; } }
     public void SetIslandType(JobType type) { _islandType = type; }
+
+    private SCENE_TYPE _currentScene = SCENE_TYPE.LOGIN_SCENE;
+    public SCENE_TYPE currentScene { get { return _currentScene; } set { _currentScene = value; } }
     
+}
+
+
+public enum SCENE_TYPE
+{
+    LOGIN_SCENE = 0,
+    PORT_SCENE,
+    ISLAND_TRIP_SCENE,
+    ISLAND_SCENE
 }

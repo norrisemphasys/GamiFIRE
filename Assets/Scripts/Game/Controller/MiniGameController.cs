@@ -10,6 +10,20 @@ public class MiniGameController : MonoBehaviour
     public Dictionary<MiniGameType, MiniGame> miniGameBank = new Dictionary<MiniGameType, MiniGame>();
 
     [SerializeField] MiniGame[] miniGame;
+    [SerializeField] MiniGameType initMiniGameType;
+    [SerializeField] bool useInitUIState = false;
+
+    private MiniGameType _currentType;
+    public MiniGameType CurrentType { get { return _currentType; } }
+
+    void Start()
+    {
+        if (useInitUIState)
+        {
+            //Init();
+            Load(initMiniGameType);
+        }
+    }
 
     public T GetMiniGame<T>(MiniGameType type) where T : Component
     {
@@ -18,14 +32,11 @@ public class MiniGameController : MonoBehaviour
 
         return null;
     }
-    private void Start()
-    {
-        Init();
-    }
 
     public void Init()
     {
         miniGameBank.Add(MiniGameType.MG_ONE, miniGame[0]);
+        miniGameBank.Add(MiniGameType.MG_TWO, miniGame[1]);
 
         for (int i = 0; i < miniGame.Length; i++)
             miniGame[i].main.SetActive(false);
@@ -37,9 +48,13 @@ public class MiniGameController : MonoBehaviour
     {
         if (miniGameBank.ContainsKey(type))
         {
+            _currentType = type;
+            Debug.LogError(type);
+
             switch (type)
             {
                 case MiniGameType.MG_ONE: GetMiniGame<MGOne>(type).OnEnter(); break;
+                case MiniGameType.MG_TWO: GetMiniGame<MGTwo>(type).OnEnter(); break;
             }
         }
     }
@@ -51,14 +66,29 @@ public class MiniGameController : MonoBehaviour
             switch (type)
             {
                 case MiniGameType.MG_ONE: GetMiniGame<MGOne>(type).OnExit(); break;
+                case MiniGameType.MG_TWO: GetMiniGame<MGTwo>(type).OnExit(); break;
             }
         }
+    }
+
+    public void RandomLoad()
+    {
+        MiniGameType type = (MiniGameType)Random.Range(1, 3);
+        Load(type);
+    }
+
+    public MiniGame GetCurrentMiniGame()
+    {
+        if (miniGameBank.ContainsKey(_currentType))
+            return miniGameBank[_currentType];
+
+        return null;
     }
 }
 
 public enum MiniGameType
 {
-    MG_ONE,
+    MG_ONE = 1,
     MG_TWO,
     MG_THREE
 }

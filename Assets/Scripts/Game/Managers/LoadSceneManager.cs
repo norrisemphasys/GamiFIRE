@@ -33,7 +33,9 @@ public class LoadSceneManager : MonoSingleton<LoadSceneManager>
         SceneManager.SetActiveScene(
             SceneManager.GetSceneByBuildIndex(levelBuildIndex)
         );
+
         loadedLevelBuildIndex = levelBuildIndex;
+        GameManager.instance.currentScene = (SCENE_TYPE)levelBuildIndex;
         enabled = true;
 
         if (onLoadFinished != null)

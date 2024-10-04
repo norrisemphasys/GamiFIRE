@@ -64,6 +64,11 @@ public class SpinMenuView : BasicView
         SetBanner(data.type);
     }
 
+    public void EnableSpinButton(bool enable)
+    {
+        btnSpin.interactable = enable;
+    }
+
     void SetBanner(PrizeType type)
     {
         int idx = (int)type;

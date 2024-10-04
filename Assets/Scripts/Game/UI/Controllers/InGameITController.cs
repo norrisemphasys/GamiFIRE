@@ -61,10 +61,15 @@ public class InGameITController : BasicController
 
 		view.SetTimeTraveled(0, true);
 		view.SetCoin(0, maxCoin);
+
+		User currentUser = UserManager.instance.currentUser;
+		if(currentUser != null)
+			view.UpdateUser(currentUser);
 	}
 
 	public void ShowNextMenu()
 	{
+		ScoreManager.instance.AddCoin(coinsCollected);
 		uiController.Show(nextState);
 	}
 

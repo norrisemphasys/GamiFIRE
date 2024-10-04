@@ -91,4 +91,9 @@ public class MGOne : MiniGame
 
         GameEvents.OnMovePlayerCount?.Invoke(_moveCounter);
     }
+
+    private void OnDestroy()
+    {
+        RemoveListener();
+    }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MGPlayer : MonoBehaviour
 {
+    [SerializeField] float offset;
+
     Transform playerTransform;
     Animator animator;
 
@@ -27,11 +29,12 @@ public class MGPlayer : MonoBehaviour
 
     public void SetPlayerPosition(Vector3 pos)
     {
-        playerTransform.position = new Vector3(pos.x, pos.y + 0.05f,pos.z);
+        playerTransform.position = new Vector3(pos.x, pos.y + offset,pos.z);
     }
 
     public void MoveAnimation()
     {
-        animator.SetTrigger("Move");
+        if(animator != null)
+            animator.SetTrigger("Move");
     }
 }

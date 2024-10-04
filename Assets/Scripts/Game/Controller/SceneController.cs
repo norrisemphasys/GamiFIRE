@@ -32,6 +32,9 @@ public class SceneController : MonoBehaviour
     {
         questionController.Init();
         cellController.Init();
+        minigameController.Init();
+
+        ScoreManager.instance.SetBonus(0, PrizeType.NONE);
 
         currentQuestionBank = questionController.GetShuffledQuestionByType(GameManager.instance.IslandType);
         totalQuestionCount = currentQuestionBank.Count;
