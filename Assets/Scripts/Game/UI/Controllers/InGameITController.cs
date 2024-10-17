@@ -96,11 +96,14 @@ public class InGameITController : BasicController
 
 	IEnumerator ShowStartTimerEnum()
     {
+		Audio.PlaySFXCounter();
 		view.ShowTimer(true);
 		view.ShowTimer(3);
 		yield return new WaitForSecondsRealtime(1f);
+		Audio.PlaySFXCounter();
 		view.ShowTimer(2);
 		yield return new WaitForSecondsRealtime(1f);
+		Audio.PlaySFXCounter();
 		view.ShowTimer(1);
 		yield return new WaitForSecondsRealtime(1f);
 

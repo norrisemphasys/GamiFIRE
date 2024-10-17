@@ -8,8 +8,21 @@ using TMPro;
 public class SQUIView : BasicView
 {
     public Button[] btnAnswers;
+
+    [SerializeField] TextMeshProUGUI textQuestion;
+    [SerializeField] TextMeshProUGUI textTitle;
     public void Init()
     {
 
+    }
+
+    public void SetTextQuestion(string text)
+    {
+        textQuestion.text = text;
+    }
+
+    public void SetTextTitle(string text)
+    {
+        textTitle.text = text;
     }
 }

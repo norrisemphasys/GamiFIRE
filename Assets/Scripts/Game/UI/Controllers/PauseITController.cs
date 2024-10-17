@@ -29,6 +29,7 @@ public class PauseITController : BasicController
 	public override void Initialize()
 	{
 		Time.timeScale = 0;
+		Audio.StopBGMIslandTrip();
 	}
 
 	public void ShowNextMenu()

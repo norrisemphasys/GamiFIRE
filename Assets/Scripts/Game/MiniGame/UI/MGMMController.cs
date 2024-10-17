@@ -32,6 +32,8 @@ public class MGMMController : BasicController
 
 	public override void Initialize()
 	{
+		Audio.StopBGMStudentIsland();
+
 		uiController = gameManager.miniGameController.uiController;
 		int level = (int)gameManager.miniGameController.CurrentType;
 		view.SetText(level);

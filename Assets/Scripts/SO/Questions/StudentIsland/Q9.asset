@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q9
+  m_EditorClassIdentifier: 
+  questionTitle: Attending an Optional Workshop
+  question: An optional skills workshop is available, but it costs money to attend.
+  answerData:
+  - answer: I attend the workshop to improve my skills.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 1
+    moneyCurrencyPoints: -2
+  - answer: I skip it and look for free online resources.
+    growthPoint: 1
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 0
+  - answer: I ask if the university can subsidize the cost.
+    growthPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: 1
+    moneyCurrencyPoints: 0
+  - answer: I ask my peers if they have notes from the workshop.
+    growthPoint: 0
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 0

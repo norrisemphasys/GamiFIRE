@@ -32,6 +32,9 @@ public class InGamePortController : BasicController
 		User currentUser = UserManager.instance.currentUser;
 		if (currentUser != null)
 			view.UpdateUserPoints(currentUser);
+
+		Audio.PlayBGMPort();
+		Audio.PlayBGMSea();
 	}
 
 	public void ShowNextMenu()

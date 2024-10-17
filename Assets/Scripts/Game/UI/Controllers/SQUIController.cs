@@ -26,6 +26,8 @@ public class SQUIController : BasicController
 	{
 		RemoveListener();
 		view.Hide(ShowNextMenu);
+
+		gameManager.sceneController.UpdateQuestionCounter();
 	}
 
 	public override void Initialize()
@@ -33,6 +35,9 @@ public class SQUIController : BasicController
 		scoreManager = ScoreManager.instance;
 
 		QuestionSO question = gameManager.sceneController.GetCurrentQuestion();
+
+		view.SetTextTitle(question.questionTitle);
+		view.SetTextQuestion(question.question);
 
 		for(int i = 0; i < view.btnAnswers.Length; i++)
         {

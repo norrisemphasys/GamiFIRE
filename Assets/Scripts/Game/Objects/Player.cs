@@ -15,11 +15,14 @@ public class Player : MonoBehaviour
 
     bool startJump = false;
 
+    PlayerAudio playerAudio;
+
     // Start is called before the first frame update
     void Start()
     {
         guideParent = new GameObject("GuideParent");
         animator = GetComponent<Animator>();
+        playerAudio = GetComponent<PlayerAudio>();
 
         Init();
     }
@@ -64,7 +67,7 @@ public class Player : MonoBehaviour
     IEnumerator FollowGuideEnum(UnityAction callback = null)
     {
         animator.SetTrigger("Jump");
-
+        playerAudio.PlayJump();
         Cell currentCell = cellController.GetCurrentCell();
         Cell nextCell = cellController.GetNextCell(2);
 
@@ -83,6 +86,8 @@ public class Player : MonoBehaviour
 
             yield return new WaitForSeconds(0.025f);
         }
+
+        playerAudio.PlayLand();
 
         callback?.Invoke();
         startJump = false;

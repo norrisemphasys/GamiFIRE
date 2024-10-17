@@ -30,6 +30,16 @@ public class MGGOController : BasicController
 	public override void Initialize()
 	{
 		uiController = gameManager.miniGameController.uiController;
+
+		if (gameManager.miniGameController.CurrentType == MiniGameType.MG_ONE)
+			Audio.StopBGMMGOne();
+		else if (gameManager.miniGameController.CurrentType == MiniGameType.MG_TWO)
+			Audio.StopBGMMGTwo();
+
+		if (gameManager.WinIslandMode)
+			Audio.PlaySFXMGWin();
+		else
+			Audio.PlaySFXMGLose();
 	}
 
 	public void ShowNextMenu()

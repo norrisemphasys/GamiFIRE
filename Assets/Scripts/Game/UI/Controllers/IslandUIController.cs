@@ -31,6 +31,9 @@ public class IslandUIController : BasicController
 
 	public override void Initialize()
 	{
+		Audio.PlayBGMStudentIsland();
+		Audio.PlayBGMSea();
+
 		Time.timeScale = 1;
 
 		sceneController = gameManager.sceneController;

@@ -52,6 +52,8 @@ public class MGIGTwoController : BasicController
 
 	public override void Initialize()
 	{
+		Audio.PlayBGMMGTwo();
+
 		uiController = gameManager.miniGameController.uiController;
 		ShowFastPanel();
 
@@ -116,6 +118,7 @@ public class MGIGTwoController : BasicController
 
 	void OnGameOver(bool win)
 	{
+		gameManager.WinIslandMode = win;
 		OnClickDefault(UIState.MGGO_MENU);
 	}
 

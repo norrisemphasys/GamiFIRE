@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q6
+  m_EditorClassIdentifier: 
+  questionTitle: Forming Study Groups
+  question: You hear that study groups can help improve learning, but you usually
+    study alone.
+  answerData:
+  - answer: I decide to join a study group
+    growthPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: 1
+    moneyCurrencyPoints: 0
+  - answer: I continue studying alone as I find it more efficient.
+    growthPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: 0
+    moneyCurrencyPoints: 0
+  - answer: I suggest creating an online study group for flexibility.
+    growthPoint: 0
+    satisfactionPoint: 0
+    innovationPoint: 2
+    moneyCurrencyPoints: 0
+  - answer: I create a hybrid plan to study alone and in a group.
+    growthPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: 1
+    moneyCurrencyPoints: 0

@@ -47,6 +47,8 @@ public class BasicController : MonoBehaviour
 
 	protected void OnClickDefault(UIState _state, float time = 1)
 	{
+		Audio.PlaySFXClick();
+
 		nextState = _state;
 		Debug.LogError("go name " + uiController.gameObject.name);
 		uiController.Hide(state);
@@ -54,6 +56,8 @@ public class BasicController : MonoBehaviour
 
 	protected void OnClickDefault(UIController controller, UIState _state)
     {
+		Audio.PlaySFXClick();
+
 		nextState = _state;
 		Debug.LogError("go name " + controller.gameObject.name);
 		controller.Hide(state);

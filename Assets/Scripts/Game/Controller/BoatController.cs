@@ -55,6 +55,8 @@ public class BoatController : MonoBehaviour
         _boatModelStartPosition = boatModel.transform.position;
 
         gameManager = GameManager.instance;
+
+        Audio.PlaySFXEngine();
     }
 
     // Update is called once per frame
@@ -70,6 +72,8 @@ public class BoatController : MonoBehaviour
 
             _currentDirection += _direction;
             _currentDirection = Mathf.Clamp(_currentDirection, -1, 1);
+
+            Audio.PlaySFXMove();
         }
 
         if (Input.GetKeyDown(KeyCode.D))
@@ -82,6 +86,8 @@ public class BoatController : MonoBehaviour
 
             _currentDirection += _direction;
             _currentDirection = Mathf.Clamp(_currentDirection, -1, 1);
+
+            Audio.PlaySFXMove();
         }
 
         bool isMaxLeftLane = _direction == 1;
@@ -124,6 +130,8 @@ public class BoatController : MonoBehaviour
     {
         animator.Play("Hit");
         cameraTransform.DOShakePosition(1);
+
+        Audio.PlaySFXBoatHit();
     }
 
     void PlayIdle()
@@ -148,6 +156,8 @@ public class BoatController : MonoBehaviour
             collision.gameObject.SetActive(false);
 
             GameEvents.OnCoinCollected.Invoke(1);
+
+            Audio.PlaySFXCoin();
         }
         else if (collision.gameObject.tag.Equals("Obstacle"))
         {

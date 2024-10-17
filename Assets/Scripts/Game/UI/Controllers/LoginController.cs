@@ -7,6 +7,7 @@ public class LoginController : BasicController
 {
     private LoginViews view;
 
+    [SerializeField] int loadSceneIndex;
     void Awake()
     {
         view = GetComponent<LoginViews>();
@@ -25,6 +26,12 @@ public class LoginController : BasicController
         Initialize();
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.P))
+            Audio.PlayBGMLogin();
+    }
+
     public override void OnExit()
     {
         RemoveListener();
@@ -33,6 +40,7 @@ public class LoginController : BasicController
 
     public override void Initialize()
     {
+        Audio.PlayBGMLogin();
     }
 
     public void ShowNextMenu()
@@ -72,6 +80,8 @@ public class LoginController : BasicController
 
     void OnClickSignUpNewUser()
     {
+        Audio.PlaySFXClick();
+
         if (view.signUpEmail == string.Empty ||
             view.signUpPassword == string.Empty ||
             view.signUpUsername == string.Empty)
@@ -130,6 +140,8 @@ public class LoginController : BasicController
 
     void OnClickLogin()
     {
+        Audio.PlaySFXClick();
+
         if (view.signInUsername == string.Empty ||
             view.signInPassword == string.Empty)
         {
@@ -163,7 +175,7 @@ public class LoginController : BasicController
                     {
                         view.ShowSignIn(false, () =>
                         {
-                            LoadSceneManager.instance.LoadSceneLevel(1,
+                            LoadSceneManager.instance.LoadSceneLevel(loadSceneIndex,
                                 UnityEngine.SceneManagement.LoadSceneMode.Single,
                             () =>
                             {
@@ -192,6 +204,8 @@ public class LoginController : BasicController
 
     void OnClickForgotPassword()
     {
+        Audio.PlaySFXClick();
+
         view.ShowSignIn(false, () =>
         {
             view.ShowForgotPassword(true);
@@ -200,6 +214,8 @@ public class LoginController : BasicController
 
     void OnClickShowSignUp()
     {
+        Audio.PlaySFXClick();
+
         view.ShowSignIn(false, ()=> 
         {
             view.ShowSignUp(true);
@@ -208,6 +224,8 @@ public class LoginController : BasicController
 
     void OnClickShowSignIn()
     {
+        Audio.PlaySFXClick();
+
         view.ShowSignUp(false, () =>
         {
             view.ShowSignIn(true);
@@ -216,6 +234,8 @@ public class LoginController : BasicController
 
     void OnClickConfirmEmail()
     {
+        Audio.PlaySFXClick();
+
         // Add email verification
         LoadingManager.instance.ShowLoader(true);
 
@@ -239,6 +259,8 @@ public class LoginController : BasicController
 
     void OnClickNewPassword()
     {
+        Audio.PlaySFXClick();
+
         // Update user password
         User currentUser = UserManager.instance.currentUser;
         currentUser.Password = Utils.GetMD5Hash(view.newPassword);
@@ -264,6 +286,8 @@ public class LoginController : BasicController
 
     void OnClickCloseForgotPassword()
     {
+        Audio.PlaySFXClick();
+
         view.ShowForgotPassword(false, () =>
         {
             view.ShowSignIn(true);

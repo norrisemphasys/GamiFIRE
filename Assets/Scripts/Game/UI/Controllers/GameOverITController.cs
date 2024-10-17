@@ -32,6 +32,17 @@ public class GameOverITController : BasicController
 	{
 		Time.timeScale = 0;
 		view.Show(gameManager.WinITMode);
+
+		Audio.StopBGMIslandTrip();
+
+		if(gameManager.WinITMode)
+        {
+			Audio.PlaySFXGameOverWin();
+        }
+        else
+        {
+			Audio.PlaySFXGameOverLose();
+        }
 	}
 
 	public void ShowNextMenu()

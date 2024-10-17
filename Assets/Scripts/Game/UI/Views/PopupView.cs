@@ -55,6 +55,7 @@ public class PopupView : MonoBehaviour
 
         buttonOk.onClick.AddListener(() =>
         {
+            Audio.PlaySFXClick();
             data.OnClickOk?.Invoke();
             Show(false, () =>
             {
@@ -65,6 +66,7 @@ public class PopupView : MonoBehaviour
 
         buttonCancel.onClick.AddListener(() =>
         {
+            Audio.PlaySFXClick();
             data.OnClickCancel?.Invoke();
             Show(false, () =>
             {
@@ -75,6 +77,7 @@ public class PopupView : MonoBehaviour
     
         buttonClose.onClick.AddListener(()=>
         {
+            Audio.PlaySFXClick();
             data.OnClickClose?.Invoke();
             Show(false, ()=> 
             {

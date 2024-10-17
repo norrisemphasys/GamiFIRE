@@ -85,6 +85,8 @@ public class SpinMenuController : BasicController
 
 	private void OnClickSpin()
 	{
+		Audio.PlaySFXClick2();
+
 		if (!_isSpinning)
 			StartCoroutine(Spin());
 	}
@@ -106,12 +108,18 @@ public class SpinMenuController : BasicController
 		_randomValue = ((sectionCount * cycle) * spinSmoothness) +
 			((itemIndex * spinSmoothness) - (_prevIndex * spinSmoothness));
 		float increment = 0;
+		float audioTime = 10;
 		for (int i = 0; i < _randomValue; i++)
 		{
 			float angle = _totalAngle / spinSmoothness;
 
 			_zRotation += angle;
 			view.SetSpinnerRotation(_zRotation);
+
+			float at = i % audioTime;
+
+			if (at == 0)
+				Audio.PlaySFXSpin();
 
 			float time = (float)i / (float)_randomValue;
 			float interval = Mathf.Lerp(0.01f, 0.1f, time * time);
@@ -134,6 +142,8 @@ public class SpinMenuController : BasicController
 
 		view.SetResultData(data);
 		view.ShowParticleSelected(true);
+
+		Audio.PlaySFXSpinResult();
 
 		yield return new WaitForSeconds(showDelay);
 

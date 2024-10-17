@@ -13,8 +13,13 @@ public class AnswerView : MonoBehaviour
     public void SetData(string answer, int gp, int ip, int sp, int mcp)
     {
         textAnswer.text = answer;
-        textPrize.text = string.Format("<#1eb7fd>Innovation {0} " +
-            "<#3FC611>Satisfaction {1} <#F83510>Growth {2} <#F8C810>Money {3}", 
+        string GPSign = gp > 0 ? "+" : "";
+        string IPSign = ip > 0 ? "+" : "";
+        string SPSign = sp > 0 ? "+" : "";
+        string MCPSign = mcp > 0 ? "+" : "";
+
+        textPrize.text = string.Format("<#1eb7fd>Innovation " + IPSign + "{0}   " +
+            "<#3FC611>Satisfaction " + IPSign + "{1}   " + "<#F83510>Growth " + GPSign + "{2}   " + "<#F8C810>Money " + MCPSign + "{3}", 
             ip, sp, gp, mcp);
     }
 }

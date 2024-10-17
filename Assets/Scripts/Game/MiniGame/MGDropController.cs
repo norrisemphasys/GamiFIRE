@@ -38,6 +38,8 @@ public class MGDropController : MonoBehaviour
 
     public void SpawnEgg(float gravityScale = 1, bool islast = false)
     {
+        Audio.PlaySFXMGDrop();
+
         GameObject egg = poolManager.GetObject("Egg");
         MGDrop drop = egg.GetComponent<MGDrop>();
 

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q20
+  m_EditorClassIdentifier: 
+  questionTitle: Organizing a Student-Led Event
+  question: You have been asked to organize a student-led event, but it requires
+    a lot of planning.
+  answerData:
+  - answer: I take charge and lead the entire event planning.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 0
+    moneyCurrencyPoints: -1
+  - answer: I form a team and delegate tasks to share the responsibility.
+    growthPoint: 0
+    satisfactionPoint: 2
+    innovationPoint: 1
+    moneyCurrencyPoints: 0
+  - answer: I ask for support from university staff.
+    growthPoint: -1
+    satisfactionPoint: 1
+    innovationPoint: 1
+    moneyCurrencyPoints: 0
+  - answer: I suggest organizing a smaller version of the event.
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 1
+    moneyCurrencyPoints: 0

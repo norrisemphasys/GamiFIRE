@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q2
+  m_EditorClassIdentifier: 
+  questionTitle: Balancing Work and Study
+  question: You need to find a way to balance your part-time job with the upcoming
+    exams, which are crucial for your academic progress.
+  answerData:
+  - answer: I reduce my work hours to focus more on studying.
+    growthPoint: 3
+    satisfactionPoint: -1
+    innovationPoint: 0
+    moneyCurrencyPoints: -1
+  - answer: I create a strict study schedule around my work hours.
+    growthPoint: 2
+    satisfactionPoint: -1
+    innovationPoint: 0
+    moneyCurrencyPoints: 1
+  - answer: I take on extra shifts and plan to catch up with studying later.
+    growthPoint: 0
+    satisfactionPoint: -2
+    innovationPoint: 0
+    moneyCurrencyPoints: 3
+  - answer: I ask my employer for more flexible hours.
+    growthPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: 0
+    moneyCurrencyPoints: 1

@@ -31,6 +31,7 @@ public class StageController : BasicController
 	public override void Initialize()
 	{
 		gameManager.playerController.SetPause(true);
+		Audio.PlaySFXPortal();
 	}
 
 	public void ShowNextMenu()
@@ -65,6 +66,12 @@ public class StageController : BasicController
 	}
 
 	void ClickIsland(int idx)
+    {
+		Audio.PlaySFXStageClick();
+		Utils.Delay(this, LoadIslandScene, 1f);
+	}
+
+	void LoadIslandScene()
     {
 		LoadingManager.instance.FadeIn(() =>
 		{

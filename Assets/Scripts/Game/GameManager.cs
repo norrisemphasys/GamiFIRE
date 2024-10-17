@@ -54,6 +54,9 @@ public class GameManager : MonoSingleton<GameManager>
     private bool _winITMode = false;
     public bool WinITMode { get { return _winITMode; } set { _winITMode = value; }  }
 
+    private bool _winIslandMode = false;
+    public bool WinIslandMode { get { return _winIslandMode; } set { _winIslandMode = value; } }
+
     private JobType _islandType = JobType.STUDENT;
     public JobType IslandType { get { return _islandType; } }
     public void SetIslandType(JobType type) { _islandType = type; }

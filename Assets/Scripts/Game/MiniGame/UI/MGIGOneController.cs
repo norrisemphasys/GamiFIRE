@@ -51,6 +51,8 @@ public class MGIGOneController : BasicController
 
 	public override void Initialize()
 	{
+		Audio.PlayBGMMGOne();
+
 		uiController = gameManager.miniGameController.uiController;
 		_startState = true;
 		_startTimer = true;
@@ -139,6 +141,7 @@ public class MGIGOneController : BasicController
 
 	void OnGameOver(bool win)
 	{
+		gameManager.WinIslandMode = win;
 		OnClickDefault(UIState.MGGO_MENU);
 	}
 

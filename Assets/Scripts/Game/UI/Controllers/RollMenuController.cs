@@ -6,7 +6,7 @@ public class RollMenuController : BasicController
 {
 	private RollMenuView view;
 
-	private int loopCount = 30;
+	[SerializeField] private int loopCount = 30;
 	private bool startRolling = false;
 	void Awake()
 	{
@@ -55,6 +55,8 @@ public class RollMenuController : BasicController
 
 		if (!startRolling)
 			StartCoroutine(RollAnimationEnum());
+
+		Audio.PlaySFXClick2();
     }
 
 	IEnumerator RollAnimationEnum()
@@ -67,6 +69,8 @@ public class RollMenuController : BasicController
 
 		for (int i = 0; i < loopCount; i++)
         {
+			Audio.PlaySFXRoll();
+
 			float time = i / (float)loopCount;
 			float easeTime = Utils.InBounce(time);
 
@@ -79,6 +83,8 @@ public class RollMenuController : BasicController
 
 		view.StopLoading();
 		gameManager.sceneController.MoveCounter = randIDX + 1;
+
+		Audio.PlaySFXRollResult();
 
 		yield return new WaitForSeconds(2f);
 		startRolling = false;

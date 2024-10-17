@@ -22,7 +22,10 @@ public class MGPlayerTrigger : MonoBehaviour
             if (gameObject.tag.Equals("Obstacle"))
                 GameEvents.OnLifeRemove?.Invoke(1, drop.IsLastDrop);
             else
+            {
+                Audio.PlaySFXMGDrop();
                 GameEvents.OnDropCollected?.Invoke(1, drop.IsLastDrop);
+            } 
         }  
     }
 }

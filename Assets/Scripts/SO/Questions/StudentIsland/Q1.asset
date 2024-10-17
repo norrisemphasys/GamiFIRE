@@ -12,26 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q1
   m_EditorClassIdentifier: 
-  questionTitle: 'Dilemma: Completing a challenging project'
+  questionTitle: Completing a challenging project
+  question: You are assigned a challenging project that will significantly impact
+    your overall grade, requiring a deep understanding of the subject, extensive
+    research, and the application of various skills.
   answerData:
-  - answer: You work extra hours to finish the project on time.
+  - answer: I work extra hours to finish the project on time.
     growthPoint: 3
+    satisfactionPoint: -2
     innovationPoint: 0
-    satisfactionPoint: -1
     moneyCurrencyPoints: 0
-  - answer: You ask for an extension to ensure high quality.
+  - answer: I ask for an extension to ensure high quality.
     growthPoint: 1
-    innovationPoint: 0
-    satisfactionPoint: 2
-    moneyCurrencyPoints: 0
-  - answer: You collaborate with peers to share the workload.
+    satisfactionPoint: 3
+    innovationPoint: -1
+    moneyCurrencyPoints: -1
+  - answer: I collaborate with peers to share the workload.
     growthPoint: 0
-    innovationPoint: 2
     satisfactionPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: You use online resources to improve your skills and finish the project
-      efficiently.
-    growthPoint: 1
     innovationPoint: 2
-    satisfactionPoint: 0
+    moneyCurrencyPoints: 0
+  - answer: I use online resources to improve my skills.
+    growthPoint: 1
+    satisfactionPoint: -2
+    innovationPoint: 3
     moneyCurrencyPoints: 0

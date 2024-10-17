@@ -6,6 +6,7 @@ using UnityEngine;
 public class QuestionSO : ScriptableObject
 {
     public string questionTitle;
+    public string question;
     public AnswerData[] answerData;
 }
 
@@ -16,7 +17,7 @@ public class AnswerData
     public string answer;
 
     public int growthPoint;
-    public int innovationPoint;
     public int satisfactionPoint;
+    public int innovationPoint;
     public int moneyCurrencyPoints;
 }

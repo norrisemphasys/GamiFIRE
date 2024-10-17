@@ -82,6 +82,9 @@ public class PopupManager : MonoSingleton<PopupManager>
                 }
             });
         }
+
+        if (show)
+            Audio.PlaySFXPopup();
     }
 
     public void ShowPopup(PopupData data)

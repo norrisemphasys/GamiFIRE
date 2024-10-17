@@ -76,6 +76,8 @@ public class MGOne : MiniGame
         }
         else
         {
+            Audio.PlaySFXMGJump();
+
             platformController.UpdatePlatformPositions();
             platformController.SpawnPlatform(true);
         }

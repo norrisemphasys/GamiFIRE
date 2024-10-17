@@ -27,6 +27,12 @@ public class UIController : MonoBehaviour
         }
     }
 
+    public void ManualLoad()
+    {
+        ShowCanvas(true);
+        Show(initialUIState);
+    }
+
     public void ShowCanvas(bool show)
     {
         mainCanvas.gameObject.SetActive(show);

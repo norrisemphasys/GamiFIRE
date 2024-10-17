@@ -32,6 +32,9 @@ public class TutorialITController : BasicController
 
 	public override void Initialize()
 	{
+		Audio.PlayBGMIslandTrip();
+		Audio.PlaySFXStream();
+
 		UpdateTutorial();
 	}
 
