@@ -15,9 +15,12 @@ public class MGIGTwoController : BasicController
 	private int _coinsCollected = 0;
 	private int _lifeRemoved = 0;
 	private int _fastSpeed = 1;
+	private float _scaleSpeed = 1;
 	private int _eggCount = 3;
 	private int _eggCounter = 0;
 	private float _delaySpawn = 1f;
+
+	private float _scaleCounter = 0f;
 
 	void Awake()
 	{
@@ -69,6 +72,8 @@ public class MGIGTwoController : BasicController
 		_eggCount = 3;
 		_eggCounter = 3;
 		_delaySpawn = 1f;
+		_scaleSpeed = 1;
+		_scaleCounter = 0f;
 	}
 
 	public void ShowNextMenu()
@@ -93,8 +98,11 @@ public class MGIGTwoController : BasicController
 	void UpdateFastSpeed()
     {
 		_fastSpeed++;
+		_scaleCounter += 0.1f;
+		_scaleSpeed = 1 + _scaleCounter;
+
 		_eggCounter = _eggCount * _fastSpeed;
-		_delaySpawn = 1f / _fastSpeed;
+		_delaySpawn = 1f - _scaleCounter;
 
 		if (_fastSpeed <= 5 && !_fastReady)
 			_fastReady = true;
@@ -111,7 +119,7 @@ public class MGIGTwoController : BasicController
 			view.ShowFastPanel(false, 2, () =>
 			{
 				gameManager.miniGameController.GetMiniGame<MGTwo>(MiniGameType.MG_TWO)
-					.DropEgg(_eggCounter, _delaySpawn, _fastSpeed, UpdateFastSpeed);
+					.DropEgg(_eggCounter, _delaySpawn, _scaleSpeed, UpdateFastSpeed);
 			});
 		});
 	}
@@ -128,7 +136,12 @@ public class MGIGTwoController : BasicController
 		view.SetPoints(_coinsCollected);
 
 		if (last)
-			ShowFastPanel();
+        {
+			if(_fastSpeed >= 8)
+				OnGameOver(true);
+			else
+				ShowFastPanel();
+		}	
 	}
 
 	void OnLifeRemoved(int life, bool last) 

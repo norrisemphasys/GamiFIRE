@@ -7,7 +7,6 @@ public class MGTwo : MiniGame
 {
     [SerializeField] MGPlayer player;
     [SerializeField] MGDropController controller;
-
     public override void OnEnter()
     {
         main.SetActive(true);

@@ -11,7 +11,7 @@ public class CellController : MonoBehaviour
     [SerializeField] GameObject cellPrefab;
     [SerializeField] Transform cellParent;
 
-    [SerializeField] int maxCellCount;
+    public int maxCellCount;
     [SerializeField] float distance;
     [SerializeField] float startYPosition;
 

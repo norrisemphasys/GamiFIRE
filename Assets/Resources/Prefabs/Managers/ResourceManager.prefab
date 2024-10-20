@@ -116,5 +116,12 @@ MonoBehaviour:
     shouldExpand: 0
     objectParent: {fileID: 0}
     objectList: []
+  - name: PowerUp
+    count: 30
+    dataObject: {fileID: 877852865217014848, guid: b9634adc91f63434c8749371f4e49af2,
+      type: 3}
+    shouldExpand: 0
+    objectParent: {fileID: 0}
+    objectList: []
   uiDataPool: []
   effectDataPool: []

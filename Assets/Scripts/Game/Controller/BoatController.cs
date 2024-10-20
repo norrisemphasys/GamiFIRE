@@ -62,7 +62,7 @@ public class BoatController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             _direction = -1f;
 
@@ -76,7 +76,7 @@ public class BoatController : MonoBehaviour
             Audio.PlaySFXMove();
         }
 
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             _direction = 1f;
 

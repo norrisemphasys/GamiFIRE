@@ -83,6 +83,7 @@ public class RollMenuController : BasicController
 
 		view.StopLoading();
 		gameManager.sceneController.MoveCounter = randIDX + 1;
+		gameManager.sceneController.TotalMoves += gameManager.sceneController.MoveCounter;
 
 		Audio.PlaySFXRollResult();
 

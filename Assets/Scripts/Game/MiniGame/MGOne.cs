@@ -6,6 +6,7 @@ public class MGOne : MiniGame
 {
     [SerializeField] MGPlayer player;
     [SerializeField] MGPlatformController platformController;
+   
 
     private int _initialMoveCounter = 0;
     private int _moveCounter = 0;

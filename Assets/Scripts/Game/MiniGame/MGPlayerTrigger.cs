@@ -23,7 +23,7 @@ public class MGPlayerTrigger : MonoBehaviour
                 GameEvents.OnLifeRemove?.Invoke(1, drop.IsLastDrop);
             else
             {
-                Audio.PlaySFXMGDrop();
+                Audio.PlaySFXMGCollect();
                 GameEvents.OnDropCollected?.Invoke(1, drop.IsLastDrop);
             } 
         }  

@@ -80,7 +80,7 @@ public static class Audio
 
     public static void PlaySFXBoatHit()
     {
-        MundoSound.Play(AddressableManager.GetClip("SFXBoatHit"), sfxVolume);
+        MundoSound.Play(AddressableManager.GetClip("SFXHit2"), sfxVolume);
     }
 
     public static void PlaySFXCoin()
@@ -166,6 +166,16 @@ public static class Audio
     public static void PlaySFXMGDrop()
     {
         MundoSound.Play(AddressableManager.GetClip("SFXMGDrop"), sfxVolume);
+    }
+
+    public static void PlaySFXFinishCollectCoin()
+    {
+        MundoSound.Play(AddressableManager.GetClip("SFXCollectCoin"), sfxVolume);
+    }
+
+    public static void PlaySFXResult()
+    {
+        MundoSound.Play(AddressableManager.GetClip("SFXResult"), sfxVolume);
     }
 
     public static void StopBGMIslandTrip()

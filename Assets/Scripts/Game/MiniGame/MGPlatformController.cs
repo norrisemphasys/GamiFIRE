@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MGPlatformController : MonoBehaviour
 {
+    [SerializeField] MGPowerUpController powerUpController;
+
     public List<MGPlatform> platformList = new List<MGPlatform>();
     public float forwardDistance;
     public float sideDistance;
@@ -31,8 +33,11 @@ public class MGPlatformController : MonoBehaviour
         currentPlatformCount = 0;
         platformList.Clear();
 
-        for(int i = 0; i < initialCount; i++)
+        powerUpController.Init();
+
+        for (int i = 0; i < initialCount; i++)
             SpawnPlatform();
+
     }
 
     public void ResetPlatforms()
@@ -40,12 +45,18 @@ public class MGPlatformController : MonoBehaviour
         poolManager.ResetAllObjectList("RedPlatform");
         poolManager.ResetAllObjectList("YellowPlatform");
         poolManager.ResetAllObjectList("GreenPlatform");
+
+        powerUpController.ResetPowerUp();
     }
 
-    public GameObject SpawnPlatform(bool usePositionLastIndex = false)
+    int prevPlatformIDX = 0;
+    public void SpawnPlatform(bool usePositionLastIndex = false)
     {
         int rand = Random.Range(0, 3);
         GameObject platform = null;
+
+        if (prevPlatformIDX == rand)
+            rand = ChangePlatformIndex(rand);
 
         if(rand == 0)
             platform = poolManager.GetObject("RedPlatform");
@@ -71,14 +82,29 @@ public class MGPlatformController : MonoBehaviour
                     -forwardDistance * currentPlatformCount;
                 mgPlatform.SetPosition(new Vector3(sideDistance * sidePosition, forwardPosition, 0));
                 platformList.Add(mgPlatform);
+
+                // Add power up
+
+                int pRand = Random.Range(0, 2);
+                if(pRand == 0 && currentPlatformCount > 0)
+                    powerUpController.SpawnPowerUp(Vector3.up * 1.5f, (PickUpType)Random.Range(0, 4), false, 0, platform.transform);
             }
                 
             currentPlatformCount++;
         }
 
-        return null;
+        prevPlatformIDX = rand;
     }
 
+    int ChangePlatformIndex(int idx)
+    {
+        if (idx == 0)
+            return 1;
+        else if (idx == 1)
+            return 2;
+        else
+            return 0;
+    }
     public void UpdatePlatformPositions()
     {
         for(int i = 0; i < platformList.Count; i++)

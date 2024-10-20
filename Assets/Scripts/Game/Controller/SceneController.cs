@@ -16,6 +16,8 @@ public class SceneController : MonoBehaviour
     private bool _startGame = false;
     public bool StartGame { get { return _startGame; } set { _startGame = value; } }
 
+    public int TotalMoves;
+
     private int _incrementer = 0;
     private int _questionCounter = 0;
 
@@ -41,6 +43,8 @@ public class SceneController : MonoBehaviour
 
         _questionCounter = 0;
         _incrementer = 0;
+
+        TotalMoves = 0;
 
         Time.timeScale = 1;
     }

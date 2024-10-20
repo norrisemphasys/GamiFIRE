@@ -38,11 +38,15 @@ public class IslandUIController : BasicController
 
 		sceneController = gameManager.sceneController;
 		if (gameManager.previousState == UIState.ROLL_MENU)
-            view.SetDiceResult(gameManager.sceneController.MoveCounter);
+        {
+			view.SetDiceResult(gameManager.sceneController.MoveCounter);
+			view.SetPulse(false);
+		}
         else
         {
 			sceneController.cameraController.SetCamera(CameraType.ISO);
 			view.SetDiceResult(gameManager.sceneController.MoveCounter);
+			view.SetPulse(true);
 		}
             
 		if(gameManager.sceneController.StartGame)
@@ -53,7 +57,10 @@ public class IslandUIController : BasicController
 				gameManager.sceneController.StartGame = false;
 				sceneController.cameraController.SetCamera(CameraType.ISO);
 
-				ShowCellType();
+				if(sceneController.TotalMoves >= sceneController.cellController.maxCellCount)
+					OnClickDefault(UIState.RESULT_MENU);
+                else
+					ShowCellType();
 			});
         }
 

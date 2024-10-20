@@ -12,6 +12,8 @@ public class InGameITView : BasicView
 
     public Button btnPause;
 
+    [SerializeField] GameObject particleEffect;
+
     [SerializeField] TextMeshProUGUI textTimer;
     [SerializeField] TextMeshProUGUI textTotalCoin;
     [SerializeField] TextMeshProUGUI textUserName;
@@ -24,6 +26,7 @@ public class InGameITView : BasicView
     {
         textTimer.transform.DOScale(Vector3.zero, 0f);
         ShowTimer(false);
+        ShowEffect(false);
     }
 
     public void SetTimer(int time)
@@ -75,5 +78,10 @@ public class InGameITView : BasicView
     public void ShowTimer(bool show)
     {
         goTimerBG.SetActive(show);
+    }
+
+    public void ShowEffect(bool show)
+    {
+        particleEffect.SetActive(show);
     }
 }

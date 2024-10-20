@@ -176,6 +176,12 @@ public class InGameITController : BasicController
 			OnClickDefault(UIState.IT_GAMEOVER);
 		}
 
+		if (coinsCollected == maxCoin)
+        {
+			Audio.PlaySFXFinishCollectCoin();
+			view.ShowEffect(true);
+        }
+
 		view.SetCoin(coinsCollected, maxCoin);
     }
 

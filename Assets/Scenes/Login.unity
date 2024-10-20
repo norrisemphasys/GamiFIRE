@@ -16685,7 +16685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 12
   nextState: 0
-  loadSceneIndex: 3
+  loadSceneIndex: 1
 --- !u!1 &1729393128
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,6 +20,9 @@ public class IslandUIView : BasicView
 
     [SerializeField] GameObject[] diceResultView;
 
+    [SerializeField] AnimationPulse pulse;
+    [SerializeField] GameObject textPressToRoll;
+
     public void Init()
     {
 
@@ -43,5 +46,13 @@ public class IslandUIView : BasicView
         textGrowthPoint.text = user.GrowthPoint != 0 ? string.Format("{0:#,#}", user.GrowthPoint) : "0";
         textInnovationPoint.text = user.InnovationPoint != 0 ? string.Format("{0:#,#}", user.InnovationPoint) : "0";
         textSatisfactionPoint.text = user.SatisfactionPoint != 0 ? string.Format("{0:#,#}", user.SatisfactionPoint) : "0";
+    }
+
+    public void SetPulse(bool start)
+    {
+        pulse.StartPulse(start);
+        textPressToRoll.SetActive(start);
+
+        buttonRoll.interactable = start;
     }
 }

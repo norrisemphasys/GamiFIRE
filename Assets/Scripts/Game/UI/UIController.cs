@@ -85,6 +85,7 @@ public class UIController : MonoBehaviour
                 case UIState.SPIN_MENU: GetContoller<SpinMenuController>(state).OnEnter(); break;
                 case UIState.ISLAND_MENU: GetContoller<IslandUIController>(state).OnEnter(); break;
                 case UIState.SQ_MENU: GetContoller<SQUIController>(state).OnEnter(); break;
+                case UIState.RESULT_MENU: GetContoller<ResultController>(state).OnEnter(); break;
 
                 // MINI GAME
                 case UIState.MGIGONE_MENU: GetContoller<MGIGOneController>(state).OnEnter(); break;
@@ -122,6 +123,7 @@ public class UIController : MonoBehaviour
                 case UIState.SPIN_MENU: GetContoller<SpinMenuController>(state).OnExit(); break;
                 case UIState.ISLAND_MENU: GetContoller<IslandUIController>(state).OnExit(); break;
                 case UIState.SQ_MENU: GetContoller<SQUIController>(state).OnExit(); break;
+                case UIState.RESULT_MENU: GetContoller<ResultController>(state).OnExit(); break;
 
                 // MINI GAME
                 case UIState.MGIGONE_MENU: GetContoller<MGIGOneController>(state).OnExit(); break;
@@ -174,6 +176,8 @@ public enum UIState
 
     MGIGTWO_MENU,
     MGIGTHREE_MENU,
+
+    RESULT_MENU,
 
     NONE
 }
