@@ -32,7 +32,7 @@ public static class MundoSound {
 	/// <param name="delay">Delay.</param>
 	public static AudioSource Play(AudioClip clip, float volume, Vector3 offsetPosition, bool loop, float delay, Transform container){
 
-		Debug.LogError("clip name " + clip.name);
+		//Debug.LogError("clip name " + clip.name);
 		//Searches for an audio container
 		if(audioPoolContainer == null){
 			audioPoolContainer = Ins ("MundoSound_Audio_Pool").transform;

@@ -92,6 +92,7 @@ public class UIController : MonoBehaviour
                 case UIState.MGIGTWO_MENU: GetContoller<MGIGTwoController>(state).OnEnter(); break;
                 case UIState.MGMM_MENU: GetContoller<MGMMController>(state).OnEnter(); break;
                 case UIState.MGGO_MENU: GetContoller<MGGOController>(state).OnEnter(); break;
+                case UIState.MGT_MENU: GetContoller<MGTController>(state).OnEnter(); break;
 
                 // MAIN
                 case UIState.LOGIN: GetContoller<LoginController>(state).OnEnter(); break;
@@ -130,6 +131,7 @@ public class UIController : MonoBehaviour
                 case UIState.MGIGTWO_MENU: GetContoller<MGIGTwoController>(state).OnExit(); break;
                 case UIState.MGMM_MENU: GetContoller<MGMMController>(state).OnExit(); break;
                 case UIState.MGGO_MENU: GetContoller<MGGOController>(state).OnExit(); break;
+                case UIState.MGT_MENU: GetContoller<MGTController>(state).OnExit(); break;
 
                 // MAIN
                 case UIState.LOGIN: GetContoller<LoginController>(state).OnExit(); break;
@@ -178,6 +180,8 @@ public enum UIState
     MGIGTHREE_MENU,
 
     RESULT_MENU,
+
+    MGT_MENU,
 
     NONE
 }

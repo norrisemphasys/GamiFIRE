@@ -11,11 +11,20 @@ public class PickUpStat : MonoBehaviour
     private Rigidbody2D r2D;
 
     public bool IsLast = false;
+
+    MGPlusOneController plusOneController;
+
     private void Awake()
     {
         if (r2D == null)
             r2D = GetComponent<Rigidbody2D>();
     }
+
+    public void SetEffectController(MGPlusOneController controller)
+    {
+        plusOneController = controller;
+    }
+
     public void Setup(PickUpType type, bool useRigidBody, float gravityScale = 1)
     {
         this.useRigidBody = useRigidBody;
@@ -47,18 +56,20 @@ public class PickUpStat : MonoBehaviour
     }
 
     public void SetIfLast(bool last) { IsLast = last; }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         bool isCup = collision.tag.Equals("Cup");
         bool isObstacle = collision.tag.Equals("Obstacle");
+        bool isPlayer = collision.tag.Equals("Player");
 
-        if(!isObstacle)
+        if (!isObstacle)
             Audio.PlaySFXMGCollect();
 
-        if(isCup || isObstacle)
+        if(isCup || isObstacle || isPlayer)
             gameObject.SetActive(false);
 
-        if (collision.tag.Equals("Player") || isCup)
+        if (isPlayer || isCup)
             AddScoreToUser();
 
         if(isCup)
@@ -85,12 +96,20 @@ public class PickUpStat : MonoBehaviour
                 ScoreManager.instance.AddCoin(1);
                 break;
         }
+
+        ShowPlusOneEffect();
+    }
+
+    void ShowPlusOneEffect()
+    {
+        if (plusOneController != null)
+            plusOneController.PickUp(type, transform.position);
     }
 }
 
 public enum PickUpType
 {
-    GROWTH,
+    GROWTH = 0,
     INNOVATION,
     SATISFACTION,
     COIN

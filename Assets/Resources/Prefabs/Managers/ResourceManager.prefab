@@ -123,5 +123,12 @@ MonoBehaviour:
     shouldExpand: 0
     objectParent: {fileID: 0}
     objectList: []
+  - name: PlusOne
+    count: 30
+    dataObject: {fileID: 8532444039927267409, guid: c4c70472e19914640bb57f257166921e,
+      type: 3}
+    shouldExpand: 0
+    objectParent: {fileID: 0}
+    objectList: []
   uiDataPool: []
   effectDataPool: []

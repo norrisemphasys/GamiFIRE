@@ -57,20 +57,23 @@ public class MGMMController : BasicController
 
 	void OnClickPlay()
     {
-        switch (gameManager.miniGameController.CurrentType)
-        {
-			case MiniGameType.MG_ONE:
-				OnClickDefault(gameManager.miniGameController.uiController, UIState.MGIGONE_MENU);
-				break;
-			case MiniGameType.MG_TWO:
-				OnClickDefault(gameManager.miniGameController.uiController, UIState.MGIGTWO_MENU);
-				break;
-			case MiniGameType.MG_THREE:
-				OnClickDefault(gameManager.miniGameController.uiController, UIState.MGIGTHREE_MENU);
-				break;
-		}
+		OnClickDefault(gameManager.miniGameController.uiController, UIState.MGT_MENU);
+
+		/* switch (gameManager.miniGameController.CurrentType)
+		 {
+			 case MiniGameType.MG_ONE:
+				 OnClickDefault(gameManager.miniGameController.uiController, UIState.MGIGONE_MENU);
+				 break;
+			 case MiniGameType.MG_TWO:
+				 OnClickDefault(gameManager.miniGameController.uiController, UIState.MGIGTWO_MENU);
+				 break;
+			 case MiniGameType.MG_THREE:
+				 OnClickDefault(gameManager.miniGameController.uiController, UIState.MGIGTHREE_MENU);
+				 break;
+		 }*/
 		Debug.LogError("On Click play");
     }
+
 	private void OnDestroy()
 	{
 		RemoveListener();

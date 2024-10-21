@@ -139,9 +139,10 @@ MonoBehaviour:
   type: 0
   powerups:
   - {fileID: 877852865034156079}
-  - {fileID: 877852865290202283}
   - {fileID: 877852865770678896}
+  - {fileID: 877852865290202283}
   - {fileID: 877852865823920662}
+  IsLast: 0
 --- !u!50 &877852865217014851
 Rigidbody2D:
   serializedVersion: 4
