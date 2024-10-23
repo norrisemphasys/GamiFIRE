@@ -90,6 +90,7 @@ public class MGTController : BasicController
 				OnClickDefault(gameManager.miniGameController.uiController, UIState.MGIGONE_MENU);
 				break;
 			case MiniGameType.MG_TWO:
+				Cursor.visible = false;
 				OnClickDefault(gameManager.miniGameController.uiController, UIState.MGIGTWO_MENU);
 				break;
 			case MiniGameType.MG_THREE:

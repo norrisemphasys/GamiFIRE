@@ -8,6 +8,8 @@ public class CellController : MonoBehaviour
     public List<Cell> cellList = new List<Cell>();
     public List<CellTypeOccurence> probabilityCellTypeOccurence = new List<CellTypeOccurence>();
 
+    public int CurrentCellIndex { get { return currentCellIndex; } }
+
     [SerializeField] GameObject cellPrefab;
     [SerializeField] Transform cellParent;
 

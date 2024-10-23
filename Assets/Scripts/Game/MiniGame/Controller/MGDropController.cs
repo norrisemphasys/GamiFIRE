@@ -14,11 +14,6 @@ public class MGDropController : MonoBehaviour
     PoolManager poolManager;
     Coroutine coroutine;
 
-    private void Start()
-    {
-        Init();
-    }
-
     private void Update()
     {
 #if UNITY_EDITOR
@@ -30,6 +25,10 @@ public class MGDropController : MonoBehaviour
     public void Init()
     {
         poolManager = PoolManager.instance;
+
+        if (coroutine != null)
+            StopCoroutine(coroutine);
+
         coroutine = null;
 
         powerUpController.Init();
@@ -65,6 +64,12 @@ public class MGDropController : MonoBehaviour
         if (coroutine == null)
             coroutine = StartCoroutine(DeployEggEnum(count, delay, scale, callback));
         else
+            StopCoroutine(coroutine);
+    }
+
+    public void StopDrop()
+    {
+        if (coroutine != null)
             StopCoroutine(coroutine);
     }
 

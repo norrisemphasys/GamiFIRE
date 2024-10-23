@@ -23,6 +23,10 @@ public class IslandUIView : BasicView
     [SerializeField] AnimationPulse pulse;
     [SerializeField] GameObject textPressToRoll;
 
+    ScoreManager.TempScore tempScore;
+
+    bool testScore = false;
+
     public void Init()
     {
 
@@ -37,15 +41,90 @@ public class IslandUIView : BasicView
 
     public void UpdateUserPoints(User user)
     {
+        testScore = false;
+
         JobType job = (JobType)user.JobType;
 
         textUserName.text = user.Username;
         textJobType.text = job.ToString();
 
-        textCoin.text = user.CurrencyPoint != 0 ? string.Format("{0:#,#}", user.CurrencyPoint) : "0";
-        textGrowthPoint.text = user.GrowthPoint != 0 ? string.Format("{0:#,#}", user.GrowthPoint) : "0";
-        textInnovationPoint.text = user.InnovationPoint != 0 ? string.Format("{0:#,#}", user.InnovationPoint) : "0";
-        textSatisfactionPoint.text = user.SatisfactionPoint != 0 ? string.Format("{0:#,#}", user.SatisfactionPoint) : "0";
+        tempScore = ScoreManager.instance.tempScore;
+
+        //textCoin.text = user.CurrencyPoint != 0 ? string.Format("{0:#,#}", user.CurrencyPoint) : "0";
+        //textGrowthPoint.text = user.GrowthPoint != 0 ? string.Format("{0:#,#}", user.GrowthPoint) : "0";
+        //textInnovationPoint.text = user.InnovationPoint != 0 ? string.Format("{0:#,#}", user.InnovationPoint) : "0";
+        //textSatisfactionPoint.text = user.SatisfactionPoint != 0 ? string.Format("{0:#,#}", user.SatisfactionPoint) : "0"
+
+        DOTween.KillAll();
+
+        UpdateGrowhtPoints(user.GrowthPoint);
+        UpdateInnovationPoints(user.InnovationPoint);
+        UpdateSatisfactionPoint(user.SatisfactionPoint);
+        UpdateCoinPoints(user.CurrencyPoint);
+    }
+    
+    public void UpdateTestScore()
+    {
+        testScore = true;
+
+        //DOTween.KillAll();
+
+        UpdateGrowhtPoints(Random.Range(0, 20));
+        UpdateInnovationPoints(Random.Range(0, 20));
+        UpdateSatisfactionPoint(Random.Range(0, 20));
+        UpdateCoinPoints(Random.Range(0, 20));
+    }
+
+    void UpdateGrowhtPoints(int endValue)
+    {
+        int origValue = endValue - (testScore ? Random.Range(0, 10) : tempScore.growthPoint);
+
+        if (origValue == endValue)
+            return;
+
+        DOTween.To(() => origValue, x => origValue = x, endValue, 1)
+            .OnUpdate(() => {
+                textGrowthPoint.text = origValue != 0 ? string.Format("{0:#,#}", origValue) : "0";
+            });
+    }
+
+    void UpdateInnovationPoints(int endValue)
+    {
+        int origValue = endValue - (testScore ? Random.Range(0, 10) : tempScore.innovationPoint);
+
+        if (origValue == endValue)
+            return;
+
+        DOTween.To(() => origValue, x => origValue = x, endValue, 1)
+            .OnUpdate(() => {
+                textInnovationPoint.text = origValue != 0 ? string.Format("{0:#,#}", origValue) : "0";
+            });
+    }
+
+    void UpdateSatisfactionPoint(int endValue)
+    {
+        int origValue = endValue - (testScore ? Random.Range(0, 10) : tempScore.satsifactionPoint);
+
+        if (origValue == endValue)
+            return;
+
+        DOTween.To(() => origValue, x => origValue = x, endValue, 1)
+            .OnUpdate(() => {
+                textSatisfactionPoint.text = origValue != 0 ? string.Format("{0:#,#}", origValue) : "0";
+            });
+    }
+
+    void UpdateCoinPoints(int endValue)
+    {
+        int origValue = endValue - (testScore ? Random.Range(0, 10) : tempScore.coin);
+
+        if (origValue == endValue)
+            return;
+
+        DOTween.To(() => origValue, x => origValue = x, endValue, 1)
+            .OnUpdate(() => {
+                textCoin.text = origValue != 0 ? string.Format("{0:#,#}", origValue) : "0";
+            });
     }
 
     public void SetPulse(bool start)

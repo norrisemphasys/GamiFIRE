@@ -9,6 +9,7 @@ public class SceneController : MonoBehaviour
     public CellController cellController { get { return FindObjectOfType<CellController>(); } }
     public CameraController cameraController { get { return FindObjectOfType<CameraController>(); } }
     public MiniGameController minigameController { get { return FindObjectOfType<MiniGameController>(); } }
+    public EnvironmentController environmentController { get { return FindObjectOfType<EnvironmentController>(); } }
 
     public int MoveCounter { get { return _moveCounter; } set { _moveCounter = value; } }
     private int _moveCounter = 1;
@@ -35,6 +36,7 @@ public class SceneController : MonoBehaviour
         questionController.Init();
         cellController.Init();
         minigameController.Init();
+        environmentController.Init();
 
         ScoreManager.instance.SetBonus(0, PrizeType.NONE);
 

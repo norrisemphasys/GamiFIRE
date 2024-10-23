@@ -51,16 +51,20 @@ public class MGIGTwoController : BasicController
 
 		view.Hide(ShowNextMenu);
 		_startState = false;
+
+		gameManager.miniGameController.mgDropController.StopDrop();
 	}
 
 	public override void Initialize()
 	{
 		Audio.PlayBGMMGTwo();
+		ScoreManager.instance.ResetTempScore();
 
 		uiController = gameManager.miniGameController.uiController;
-		ShowFastPanel();
 
 		view.SetPoints(0);
+		view.LifeRemoved(-1);
+		
 
 		_startState = true;
 		_startTimer = true;
@@ -74,6 +78,9 @@ public class MGIGTwoController : BasicController
 		_delaySpawn = 1f;
 		_scaleSpeed = 1;
 		_scaleCounter = 0f;
+
+		view.SetTextFast(_fastSpeed);
+		ShowFastPanel();
 	}
 
 	public void ShowNextMenu()
@@ -134,6 +141,8 @@ public class MGIGTwoController : BasicController
     {
 		_coinsCollected += coin;
 		view.SetPoints(_coinsCollected);
+
+		ScoreManager.instance.AddScore(1);
 
 		if (last)
         {

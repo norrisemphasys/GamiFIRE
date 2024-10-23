@@ -11,6 +11,26 @@ public class ScoreManager : MonoSingleton<ScoreManager>
 
     private bool _hasUser => userManager.currentUser != null;
 
+    public struct TempScore
+    {
+        public int growthPoint;
+        public int innovationPoint;
+        public int satsifactionPoint;
+        public int coin;
+        public int score;
+    }
+
+    public TempScore tempScore;
+
+    public void ResetTempScore()
+    {
+        tempScore.growthPoint = 0;
+        tempScore.innovationPoint = 0;
+        tempScore.satsifactionPoint = 0;
+        tempScore.coin = 0;
+        tempScore.score = 0;
+    }
+
     public override void Init()
     {
         base.Init();
@@ -26,7 +46,10 @@ public class ScoreManager : MonoSingleton<ScoreManager>
 
     public void AddScore(int score)
     {
-        userManager.currentUser.Score += score;
+        if (_hasUser)
+             userManager.currentUser.Score += score;
+        
+        tempScore.score += score;
     }
 
     public void AddGrowthPoint(int point)
@@ -38,6 +61,8 @@ public class ScoreManager : MonoSingleton<ScoreManager>
             if (userManager.currentUser.GrowthPoint < 0)
                 userManager.currentUser.GrowthPoint = 0;
         }
+
+        tempScore.growthPoint += point;
     }
 
     public void AddInnovationPoint(int point)
@@ -49,6 +74,8 @@ public class ScoreManager : MonoSingleton<ScoreManager>
             if (userManager.currentUser.InnovationPoint < 0)
                 userManager.currentUser.InnovationPoint = 0;
         }
+
+        tempScore.innovationPoint += point;
     }
 
     public void AddCurrencyPoint(int point)
@@ -60,6 +87,8 @@ public class ScoreManager : MonoSingleton<ScoreManager>
             if (userManager.currentUser.CurrencyPoint < 0)
                 userManager.currentUser.CurrencyPoint = 0;
         }
+
+        tempScore.coin += point;
     }
 
     public void AddSatisfactionPoint(int point)
@@ -71,6 +100,8 @@ public class ScoreManager : MonoSingleton<ScoreManager>
             if (userManager.currentUser.SatisfactionPoint < 0)
                 userManager.currentUser.SatisfactionPoint = 0;
         }
+
+        tempScore.satsifactionPoint += point;
     }
 
     public void SetBonus(float percentage, PrizeType type)

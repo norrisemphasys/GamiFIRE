@@ -6,6 +6,7 @@ public class MiniGameController : MonoBehaviour
 {
     public UIController uiController;
     public MGIGOneController mgigOneController { get { return FindObjectOfType<MGIGOneController>(); } }
+    public MGDropController mgDropController { get { return FindObjectOfType<MGDropController>(); } }
 
     public Dictionary<MiniGameType, MiniGame> miniGameBank = new Dictionary<MiniGameType, MiniGame>();
 

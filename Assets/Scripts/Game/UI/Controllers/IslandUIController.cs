@@ -7,6 +7,7 @@ public class IslandUIController : BasicController
 	private IslandUIView view;
 	private SceneController sceneController;
 
+	[SerializeField] bool testScore = false;
 	void Awake()
 	{
 		view = GetComponent<IslandUIView>();
@@ -27,6 +28,8 @@ public class IslandUIController : BasicController
 	{
 		RemoveListener();
 		view.Hide(ShowNextMenu);
+
+		ScoreManager.instance.ResetTempScore();
 	}
 
 	public override void Initialize()
@@ -47,6 +50,8 @@ public class IslandUIController : BasicController
 			sceneController.cameraController.SetCamera(CameraType.ISO);
 			view.SetDiceResult(gameManager.sceneController.MoveCounter);
 			view.SetPulse(true);
+
+			gameManager.sceneController.environmentController.UpdateEnvironment();
 		}
             
 		if(gameManager.sceneController.StartGame)
@@ -56,7 +61,7 @@ public class IslandUIController : BasicController
 			{
 				gameManager.sceneController.StartGame = false;
 				sceneController.cameraController.SetCamera(CameraType.ISO);
-
+				Debug.LogError("Total Moves " + sceneController.TotalMoves);
 				if(sceneController.TotalMoves >= sceneController.cellController.maxCellCount)
 					OnClickDefault(UIState.RESULT_MENU);
                 else
@@ -64,9 +69,16 @@ public class IslandUIController : BasicController
 			});
         }
 
-		User currentUser = UserManager.instance.currentUser;
-		if (currentUser != null)
-			view.UpdateUserPoints(currentUser);
+		if(testScore)
+        {
+			view.UpdateTestScore();
+		}
+        else
+        {
+			User currentUser = UserManager.instance.currentUser;
+			if (currentUser != null)
+				view.UpdateUserPoints(currentUser);
+		}
 
 		UserManager.instance.SaveUser(()=>
 		{

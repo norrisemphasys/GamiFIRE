@@ -52,13 +52,14 @@ public class MGIGOneController : BasicController
 	public override void Initialize()
 	{
 		Audio.PlayBGMMGOne();
+		ScoreManager.instance.ResetTempScore();
 
 		uiController = gameManager.miniGameController.uiController;
 		_startState = true;
 		_startTimer = true;
 		_isPlayerFinishedMoving = false;
 		_timer = 0;
-		_maxTime = 15f;
+		_maxTime = 20f;
 	}
 
 	public void ShowNextMenu()
@@ -99,9 +100,11 @@ public class MGIGOneController : BasicController
 		if(_startTimer)
         {
 			_timer += Time.deltaTime;
-			view.SetTimer(_timer);
+			float reverseTimer = _maxTime - _timer;
 
-			if (_timer >= _maxTime)
+			view.SetTimer(reverseTimer);
+
+			if (reverseTimer <= 0)
             {
 				// Check score
 				GameEvents.OnGameOverMiniGame?.Invoke(false);

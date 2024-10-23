@@ -15,6 +15,8 @@ public class MGTwo : MiniGame
         gameManager.sceneController.cameraController.SetCamera(CameraType.MINI_GAME);
         gameManager.miniGameController.uiController.Show(UIState.MGMM_MENU);
 
+        controller.Init();
+
         AddListener();
     }
 
@@ -23,6 +25,7 @@ public class MGTwo : MiniGame
         RemoveListener();
 
         main.SetActive(false);
+
         controller.ResetPool();
         gameManager.miniGameController.uiController.ShowCanvas(false);
     }

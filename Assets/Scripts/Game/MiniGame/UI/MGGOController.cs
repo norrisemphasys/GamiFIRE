@@ -31,15 +31,27 @@ public class MGGOController : BasicController
 	{
 		uiController = gameManager.miniGameController.uiController;
 
-		if (gameManager.miniGameController.CurrentType == MiniGameType.MG_ONE)
+		MiniGameType type = gameManager.miniGameController.CurrentType;
+
+		if (type == MiniGameType.MG_ONE)
 			Audio.StopBGMMGOne();
-		else if (gameManager.miniGameController.CurrentType == MiniGameType.MG_TWO)
+		else if (type == MiniGameType.MG_TWO)
 			Audio.StopBGMMGTwo();
 
 		if (gameManager.WinIslandMode)
+        {
 			Audio.PlaySFXMGWin();
-		else
+			view.SetMessage(type == MiniGameType.MG_ONE ? "Great job! You've finish the game without falling into the river." : "You're an amazing catcher!");
+		}
+        else
+        {
 			Audio.PlaySFXMGLose();
+			view.SetMessage(type == MiniGameType.MG_ONE ? "Too bad you fell into the river! Better luck next time." : "You missed your chance! Try again.");
+		}
+
+		view.UpdateUserPoints(ScoreManager.instance.tempScore);
+
+		Cursor.visible = true;
 	}
 
 	public void ShowNextMenu()

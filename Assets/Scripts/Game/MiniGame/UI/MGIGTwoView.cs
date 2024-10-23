@@ -18,7 +18,6 @@ public class MGIGTwoView : BasicView
     public void Init() 
     {
         rectFast.DOScaleY(0f, 0f).SetUpdate(true);
-        LifeRemoved(-1);
     }
 
     public void ShowFastPanel(bool show, float delay = 0, UnityAction callback = null)

@@ -8,7 +8,8 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 public class AddressableManager : MonoSingleton<AddressableManager>
 {
     [SerializeField] bool useLocal = false;
-
+    [SerializeField] bool useDelay = true;
+ 
     [SerializeField] UnityEvent OnFinishedLoad;
 
     [SerializeField] private AssetLabelReference soundAssetLabel;
@@ -26,7 +27,7 @@ public class AddressableManager : MonoSingleton<AddressableManager>
                     AddClipToBank(soundList[i].name, soundList[i]);
 
                 OnFinishedLoad?.Invoke();
-            }, 1f);
+            }, useDelay ? 1f : 0f);
         }
         else
         {

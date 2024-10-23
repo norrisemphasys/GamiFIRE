@@ -63,7 +63,7 @@ public class PickUpStat : MonoBehaviour
         bool isObstacle = collision.tag.Equals("Obstacle");
         bool isPlayer = collision.tag.Equals("Player");
 
-        if (!isObstacle)
+        if (isCup)
             Audio.PlaySFXMGCollect();
 
         if(isCup || isObstacle || isPlayer)

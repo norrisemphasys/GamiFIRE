@@ -4,18 +4,6 @@ using UnityEngine;
 
 public class MGInputController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void UpdateInput()
     {
         if (Input.GetKeyDown(KeyCode.A))

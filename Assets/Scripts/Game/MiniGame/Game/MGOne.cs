@@ -81,6 +81,8 @@ public class MGOne : MiniGame
 
             platformController.UpdatePlatformPositions();
             platformController.SpawnPlatform(true);
+
+            ScoreManager.instance.AddScore(1);
         }
 
         float sidePosition = platformController.GetXPositionByType(type) * platformController.sideDistance;
