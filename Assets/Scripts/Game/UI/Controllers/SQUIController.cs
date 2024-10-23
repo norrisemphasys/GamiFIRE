@@ -58,17 +58,23 @@ public class SQUIController : BasicController
 	{
 		for(int i = 0; i < view.btnAnswers.Length; i++)
 			AddButtonListener(i, view.btnAnswers[i], OnClickAnswer);
+
+		view.buttonCollect.onClick.AddListener(OnClickContinue);
 	}
 
 	void RemoveListener()
 	{
 		for (int i = 0; i < view.btnAnswers.Length; i++)
 			view.btnAnswers[i].onClick.RemoveAllListeners();
+
+		view.buttonCollect.onClick.RemoveListener(OnClickContinue);
 	}
 
 	void OnClickAnswer(int idx)
     {
 		Debug.Log("Answer IDX " + idx);
+
+		view.ShowScorePopup(true);
 
 		QuestionSO question = gameManager.sceneController.GetCurrentQuestion();
 		AnswerData data = question.answerData[idx];
@@ -78,11 +84,12 @@ public class SQUIController : BasicController
 		scoreManager.AddInnovationPoint(data.innovationPoint);
 		scoreManager.AddSatisfactionPoint(data.satisfactionPoint);
 
-		OnClickDefault(UIState.ISLAND_MENU);
+		view.SetPoints(data.growthPoint, data.innovationPoint, data.satisfactionPoint, data.moneyCurrencyPoints);
 	}
 
 	void OnClickContinue()
 	{
+		view.ShowScorePopup(false);
 		OnClickDefault(UIState.ISLAND_MENU);
 	}
 	private void OnDestroy()
