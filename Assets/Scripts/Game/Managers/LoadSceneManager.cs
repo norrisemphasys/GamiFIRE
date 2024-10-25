@@ -38,11 +38,7 @@ public class LoadSceneManager : MonoSingleton<LoadSceneManager>
         GameManager.instance.currentScene = (SCENE_TYPE)levelBuildIndex;
         enabled = true;
 
-        if (onLoadFinished != null)
-        {
-            onLoadFinished();
-            onLoadFinished = null;
-        }
+        onLoadFinished?.Invoke();
     }
 
     public void LoadSceneLevel(int idx, LoadSceneMode mode,
@@ -63,11 +59,7 @@ public class LoadSceneManager : MonoSingleton<LoadSceneManager>
         SceneManager.SetActiveScene(SceneManager.GetSceneByPath("Assets/" + path + ".unity"));
         LightProbes.TetrahedralizeAsync();
 
-        if (onLoadFinished != null)
-        {
-            onLoadFinished();
-            onLoadFinished = null;
-        }
+        onLoadFinished?.Invoke();
 
         currentScenarioPath = path;
     }
@@ -79,12 +71,8 @@ public class LoadSceneManager : MonoSingleton<LoadSceneManager>
 
         yield return SceneManager.LoadSceneAsync(path, LoadSceneMode.Additive);
 
-       
-        if (onLoadFinished != null)
-        {
-            onLoadFinished();
-            onLoadFinished = null;
-        }
+
+        onLoadFinished?.Invoke();
 
         currentEnvironmentPath = path;
     }

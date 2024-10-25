@@ -55,8 +55,6 @@ public class IslandUIView : BasicView
         //textInnovationPoint.text = user.InnovationPoint != 0 ? string.Format("{0:#,#}", user.InnovationPoint) : "0";
         //textSatisfactionPoint.text = user.SatisfactionPoint != 0 ? string.Format("{0:#,#}", user.SatisfactionPoint) : "0"
 
-        DOTween.KillAll();
-
         UpdateGrowhtPoints(user.GrowthPoint);
         UpdateInnovationPoints(user.InnovationPoint);
         UpdateSatisfactionPoint(user.SatisfactionPoint);
@@ -66,8 +64,6 @@ public class IslandUIView : BasicView
     public void UpdateTestScore()
     {
         testScore = true;
-
-        //DOTween.KillAll();
 
         UpdateGrowhtPoints(Random.Range(0, 20));
         UpdateInnovationPoints(Random.Range(0, 20));
@@ -80,12 +76,16 @@ public class IslandUIView : BasicView
         int origValue = endValue - (testScore ? Random.Range(0, 10) : tempScore.growthPoint);
 
         if (origValue == endValue)
-            return;
-
-        DOTween.To(() => origValue, x => origValue = x, endValue, 1)
+        {
+            textGrowthPoint.text = origValue != 0 ? string.Format("{0:#,#}", origValue) : "0";
+        }
+        else
+        {
+            DOTween.To(() => origValue, x => origValue = x, endValue, 1)
             .OnUpdate(() => {
                 textGrowthPoint.text = origValue != 0 ? string.Format("{0:#,#}", origValue) : "0";
             });
+        }
     }
 
     void UpdateInnovationPoints(int endValue)
@@ -93,12 +93,16 @@ public class IslandUIView : BasicView
         int origValue = endValue - (testScore ? Random.Range(0, 10) : tempScore.innovationPoint);
 
         if (origValue == endValue)
-            return;
-
-        DOTween.To(() => origValue, x => origValue = x, endValue, 1)
-            .OnUpdate(() => {
-                textInnovationPoint.text = origValue != 0 ? string.Format("{0:#,#}", origValue) : "0";
-            });
+        {
+            textInnovationPoint.text = origValue != 0 ? string.Format("{0:#,#}", origValue) : "0";
+        }
+        else
+        {
+            DOTween.To(() => origValue, x => origValue = x, endValue, 1)
+           .OnUpdate(() => {
+               textInnovationPoint.text = origValue != 0 ? string.Format("{0:#,#}", origValue) : "0";
+           });
+        }  
     }
 
     void UpdateSatisfactionPoint(int endValue)
@@ -106,12 +110,17 @@ public class IslandUIView : BasicView
         int origValue = endValue - (testScore ? Random.Range(0, 10) : tempScore.satsifactionPoint);
 
         if (origValue == endValue)
-            return;
-
-        DOTween.To(() => origValue, x => origValue = x, endValue, 1)
+        {
+            textSatisfactionPoint.text = origValue != 0 ? string.Format("{0:#,#}", origValue) : "0";
+        }
+        else
+        {
+            DOTween.To(() => origValue, x => origValue = x, endValue, 1)
             .OnUpdate(() => {
                 textSatisfactionPoint.text = origValue != 0 ? string.Format("{0:#,#}", origValue) : "0";
             });
+        }
+
     }
 
     void UpdateCoinPoints(int endValue)
@@ -119,12 +128,16 @@ public class IslandUIView : BasicView
         int origValue = endValue - (testScore ? Random.Range(0, 10) : tempScore.coin);
 
         if (origValue == endValue)
-            return;
-
-        DOTween.To(() => origValue, x => origValue = x, endValue, 1)
+        {
+            textCoin.text = origValue != 0 ? string.Format("{0:#,#}", origValue) : "0";
+        }
+        else
+        {
+            DOTween.To(() => origValue, x => origValue = x, endValue, 1)
             .OnUpdate(() => {
                 textCoin.text = origValue != 0 ? string.Format("{0:#,#}", origValue) : "0";
             });
+        }
     }
 
     public void SetPulse(bool start)
