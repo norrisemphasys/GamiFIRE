@@ -8,6 +8,9 @@ public class IslandUIController : BasicController
 	private SceneController sceneController;
 
 	[SerializeField] bool testScore = false;
+
+	private bool showPlatformPanel = false;
+
 	void Awake()
 	{
 		view = GetComponent<IslandUIView>();
@@ -52,6 +55,17 @@ public class IslandUIController : BasicController
 			view.SetPulse(true);
 
 			gameManager.sceneController.environmentController.UpdateEnvironment();
+
+			if(gameManager.sceneController.HasPrize)
+            {
+				view.ShowBoosterInfo(true,
+					gameManager.sceneController.currentPrizeData);
+            }
+            else
+            {
+				view.ShowBoosterInfo(false,
+					gameManager.sceneController.currentPrizeData);
+			}
 		}
             
 		if(gameManager.sceneController.StartGame)
@@ -84,6 +98,12 @@ public class IslandUIController : BasicController
 		{
 			// Update User to server
 		});
+
+		if(!showPlatformPanel)
+        {
+			view.ShowPlatformPanel(true);
+			showPlatformPanel = true;
+		}
 	}
 
 	void ShowCellType()
@@ -117,13 +137,22 @@ public class IslandUIController : BasicController
 	{
 		view.buttonRoll.onClick.AddListener(OnClickRoll);
 		view.buttonPause.onClick.AddListener(OnClickPause);
+
+		view.buttonStart.onClick.AddListener(OnClickStart);
 	}
 
 	void RemoveListener()
 	{
 		view.buttonRoll.onClick.RemoveListener(OnClickRoll);
 		view.buttonPause.onClick.RemoveListener(OnClickPause);
+
+		view.buttonStart.onClick.RemoveListener(OnClickStart);
 	}
+
+	void OnClickStart()
+    {
+		view.ShowPlatformPanel(false);
+    }
 
 	void OnClickRoll()
     {

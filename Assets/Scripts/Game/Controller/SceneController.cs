@@ -11,6 +11,9 @@ public class SceneController : MonoBehaviour
     public MiniGameController minigameController { get { return FindObjectOfType<MiniGameController>(); } }
     public EnvironmentController environmentController { get { return FindObjectOfType<EnvironmentController>(); } }
 
+    public PrizeData currentPrizeData = null;
+    public bool HasPrize = false;
+
     public int MoveCounter { get { return _moveCounter; } set { _moveCounter = value; } }
     private int _moveCounter = 1;
 
@@ -42,6 +45,9 @@ public class SceneController : MonoBehaviour
 
         currentQuestionBank = questionController.GetShuffledQuestionByType(GameManager.instance.IslandType);
         totalQuestionCount = currentQuestionBank.Count;
+
+        currentPrizeData = null;
+        HasPrize = false;
 
         _questionCounter = 0;
         _incrementer = 0;

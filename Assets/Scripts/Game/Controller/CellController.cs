@@ -40,6 +40,8 @@ public class CellController : MonoBehaviour
             Cell cell = cellGO.GetComponent<Cell>();
 
             cell.SetCellType(Utils.GetPrizeByProbability(cellProbability));
+            if(i == 0)
+                cell.SetInitPlatform(true);
 
             float posIndex = (i / (float)maxCellCount) * Mathf.PI * 2f;
 
@@ -49,7 +51,7 @@ public class CellController : MonoBehaviour
             float z = Mathf.Cos(posIndex) * distance;
 
             cellGO.transform.SetParent(cellParent);
-            cellGO.transform.localPosition = new Vector3(x, i == 0 ? startYPosition : 0, z);
+            cellGO.transform.localPosition = new Vector3(x, i == 0 ? startYPosition : 0.5f, z);
 
             cellList.Add(cell);
         }

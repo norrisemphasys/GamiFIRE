@@ -151,14 +151,19 @@ public class SpinMenuController : BasicController
 
 		if (data.type == PrizeType.SCENARIO_QUESTION)
         {
+			gameManager.sceneController.HasPrize = false;
 			OnClickDefault(UIState.SQ_MENU);
 		}
 		else if(data.type == PrizeType.REPEAT_SPIN)
         {
+			gameManager.sceneController.HasPrize = false;
 			view.EnableSpinButton(true);
 		}
 		else
         {
+			gameManager.sceneController.HasPrize = true;
+			gameManager.sceneController.currentPrizeData = data;
+			Debug.LogError("sdfsdfsdfsdsdf");
 			// Temporary
 			OnClickDefault(UIState.ISLAND_MENU);
 		}

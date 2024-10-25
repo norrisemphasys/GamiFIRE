@@ -9,6 +9,7 @@ public class IslandUIView : BasicView
 {
     public Button buttonRoll;
     public Button buttonPause;
+    public Button buttonStart;
 
     [SerializeField] TextMeshProUGUI textCoin;
     [SerializeField] TextMeshProUGUI textGrowthPoint;
@@ -23,13 +24,33 @@ public class IslandUIView : BasicView
     [SerializeField] AnimationPulse pulse;
     [SerializeField] GameObject textPressToRoll;
 
+    [SerializeField] RectTransform platformPanel;
+    [SerializeField] GameObject goPlatformPanelDim;
+
+    [SerializeField] SpinnerResultView spinnerResultView;
+
     ScoreManager.TempScore tempScore;
 
     bool testScore = false;
 
     public void Init()
     {
+        platformPanel.DOScale(Vector3.zero, 0);
+        ShowBoosterInfo(false);
+    }
 
+    public void ShowBoosterInfo(bool show, PrizeData data = null)
+    {
+        spinnerResultView.gameObject.SetActive(show);
+
+        if (show && data != null)
+            spinnerResultView.SetResultData(data);
+    }
+
+    public void ShowPlatformPanel(bool show)
+    {
+        goPlatformPanelDim.SetActive(show);
+        platformPanel.DOScale(show ? Vector3.one : Vector3.zero, 0.3f).SetEase(Ease.InOutBounce);
     }
 
     public void SetDiceResult(int idx)
