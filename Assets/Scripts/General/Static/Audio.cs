@@ -43,9 +43,12 @@ public static class Audio
         MundoSound.Play(AddressableManager.GetClip("BGMSea"), bgmVolume, true);  
     }
 
-    public static void PlaySFXWalk(int idx)
+    public static void PlaySFXWalk(int idx, bool useWorld = false, Transform t = null)
     {
-        MundoSound.Play(AddressableManager.GetClip(idx == 0 ? "SFXWalkLeft" : "SFXWalkRight"), sfxVolume);
+        if(useWorld)
+            MundoSound.Play(AddressableManager.GetClip(idx == 0 ? "SFXWalkLeft" : "SFXWalkRight"), sfxVolume, t.position, false);
+        else
+            MundoSound.Play(AddressableManager.GetClip(idx == 0 ? "SFXWalkLeft" : "SFXWalkRight"), sfxVolume);
     }
 
     public static void PlaySFXJump(Gender type)

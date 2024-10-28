@@ -6,6 +6,8 @@ public class PlayerAudio : MonoBehaviour
 {
     Gender type;
 
+    [SerializeField] bool useWalkSFX = true;
+
     private void Start()
     {
         User user = UserManager.instance.currentUser;
@@ -15,12 +17,12 @@ public class PlayerAudio : MonoBehaviour
 
     public void PlayWalkLeft()
     {
-        Audio.PlaySFXWalk(0);
+        if(useWalkSFX) Audio.PlaySFXWalk(0);
     }
 
     public void PlayWalkRight()
     {
-        Audio.PlaySFXWalk(1);
+        if (useWalkSFX) Audio.PlaySFXWalk(1);
     }
 
     public void PlayJump()

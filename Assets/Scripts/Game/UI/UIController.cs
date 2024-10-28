@@ -183,5 +183,9 @@ public enum UIState
 
     MGT_MENU,
 
+    LEADERBOARD_MENU,
+    GAMEINFO_MENU,
+    CUSTOMIZATION_MENU,
+
     NONE
 }

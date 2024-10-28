@@ -66,20 +66,20 @@ public class LoadingManager : MonoSingleton<LoadingManager>
 
     }
 
-    public void FadeIn(UnityAction callback = null)
+    public void FadeIn(UnityAction callback = null, float time = 0.2f)
     {
         ShowLoadingCanvas(false);
         ShowFadeCanvas(true);
 
-        fadeCanvasGroup.DOFade(1, 0.2f).OnComplete(() =>
+        fadeCanvasGroup.DOFade(1, time).OnComplete(() =>
         {
             callback?.Invoke();
         }).SetUpdate(true);
     }
 
-    public void FadeOut(UnityAction callback = null) 
+    public void FadeOut(UnityAction callback = null, float time = 0.2f) 
     {
-        fadeCanvasGroup.DOFade(0, 0.2f).OnComplete(() =>
+        fadeCanvasGroup.DOFade(0, time).OnComplete(() =>
         {
             ShowLoadingCanvas(false);
             ShowFadeCanvas(false);

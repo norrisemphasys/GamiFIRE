@@ -30,6 +30,31 @@ public class OnTriggerObject : MonoBehaviour
             if(uiState != UIState.NONE)
                 GameManager.instance.uiController.ShowHidePreviousState(uiState);
 
+            if(uiState == UIState.LEADERBOARD_MENU)
+            {
+                GameManager.instance.playerController.SetPause(true);
+                PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("Here you can see your score and compare it to other players! The content is not ready yet but make sure to come back and check it!", () =>
+                {
+                    GameManager.instance.playerController.SetPause(false);
+                }));
+            }
+            else if (uiState == UIState.CUSTOMIZATION_MENU)
+            {
+                GameManager.instance.playerController.SetPause(true);
+                PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("Here you can customize your player to your taste! The content is not ready yet but make sure to come back and check it!", () =>
+                {
+                    GameManager.instance.playerController.SetPause(false);
+                }));
+            }
+            else if(uiState == UIState.GAMEINFO_MENU)
+            {
+                GameManager.instance.playerController.SetPause(true);
+                PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("Here you will get to learn more about financial literacy! The content is not ready yet but make sure to come back and check it!", () =>
+                {
+                    GameManager.instance.playerController.SetPause(false);
+                }));
+            }
+
             OnEnterTrigger?.Invoke();
         }
     }

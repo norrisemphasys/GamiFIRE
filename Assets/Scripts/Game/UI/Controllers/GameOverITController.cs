@@ -72,7 +72,7 @@ public class GameOverITController : BasicController
 		{
 			UserManager.instance.SaveUser(()=> 
 			{
-				LoadIslandScene();
+				LoadIslandCutScene();
 			});
 		});
 	}
@@ -98,13 +98,13 @@ public class GameOverITController : BasicController
 		});
 	}
 
-	void LoadIslandScene()
+	void LoadIslandCutScene()
     {
-		LoadSceneManager.instance.LoadSceneLevel(3,
+		LoadSceneManager.instance.LoadSceneLevel(4,
 		UnityEngine.SceneManagement.LoadSceneMode.Single,
 		() =>
 		{
-			LoadingManager.instance.FadeOut();
+			LoadingManager.instance.FadeOut(null, 1f);
 		});
 	}
 
