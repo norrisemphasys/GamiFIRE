@@ -16,6 +16,9 @@ public class CutsceneAnimation : MonoBehaviour
 
     [SerializeField] bool startCutScene = false;
 
+    [SerializeField] CanvasGroup canvasGroup;
+    [SerializeField] RectTransform rectText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +28,20 @@ public class CutsceneAnimation : MonoBehaviour
 
     public void PlayCutScene()
     {
+        Audio.PlayBGMSea();
+        Audio.PlaySFXEngine();
+
         speedBoatParent.DOMove(targetDestination.position, 15f).SetUpdate(true);
         cameraTransform.DOMove(targetCameraDest.position, 20f).OnComplete(()=> 
+        {
+            ShowText();
+        }).SetUpdate(true);
+    }
+
+    void ShowText()
+    {
+        canvasGroup.DOFade(1, 0.2f).SetUpdate(true);
+        rectText.DOScaleY(1, 0.2f).OnComplete(()=> 
         {
             Utils.Delay(this, () =>
             {
