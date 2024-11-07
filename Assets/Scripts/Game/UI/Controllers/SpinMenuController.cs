@@ -47,6 +47,7 @@ public class SpinMenuController : BasicController
 		_totalAngle = 360 / sectionCount;
 
 		view.EnableSpinButton(true);
+		view.ShowParticleSelected(false);
 
 		InitializePrizePercentage();
 		InitializeDataInfo();

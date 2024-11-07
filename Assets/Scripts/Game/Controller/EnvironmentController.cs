@@ -45,12 +45,15 @@ public class EnvironmentController : MonoBehaviour
                 int enableIdx = i / ratioCount;
                 Debug.LogError("e idx " + enableIdx + " ratio cnt " + ratioCount);
 
-                if (environments[islandTypeIdx].environments[enableIdx] != null &&
-                    !environments[islandTypeIdx].environments[enableIdx].activeSelf)
+                if(enableIdx < environments[islandTypeIdx]?.environments.Length)
                 {
-                    AnimateIsland(environments[islandTypeIdx].environments[enableIdx], ctr);
+                    if (environments[islandTypeIdx].environments[enableIdx] != null &&
+                        !environments[islandTypeIdx].environments[enableIdx].activeSelf)
+                    {
+                        AnimateIsland(environments[islandTypeIdx].environments[enableIdx], ctr);
 
-                    ctr++;
+                        ctr++;
+                    }
                 }
             }
         }
@@ -61,6 +64,9 @@ public class EnvironmentController : MonoBehaviour
         go.transform.DOKill();
         go.SetActive(true);
         go.transform.DOScale(Vector3.one, 1f).SetEase(Ease.InOutBounce).SetDelay(delay);
+
+        string message = go.name + " has been added in the scene.";
+        PopupManager.instance.ShowNotification(message);
     }
 }
 

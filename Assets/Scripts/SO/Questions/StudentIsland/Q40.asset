@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q40
+  m_EditorClassIdentifier: 
+  questionTitle: Attending a Career Workshop
+  question: A career development workshop is being offered on campus, but it conflicts
+    with your study schedule.
+  answerData:
+  - answer: I attend the workshop and adjust my study schedule.
+    growthPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: 1
+    moneyCurrencyPoints: -1
+  - answer: I prioritize my studies and skip the workshop.
+    growthPoint: 1
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 0
+  - answer: "I ask if there\u2019s a recording or online resources from the workshop."
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 1
+    moneyCurrencyPoints: 0
+  - answer: I ask the professor if I can attend a similar workshop later.
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 1
+    moneyCurrencyPoints: 0

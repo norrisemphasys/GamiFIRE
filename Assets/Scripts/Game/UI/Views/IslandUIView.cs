@@ -102,9 +102,15 @@ public class IslandUIView : BasicView
         }
         else
         {
+            textGrowthPoint.rectTransform.DOScale(Vector3.one * 1.5f, 0.1f).SetLoops(tempScore.growthPoint);
+
             DOTween.To(() => origValue, x => origValue = x, endValue, 1)
             .OnUpdate(() => {
                 textGrowthPoint.text = origValue != 0 ? string.Format("{0:#,#}", origValue) : "0";
+            }).OnComplete(() =>
+            {
+                textGrowthPoint.rectTransform.DOKill();
+                textGrowthPoint.rectTransform.DOScale(Vector3.one, 0.1f);
             });
         }
     }
@@ -119,9 +125,16 @@ public class IslandUIView : BasicView
         }
         else
         {
+            textInnovationPoint.rectTransform.DOScale(Vector3.one * 1.5f, 0.1f).SetLoops(tempScore.innovationPoint);
+
             DOTween.To(() => origValue, x => origValue = x, endValue, 1)
            .OnUpdate(() => {
                textInnovationPoint.text = origValue != 0 ? string.Format("{0:#,#}", origValue) : "0";
+               
+           }).OnComplete(() =>
+           {
+               textInnovationPoint.rectTransform.DOKill();
+               textInnovationPoint.rectTransform.DOScale(Vector3.one, 0.1f);
            });
         }  
     }
@@ -136,9 +149,15 @@ public class IslandUIView : BasicView
         }
         else
         {
+            textSatisfactionPoint.rectTransform.DOScale(Vector3.one * 1.5f, 0.1f).SetLoops(tempScore.satsifactionPoint);
+
             DOTween.To(() => origValue, x => origValue = x, endValue, 1)
             .OnUpdate(() => {
                 textSatisfactionPoint.text = origValue != 0 ? string.Format("{0:#,#}", origValue) : "0";
+            }).OnComplete(() =>
+            {
+                textSatisfactionPoint.rectTransform.DOKill();
+                textSatisfactionPoint.rectTransform.DOScale(Vector3.one, 0.1f);
             });
         }
 
@@ -154,9 +173,15 @@ public class IslandUIView : BasicView
         }
         else
         {
+            textCoin.rectTransform.DOScale(Vector3.one * 1.5f, 0.1f).SetLoops(tempScore.coin);
+
             DOTween.To(() => origValue, x => origValue = x, endValue, 1)
             .OnUpdate(() => {
                 textCoin.text = origValue != 0 ? string.Format("{0:#,#}", origValue) : "0";
+            }).OnComplete(()=> 
+            {
+                textCoin.rectTransform.DOKill();
+                textCoin.rectTransform.DOScale(Vector3.one , 0.1f);
             });
         }
     }

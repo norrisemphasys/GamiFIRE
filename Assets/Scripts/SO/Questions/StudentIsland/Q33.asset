@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q33
+  m_EditorClassIdentifier: 
+  questionTitle: Handling Constructive Criticism
+  question: You receive constructive criticism on a project.
+  answerData:
+  - answer: I reflect on it and make improvements.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 0
+    moneyCurrencyPoints: 0
+  - answer: I acknowledge it but maintain my approach.
+    growthPoint: 1
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 0
+  - answer: I discuss it further for clarity.
+    growthPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: 0
+    moneyCurrencyPoints: 0
+  - answer: I integrate feedback gradually into my work.
+    growthPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: 0
+    moneyCurrencyPoints: 0

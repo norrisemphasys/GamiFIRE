@@ -8,18 +8,25 @@ public class PopupManager : MonoSingleton<PopupManager>
 {
     [SerializeField] CanvasGroup canvasGroup;
     [SerializeField] Transform popupViewParent;
+    [SerializeField] Transform notifViewParent;
 
     public Queue<PopupView> popupViews = new Queue<PopupView>();
+    public Queue<NotificationView> notificationViews = new Queue<NotificationView>();
 
     private bool _isPopupShowing = false;
+    private bool isAlreadyShowing = false;
 
     private void Update()
     {
         PopupUpdate();
+        NotifUpdate();
 
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.P))
             ShowDefaultPopup();
+
+        if (Input.GetKeyDown(KeyCode.N))
+            ShowNotification("Test");
 #endif
     }
 
@@ -57,7 +64,7 @@ public class PopupManager : MonoSingleton<PopupManager>
     #region Create Popup 
     public void ShowPopup(bool show, UnityAction onShow = null)
     {
-        bool isAlreadyShowing = canvasGroup.alpha >= 1;
+        isAlreadyShowing = canvasGroup.alpha >= 1;
 
         if(!show)
         {
@@ -107,6 +114,36 @@ public class PopupManager : MonoSingleton<PopupManager>
             PopupView view = PopupView.Create(popupViewParent, data);
             AddToPopupQueue(view);
         });
+    }
+
+    #endregion
+
+
+    #region NOTIFICATION
+
+    public void ShowNotification(string message)
+    {
+        NotificationView view = NotificationView.Create(notifViewParent, message);
+        AddToNotifView(view);
+    }
+
+    void AddToNotifView(NotificationView view)
+    {
+        notificationViews.Enqueue(view);
+    }
+
+    void NotifUpdate()
+    {
+        if (notificationViews.Count <= 0)
+            return;
+
+        ExecuteNotifQueue();
+    }
+
+    void ExecuteNotifQueue()
+    {
+        NotificationView view = notificationViews.Dequeue();
+        view.Show();
     }
 
     #endregion

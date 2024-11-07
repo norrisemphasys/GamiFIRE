@@ -95,6 +95,7 @@ public class UIController : MonoBehaviour
                 case UIState.MGT_MENU: GetContoller<MGTController>(state).OnEnter(); break;
 
                 // MAIN
+                case UIState.SPLASH_MENU: GetContoller<SplashMenuController>(state).OnEnter(); break;
                 case UIState.LOGIN: GetContoller<LoginController>(state).OnEnter(); break;
                 case UIState.GENDER_MENU: GetContoller<GenderMenuController>(state).OnEnter(); break;
                 case UIState.JOB_MENU: GetContoller<JobMenuController>(state).OnEnter(); break;
@@ -134,6 +135,7 @@ public class UIController : MonoBehaviour
                 case UIState.MGT_MENU: GetContoller<MGTController>(state).OnExit(); break;
 
                 // MAIN
+                case UIState.SPLASH_MENU: GetContoller<SplashMenuController>(state).OnExit(); break;
                 case UIState.LOGIN: GetContoller<LoginController>(state).OnExit(); break;
                 case UIState.GENDER_MENU: GetContoller<GenderMenuController>(state).OnExit(); break;
                 case UIState.JOB_MENU: GetContoller<JobMenuController>(state).OnExit(); break;
@@ -186,6 +188,8 @@ public enum UIState
     LEADERBOARD_MENU,
     GAMEINFO_MENU,
     CUSTOMIZATION_MENU,
+
+    SPLASH_MENU,
 
     NONE
 }

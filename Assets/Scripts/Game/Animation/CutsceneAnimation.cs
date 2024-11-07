@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.Events;
+using TMPro;
 
 public class CutsceneAnimation : MonoBehaviour
 {
@@ -18,6 +19,12 @@ public class CutsceneAnimation : MonoBehaviour
 
     [SerializeField] CanvasGroup canvasGroup;
     [SerializeField] RectTransform rectText;
+    [SerializeField] TextMeshProUGUI textMessage;
+
+    [SerializeField] bool enableAudio = true;
+
+    JobType islandType;
+    string currentIsland;
 
     // Start is called before the first frame update
     void Start()
@@ -28,30 +35,58 @@ public class CutsceneAnimation : MonoBehaviour
 
     public void PlayCutScene()
     {
-        Audio.PlayBGMSea();
-        Audio.PlaySFXEngine();
+        if(enableAudio)
+        {
+            Audio.PlayBGMSea();
+            Audio.PlaySFXEngine();  
+        }
+
+        islandType = GameManager.instance.IslandType;
+        currentIsland = islandType.ToString();
+
+        textMessage.text = "You have arrived on the " + currentIsland + " ISLAND";
 
         speedBoatParent.DOMove(targetDestination.position, 15f).SetUpdate(true);
         cameraTransform.DOMove(targetCameraDest.position, 20f).OnComplete(()=> 
         {
-            ShowText();
+            canvasGroup.DOFade(1, 0.2f).SetUpdate(true);
+            ShowText(true);
+
         }).SetUpdate(true);
     }
 
-    void ShowText()
+    void ShowText(bool hasDelay)
     {
-        canvasGroup.DOFade(1, 0.2f).SetUpdate(true);
         rectText.DOScaleY(1, 0.2f).OnComplete(()=> 
         {
-            Utils.Delay(this, () =>
+            if(hasDelay)
             {
-                LoadingManager.instance.FadeIn(() =>
+                Utils.Delay(this, () =>
                 {
-                    LoadIslandScene();
-                }, 1f);
-                OnFinishedCutScene?.Invoke();
-            }, 2f);
+                    rectText.DOScaleY(0, 0.2f).OnComplete(()=> 
+                    {
+                        textMessage.text = "Each choice you make will influence your path. Manage your time, money, and opportunities to thrive in this new academic adventure!";
+                        ShowText(false);
+                    });
+                }, 4f);
+            }
+            else
+            {
+                DelayAndFade();
+            }
         }).SetUpdate(true);
+    }
+
+    void DelayAndFade()
+    {
+        Utils.Delay(this, () =>
+        {
+            LoadingManager.instance.FadeIn(() =>
+            {
+                LoadIslandScene();
+            }, 1f);
+            OnFinishedCutScene?.Invoke();
+        }, 5f);
     }
 
     void LoadIslandScene()

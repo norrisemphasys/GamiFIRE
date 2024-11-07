@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q36
+  m_EditorClassIdentifier: 
+  questionTitle: Managing a Group Project
+  question: Your team project deadline is approaching, but one member is unresponsive.
+  answerData:
+  - answer: I take on their tasks to ensure completion.
+    growthPoint: 1
+    satisfactionPoint: -1
+    innovationPoint: 0
+    moneyCurrencyPoints: 1
+  - answer: I reach out to them and ask for an update.
+    growthPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: 0
+    moneyCurrencyPoints: 0
+  - answer: I suggest redistributing the work among active members.
+    growthPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: 1
+    moneyCurrencyPoints: 0
+  - answer: I inform the professor about the situation.
+    growthPoint: 0
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 0

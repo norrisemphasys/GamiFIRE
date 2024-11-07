@@ -85,12 +85,16 @@ public class SQUIController : BasicController
 		scoreManager.AddSatisfactionPoint(data.satisfactionPoint);
 
 		view.SetPoints(data.growthPoint, data.innovationPoint, data.satisfactionPoint, data.moneyCurrencyPoints);
+
+		Audio.PlaySFXStageClick();
 	}
 
 	void OnClickContinue()
 	{
 		view.ShowScorePopup(false);
 		OnClickDefault(UIState.ISLAND_MENU);
+
+		Audio.PlaySFXCoin();
 	}
 	private void OnDestroy()
 	{

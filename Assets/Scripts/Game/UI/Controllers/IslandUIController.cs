@@ -79,7 +79,7 @@ public class IslandUIController : BasicController
 				if(sceneController.TotalMoves >= sceneController.cellController.maxCellCount)
 					OnClickDefault(UIState.RESULT_MENU);
                 else
-					ShowCellType();
+					ShowPopup();
 			});
         }
 
@@ -106,10 +106,30 @@ public class IslandUIController : BasicController
 		}
 	}
 
-	void ShowCellType()
+	void ShowPopup()
     {
+		string message = string.Empty;
 		Cell currentCell = sceneController.cellController.GetCurrentCell();
-		switch (currentCell.Type)
+
+		if (currentCell.Type == CellType.SCENARIO)
+			message = "You landed on a <#FD9744>SCENARIO QUESTION";
+		else if (currentCell.Type == CellType.SPINNER)
+			message = "You landed on a <#1CB0F6>SPINNER";
+		else if (currentCell.Type == CellType.MINIGAME)
+			message = "You landed on a <#61708A>MINI GAME";
+
+		PopupManager.instance.ShowPopup(
+			PopupMessage.InfoPopup(message, () =>
+			{
+				ShowCellType(currentCell.Type);
+			})
+		);
+    }
+
+	void ShowCellType(CellType type)
+    {
+
+		switch (type)
 		{
 			case CellType.SCENARIO:
 				OnClickDefault(UIState.SQ_MENU);
