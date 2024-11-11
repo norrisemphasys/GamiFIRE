@@ -28,6 +28,7 @@ public class SplashMenuController : BasicController
 
 	public override void Initialize()
 	{
+		Audio.PlayBGMLogin();
 		view.PlaySplashSequence(() =>
 		{
 			OnClickDefault(UIState.LOGIN);

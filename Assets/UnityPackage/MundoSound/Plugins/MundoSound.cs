@@ -50,6 +50,16 @@ public static class MundoSound {
 				//And if this audio is no playing
 				if(!audioPoolList[i].isPlaying){
 
+                    if (loop)
+                    {
+						AudioSource existingAudioSource = GetExistingClip(clip.name);
+						bool isExisting = existingAudioSource != null;
+						if (loop && isExisting)
+                        {
+							return existingAudioSource;
+						}	
+					}
+
                     //Reset a few parameters
                     audioPoolList[i].name = "Sound: " + clip.name;
 					audioPoolList[i].clip = clip;
@@ -65,7 +75,9 @@ public static class MundoSound {
 					audioPoolList[i].transform.localPosition = offsetPosition;
 
 					if(delay == 0) audioPoolList[i].Play();					
-					else audioPoolList[i].PlayDelayed (delay);				
+					else audioPoolList[i].PlayDelayed (delay);
+
+					Debug.LogError("Audio going here existing not playing");
 
 					//Then let's return this audioSource
 					return audioPoolList[i];	
@@ -76,34 +88,6 @@ public static class MundoSound {
 					bool isExisting = existingAudioSource != null;
 					if (loop && isExisting)
 						return audioPoolList[i];
-                    else
-                    {
-						if (isExisting && !audioPoolList[i].loop && audioPoolList[i].clip.name.Equals(clip.name))
-						{
-							/*Debug.LogError("clip name " + clip.name);
-							//Reset a few parameters
-							audioPoolList[i].name = "Sound: " + clip.name;
-							audioPoolList[i].clip = clip;
-							audioPoolList[i].volume = volume;
-							audioPoolList[i].pitch = 1;
-							audioPoolList[i].loop = loop;
-							if (container == null)
-							{
-								audioPoolList[i].transform.parent = audioPoolContainer;
-							}
-							else
-							{
-								audioPoolList[i].transform.parent = container;
-							}
-							audioPoolList[i].transform.localPosition = offsetPosition;
-
-							if (delay == 0) audioPoolList[i].Play();
-							else audioPoolList[i].PlayDelayed(delay);*/
-
-							//Then let's return this audioSource
-							//return audioPoolList[i];
-						}
-					}
                 }			
 			}
 		}

@@ -65,7 +65,7 @@ public class EnvironmentController : MonoBehaviour
         go.SetActive(true);
         go.transform.DOScale(Vector3.one, 1f).SetEase(Ease.InOutBounce).SetDelay(delay);
 
-        string message = go.name + " has been added in the scene.";
+        string message = go.name + " has been added to the island.";
         PopupManager.instance.ShowNotification(message);
     }
 }

@@ -36,6 +36,7 @@ public class MGTController : BasicController
 	public override void Initialize()
 	{
 		_type = (int)gameManager.miniGameController.CurrentType - 1;
+		_currentStep = 0;
 
 		view.SetMGTView(_type);
 		UpdateView();

@@ -28,10 +28,14 @@ public class SQUIController : BasicController
 		view.Hide(ShowNextMenu);
 
 		gameManager.sceneController.UpdateQuestionCounter();
+		Audio.StopBGMScenarioQuestion();
 	}
 
 	public override void Initialize()
 	{
+		Audio.StopBGMStudentIsland();
+		Audio.PlayBGMScenarioQuestion();
+
 		scoreManager = ScoreManager.instance;
 
 		QuestionSO question = gameManager.sceneController.GetCurrentQuestion();

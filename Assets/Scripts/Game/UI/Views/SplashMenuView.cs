@@ -10,6 +10,7 @@ public class SplashMenuView : BasicView
 {
     [SerializeField] Image imgLogo;
     [SerializeField] RectTransform rectText;
+    [SerializeField] GameObject whitePanel;
 
     public void Init()
     {
@@ -29,6 +30,7 @@ public class SplashMenuView : BasicView
         seq.Append(rectText.DOScaleY(0f, 0.2f));
         seq.AppendCallback(()=> 
         {
+            whitePanel.gameObject.SetActive(false);
             callback?.Invoke();
         });
     }

@@ -181,6 +181,16 @@ public static class Audio
         MundoSound.Play(AddressableManager.GetClip("SFXResult"), sfxVolume);
     }
 
+    public static void PlayBGMScenarioQuestion()
+    {
+        MundoSound.Play(AddressableManager.GetClip("BGMScenarioQuestion"), bgmVolume, true);
+    }
+
+    public static void StopBGMScenarioQuestion()
+    {
+        MundoSound.Stop("BGMScenarioQuestion");
+    }
+
     public static void StopBGMIslandTrip()
     {
         MundoSound.Stop("BGMIslandTrip");

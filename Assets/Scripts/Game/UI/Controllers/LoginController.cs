@@ -40,7 +40,7 @@ public class LoginController : BasicController
 
     public override void Initialize()
     {
-        Audio.PlayBGMLogin();
+
     }
 
     public void ShowNextMenu()

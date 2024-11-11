@@ -73,6 +73,7 @@ public class UIController : MonoBehaviour
                 // PORT
                 case UIState.STAGE_SELECT: GetContoller<StageController>(state).OnEnter(); break;
                 case UIState.PORT_INGAME: GetContoller<InGamePortController>(state).OnEnter(); break;
+                case UIState.PORT_TUTORIAL_MENU: GetContoller<PortTutotrialController>(state).OnEnter(); break;
 
                 // ISLAND TRIP
                 case UIState.IT_INGAME: GetContoller<InGameITController>(state).OnEnter(); break;
@@ -113,6 +114,7 @@ public class UIController : MonoBehaviour
                 // PORT
                 case UIState.STAGE_SELECT: GetContoller<StageController>(state).OnExit(); break;
                 case UIState.PORT_INGAME: GetContoller<InGamePortController>(state).OnExit(); break;
+                case UIState.PORT_TUTORIAL_MENU: GetContoller<PortTutotrialController>(state).OnExit(); break;
 
                 // ISLAND TRIP
                 case UIState.IT_INGAME: GetContoller<InGameITController>(state).OnExit(); break;
@@ -190,6 +192,7 @@ public enum UIState
     CUSTOMIZATION_MENU,
 
     SPLASH_MENU,
+    PORT_TUTORIAL_MENU,
 
     NONE
 }

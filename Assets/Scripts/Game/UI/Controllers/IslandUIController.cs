@@ -132,13 +132,26 @@ public class IslandUIController : BasicController
 		switch (type)
 		{
 			case CellType.SCENARIO:
+
+				if(gameManager.sceneController.HasPrize)
+                {
+					ScoreManager.instance.SetBonus(0, PrizeType.NONE);
+					gameManager.sceneController.HasPrize = false;
+				}
 				OnClickDefault(UIState.SQ_MENU);
+
 				break;
 			case CellType.SPINNER:
 				OnClickDefault(UIState.SPIN_MENU);
 				break;
 			case CellType.MINIGAME:
-				// To Do:
+
+				if (gameManager.sceneController.HasPrize)
+				{
+					ScoreManager.instance.SetBonus(0, PrizeType.NONE);
+					gameManager.sceneController.HasPrize = false;
+				}
+
 				view.Hide();
 				RemoveListener();
 

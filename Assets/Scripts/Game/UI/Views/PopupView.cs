@@ -31,7 +31,7 @@ public class PopupView : MonoBehaviour
         viewGO.transform.localScale = Vector3.one;
 
         PopupView view = viewGO.GetComponent<PopupView>();
-        view.popupRect.DOScale(Vector3.zero, 0);
+        view.popupRect.localScale = Vector3.zero;
         view.Create(data);
 
         return view;

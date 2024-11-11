@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useLocal: 1
+  useDelay: 1
   OnFinishedLoad:
     m_PersistentCalls:
       m_Calls:
@@ -111,3 +112,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c95cc245320e05649bd418552afcb5fd, type: 3}
   - {fileID: 8300000, guid: ea5b14fa5d67e854da07907439a57af8, type: 3}
   - {fileID: 8300000, guid: ce01e8dab44d1cc40ae983fd63f6b76f, type: 3}
+  - {fileID: 8300000, guid: ed4497b6915f7124787f2133a9af73fe, type: 3}
