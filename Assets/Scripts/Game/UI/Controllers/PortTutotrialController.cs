@@ -7,7 +7,7 @@ public class PortTutotrialController : BasicController
 	private PortTutorialView view;
 
 	private int _currentIndex = 0;
-	private int _maxStep = 3;
+	private int _maxStep = 4;
 
 	void Awake()
 	{

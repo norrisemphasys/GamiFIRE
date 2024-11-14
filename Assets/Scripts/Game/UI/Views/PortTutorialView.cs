@@ -15,7 +15,7 @@ public class PortTutorialView : BasicView
     public GameObject[] goTextInfo;
     public GameObject[] goPagination;
 
-    private int steps = 3;
+    private int steps = 4;
 
     public void Init()
     {

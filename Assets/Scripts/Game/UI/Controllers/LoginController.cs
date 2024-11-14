@@ -8,6 +8,7 @@ public class LoginController : BasicController
     private LoginViews view;
 
     [SerializeField] int loadSceneIndex;
+    [SerializeField] bool resetUserPoints = false;
     void Awake()
     {
         view = GetComponent<LoginViews>();
@@ -170,6 +171,8 @@ public class LoginController : BasicController
                     // Login user account
                     Debug.Log("Login user account." + res.isAnExistingAccount);
                     UserManager.instance.SetCurrentUser(res);
+                    if(resetUserPoints)
+                        UserManager.instance.ResetUserPoints();
 
                     if(res.isAnExistingAccount)
                     {

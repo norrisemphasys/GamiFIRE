@@ -4537,6 +4537,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 482501341}
+  - component: {fileID: 482501342}
   m_Layer: 0
   m_Name: Popup_SignUp
   m_TagString: Untagged
@@ -4566,6 +4567,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &482501342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482501340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e17a1879b8ae341a5282094670286d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &490609280
 GameObject:
   m_ObjectHideFlags: 0
@@ -6674,6 +6687,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 761885882}
+  - component: {fileID: 761885883}
   m_Layer: 0
   m_Name: Popup_SignIn
   m_TagString: Untagged
@@ -6703,6 +6717,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &761885883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761885881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e17a1879b8ae341a5282094670286d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &775610674
 GameObject:
   m_ObjectHideFlags: 0
@@ -17127,6 +17153,7 @@ MonoBehaviour:
   state: 12
   nextState: 0
   loadSceneIndex: 1
+  resetUserPoints: 1
 --- !u!1 &1729393128
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,15 @@ public class UserManager : MonoSingleton<UserManager>
     private User _currentUser;
     public User currentUser { get { return _currentUser; } set { _currentUser = value; } }
     public void SetCurrentUser(User user) { _currentUser = user; }
+    public void ResetUserPoints()
+    {
+        currentUser.Coin = 0;
+        currentUser.Score = 0;
+        currentUser.GrowthPoint = 0;
+        currentUser.InnovationPoint = 0;
+        currentUser.CurrencyPoint = 0;
+        currentUser.SatisfactionPoint = 0;
+    }
 
     public void SaveUser(UnityAction callback = null)
     {

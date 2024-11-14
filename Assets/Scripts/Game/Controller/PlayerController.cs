@@ -9,18 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] AimBehaviourBasic aimBehavior;
 
     [SerializeField] ThirdPersonOrbitCamBasic thirdPersonController;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public bool IsOccupied { get; set; }
 
     public void SetPause(bool pause)
     {

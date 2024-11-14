@@ -17,6 +17,8 @@ public class MiniGameController : MonoBehaviour
     private MiniGameType _currentType;
     public MiniGameType CurrentType { get { return _currentType; } }
 
+    int counter = 1;
+
     void Start()
     {
         if (useInitUIState)
@@ -43,6 +45,7 @@ public class MiniGameController : MonoBehaviour
             miniGame[i].main.SetActive(false);
 
         uiController.ShowCanvas(false);
+        counter = 1;
     }
 
     public void Load(MiniGameType type)
@@ -74,8 +77,16 @@ public class MiniGameController : MonoBehaviour
 
     public void RandomLoad()
     {
-        MiniGameType type = (MiniGameType)Random.Range(1, 3);
+        // Load Random
+        //MiniGameType type = (MiniGameType)Random.Range(1, 3);
+
+        MiniGameType type = (MiniGameType)counter;
         Load(type);
+
+        counter++;
+
+        if (counter == 3)
+            counter = 1;
     }
 
     public MiniGame GetCurrentMiniGame()
