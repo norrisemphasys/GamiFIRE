@@ -28,6 +28,9 @@ public class InGameITController : BasicController
         if(startGame)
         {
 			UpdateTimer();
+
+			if (Input.GetKeyDown(KeyCode.Space) && Time.timeScale == 1)
+				OnClickPause();
 		}
     }
 

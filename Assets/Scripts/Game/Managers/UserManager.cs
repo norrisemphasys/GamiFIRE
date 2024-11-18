@@ -16,6 +16,8 @@ public class UserManager : MonoSingleton<UserManager>
         currentUser.InnovationPoint = 0;
         currentUser.CurrencyPoint = 0;
         currentUser.SatisfactionPoint = 0;
+
+        currentUser.isAnExistingAccount = false;
     }
 
     public void SaveUser(UnityAction callback = null)
