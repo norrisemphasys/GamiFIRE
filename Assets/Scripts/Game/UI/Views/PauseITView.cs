@@ -11,8 +11,15 @@ public class PauseITView : BasicView
     public Button btnRestart;
     public Button btnGiveup;
 
+    [SerializeField] TextMeshProUGUI textIslandName;
+
     public void Init()
     {
 
+    }
+
+    public void SetIslandName(string name)
+    {
+        textIslandName.text = name;
     }
 }

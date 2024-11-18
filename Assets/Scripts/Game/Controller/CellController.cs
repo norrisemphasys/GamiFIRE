@@ -20,7 +20,35 @@ public class CellController : MonoBehaviour
     int currentCellIndex = 0;
     int cellCounterIndex = 0;
 
+    public int miniGameCellCount;
+    public int spinnerCellCount;
+
     List<float> cellProbability = new List<float>();
+
+    public int GetCellTypeIndex(CellType type)
+    {
+        for(int i = 0; i < cellList.Count; i++)
+        {
+            if (cellList[i].Type == type)
+            {
+                if(currentCellIndex < i)
+                    return i;
+            }
+        }
+
+        return -1;
+    }
+
+    public int GetCellTypeCount(CellType type) 
+    {
+        int cnt = 0;
+        for (int i = 0; i < cellList.Count; i++)
+        {
+            if (cellList[i].Type == type)
+                cnt++;
+        }
+        return cnt;
+    }
 
     public void Init()
     {
@@ -55,6 +83,9 @@ public class CellController : MonoBehaviour
 
             cellList.Add(cell);
         }
+
+        miniGameCellCount = GetCellTypeCount(CellType.MINIGAME);
+        spinnerCellCount = GetCellTypeCount(CellType.SPINNER);
     }
 
     public void ActivateNextCell()

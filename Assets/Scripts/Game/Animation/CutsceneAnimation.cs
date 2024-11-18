@@ -42,9 +42,9 @@ public class CutsceneAnimation : MonoBehaviour
         }
 
         islandType = GameManager.instance.IslandType;
-        currentIsland = islandType.ToString();
+        currentIsland =  UserManager.GetJobName( islandType );
 
-        textMessage.text = "You have arrived on the " + currentIsland + " ISLAND";
+        textMessage.text = "You have arrived on the\n" + currentIsland + " ISLAND";
 
         speedBoatParent.DOMove(targetDestination.position, 15f).SetUpdate(true);
         cameraTransform.DOMove(targetCameraDest.position, 20f).OnComplete(()=> 

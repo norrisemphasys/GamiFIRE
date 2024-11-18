@@ -25,7 +25,7 @@ public class InGamePortView : BasicView
         JobType job = (JobType)user.JobType;
 
         textUserName.text = user.Username;
-        textJobType.text = job.ToString();
+        textJobType.text = UserManager.GetJobName( job );
 
         textCoin.text = user.CurrencyPoint != 0 ? string.Format("{0:#,#}", user.CurrencyPoint) : "0";
         textGrowthPoint.text = user.GrowthPoint != 0 ? string.Format("{0:#,#}", user.GrowthPoint) : "0";

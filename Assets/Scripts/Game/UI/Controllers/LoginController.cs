@@ -31,6 +31,24 @@ public class LoginController : BasicController
     {
         if(Input.GetKeyDown(KeyCode.P))
             Audio.PlayBGMLogin();
+
+        if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
+        {
+            if(!PopupManager.instance.IsPopupShowing)
+            {
+                if (view.IsSignInVisible)
+                    OnClickLogin();
+                else if (view.IsSignUpVisible)
+                    OnClickSignUpNewUser();
+                else if (view.IsForgotPasswordVisible)
+                {
+                    if (view.IsEmailVisible)
+                        OnClickConfirmEmail();
+                    else if (view.IsNewPasswordVisible)
+                        OnClickNewPassword();
+                }
+            }
+        }
     }
 
     public override void OnExit()

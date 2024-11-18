@@ -29,6 +29,8 @@ public class IslandUIView : BasicView
 
     [SerializeField] SpinnerResultView spinnerResultView;
 
+    [SerializeField] TextMeshProUGUI textIslandName;
+
     ScoreManager.TempScore tempScore;
 
     bool testScore = false;
@@ -67,7 +69,7 @@ public class IslandUIView : BasicView
         JobType job = (JobType)user.JobType;
 
         textUserName.text = user.Username;
-        textJobType.text = job.ToString();
+        textJobType.text = UserManager.GetJobName(job);
 
         tempScore = ScoreManager.instance.tempScore;
 
@@ -80,6 +82,11 @@ public class IslandUIView : BasicView
         UpdateInnovationPoints(user.InnovationPoint);
         UpdateSatisfactionPoint(user.SatisfactionPoint);
         UpdateCoinPoints(user.CurrencyPoint);
+    }
+
+    public void SetIslandName(string name)
+    {
+        textIslandName.text = name + " ISLAND";
     }
     
     public void UpdateTestScore()

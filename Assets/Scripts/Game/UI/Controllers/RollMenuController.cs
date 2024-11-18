@@ -8,6 +8,10 @@ public class RollMenuController : BasicController
 
 	[SerializeField] private int loopCount = 30;
 	private bool startRolling = false;
+
+	int miniGameCount = 0;
+	int spinnerCount = 0;
+
 	void Awake()
 	{
 		view = GetComponent<RollMenuView>();
@@ -81,6 +85,13 @@ public class RollMenuController : BasicController
 			yield return new WaitForSeconds(easeTime);
         }
 
+		int customIndex = RandomizeCustomIndex();
+		if (customIndex >= 0)
+        {
+			randIDX = customIndex - 1;
+			view.ShowDiceFace(randIDX);
+		}
+
 		view.StopLoading();
 		gameManager.sceneController.MoveCounter = randIDX + 1;
 		gameManager.sceneController.TotalMoves += gameManager.sceneController.MoveCounter;
@@ -94,8 +105,97 @@ public class RollMenuController : BasicController
 		OnClickDefault(UIState.ISLAND_MENU);
 	}
 
+	int RandomizeCustomIndex()
+    {
+		int miniGameIndex = gameManager.sceneController.cellController.GetCellTypeIndex(CellType.MINIGAME);
+		int spinnerIndex = gameManager.sceneController.cellController.GetCellTypeIndex(CellType.SPINNER);
+
+		if(miniGameIndex > spinnerIndex)
+        {
+			if(spinnerCount < 1)
+			{
+				int idx = CustomSpinnerIndex();
+				if(idx >= 0)
+				{
+					spinnerCount++;
+					return idx;
+                }
+            }
+            else
+            {
+				if (miniGameCount < 2)
+				{
+					int idx = CustomMiniGameIndex();
+					if (idx >= 0)
+					{
+						miniGameCount++;
+						return idx;
+					}
+				}
+			}
+        }
+        else
+        {
+			if(miniGameCount < 2)
+            {
+				int idx = CustomMiniGameIndex();
+				if (idx >= 0)
+				{
+					miniGameCount++;
+					return idx;
+				}
+            }
+            else
+            {
+				if (spinnerCount < 1)
+				{
+					int idx = CustomSpinnerIndex();
+					if (idx >= 0)
+					{
+						spinnerCount++;
+						return idx;
+					}
+				}
+			}
+        }
+
+		return -1;
+	}
+
     private void OnDestroy()
     {
 		RemoveListener();
     }
+
+	int CustomMiniGameIndex()
+    {
+		int currentCellIndex = gameManager.sceneController.cellController.CurrentCellIndex;
+		int miniGameIndex = gameManager.sceneController.cellController.GetCellTypeIndex(CellType.MINIGAME);
+
+		if (miniGameIndex > 0)
+		{
+			int diff = miniGameIndex - currentCellIndex;
+			Debug.LogError("MINIGAME DIFF " + diff);
+			if (diff > 0 && diff < 6)
+				return diff;
+		}
+
+		return -1;
+	}
+
+	int CustomSpinnerIndex()
+    {
+		int currentCellIndex = gameManager.sceneController.cellController.CurrentCellIndex;
+		int spinnerIndex = gameManager.sceneController.cellController.GetCellTypeIndex(CellType.SPINNER);
+
+		if(spinnerIndex > 0)
+        {
+			int diff = spinnerIndex - currentCellIndex;
+			Debug.LogError("SPINNER DIFF " + diff);
+			if(diff > 0 && diff < 6)
+				return diff;
+		}
+
+		return -1;
+	}
 }

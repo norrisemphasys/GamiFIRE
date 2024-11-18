@@ -16,6 +16,8 @@ public class PopupManager : MonoSingleton<PopupManager>
     private bool _isPopupShowing = false;
     private bool isAlreadyShowing = false;
 
+    public bool IsPopupShowing { get { return _isPopupShowing; } }
+
     private void Update()
     {
         PopupUpdate();

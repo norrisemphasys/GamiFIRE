@@ -31,8 +31,25 @@ public class SplashMenuController : BasicController
 		Audio.PlayBGMLogin();
 		view.PlaySplashSequence(() =>
 		{
-			OnClickDefault(UIState.LOGIN);
+			PopupManager.instance.ShowPopup(PopupMessage.CreatePopupData("INFORMATION", 
+				"For the best possible experience we recommend you play the game in full screen view.",
+				"FULL SCREEN", "CONTINUE", true, true, false, OnFullScreen, OnCancel));
+
+			//OnClickDefault(UIState.LOGIN);
 		});
+	}
+
+	void OnFullScreen()
+    {
+		Application.ExternalCall("GoToFullScreen");
+		//Screen.fullScreen = true;
+		//WebGLExternalManager.FullScreen();
+		OnClickDefault(UIState.LOGIN);
+	}
+
+	void OnCancel()
+    {
+		OnClickDefault(UIState.LOGIN);
 	}
 
 	public void ShowNextMenu()

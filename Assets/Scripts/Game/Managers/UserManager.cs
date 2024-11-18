@@ -47,6 +47,23 @@ public class UserManager : MonoSingleton<UserManager>
     {
         _currentUser.JobType = idx;
     }
+
+    public static string GetJobName(JobType type) 
+    {
+        switch(type)
+        {
+            case JobType.STUDENT:
+                return "HIGHER EDUCATION STUDENT";
+            case JobType.PROFESSIONAL:
+                return "INDEPENDENT PROFESSIONAL";
+            case JobType.AGRICULTRIST:
+                return "AGRICULTRIST";
+            case JobType.BUSINESSMAN:
+                return "COMPANY EMPLOYEE";
+        }
+
+        return "HIGHER EDUCATION STUDENT";
+    }
 }
 
 public enum JobType

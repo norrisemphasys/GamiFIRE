@@ -20,7 +20,7 @@ public class MGIGOneView : BasicView
 
     public void SetTimer(float timer)
     {
-        textTimer.text = string.Format("{0:#.##} " + "<size=70>s", timer);
+        textTimer.text = string.Format("{0:#.#} " + "<size=70>s", timer);
     }
 
     public void ButtonPress(Button button)

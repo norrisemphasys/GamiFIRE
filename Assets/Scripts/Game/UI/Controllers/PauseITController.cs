@@ -30,6 +30,14 @@ public class PauseITController : BasicController
 	{
 		Time.timeScale = 0;
 		Audio.StopBGMIslandTrip();
+
+		if(gameManager.currentScene == SCENE_TYPE.ISLAND_TRIP_SCENE)
+			view.SetIslandName("ISLAND TRIP");
+		else if(gameManager.currentScene == SCENE_TYPE.ISLAND_SCENE)
+        {
+			string IslandName = UserManager.GetJobName(gameManager.IslandType);
+			view.SetIslandName(IslandName + " ISLAND");
+		}
 	}
 
 	public void ShowNextMenu()

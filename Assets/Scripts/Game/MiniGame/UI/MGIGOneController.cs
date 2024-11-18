@@ -15,7 +15,8 @@ public class MGIGOneController : BasicController
 	private float _timer;
 	private float _maxTime;
 
-	private int _maxPlayerMove = 20;
+	private int _maxPlayerMove = 30;
+	private int _playerMove = 0;
 
 	void Awake()
 	{
@@ -59,7 +60,8 @@ public class MGIGOneController : BasicController
 		_startTimer = true;
 		_isPlayerFinishedMoving = false;
 		_timer = 0;
-		_maxTime = 20f;
+		_maxTime = 45f;
+		_playerMove = 0;
 	}
 
 	public void ShowNextMenu()
@@ -106,8 +108,11 @@ public class MGIGOneController : BasicController
 
 			if (reverseTimer <= 0)
             {
-				// Check score
-				GameEvents.OnGameOverMiniGame?.Invoke(false);
+				if(_playerMove >= _maxPlayerMove)
+					GameEvents.OnGameOverMiniGame?.Invoke(true);
+				else
+					GameEvents.OnGameOverMiniGame?.Invoke(false);
+
 				_startTimer = false;
 			}
 		}
@@ -116,14 +121,16 @@ public class MGIGOneController : BasicController
 	void OnPlayerMoveCount(int count)
     {
 		Debug.LogError("Move count " + count);
+		_playerMove = count;
 
-		if(count >= _maxPlayerMove && _startTimer)
+		/*if(count >= _maxPlayerMove && _startTimer)
         {
 			GameEvents.OnGameOverMiniGame?.Invoke(true);
 			_isPlayerFinishedMoving = true;
 			_startTimer = false;
-		}
-    }
+			_playerMove = count;
+		}*/
+	}
 
 	void OnClickButtonType(MiniGame.PlatformType type) 
 	{

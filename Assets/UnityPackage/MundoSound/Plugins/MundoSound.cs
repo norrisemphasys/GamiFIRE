@@ -56,6 +56,8 @@ public static class MundoSound {
 						bool isExisting = existingAudioSource != null;
 						if (loop && isExisting)
                         {
+							if (!existingAudioSource.isPlaying)
+								existingAudioSource.Play();
 							return existingAudioSource;
 						}	
 					}

@@ -16,7 +16,7 @@ MonoBehaviour:
   question: You hear that study groups can help improve learning, but you usually
     study alone.
   answerData:
-  - answer: I decide to join a study group
+  - answer: I decide to join a study group.
     growthPoint: 1
     satisfactionPoint: 1
     innovationPoint: 1

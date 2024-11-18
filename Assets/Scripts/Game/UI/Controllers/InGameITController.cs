@@ -119,6 +119,9 @@ public class InGameITController : BasicController
 		gameManager.terrainController.StartSpawnObstacle(true);
 		view.ShowTimer(false);
 		startGame = true;
+
+		Audio.PlayBGMIslandTrip();
+		Audio.PlaySFXStream();
 	}
 
 	void OnClickPause()

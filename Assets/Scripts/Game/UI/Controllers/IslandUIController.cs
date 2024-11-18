@@ -42,6 +42,8 @@ public class IslandUIController : BasicController
 
 		Time.timeScale = 1;
 
+		view.SetIslandName( UserManager.GetJobName( gameManager.IslandType ));
+
 		sceneController = gameManager.sceneController;
 		if (gameManager.previousState == UIState.ROLL_MENU)
         {

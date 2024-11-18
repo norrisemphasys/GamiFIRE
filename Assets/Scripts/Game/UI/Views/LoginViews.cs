@@ -20,6 +20,8 @@ public class LoginViews : BasicView
     public Button signUpButtonSignUp;
     public Button signInButtonSignUp;
 
+    public bool IsSignUpVisible => signUpRect.localScale == Vector3.one;
+
     [Header("Sign In")]
     [Space(5)]
 
@@ -31,6 +33,8 @@ public class LoginViews : BasicView
     public Button signUpButtonSignIn;
     public Button signInButtonSignIn;
     public Button forgotPasswordButton;
+
+    public bool IsSignInVisible => signInRect.localScale == Vector3.one;
 
     [Header("Forgot Password")]
     [Space(5)]
@@ -46,6 +50,10 @@ public class LoginViews : BasicView
     public Button confirmEmailButton;
     public Button confirmPasswordButton;
     public Button closeButton;
+
+    public bool IsForgotPasswordVisible => forgotPasswordRect.localScale == Vector3.one;
+    public bool IsEmailVisible => typeEmailRect.activeSelf;
+    public bool IsNewPasswordVisible => typeNewPasswordRect.activeSelf;
 
     public string signUpEmail { get { return emailInputSignUp?.text; } }
     public string signUpUsername { get { return usernameInputSignUp?.text; } }
