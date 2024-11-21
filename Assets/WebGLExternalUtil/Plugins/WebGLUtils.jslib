@@ -1,7 +1,7 @@
 mergeInto(LibraryManager.library, {
 
   GoToFullScreen: function () {
-    window.GoToFullScreen();
+	window.GoToFullScreen();
   }, 
 
   HasFullscreen: function()

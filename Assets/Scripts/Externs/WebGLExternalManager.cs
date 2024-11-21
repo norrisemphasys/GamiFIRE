@@ -13,8 +13,7 @@ public class WebGLExternalManager : MonoSingleton<WebGLExternalManager>
 
     public static void FullScreen()
     {
-        //GoToFullScreen();
-
-        HasFullscreen();
+        GoToFullScreen();
+        //HasFullscreen();
     }
 }

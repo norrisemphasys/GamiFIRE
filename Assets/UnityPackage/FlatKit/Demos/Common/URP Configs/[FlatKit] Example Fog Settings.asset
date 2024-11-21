@@ -40,12 +40,12 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
+    m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 3
   near: 30
   far: 150
   distanceFogIntensity: 0.72
-  useDistanceFogOnSky: 0
   useHeight: 1
   heightGradient:
     serializedVersion: 2
@@ -74,15 +74,17 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
+    m_ColorSpace: -1
     m_NumColorKeys: 3
     m_NumAlphaKeys: 3
   low: 5
   high: 35
   heightFogIntensity: 0.324
-  useHeightFogOnSky: 0
+  cameraRelativePosition: 0
   distanceHeightBlend: 0
   renderEvent: 550
   applyInSceneView: 1
+  effectMaterial: {fileID: 3809722197779856838}
 --- !u!21 &3809722197779856838
 Material:
   serializedVersion: 8
@@ -93,16 +95,19 @@ Material:
   m_Name: Effect Material
   m_Shader: {fileID: -6465566751694194690, guid: c77db07224d9f784d90d7eb0e84c57f7,
     type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords:
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
   - USE_DISTANCE_FOG
   - USE_HEIGHT_FOG
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -128,10 +133,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DistanceFogIntensity: 0.5
-    - _DistanceHeightBlend: 0.5
+    - _DistanceFogIntensity: 0.72
+    - _DistanceHeightBlend: 0
     - _Far: 150
-    - _HeightFogIntensity: 0.5
+    - _HeightFogIntensity: 0.324
     - _HighWorldY: 35
     - _LowWorldY: 5
     - _Near: 30
