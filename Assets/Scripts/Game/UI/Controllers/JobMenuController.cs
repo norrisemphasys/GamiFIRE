@@ -57,7 +57,7 @@ public class JobMenuController : BasicController
 
 		LoadingManager.instance.ShowLoader(true);
 
-		DBManager.AddEditUser(updatedUser, res =>
+		DBManager.AddEditUserLocalID(updatedUser, res =>
 		{
 			PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("Your account has been updated.", () =>
 			{

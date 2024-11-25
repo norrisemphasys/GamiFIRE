@@ -46,6 +46,7 @@ public class LoginViews : BasicView
 
     [SerializeField] TMP_InputField confirmEmailInput;
     [SerializeField] TMP_InputField newPasswordInput;
+    [SerializeField] TMP_InputField verificationCodeInput;
 
     public Button confirmEmailButton;
     public Button confirmPasswordButton;
@@ -64,6 +65,7 @@ public class LoginViews : BasicView
 
     public string forgotPasswordEmail { get { return confirmEmailInput?.text; } }
     public string newPassword { get { return newPasswordInput?.text; } }
+    public string verificationCode { get { return verificationCodeInput?.text; } }
 
 
     public void Init()

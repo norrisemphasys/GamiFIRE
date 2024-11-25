@@ -10,10 +10,8 @@ public class WebGLExternalManager : MonoSingleton<WebGLExternalManager>
     [DllImport("__Internal")]
     private static extern void HasFullscreen();
 
-
     public static void FullScreen()
     {
         GoToFullScreen();
-        //HasFullscreen();
     }
 }

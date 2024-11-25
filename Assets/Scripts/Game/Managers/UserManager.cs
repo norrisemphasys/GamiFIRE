@@ -28,7 +28,7 @@ public class UserManager : MonoSingleton<UserManager>
             return;
         }
 
-        DBManager.AddEditUser(_currentUser, (res) => 
+        DBManager.AddEditUserLocalID(_currentUser, (res) => 
         {
             SetCurrentUser(res);
             callback?.Invoke();

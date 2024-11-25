@@ -1,3 +1,5 @@
+//#define OLD_DB_IMPLEMENTATION
+
 using Proyecto26;
 using System.Collections;
 using System.Collections.Generic;
@@ -109,7 +111,7 @@ public class LoginController : BasicController
                         ("You are missing an information. Make sure to complete the necessary data."));
             return; // Show popup Error
         }
-
+#if OLD_DB_IMPLEMENTATION
         // Add new user to database.
         User newUser = new User
         {
@@ -155,6 +157,22 @@ public class LoginController : BasicController
                 PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("User already exist."));
             }
         });
+#else
+        LoadingManager.instance.ShowLoader(true);
+        DBManager.SignUpUser(view.signUpUsername, view.signUpEmail, view.signUpPassword, 
+        (res) => 
+        {
+            LoadingManager.instance.ShowLoader(false);
+            PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("New user successfuly created. Login your account to get started.",
+            () =>
+            {
+                view.ShowSignUp(false, () =>
+                {
+                    view.ShowSignIn(true);
+                });
+            }));
+        });
+#endif
     }
 
     void OnClickLogin()
@@ -169,6 +187,7 @@ public class LoginController : BasicController
             return; // Show popup Error
         }
 
+#if OLD_DB_IMPLEMENTATION
         LoadingManager.instance.ShowLoader(true);
 
         DBManager.GetUserByName(view.signInUsername, (res) =>
@@ -221,6 +240,45 @@ public class LoginController : BasicController
                 }
             }
         });
+#else
+        LoadingManager.instance.ShowLoader(true);
+        DBManager.SignInUser(view.signInUsername, view.signInPassword, (res) => 
+        {
+            if (res == null)
+            {
+                // Show popup wrong username or password
+                Debug.Log("Wrong username or password.");
+                LoadingManager.instance.ShowLoader(false);
+
+                PopupManager.instance.ShowPopup(PopupMessage.ErrorPopup
+                    ("Wrong username or password. Please try again."));
+            }
+            else
+            {
+                UserManager.instance.SetCurrentUser(res);
+                if (resetUserPoints)
+                    UserManager.instance.ResetUserPoints();
+
+                if (res.isAnExistingAccount)
+                {
+                    view.ShowSignIn(false, () =>
+                    {
+                        LoadSceneManager.instance.LoadSceneLevel(loadSceneIndex,
+                            UnityEngine.SceneManagement.LoadSceneMode.Single,
+                        () =>
+                        {
+                            LoadingManager.instance.ShowLoader(false);
+                        });
+                    });
+                }
+                else
+                {
+                    OnClickDefault(UIState.GENDER_MENU);
+                    LoadingManager.instance.ShowLoader(false);
+                }
+            }
+        });
+#endif
     }
 
     void OnClickForgotPassword()
@@ -256,7 +314,7 @@ public class LoginController : BasicController
     void OnClickConfirmEmail()
     {
         Audio.PlaySFXClick();
-
+#if OLD_DB_IMPLEMENTATION
         // Add email verification
         LoadingManager.instance.ShowLoader(true);
 
@@ -276,6 +334,31 @@ public class LoginController : BasicController
                 UserManager.instance.SetCurrentUser(res);
             }
         });
+#else
+        LoadingManager.instance.ShowLoader(true);
+
+        DBManager.RequestForgotPassword(view.forgotPasswordEmail, (res) =>
+        {
+            LoadingManager.instance.ShowLoader(false);
+
+            if(res)
+            {
+                PopupManager.instance.ShowPopup(PopupMessage.InfoPopup
+                ("Check your email to change your password.", ()=> 
+                {
+                    view.ShowForgotPassword(false, () =>
+                    {
+                        view.ShowSignIn(true);
+                    });
+                }));
+            }
+            else
+            {
+                PopupManager.instance.ShowPopup(PopupMessage.ErrorPopup
+                        ("Email does not exist. Please try again."));
+            }
+        });
+#endif
     }
 
     void OnClickNewPassword()
@@ -286,6 +369,7 @@ public class LoginController : BasicController
         User currentUser = UserManager.instance.currentUser;
         currentUser.Password = Utils.GetMD5Hash(view.newPassword);
 
+#if OLD_DB_IMPLEMENTATION
         LoadingManager.instance.ShowLoader(true);
 
         DBManager.AddEditUser(currentUser, res => 
@@ -303,6 +387,35 @@ public class LoginController : BasicController
             UserManager.instance.SetCurrentUser(res);
             LoadingManager.instance.ShowLoader(false);
         });
+#else
+        LoadingManager.instance.ShowLoader(true);
+
+        DBManager.RequestChangePassword(view.verificationCode, currentUser.Password, (res) =>
+        {
+            if (res)
+            {
+                DBManager.AddEditUserLocalID(currentUser, (user) => 
+                {
+                    PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("Your password has been updated.", () =>
+                    {
+                        view.ShowForgotPassword(false, () =>
+                        {
+                            view.ShowSignIn(true);
+                        });
+                    }));
+
+                    UserManager.instance.SetCurrentUser(user);
+                    LoadingManager.instance.ShowLoader(false);
+                });
+            }
+            else
+            {
+                PopupManager.instance.ShowPopup(PopupMessage.ErrorPopup
+                       ("Failed to change password."));
+            }
+        });
+
+#endif
     }
 
     void OnClickCloseForgotPassword()
