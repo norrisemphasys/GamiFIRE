@@ -198,6 +198,7 @@ public class DBManager : MonoSingleton<DBManager>
                         if(Utils.VerifyMD5Hash(password, user.Password))
                         {
                             callback?.Invoke(user);
+                            UserManager.instance.SetCurrentUser(user);
                         }
                         else
                         {

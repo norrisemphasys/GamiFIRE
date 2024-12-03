@@ -39,10 +39,10 @@ public class MGOne : MiniGame
         gameManager.miniGameController.uiController.ShowCanvas(false);
     }
 
-
-    // Update is called once per frame
-    void Update()
+    public override void OnUpdate()
     {
+        base.OnUpdate();
+
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.M))
             MovePlayer(PlatformType.GREEN);

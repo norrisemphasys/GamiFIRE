@@ -10,6 +10,8 @@ TagManager:
   - Egg
   - Cup
   - FxTemporaire
+  - Enemy
+  - Hop
   layers:
   - Default
   - TransparentFX

@@ -9,6 +9,8 @@ public class MGPlayer : MonoBehaviour
     Transform playerTransform;
     Animator animator;
 
+    public Transform transformFollow;
+
     private void Awake()
     {
         playerTransform = transform;
@@ -24,7 +26,8 @@ public class MGPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (transformFollow != null)
+            transform.position = transformFollow.position;
     }
 
     public void SetPlayerPosition(Vector3 pos)

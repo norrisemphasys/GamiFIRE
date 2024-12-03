@@ -40,6 +40,7 @@ public class MiniGameController : MonoBehaviour
     {
         miniGameBank.Add(MiniGameType.MG_ONE, miniGame[0]);
         miniGameBank.Add(MiniGameType.MG_TWO, miniGame[1]);
+        miniGameBank.Add(MiniGameType.MG_THREE, miniGame[2]);
 
         for (int i = 0; i < miniGame.Length; i++)
             miniGame[i].main.SetActive(false);
@@ -59,6 +60,7 @@ public class MiniGameController : MonoBehaviour
             {
                 case MiniGameType.MG_ONE: GetMiniGame<MGOne>(type).OnEnter(); break;
                 case MiniGameType.MG_TWO: GetMiniGame<MGTwo>(type).OnEnter(); break;
+                case MiniGameType.MG_THREE: GetMiniGame<MGThree>(type).OnEnter(); break;
             }
         }
     }
@@ -71,6 +73,7 @@ public class MiniGameController : MonoBehaviour
             {
                 case MiniGameType.MG_ONE: GetMiniGame<MGOne>(type).OnExit(); break;
                 case MiniGameType.MG_TWO: GetMiniGame<MGTwo>(type).OnExit(); break;
+                case MiniGameType.MG_THREE: GetMiniGame<MGThree>(type).OnExit(); break;
             }
         }
     }

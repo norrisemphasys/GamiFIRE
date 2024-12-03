@@ -24,4 +24,12 @@ public class MiniGame : MonoBehaviour
         GREEN,
         YELLOW
     }
+
+    public enum Direction
+    {
+        LEFT,
+        RIGHT,
+        UP,
+        DOWN
+    }
 }

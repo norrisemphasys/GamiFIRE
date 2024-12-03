@@ -19,6 +19,11 @@ public static class GameEvents
     public static readonly Evt<MiniGame.PlatformType> OnPressS = new Evt<MiniGame.PlatformType>();
     public static readonly Evt<MiniGame.PlatformType> OnPressD = new Evt<MiniGame.PlatformType>();
 
+    public static readonly Evt<MiniGame.Direction> OnPressLeft = new Evt<MiniGame.Direction>();
+    public static readonly Evt<MiniGame.Direction> OnPressRight = new Evt<MiniGame.Direction>();
+    public static readonly Evt<MiniGame.Direction> OnPressUp = new Evt<MiniGame.Direction>();
+    public static readonly Evt<MiniGame.Direction> OnPressDown = new Evt<MiniGame.Direction>();
+
     public static readonly Evt<Vector3> OnMouseMove = new Evt<Vector3>();
 
     public static readonly Evt<bool> OnGameOverMiniGame = new Evt<bool>();

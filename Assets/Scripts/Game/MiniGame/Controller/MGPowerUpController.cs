@@ -29,6 +29,7 @@ public class MGPowerUpController : MonoBehaviour
         ps.SetIfLast(islast);
         ps.SetEffectController(plusOneController);
     }
+
     public void ResetPowerUp()
     {
         poolManager.ResetAllObjectList("PowerUp");
