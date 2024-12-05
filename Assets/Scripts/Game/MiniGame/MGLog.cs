@@ -57,6 +57,11 @@ public class MGLog : MonoBehaviour
         _startMove = true;
     }
 
+    public void Stop()
+    {
+        _startMove = false;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals("Player"))
@@ -71,7 +76,7 @@ public class MGLog : MonoBehaviour
             else
             {
                 MGPlayer player = collision.gameObject.GetComponent<MGPlayer>();
-                if (player != null)
+                if (player != null && player.transformFollow == null)
                     GameEvents.OnGameOverMiniGame.Invoke(false);
 
                 Debug.LogError("Player Defeated");

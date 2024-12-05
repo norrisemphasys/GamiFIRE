@@ -71,6 +71,7 @@ public class MGRoadController : MonoBehaviour
     {
         Vector2 pos = parentRoad.position;
         pos.y -= (_offset * dir);
+        pos.y = Mathf.Clamp(pos.y, -1000f, -5.67f);
         parentRoad.position = pos;
     }
 

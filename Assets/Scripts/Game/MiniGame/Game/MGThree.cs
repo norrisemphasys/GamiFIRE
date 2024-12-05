@@ -12,6 +12,8 @@ public class MGThree : MiniGame
     private int _moveCount = 0;
     private int _moveLimitCount = 0;
 
+    private int _maxMoveLimit = 3;
+
     public override void OnEnter()
     {
         main.SetActive(true);
@@ -44,6 +46,9 @@ public class MGThree : MiniGame
         GameEvents.OnPressRight.AddListener(MovePlayer);
         GameEvents.OnPressUp.AddListener(MovePlayer);
         GameEvents.OnPressDown.AddListener(MovePlayer);
+
+        GameEvents.OnReleaseLeft.AddListener(OnReleaseMove);
+        GameEvents.OnReleaseRight.AddListener(OnReleaseMove);
     }
 
     public override void RemoveListener()
@@ -52,11 +57,21 @@ public class MGThree : MiniGame
         GameEvents.OnPressRight.RemoveListener(MovePlayer);
         GameEvents.OnPressUp.RemoveListener(MovePlayer);
         GameEvents.OnPressDown.RemoveListener(MovePlayer);
+
+        GameEvents.OnReleaseLeft.RemoveListener(OnReleaseMove);
+        GameEvents.OnReleaseRight.RemoveListener(OnReleaseMove);
     }
 
     private void OnDestroy()
     {
         RemoveListener();
+    }
+
+    bool _moveOnce = false;
+
+    void OnReleaseMove(MiniGame.Direction dir)
+    {
+        _moveOnce = false;
     }
 
     public void MovePlayer(MiniGame.Direction dir)
@@ -70,29 +85,54 @@ public class MGThree : MiniGame
         switch (dir)
         {
             case Direction.LEFT:
-                playerPos.x -= (moveOffset / (isRiding ? 1f : 6f));
-                player.transformFollow = null;
+
+                if(isRiding)
+                {
+                    if(!_moveOnce)
+                    {
+                        playerPos.x -= 1;
+                        _moveOnce = true;
+                        player.transformFollow = null;
+                    }
+                }else
+                    playerPos.x -= 0.005f;
+
                 break;
             case Direction.RIGHT:
-                playerPos.x += (moveOffset / (isRiding ? 1f : 6f));
-                player.transformFollow = null;
+
+                if (isRiding)
+                {
+                    if (!_moveOnce)
+                    {
+                        playerPos.x += 1;
+                        _moveOnce = true;
+                        player.transformFollow = null;
+                    }
+                }
+                else
+                    playerPos.x += 0.005f;
+
                 break;
             case Direction.UP:
 
                 player.transformFollow = null;
 
-                if (_moveLimitCount < 4)
-                    playerPos.y += moveOffset;
-                else
+                if(_moveLimitCount > _maxMoveLimit)
                 {
                     roadController.MoveRoad(1);
                     roadController.SpawnRoad();
                 }
+                else
+                    playerPos.y += moveOffset;
 
-                _moveCount++;
                 _moveLimitCount++;
 
-                GameEvents.OnMovePlayerCount.Invoke(_moveCount);
+                if(_moveLimitCount > _moveCount)
+                {
+                    _moveCount++;
+                    ScoreManager.instance.AddScore(1);
+                    GameEvents.OnMovePlayerCount.Invoke(_moveCount);
+                }
 
                 break;
 
@@ -100,23 +140,13 @@ public class MGThree : MiniGame
 
                 player.transformFollow = null;
                
-                if(_moveLimitCount >= 4)
-                {
+                if(_moveLimitCount > _maxMoveLimit)
                     roadController.MoveRoad(-1);
-                    _moveLimitCount--;
-                }
                 else
                     playerPos.y -= moveOffset;
-  
-                    
-                /* if (_moveLimitCount < 4)
-                     playerPos.y -= moveOffset;
-                 else
-                 {
-                     roadController.MoveRoad();
-                     roadController.SpawnRoad();
-                 }
- */
+
+                _moveLimitCount--;
+
                 playerPos.y = Mathf.Clamp(playerPos.y, -5.65f, 100f);
 
                 break;

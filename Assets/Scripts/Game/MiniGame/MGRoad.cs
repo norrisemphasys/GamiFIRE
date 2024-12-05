@@ -66,6 +66,7 @@ public class MGRoad : MonoBehaviour
         int cnt = 0;
         int maxCnt = Random.Range(2, 4);
 
+        ResetEnemy();
         enemyList.Clear();
 
         for (int i = -3; i < 3; i++)
@@ -99,6 +100,7 @@ public class MGRoad : MonoBehaviour
         int cnt = 0;
         int maxCnt = Random.Range(2, 4);
 
+        ResetBone();
         boneList.Clear();
 
         for (int i = -3; i < 3; i++)
@@ -135,6 +137,51 @@ public class MGRoad : MonoBehaviour
                 mgBone.speed = speed;
                 mgBone.SetSafe(false);
                 mgBone.Move();
+
+                boneList.Add(mgBone);
+            }
+        }
+
+        SpawnSingleBone(-4);
+        SpawnSingleBone(4);
+    }
+
+    void SpawnSingleBone(float pos)
+    {
+        GameObject bone = pool.GetObject("Bone");
+        MGLog mgBone = bone.GetComponent<MGLog>();
+
+        bone.transform.SetParent(transform);
+        bone.transform.localPosition = new Vector3(pos, 0f, 0f);
+
+        mgBone.side = side;
+        mgBone.speed = speed;
+        mgBone.SetSafe(false);
+        mgBone.Move();
+
+        boneList.Add(mgBone);
+    }
+
+    void ResetBone()
+    {
+        if(boneList.Count > 0)
+        {
+            for(int i = 0; i < boneList.Count; i++)
+            {
+                boneList[i].Stop();
+                boneList[i].gameObject.SetActive(false);
+            }
+        }
+    }
+
+    void ResetEnemy()
+    {
+        if (enemyList.Count > 0)
+        {
+            for (int i = 0; i < enemyList.Count; i++)
+            {
+                enemyList[i].Stop();
+                enemyList[i].gameObject.SetActive(false);
             }
         }
     }

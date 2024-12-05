@@ -88,7 +88,7 @@ public class MiniGameController : MonoBehaviour
 
         counter++;
 
-        if (counter == 3)
+        if (counter == 4)
             counter = 1;
     }
 

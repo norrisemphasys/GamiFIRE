@@ -15,11 +15,17 @@ public class MGInputController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D))
             GameEvents.OnPressA.Invoke(MiniGame.PlatformType.GREEN);
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
             GameEvents.OnPressLeft.Invoke(MiniGame.Direction.LEFT);
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
             GameEvents.OnPressRight.Invoke(MiniGame.Direction.RIGHT);
+
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
+            GameEvents.OnReleaseLeft.Invoke(MiniGame.Direction.LEFT);
+
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+            GameEvents.OnReleaseRight.Invoke(MiniGame.Direction.RIGHT);
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
             GameEvents.OnPressUp.Invoke(MiniGame.Direction.UP);

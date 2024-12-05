@@ -59,6 +59,11 @@ public class MGEnemy : MonoBehaviour
         animator.Play("Idle");
     }
 
+    public void Stop()
+    {
+        _startMove = false;
+    }
+
     public void SetIcon(int idx)
     {
         icon.sprite = icons[idx];

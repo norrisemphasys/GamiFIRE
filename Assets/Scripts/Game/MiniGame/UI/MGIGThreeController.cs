@@ -8,6 +8,7 @@ public class MGIGThreeController : BasicController
 	private MGIGThreeView view;
 
 	private bool _startState = false;
+	int _maxPlayerCount = 80;
 
 	void Awake()
 	{
@@ -73,7 +74,11 @@ public class MGIGThreeController : BasicController
 	void OnPlayerMoveCount(int count)
     {
 		view.SetPoints(count);
-    }
+
+		if (count >= _maxPlayerCount)
+			OnGameOver(true);
+
+	}
 
 	void OnGameOver(bool win)
     {

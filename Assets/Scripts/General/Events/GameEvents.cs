@@ -21,6 +21,10 @@ public static class GameEvents
 
     public static readonly Evt<MiniGame.Direction> OnPressLeft = new Evt<MiniGame.Direction>();
     public static readonly Evt<MiniGame.Direction> OnPressRight = new Evt<MiniGame.Direction>();
+
+    public static readonly Evt<MiniGame.Direction> OnReleaseLeft = new Evt<MiniGame.Direction>();
+    public static readonly Evt<MiniGame.Direction> OnReleaseRight = new Evt<MiniGame.Direction>();
+
     public static readonly Evt<MiniGame.Direction> OnPressUp = new Evt<MiniGame.Direction>();
     public static readonly Evt<MiniGame.Direction> OnPressDown = new Evt<MiniGame.Direction>();
 
