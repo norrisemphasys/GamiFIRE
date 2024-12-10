@@ -56,9 +56,13 @@ public class IslandUIController : BasicController
 			view.SetDiceResult(gameManager.sceneController.MoveCounter);
 			view.SetPulse(true);
 
-			gameManager.sceneController.environmentController.UpdateEnvironment();
+			// Auto environment spawn
+			// gameManager.sceneController.environmentController.UpdateEnvironment();
 
-			if(gameManager.sceneController.HasPrize)
+			// Manual environment spawn
+			ShowBuildingShop();
+
+			if (gameManager.sceneController.HasPrize)
             {
 				view.ShowBoosterInfo(true,
 					gameManager.sceneController.currentPrizeData);
@@ -67,6 +71,13 @@ public class IslandUIController : BasicController
             {
 				view.ShowBoosterInfo(false,
 					gameManager.sceneController.currentPrizeData);
+			}
+
+			if (gameManager.previousState == UIState.BUILDING_MENU && 
+				gameManager.sceneController.environmentController.hasBuildingSelected)
+            {
+				// Show building animation
+				gameManager.sceneController.environmentController.AnimateBuildingList();
 			}
 		}
             
@@ -93,7 +104,17 @@ public class IslandUIController : BasicController
         {
 			User currentUser = UserManager.instance.currentUser;
 			if (currentUser != null)
+            {
 				view.UpdateUserPoints(currentUser);
+
+				int lowestPrice = gameManager.sceneController.environmentController.GetLowestBuildPrice();
+				bool hasAvailableBuilding = currentUser.CurrencyPoint >= lowestPrice;
+				view.ShowNotif(hasAvailableBuilding);
+
+				if (!hasAvailableBuilding)
+					gameManager.sceneController.environmentController.showPopupOnce = false;
+			}
+				
 		}
 
 		UserManager.instance.SaveUser(()=>
@@ -107,6 +128,31 @@ public class IslandUIController : BasicController
 			showPlatformPanel = true;
 		}
 	}
+
+	void ShowBuildingShop()
+    {
+		User currentUser = UserManager.instance.currentUser;
+		if (currentUser != null)
+        {
+			int lowestPrice = gameManager.sceneController.environmentController.GetLowestBuildPrice();
+			if (currentUser.CurrencyPoint >= lowestPrice)
+            {
+				//OnClickDefault(UIState.BUILDING_MENU);
+				// Show popup
+
+				if(!gameManager.sceneController.environmentController.showPopupOnce)
+                {
+					PopupManager.instance.ShowPopup(
+						PopupMessage.InfoPopup("You have an available building to place on your island.", () =>
+						{
+							OnClickDefault(UIState.BUILDING_MENU);
+							gameManager.sceneController.environmentController.showPopupOnce = true;
+						})
+					);
+				}
+			}
+		}	
+    }
 
 	void ShowPopup()
     {
@@ -174,6 +220,7 @@ public class IslandUIController : BasicController
 		view.buttonPause.onClick.AddListener(OnClickPause);
 
 		view.buttonStart.onClick.AddListener(OnClickStart);
+		view.buttonBuilding.onClick.AddListener(OnClickBuilding);
 	}
 
 	void RemoveListener()
@@ -182,7 +229,13 @@ public class IslandUIController : BasicController
 		view.buttonPause.onClick.RemoveListener(OnClickPause);
 
 		view.buttonStart.onClick.RemoveListener(OnClickStart);
+		view.buttonBuilding.onClick.RemoveListener(OnClickBuilding);
 	}
+
+	void OnClickBuilding()
+    {
+		OnClickDefault(UIState.BUILDING_MENU);
+    }
 
 	void OnClickStart()
     {

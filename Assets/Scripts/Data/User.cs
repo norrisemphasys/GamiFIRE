@@ -18,6 +18,7 @@ public class User
 
     public int Gender;
 
+    // Depricated
     public int Coin;
 
     public int Score;

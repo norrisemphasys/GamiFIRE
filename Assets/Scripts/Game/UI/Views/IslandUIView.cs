@@ -10,6 +10,7 @@ public class IslandUIView : BasicView
     public Button buttonRoll;
     public Button buttonPause;
     public Button buttonStart;
+    public Button buttonBuilding;
 
     [SerializeField] TextMeshProUGUI textCoin;
     [SerializeField] TextMeshProUGUI textGrowthPoint;
@@ -30,6 +31,7 @@ public class IslandUIView : BasicView
     [SerializeField] SpinnerResultView spinnerResultView;
 
     [SerializeField] TextMeshProUGUI textIslandName;
+    [SerializeField] GameObject notif;
 
     ScoreManager.TempScore tempScore;
 
@@ -39,6 +41,12 @@ public class IslandUIView : BasicView
     {
         platformPanel.DOScale(Vector3.zero, 0);
         ShowBoosterInfo(false);
+        ShowNotif(false);
+    }
+
+    public void ShowNotif(bool show)
+    {
+        notif.SetActive(show);
     }
 
     public void ShowBoosterInfo(bool show, PrizeData data = null)

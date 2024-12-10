@@ -10,6 +10,8 @@ public static class GameEvents
     public static readonly Evt<int> OnCoinCollected = new Evt<int>();
     public static readonly Evt OnSelectObject = new Evt();
 
+    public static readonly Evt<int> OnCoinUpdate = new Evt<int>();
+
     public static readonly Evt<User> OnUpdateUser = new Evt<User>();
 
 
