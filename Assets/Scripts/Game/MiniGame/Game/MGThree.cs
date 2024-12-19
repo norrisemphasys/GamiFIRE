@@ -8,6 +8,7 @@ public class MGThree : MiniGame
     [SerializeField] MGRoadController roadController;
 
     [SerializeField] Vector3 playerInitPosition;
+    [SerializeField] float playerSpeed = 0.005f;
 
     private int _moveCount = 0;
     private int _moveLimitCount = 0;
@@ -95,7 +96,7 @@ public class MGThree : MiniGame
                         player.transformFollow = null;
                     }
                 }else
-                    playerPos.x -= 0.005f;
+                    playerPos.x -= playerSpeed;
 
                 break;
             case Direction.RIGHT:
@@ -110,7 +111,7 @@ public class MGThree : MiniGame
                     }
                 }
                 else
-                    playerPos.x += 0.005f;
+                    playerPos.x += playerSpeed;
 
                 break;
             case Direction.UP:

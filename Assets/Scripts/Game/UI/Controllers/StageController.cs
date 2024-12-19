@@ -67,6 +67,9 @@ public class StageController : BasicController
 
 	void ClickIsland(int idx)
     {
+		JobType type = (JobType)idx;
+		gameManager.SetIslandType( type );
+
 		Audio.PlaySFXStageClick();
 		Utils.Delay(this, LoadIslandScene, 1f);
 	}

@@ -12,6 +12,8 @@ public class IslandUIView : BasicView
     public Button buttonStart;
     public Button buttonBuilding;
 
+    public Button[] buttonPoints;
+
     [SerializeField] TextMeshProUGUI textCoin;
     [SerializeField] TextMeshProUGUI textGrowthPoint;
     [SerializeField] TextMeshProUGUI textInnovationPoint;

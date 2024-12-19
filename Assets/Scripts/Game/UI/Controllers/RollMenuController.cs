@@ -92,6 +92,19 @@ public class RollMenuController : BasicController
 			view.ShowDiceFace(randIDX);
 		}
 
+		int currentCellIndex = gameManager.sceneController.cellController.CurrentCellIndex;
+		int maxCellCount = gameManager.sceneController.cellController.maxCellCount;
+
+		int totalMoveCount = currentCellIndex + (randIDX + 1);
+
+		if(totalMoveCount > maxCellCount)
+        {
+			int diff = maxCellCount - currentCellIndex;
+			randIDX = (diff - 1);
+
+			view.ShowDiceFace(randIDX);
+		}
+
 		view.StopLoading();
 		gameManager.sceneController.MoveCounter = randIDX + 1;
 		gameManager.sceneController.TotalMoves += gameManager.sceneController.MoveCounter;
@@ -104,6 +117,8 @@ public class RollMenuController : BasicController
 
 		OnClickDefault(UIState.ISLAND_MENU);
 	}
+
+	
 
 	int RandomizeCustomIndex()
     {

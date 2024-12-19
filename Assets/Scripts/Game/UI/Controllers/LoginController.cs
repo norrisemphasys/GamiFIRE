@@ -82,6 +82,7 @@ public class LoginController : BasicController
         view.confirmPasswordButton.onClick.AddListener(OnClickNewPassword);
 
         view.closeButton.onClick.AddListener(OnClickCloseForgotPassword);
+        view.buttonShowPassword.onClick.AddListener(OnClickShowPassword);
     }
 
     void RemoveListener()
@@ -97,6 +98,12 @@ public class LoginController : BasicController
         view.confirmPasswordButton.onClick.RemoveListener(OnClickNewPassword);
 
         view.closeButton.onClick.RemoveListener(OnClickCloseForgotPassword);
+        view.buttonShowPassword.onClick.RemoveListener(OnClickShowPassword);
+    }
+
+    void OnClickShowPassword()
+    {
+        view.ToggleShowPassword();
     }
 
     void OnClickSignUpNewUser()

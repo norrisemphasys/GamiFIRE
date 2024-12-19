@@ -17,8 +17,12 @@ public class LoginViews : BasicView
     [SerializeField] TMP_InputField usernameInputSignUp;
     [SerializeField] TMP_InputField passwordInputSignUp;
 
+    [SerializeField] Image imgShowIcon;
+
     public Button signUpButtonSignUp;
     public Button signInButtonSignUp;
+
+    public Button buttonShowPassword;
 
     public bool IsSignUpVisible => signUpRect.localScale == Vector3.one;
 
@@ -67,7 +71,7 @@ public class LoginViews : BasicView
     public string newPassword { get { return newPasswordInput?.text; } }
     public string verificationCode { get { return verificationCodeInput?.text; } }
 
-
+    bool showPassword = false;
     public void Init()
     {
         signInRect.DOScale(Vector3.zero, 0).SetUpdate(true);
@@ -141,5 +145,17 @@ public class LoginViews : BasicView
     {
         confirmEmailInput.text = string.Empty;
         newPasswordInput.text = string.Empty;
+    }
+
+    public void ToggleShowPassword()
+    {
+        showPassword = !showPassword;
+
+        Color c = imgShowIcon.color;
+        c.a = showPassword ? 1 : 0.6f;
+        imgShowIcon.color = c;
+
+        passwordInputSignUp.contentType = showPassword ? TMP_InputField.ContentType.Standard : TMP_InputField.ContentType.Password;
+        passwordInputSignUp.ForceLabelUpdate();
     }
 }

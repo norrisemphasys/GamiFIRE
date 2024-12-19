@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 121be107ed67d87439e932b4f412adb9, type: 3}
+  m_Name: TreeAgriculturist
+  m_EditorClassIdentifier: 
+  objects: []
+  prefabs:
+  - prefab: {fileID: 1452130660160706, guid: 012abc7abe0517b43ab980b30563df5f, type: 3}
+    weight: 2.05
+    minMaxScaleMltp: {x: 0, y: 0}
+    normalAllighn: 0
+    snapChildren: 0
+  - prefab: {fileID: 1802671203536516, guid: 99c39d367e6112d4c811f0b545bb1da7, type: 3}
+    weight: 2.05
+    minMaxScaleMltp: {x: 0, y: 0}
+    normalAllighn: 0
+    snapChildren: 0
+  - prefab: {fileID: 1314124812925230, guid: b39a80e2973223644b07f21c385bccc2, type: 3}
+    weight: 2.05
+    minMaxScaleMltp: {x: 0, y: 0}
+    normalAllighn: 0
+    snapChildren: 0
+  - prefab: {fileID: 1940795324081892, guid: 630338913b6d039448f2a32c95f5094c, type: 3}
+    weight: 2.05
+    minMaxScaleMltp: {x: 0, y: 0}
+    normalAllighn: 0
+    snapChildren: 0
+  spawnAsPrefab: 1
+  minMaxScale: {x: 0.9, y: 3.5}
+  randRotAdd: {x: 0, y: 180, z: 0}
+  maxNormal: 60
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 2147483647
+  avoidedLayer:
+    serializedVersion: 2
+    m_Bits: 0

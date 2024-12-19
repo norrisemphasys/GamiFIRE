@@ -8,7 +8,7 @@ public class IslandUIController : BasicController
 	private SceneController sceneController;
 
 	[SerializeField] bool testScore = false;
-
+	[SerializeField] bool enablePlatformPanel = true;
 	private bool showPlatformPanel = false;
 
 	void Awake()
@@ -43,6 +43,7 @@ public class IslandUIController : BasicController
 		Time.timeScale = 1;
 
 		view.SetIslandName( UserManager.GetJobName( gameManager.IslandType ));
+		view.buttonBuilding.interactable = false;
 
 		sceneController = gameManager.sceneController;
 		if (gameManager.previousState == UIState.ROLL_MENU)
@@ -57,10 +58,10 @@ public class IslandUIController : BasicController
 			view.SetPulse(true);
 
 			// Auto environment spawn
-			// gameManager.sceneController.environmentController.UpdateEnvironment();
+			gameManager.sceneController.environmentController.UpdateEnvironment();
 
 			// Manual environment spawn
-			ShowBuildingShop();
+			// ShowBuildingShop();
 
 			if (gameManager.sceneController.HasPrize)
             {
@@ -104,17 +105,9 @@ public class IslandUIController : BasicController
         {
 			User currentUser = UserManager.instance.currentUser;
 			if (currentUser != null)
-            {
 				view.UpdateUserPoints(currentUser);
 
-				int lowestPrice = gameManager.sceneController.environmentController.GetLowestBuildPrice();
-				bool hasAvailableBuilding = currentUser.CurrencyPoint >= lowestPrice;
-				view.ShowNotif(hasAvailableBuilding);
-
-				if (!hasAvailableBuilding)
-					gameManager.sceneController.environmentController.showPopupOnce = false;
-			}
-				
+			ShowBuildingNotification();
 		}
 
 		UserManager.instance.SaveUser(()=>
@@ -122,10 +115,30 @@ public class IslandUIController : BasicController
 			// Update User to server
 		});
 
-		if(!showPlatformPanel)
+		if(enablePlatformPanel)
         {
-			view.ShowPlatformPanel(true);
-			showPlatformPanel = true;
+			if (!showPlatformPanel)
+			{
+				view.ShowPlatformPanel(true);
+				showPlatformPanel = true;
+			}
+		}else
+			view.ShowPlatformPanel(false);
+	}
+
+	void ShowBuildingNotification()
+    {
+		User currentUser = UserManager.instance.currentUser;
+		if (currentUser != null)
+		{
+			int lowestPrice = gameManager.sceneController.environmentController.GetLowestBuildPrice();
+			bool hasAvailableBuilding = currentUser.CurrencyPoint >= lowestPrice;
+
+			view.ShowNotif(hasAvailableBuilding);
+			view.buttonBuilding.interactable = hasAvailableBuilding;
+
+			if (!hasAvailableBuilding)
+				gameManager.sceneController.environmentController.showPopupOnce = false;
 		}
 	}
 
@@ -140,19 +153,21 @@ public class IslandUIController : BasicController
 				//OnClickDefault(UIState.BUILDING_MENU);
 				// Show popup
 
-				if(!gameManager.sceneController.environmentController.showPopupOnce)
-                {
+				//if(!gameManager.sceneController.environmentController.showPopupOnce)
+                //{
 					PopupManager.instance.ShowPopup(
 						PopupMessage.InfoPopup("You have an available building to place on your island.", () =>
 						{
 							OnClickDefault(UIState.BUILDING_MENU);
-							gameManager.sceneController.environmentController.showPopupOnce = true;
+							//gameManager.sceneController.environmentController.showPopupOnce = true;
 						})
 					);
-				}
+				//}
 			}
-		}	
-    }
+		}
+
+		//ShowBuildingNotification();
+	}
 
 	void ShowPopup()
     {
@@ -219,8 +234,13 @@ public class IslandUIController : BasicController
 		view.buttonRoll.onClick.AddListener(OnClickRoll);
 		view.buttonPause.onClick.AddListener(OnClickPause);
 
-		view.buttonStart.onClick.AddListener(OnClickStart);
+		//view.buttonStart.onClick.AddListener(OnClickStart);
 		view.buttonBuilding.onClick.AddListener(OnClickBuilding);
+
+		GameEvents.OnShowBuilding.AddListener(ShowBuildingShop);
+
+		for(int i= 0; i < view.buttonPoints.Length; i++)
+			AddButtonListener(i, view.buttonPoints[i], OnClickPoints);
 	}
 
 	void RemoveListener()
@@ -228,8 +248,24 @@ public class IslandUIController : BasicController
 		view.buttonRoll.onClick.RemoveListener(OnClickRoll);
 		view.buttonPause.onClick.RemoveListener(OnClickPause);
 
-		view.buttonStart.onClick.RemoveListener(OnClickStart);
+		//view.buttonStart.onClick.RemoveListener(OnClickStart);
 		view.buttonBuilding.onClick.RemoveListener(OnClickBuilding);
+
+		GameEvents.OnShowBuilding.RemoveListener(ShowBuildingShop);
+
+		for (int i = 0; i < view.buttonPoints.Length; i++)
+			view.buttonPoints[i].onClick.RemoveAllListeners();
+
+	}
+
+	void OnClickPoints(int idx)
+    {
+		if(idx == 0) { }
+		else if(idx == 1) { }
+		else if(idx == 2) { }
+		else if(idx == 3) { }
+
+		view.ShowPlatformPanel(false);
 	}
 
 	void OnClickBuilding()
@@ -249,7 +285,8 @@ public class IslandUIController : BasicController
 
 	void OnClickPause()
     {
-		OnClickDefault(UIState.IT_PAUSE);
+		if(!gameManager.sceneController.StartGame)
+			OnClickDefault(UIState.IT_PAUSE);
     }
 	private void OnDestroy()
 	{

@@ -1,0 +1,35 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using DG.Tweening;
+using TMPro;
+
+public class IslandTutorialView : BasicView
+{
+    public Button btnClose;
+    public Button btnPrevious;
+    public Button btnNext;
+
+    public GameObject[] goImageTutorial;
+    public GameObject[] goTextInfo;
+    public GameObject[] goPagination;
+
+    private int steps = 3;
+
+    public void Init()
+    {
+        steps = goImageTutorial.Length;
+    }
+
+    public void ShowTutorial(int index)
+    {
+        for (int i = 0; i < steps; i++)
+        {
+            bool show = index == i;
+            goImageTutorial[i].SetActive(show);
+            goTextInfo[i].SetActive(show);
+            goPagination[i].SetActive(show);
+        }
+    }
+}

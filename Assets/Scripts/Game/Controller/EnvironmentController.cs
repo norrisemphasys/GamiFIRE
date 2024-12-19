@@ -17,7 +17,7 @@ public class EnvironmentController : MonoBehaviour
     public List<BuildingData> selectedBuildingData = new List<BuildingData>();
 
     bool startAnimation = false;
-
+    private int _prevEnableIndex = -1;
     public void Init()
     {
         gameManager = GameManager.instance;
@@ -25,12 +25,16 @@ public class EnvironmentController : MonoBehaviour
 
         for (int i = 0; i < environments.Length; i++)
         {
+            environments[i].parentEnvironment.SetActive(false);
             for (int j = 0; j < environments[i].environments.Length; j++)
             {
                 environments[i].environments[j].SetActive(false);
                 environments[i].environments[j].transform.localScale = Vector3.zero;
             }
         }
+
+        int islandTypeIdx = (int)gameManager.IslandType;
+        environments[islandTypeIdx].parentEnvironment.SetActive(true);
 
         particle.SetActive(false);
         // UpdateEnvironment(true);
@@ -53,7 +57,23 @@ public class EnvironmentController : MonoBehaviour
             AnimateIsland(environments[islandTypeIdx].environments[0], 1);
         else
         {
+           
+            int enableIdx = currentCell / ratioCount;
+            Debug.LogError("enableIdx" + enableIdx + " ratioCount " + ratioCount + " currentCell " + currentCell);
+            if (enableIdx < environments[islandTypeIdx]?.environments.Length && currentCell != 0)
+            {
+                if (_prevEnableIndex != enableIdx)
+                {
+                    // Send events when ready to buy building.
+                    GameEvents.OnShowBuilding.Invoke();
+                    Debug.LogError("Show building");
 
+                    _prevEnableIndex = enableIdx;
+                    showPopupOnce = false;
+                }
+            }
+
+#if OLD_IMPLEMENTATION
             Debug.LogError("currentCell " + currentCell);
             int ctr = 0;
             for (int i = 0; i < currentCell; i++)
@@ -66,12 +86,13 @@ public class EnvironmentController : MonoBehaviour
                     if (environments[islandTypeIdx].environments[enableIdx] != null &&
                         !environments[islandTypeIdx].environments[enableIdx].activeSelf)
                     {
-                        AnimateIsland(environments[islandTypeIdx].environments[enableIdx], ctr);
-
+                        // Old implementation
+                        // AnimateIsland(environments[islandTypeIdx].environments[enableIdx], ctr);
                         ctr++;
                     }
                 }
             }
+#endif
         }
     }
 
@@ -140,6 +161,7 @@ public class EnvironmentController : MonoBehaviour
 public class IslandObjects
 {
     public JobType type;
+    public GameObject parentEnvironment;
     public GameObject[] environments;
     public BuildingListView[] view;
 }

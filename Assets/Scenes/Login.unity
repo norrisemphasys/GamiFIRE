@@ -17892,8 +17892,10 @@ MonoBehaviour:
   emailInputSignUp: {fileID: 632038493}
   usernameInputSignUp: {fileID: 1084614251}
   passwordInputSignUp: {fileID: 865015223}
+  imgShowIcon: {fileID: 830733179}
   signUpButtonSignUp: {fileID: 188866140}
   signInButtonSignUp: {fileID: 1237906332}
+  buttonShowPassword: {fileID: 830733178}
   signInRect: {fileID: 761885882}
   usernameInputSignIn: {fileID: 844980181}
   passwordInputSignIn: {fileID: 980702878}
