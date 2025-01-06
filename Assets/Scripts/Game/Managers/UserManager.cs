@@ -59,7 +59,7 @@ public class UserManager : MonoSingleton<UserManager>
             case JobType.PROFESSIONAL:
                 return "INDEPENDENT PROFESSIONAL";
             case JobType.AGRICULTRIST:
-                return "AGRICULTRIST";
+                return "AGRICULTURIST";
             case JobType.BUSINESSMAN:
                 return "COMPANY EMPLOYEE";
         }

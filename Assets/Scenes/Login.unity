@@ -17927,6 +17927,7 @@ MonoBehaviour:
   nextState: 0
   loadSceneIndex: 1
   resetUserPoints: 1
+  isOffline: 0
 --- !u!1 &1729393128
 GameObject:
   m_ObjectHideFlags: 0

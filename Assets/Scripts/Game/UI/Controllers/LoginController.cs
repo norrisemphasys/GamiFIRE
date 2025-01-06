@@ -11,6 +11,7 @@ public class LoginController : BasicController
 
     [SerializeField] int loadSceneIndex;
     [SerializeField] bool resetUserPoints = false;
+    [SerializeField] bool isOffline = false;
     void Awake()
     {
         view = GetComponent<LoginViews>();
@@ -185,6 +186,45 @@ public class LoginController : BasicController
     void OnClickLogin()
     {
         Audio.PlaySFXClick();
+
+        if(isOffline)
+        {
+            User newUser = new User
+            {
+                ID = System.Guid.NewGuid().ToString(),
+                Username = "Test User",
+                Email = "test@test.com",
+                Password = Utils.GetMD5Hash("1234567890"),
+                isAnExistingAccount = false,
+
+                JobType = 0,
+                Gender = 0,
+                Coin = 0,
+                Score = 0,
+                GrowthPoint = 0,
+                InnovationPoint = 0,
+                CurrencyPoint = 0,
+                SatisfactionPoint = 0,
+                Costume = ""
+            };
+
+            UserManager.instance.SetCurrentUser(newUser);
+
+            if (resetUserPoints)
+                UserManager.instance.ResetUserPoints();
+
+            view.ShowSignIn(false, () =>
+            {
+                LoadSceneManager.instance.LoadSceneLevel(loadSceneIndex,
+                    UnityEngine.SceneManagement.LoadSceneMode.Single,
+                () =>
+                {
+                    LoadingManager.instance.ShowLoader(false);
+                });
+            });
+
+            return;
+        }
 
         if (view.signInUsername == string.Empty ||
             view.signInPassword == string.Empty)
