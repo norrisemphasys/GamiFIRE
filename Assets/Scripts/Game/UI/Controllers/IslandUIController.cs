@@ -110,12 +110,12 @@ public class IslandUIController : BasicController
 			ShowBuildingNotification();
 		}
 
-		UserManager.instance.SaveUser(()=>
-		{
-			// Update User to server
-		});
+        UserManager.instance.SaveUser(() =>
+        {
+            // Update User to server
+        });
 
-		if(enablePlatformPanel)
+        if (enablePlatformPanel)
         {
 			if (!showPlatformPanel)
 			{
@@ -164,7 +164,12 @@ public class IslandUIController : BasicController
 					);
 				//}
 			}
-		}
+			Debug.LogError("Show building Shop");
+        }
+        else
+        {
+			Debug.LogError("NULL USER");
+        }
 
 		//ShowBuildingNotification();
 	}

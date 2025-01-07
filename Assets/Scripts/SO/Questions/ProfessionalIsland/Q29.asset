@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q29
+  m_EditorClassIdentifier: 
+  questionTitle: ' A high-profile client with demands'
+  question: 'A high-profile client wants your full attention, risking other commitments.
+    Do you:'
+  answerData:
+  - answer: 'Accept and prioritise their project '
+    growthPoint: 2
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: -2
+  - answer: Decline to maintain balance with existing clients
+    growthPoint: 1
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 0
+  - answer: Talk to find a solution that works for both the client and your current
+      work.
+    growthPoint: 1
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 1
+  - answer: Refer the client to another professional
+    growthPoint: 1
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 0

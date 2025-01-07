@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q2
+  m_EditorClassIdentifier: 
+  questionTitle: Choosing Employee Benefits
+  question: "Your employer offers a benefits package that includes health insurance,
+    gym membership, and a retirement plan. You can only choose two. What\u2019s your
+    decision?"
+  answerData:
+  - answer: ' I choose health insurance and a retirement plan for security'
+    growthPoint: 3
+    satisfactionPoint: -2
+    innovationPoint: 0
+    moneyCurrencyPoints: 0
+  - answer: I opt for a gym membership and flexible working hours
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: -1
+    moneyCurrencyPoints: -1
+  - answer: I consult HR to customize my benefits package
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: 0
+  - answer: I maximize immediate savings with health insurance and vouchers.
+    growthPoint: 1
+    satisfactionPoint: -2
+    innovationPoint: 3
+    moneyCurrencyPoints: 0

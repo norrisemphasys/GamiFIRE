@@ -35,6 +35,8 @@ public class BuildingUIController : BasicController
 
 		int islandTypeIdx = (int)gameManager.IslandType;
 		view.ShowBuildingList(islandTypeIdx);
+
+		gameManager.sceneController.environmentController.ShowEnableBuildingList();
 	}
 
 	public void ShowNextMenu()

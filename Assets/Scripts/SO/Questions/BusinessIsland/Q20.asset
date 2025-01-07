@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q20
+  m_EditorClassIdentifier: 
+  questionTitle: Deciding on a Job Offer
+  question: You receive a job offer with a higher salary but fewer benefits. What
+    do you prioritize?
+  answerData:
+  - answer: I accept the offer for financial growth.
+    growthPoint: 3
+    satisfactionPoint: -2
+    innovationPoint: 0
+    moneyCurrencyPoints: 0
+  - answer: I negotiate for additional benefits.
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: -1
+    moneyCurrencyPoints: -1
+  - answer: I consult a mentor before deciding.
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: 0
+  - answer: I choose the current job for stability.
+    growthPoint: 1
+    satisfactionPoint: -2
+    innovationPoint: 3
+    moneyCurrencyPoints: 0

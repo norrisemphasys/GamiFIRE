@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q8
+  m_EditorClassIdentifier: 
+  questionTitle: Hire additional staff
+  question: 'Your workload has increased, and you need support. Do you:'
+  answerData:
+  - answer: 'Hire full-time staff to expand capacity '
+    growthPoint: 2
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: -2
+  - answer: 'Hire part-time staff or freelancers to minimise costs '
+    growthPoint: 1
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 0
+  - answer: Redistribute tasks among existing staff
+    growthPoint: 1
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 1
+  - answer: Postpone hiring and prioritise process optimisation
+    growthPoint: 1
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 0

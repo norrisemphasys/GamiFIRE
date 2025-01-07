@@ -79,8 +79,9 @@ public static class MundoSound {
 					if(delay == 0) audioPoolList[i].Play();					
 					else audioPoolList[i].PlayDelayed (delay);
 
+#if UNITY_EDITOR
 					Debug.LogError("Audio going here existing not playing");
-
+#endif
 					//Then let's return this audioSource
 					return audioPoolList[i];	
 				}
@@ -93,9 +94,9 @@ public static class MundoSound {
                 }			
 			}
 		}
-
+#if UNITY_EDITOR
 		Debug.LogError("Still goind here " + clip.name);
-
+#endif
 		//If it dosen't find any available audio, then let's create a new object
 		GameObject go = Ins ("Sound: " + clip.name);
 

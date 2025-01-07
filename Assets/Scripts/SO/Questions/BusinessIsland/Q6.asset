@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q6
+  m_EditorClassIdentifier: 
+  questionTitle: Budgeting for a Vacation
+  question: "You want to go on a vacation but need to budget carefully. What\u2019s
+    your strategy?"
+  answerData:
+  - answer: I create a detailed budget and stick to it.
+    growthPoint: 3
+    satisfactionPoint: -2
+    innovationPoint: 0
+    moneyCurrencyPoints: 0
+  - answer: I book a package deal to save money.
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: -1
+    moneyCurrencyPoints: -1
+  - answer: I look for creative ways to travel on a budget.
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: 0
+  - answer: "I delay the trip until I\u2019ve saved enough."
+    growthPoint: 1
+    satisfactionPoint: -2
+    innovationPoint: 3
+    moneyCurrencyPoints: 0

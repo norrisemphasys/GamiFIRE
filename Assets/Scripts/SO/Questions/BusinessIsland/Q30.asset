@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q30
+  m_EditorClassIdentifier: 
+  questionTitle: Managing Office Politics
+  question: ' Your team is struggling due to internal conflicts between two team
+    members. This affects your ability to focus on your work. How do you handle it?'
+  answerData:
+  - answer: I step in as a mediator to resolve the conflict.
+    growthPoint: 3
+    satisfactionPoint: -2
+    innovationPoint: 0
+    moneyCurrencyPoints: 0
+  - answer: I report the issue to HR and let them handle it.
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: -1
+    moneyCurrencyPoints: -1
+  - answer: I avoid getting involved and focus on my own tasks.
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: 0
+  - answer: I suggest team-building activities to improve relations.
+    growthPoint: 1
+    satisfactionPoint: -2
+    innovationPoint: 3
+    moneyCurrencyPoints: 0

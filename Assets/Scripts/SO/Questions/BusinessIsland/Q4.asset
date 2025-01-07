@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q4
+  m_EditorClassIdentifier: 
+  questionTitle: Handling a Work Bonus
+  question: " You receive a performance bonus. You could invest it, pay down debt,
+    or treat yourself to something special. What\u2019s your choice?"
+  answerData:
+  - answer: I invest in a skill-development course.
+    growthPoint: 3
+    satisfactionPoint: -2
+    innovationPoint: 0
+    moneyCurrencyPoints: 0
+  - answer: I use it to pay off high-interest debt.
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: -1
+    moneyCurrencyPoints: -1
+  - answer: ' I save it in a high-yield account.'
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: 0
+  - answer: I spend it on a well-deserved vacation.
+    growthPoint: 1
+    satisfactionPoint: -2
+    innovationPoint: 3
+    moneyCurrencyPoints: 0

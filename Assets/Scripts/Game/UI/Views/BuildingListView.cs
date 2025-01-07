@@ -91,6 +91,11 @@ public class BuildingListView : MonoBehaviour
         UpdateView();
     }
 
+    public void EnableButton(bool enable)
+    {
+        buttonBuy.interactable = enable;
+    }
+
     private void OnDestroy()
     {
         RemoveListener();

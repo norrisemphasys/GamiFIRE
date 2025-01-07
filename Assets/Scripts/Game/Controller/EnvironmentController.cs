@@ -59,14 +59,24 @@ public class EnvironmentController : MonoBehaviour
         {
            
             int enableIdx = currentCell / ratioCount;
+            int envLen = environments[islandTypeIdx].environments.Length;
+
+           /* for (int i = 0; i < envLen; i++)
+                environments[islandTypeIdx].view[i].EnableButton(false);*/
+
             Debug.LogError("enableIdx" + enableIdx + " ratioCount " + ratioCount + " currentCell " + currentCell);
-            if (enableIdx < environments[islandTypeIdx]?.environments.Length && currentCell != 0)
+            bool showEnvironment = enableIdx < envLen;
+
+            if (showEnvironment && currentCell != 0)
             {
                 if (_prevEnableIndex != enableIdx)
                 {
                     // Send events when ready to buy building.
                     GameEvents.OnShowBuilding.Invoke();
                     Debug.LogError("Show building");
+
+                    /*for(int i = 0; i < envLen; i++)
+                        environments[islandTypeIdx].view[i].EnableButton( i <= enableIdx);*/
 
                     _prevEnableIndex = enableIdx;
                     showPopupOnce = false;
@@ -94,6 +104,24 @@ public class EnvironmentController : MonoBehaviour
             }
 #endif
         }
+    }
+
+    public void ShowEnableBuildingList()
+    {
+        int islandTypeIdx = (int)gameManager.IslandType;
+        int totalCell = gameManager.sceneController.cellController.maxCellCount;
+        int currentCell = gameManager.sceneController.cellController.CurrentCellIndex;
+        int environmentLength = environments[islandTypeIdx].environments.Length;
+        int ratioCount = totalCell / environmentLength;
+
+        int enableIdx = currentCell / ratioCount;
+        int envLen = environments[islandTypeIdx].environments.Length;
+
+        for (int i = 0; i < envLen; i++)
+            environments[islandTypeIdx].view[i].EnableButton(false);
+
+        for (int i = 0; i < envLen; i++)
+            environments[islandTypeIdx].view[i].EnableButton(i <= enableIdx);
     }
 
     public void AnimateBuildingList()
