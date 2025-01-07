@@ -11703,7 +11703,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1072128082
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11772,7 +11772,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!114 &1072128084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17902,6 +17902,7 @@ MonoBehaviour:
   signUpButtonSignIn: {fileID: 1371015319}
   signInButtonSignIn: {fileID: 442616376}
   forgotPasswordButton: {fileID: 415663353}
+  toggleAutoSignIn: {fileID: 1072128083}
   forgotPasswordRect: {fileID: 1896421736}
   typeEmailRect: {fileID: 1747381430}
   typeNewPasswordRect: {fileID: 686677502}
@@ -17928,6 +17929,7 @@ MonoBehaviour:
   loadSceneIndex: 1
   resetUserPoints: 1
   isOffline: 0
+  isAutoLogin: 0
 --- !u!1 &1729393128
 GameObject:
   m_ObjectHideFlags: 0

@@ -38,6 +38,8 @@ public class LoginViews : BasicView
     public Button signInButtonSignIn;
     public Button forgotPasswordButton;
 
+    public Toggle toggleAutoSignIn;
+
     public bool IsSignInVisible => signInRect.localScale == Vector3.one;
 
     [Header("Forgot Password")]
@@ -72,6 +74,17 @@ public class LoginViews : BasicView
     public string verificationCode { get { return verificationCodeInput?.text; } }
 
     bool showPassword = false;
+
+    public void SetEmailLoginText(string value)
+    {
+        usernameInputSignIn.text = value;
+    }
+    
+    public void SetPasswordLoginText(string value)
+    {
+        passwordInputSignIn.text = value;
+    }
+
     public void Init()
     {
         signInRect.DOScale(Vector3.zero, 0).SetUpdate(true);

@@ -12,6 +12,12 @@ public class LoginController : BasicController
     [SerializeField] int loadSceneIndex;
     [SerializeField] bool resetUserPoints = false;
     [SerializeField] bool isOffline = false;
+
+    [SerializeField] bool isAutoLogin;
+
+    private string email;
+    private string password;
+
     void Awake()
     {
         view = GetComponent<LoginViews>();
@@ -62,7 +68,20 @@ public class LoginController : BasicController
 
     public override void Initialize()
     {
+        isAutoLogin = PlayerPrefs.GetInt("AutoSignIn", 0) == 1;
+        view.toggleAutoSignIn.isOn = isAutoLogin;
 
+        if(isAutoLogin)
+        {
+            email = PlayerPrefs.GetString("Email");
+            password = PlayerPrefs.GetString("Password");
+
+            view.SetEmailLoginText(email);
+            view.SetPasswordLoginText(password);
+
+            if(!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(password))
+                OnClickLogin();
+        }
     }
 
     public void ShowNextMenu()
@@ -84,6 +103,8 @@ public class LoginController : BasicController
 
         view.closeButton.onClick.AddListener(OnClickCloseForgotPassword);
         view.buttonShowPassword.onClick.AddListener(OnClickShowPassword);
+
+        view.toggleAutoSignIn.onValueChanged.AddListener(OnToggleAutoLogin);
     }
 
     void RemoveListener()
@@ -100,6 +121,16 @@ public class LoginController : BasicController
 
         view.closeButton.onClick.RemoveListener(OnClickCloseForgotPassword);
         view.buttonShowPassword.onClick.RemoveListener(OnClickShowPassword);
+
+        view.toggleAutoSignIn.onValueChanged.RemoveListener(OnToggleAutoLogin);
+    }
+
+    void OnToggleAutoLogin(bool isOn)
+    {
+        isAutoLogin = isOn;
+        PlayerPrefs.SetInt("AutoSignIn", isAutoLogin ? 1 : 0);
+
+        Debug.LogError("IS AUTO LOGIN " + isAutoLogin);
     }
 
     void OnClickShowPassword()
@@ -322,6 +353,12 @@ public class LoginController : BasicController
                 {
                     OnClickDefault(UIState.GENDER_MENU);
                     LoadingManager.instance.ShowLoader(false);
+                }
+
+                if(isAutoLogin)
+                {
+                    PlayerPrefs.SetString("Email", view.signInUsername);
+                    PlayerPrefs.SetString("Password", view.signInPassword);
                 }
             }
         });
