@@ -36,6 +36,7 @@ public class OnTriggerObject : MonoBehaviour
                 PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("Here you can see your score and compare it to other players! The content is not ready yet but make sure to come back and check it!", () =>
                 {
                     GameManager.instance.playerController.SetPause(false);
+                    GameManager.instance.uiController.Show(UIState.PORT_INGAME);
                 }));
             }
             else if (uiState == UIState.CUSTOMIZATION_MENU)
@@ -44,6 +45,7 @@ public class OnTriggerObject : MonoBehaviour
                 PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("Here you can customize your player to your taste! The content is not ready yet but make sure to come back and check it!", () =>
                 {
                     GameManager.instance.playerController.SetPause(false);
+                    GameManager.instance.uiController.Show(UIState.PORT_INGAME);
                 }));
             }
             else if(uiState == UIState.GAMEINFO_MENU)
@@ -52,6 +54,7 @@ public class OnTriggerObject : MonoBehaviour
                 PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("Here you will get to learn more about financial literacy! The content is not ready yet but make sure to come back and check it!", () =>
                 {
                     GameManager.instance.playerController.SetPause(false);
+                    GameManager.instance.uiController.Show(UIState.PORT_INGAME);
                 }));
             }
 
