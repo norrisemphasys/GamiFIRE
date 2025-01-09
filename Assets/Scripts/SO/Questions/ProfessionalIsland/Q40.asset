@@ -17,22 +17,22 @@ MonoBehaviour:
     you:'
   answerData:
   - answer: Fully customise your services to meet their expectations
-    growthPoint: 2
+    growthPoint: 3
     satisfactionPoint: 0
     innovationPoint: 0
     moneyCurrencyPoints: -2
   - answer: 'Highlight existing eco-practices to satisfy their requirements '
     growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: 0
     moneyCurrencyPoints: 0
   - answer: 'Decline the request if it conflicts with your goals '
-    growthPoint: 1
-    satisfactionPoint: 0
+    growthPoint: -1
+    satisfactionPoint: 2
     innovationPoint: 0
-    moneyCurrencyPoints: 1
+    moneyCurrencyPoints: 0
   - answer: Collaborate with them on a trial basis to explore if it's possible.
-    growthPoint: 1
-    satisfactionPoint: 0
+    growthPoint: 2
+    satisfactionPoint: 1
     innovationPoint: 0
     moneyCurrencyPoints: 0

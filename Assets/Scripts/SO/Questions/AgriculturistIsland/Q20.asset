@@ -17,22 +17,22 @@ MonoBehaviour:
     What will you do?
   answerData:
   - answer: I will take out a loan.
-    growthPoint: 3
-    satisfactionPoint: -2
+    growthPoint: 1
+    satisfactionPoint: -1
     innovationPoint: 0
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 2
   - answer: I will use my long-term savings.
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
+    satisfactionPoint: -1
+    innovationPoint: 1
+    moneyCurrencyPoints: 1
   - answer: I will not buy the land.
     growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 2
+    satisfactionPoint: 2
+    innovationPoint: -1
     moneyCurrencyPoints: 0
   - answer: I will borrow money from a friend.
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 0
     moneyCurrencyPoints: 0

@@ -275,7 +275,8 @@ public class IslandUIController : BasicController
 
 	void OnClickBuilding()
     {
-		OnClickDefault(UIState.BUILDING_MENU);
+		if (!gameManager.sceneController.StartGame)
+			OnClickDefault(UIState.BUILDING_MENU);
     }
 
 	void OnClickStart()

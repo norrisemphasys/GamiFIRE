@@ -17,22 +17,22 @@ MonoBehaviour:
     What\u2019s your approach?"
   answerData:
   - answer: I consolidate loans for a lower interest rate.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I seek government forgiveness programs.
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
-  - answer: I take on a part-time job to pay faster.
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 1
+  - answer: I seek government forgiveness programs.
     growthPoint: 0
     satisfactionPoint: 1
     innovationPoint: 2
     moneyCurrencyPoints: 0
-  - answer: I restructure my budget to prioritize payments.
+  - answer: I take on a part-time job to pay faster.
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 1
+    innovationPoint: 0
+    moneyCurrencyPoints: 1
+  - answer: I restructure my budget to prioritize payments.
+    growthPoint: 2
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 1

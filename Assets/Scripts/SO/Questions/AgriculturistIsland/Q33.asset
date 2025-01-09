@@ -19,24 +19,24 @@ MonoBehaviour:
   answerData:
   - answer: I will sow the additional land with grain, regardless of the price at
       the time of sale.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    growthPoint: 1
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 1
   - answer: I will not sow the additional land with grain, as I do not want more
       costs.
-    growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
+    growthPoint: 0
+    satisfactionPoint: -1
+    innovationPoint: 0
+    moneyCurrencyPoints: 2
   - answer: I will sow the additional land with grain, as it is an opportunity for
       a good profit.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
+    growthPoint: 1
+    satisfactionPoint: -1
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
   - answer: I will rather lease the additional land to another farmer.
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
+    satisfactionPoint: 0
+    innovationPoint: 1
     moneyCurrencyPoints: 0

@@ -16,22 +16,22 @@ MonoBehaviour:
   question: 'You must decide how to price your product or service. Do you:'
   answerData:
   - answer: 'Set high prices to maximise profit '
+    growthPoint: -2
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 3
+  - answer: Use a competitive pricing strategy to attract clients
     growthPoint: 2
     satisfactionPoint: 0
     innovationPoint: 0
-    moneyCurrencyPoints: -2
-  - answer: Use a competitive pricing strategy to attract clients
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 1
   - answer: Lower prices to increase demand quickly
     growthPoint: 1
-    satisfactionPoint: 0
+    satisfactionPoint: 1
     innovationPoint: 0
-    moneyCurrencyPoints: 1
+    moneyCurrencyPoints: -1
   - answer: Introduce a flexible pricing model based on customer needs
     growthPoint: 1
     satisfactionPoint: 0
-    innovationPoint: 0
+    innovationPoint: 1
     moneyCurrencyPoints: 0

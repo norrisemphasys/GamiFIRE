@@ -17,22 +17,22 @@ MonoBehaviour:
     a high-end or budget model.
   answerData:
   - answer: I buy the high-end model for its performance and longevity.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I buy a budget model and save the rest for future expenses.
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
+    satisfactionPoint: 2
+    innovationPoint: 0
     moneyCurrencyPoints: -1
-  - answer: I look for a used or refurbished laptop in good condition.
+  - answer: I buy a budget model and save the rest for future expenses.
     growthPoint: 0
     satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 2
+  - answer: I look for a used or refurbished laptop in good condition.
+    growthPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: 1
+    moneyCurrencyPoints: 1
   - answer: I take time to research and wait for a sale or promotion.
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 1

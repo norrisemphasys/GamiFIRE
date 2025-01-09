@@ -17,22 +17,22 @@ MonoBehaviour:
     you:'
   answerData:
   - answer: Hire a professional accountant to manage the process
-    growthPoint: 2
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 0
+    innovationPoint: 2
     moneyCurrencyPoints: -2
   - answer: Handle the audit yourself to save costs
-    growthPoint: 1
+    growthPoint: 0
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 1
+  - answer: 'Request an extension to prepare the necessary documents '
+    growthPoint: 0
     satisfactionPoint: 0
     innovationPoint: 1
     moneyCurrencyPoints: 0
-  - answer: 'Request an extension to prepare the necessary documents '
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
   - answer: Seek advice from a peer who has faced a similar situation
-    growthPoint: 1
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 1

@@ -17,22 +17,22 @@ MonoBehaviour:
     or treat yourself to something special. What\u2019s your choice?"
   answerData:
   - answer: I invest in a skill-development course.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    growthPoint: 2
+    satisfactionPoint: -1
+    innovationPoint: 1
+    moneyCurrencyPoints: 1
   - answer: I use it to pay off high-interest debt.
-    growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
+    growthPoint: 0
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 3
   - answer: ' I save it in a high-yield account.'
     growthPoint: 0
     satisfactionPoint: 1
     innovationPoint: 2
     moneyCurrencyPoints: 0
   - answer: I spend it on a well-deserved vacation.
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
+    growthPoint: -1
+    satisfactionPoint: 3
+    innovationPoint: 0
     moneyCurrencyPoints: 0

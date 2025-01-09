@@ -17,24 +17,24 @@ MonoBehaviour:
     your farm. This will bring additional  monthly costs. How will you decide?
   answerData:
   - answer: I see the additional activity as a challenge, regardless of the cost.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 1
     moneyCurrencyPoints: 0
   - answer: I will not register the additional activity because I don't want the
       costs.
-    growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
-  - answer: I will register the additional activity and follow the local supply trends.
     growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 2
+    innovationPoint: -2
+    moneyCurrencyPoints: 1
+  - answer: I will register the additional activity and follow the local supply trends.
+    growthPoint: 1
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 1
   - answer: I will not register the additional activity because I don't want to deal
       with people.
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
+    growthPoint: -1
+    satisfactionPoint: 2
+    innovationPoint: 0
     moneyCurrencyPoints: 0

@@ -17,22 +17,22 @@ MonoBehaviour:
     to get started and need advice.  Where will you turn for advice?
   answerData:
   - answer: I will turn to the agricultural advisory service for advice.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I will turn to another successful farmer for advice.
-    growthPoint: 1
-    satisfactionPoint: 3
+    growthPoint: 0
+    satisfactionPoint: 2
     innovationPoint: -1
-    moneyCurrencyPoints: -1
+    moneyCurrencyPoints: 1
+  - answer: I will turn to another successful farmer for advice.
+    growthPoint: -1
+    satisfactionPoint: 1
+    innovationPoint: 0
+    moneyCurrencyPoints: 1
   - answer: I will turn to the local municipality for advice.
     growthPoint: 0
     satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
+    innovationPoint: -1
+    moneyCurrencyPoints: 1
   - answer: I will research all the necessary legislation myself and find a solution.
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 1

@@ -16,22 +16,22 @@ MonoBehaviour:
   question: 'Your supplier offers sustainable products at higher prices. Do you:'
   answerData:
   - answer: Switch to them for long-term environmental benefits
-    growthPoint: 2
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 0
+    innovationPoint: 2
     moneyCurrencyPoints: -2
   - answer: Negotiate for better terms or discounts
     growthPoint: 1
     satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 1
   - answer: Maintain your current suppliers for budget reasons
-    growthPoint: 1
-    satisfactionPoint: 0
+    growthPoint: 0
+    satisfactionPoint: 1
     innovationPoint: 0
     moneyCurrencyPoints: 1
   - answer: Partner with other businesses to share costs
     growthPoint: 1
     satisfactionPoint: 0
-    innovationPoint: 0
+    innovationPoint: 1
     moneyCurrencyPoints: 0

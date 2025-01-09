@@ -23,16 +23,16 @@ MonoBehaviour:
     moneyCurrencyPoints: -2
   - answer: Dedicate evenings or weekends for personal growth activities
     growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: 0
     moneyCurrencyPoints: 0
   - answer: Rely on free online resources to upskill in your spare time
-    growthPoint: 1
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 0
+    innovationPoint: 1
     moneyCurrencyPoints: 1
   - answer: Postpone personal development until your workload decreases
-    growthPoint: 1
-    satisfactionPoint: 0
+    growthPoint: 0
+    satisfactionPoint: 1
     innovationPoint: 0
     moneyCurrencyPoints: 0

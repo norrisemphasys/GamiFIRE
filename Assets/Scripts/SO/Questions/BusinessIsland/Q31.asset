@@ -17,22 +17,22 @@ MonoBehaviour:
     rates. How do you use it?"
   answerData:
   - answer: I pay off the balance in full each month to avoid interest.
-    growthPoint: 3
-    satisfactionPoint: -2
+    growthPoint: 2
+    satisfactionPoint: 1
     innovationPoint: 0
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 1
   - answer: I use it only for emergencies to avoid accumulating debt.
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
+    satisfactionPoint: 1
+    innovationPoint: 0
+    moneyCurrencyPoints: 2
   - answer: I use it for rewards and plan to pay it off later.
     growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 2
+    innovationPoint: 0
+    moneyCurrencyPoints: -1
   - answer: I rely on it for daily expenses and carry a balance.
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    growthPoint: -1
+    satisfactionPoint: 1
+    innovationPoint: 0
+    moneyCurrencyPoints: -2

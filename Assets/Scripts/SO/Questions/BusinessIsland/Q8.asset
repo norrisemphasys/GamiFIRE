@@ -17,22 +17,22 @@ MonoBehaviour:
     and work-life balance. What do you consider?"
   answerData:
   - answer: I accept the offer for the benefits and balance.
-    growthPoint: 3
-    satisfactionPoint: -2
+    growthPoint: 0
+    satisfactionPoint: 3
     innovationPoint: 0
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: -1
   - answer: I negotiate for a higher salary.
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
+    satisfactionPoint: -1
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
   - answer: I research and compare industry standards.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 2
+    growthPoint: 2
+    satisfactionPoint: 0
+    innovationPoint: 1
     moneyCurrencyPoints: 0
   - answer: I consult a mentor for advice.
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
+    satisfactionPoint: 1
+    innovationPoint: 1
     moneyCurrencyPoints: 0

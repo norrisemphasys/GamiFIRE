@@ -17,22 +17,22 @@ MonoBehaviour:
     and costs. Which plan do you choose?
   answerData:
   - answer: I choose the most affordable plan to save money.
-    growthPoint: 3
-    satisfactionPoint: -2
+    growthPoint: 0
+    satisfactionPoint: 0
     innovationPoint: 0
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 3
   - answer: I select a plan with comprehensive coverage.
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
+    satisfactionPoint: 2
+    innovationPoint: 0
+    moneyCurrencyPoints: 0
   - answer: I consult a financial advisor for advice.
-    growthPoint: 0
+    growthPoint: 1
     satisfactionPoint: 1
-    innovationPoint: 2
+    innovationPoint: 1
     moneyCurrencyPoints: 0
   - answer: I opt for a mid-range plan balancing cost and coverage.
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 1
+    innovationPoint: 0
+    moneyCurrencyPoints: 1

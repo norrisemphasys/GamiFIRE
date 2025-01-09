@@ -19,19 +19,19 @@ MonoBehaviour:
     growthPoint: 2
     satisfactionPoint: 0
     innovationPoint: 0
-    moneyCurrencyPoints: -2
+    moneyCurrencyPoints: -1
   - answer: Focus on improving your service quality
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 0
+    moneyCurrencyPoints: 1
+  - answer: Collaborate with partners to provide joint client benefits
     growthPoint: 1
     satisfactionPoint: 0
     innovationPoint: 1
     moneyCurrencyPoints: 0
-  - answer: Collaborate with partners to provide joint client benefits
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
   - answer: 'Conduct surveys to identify client needs '
-    growthPoint: 1
-    satisfactionPoint: 0
+    growthPoint: 0
+    satisfactionPoint: 2
     innovationPoint: 0
     moneyCurrencyPoints: 0

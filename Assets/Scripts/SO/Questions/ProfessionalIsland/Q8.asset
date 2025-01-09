@@ -16,22 +16,22 @@ MonoBehaviour:
   question: 'Your workload has increased, and you need support. Do you:'
   answerData:
   - answer: 'Hire full-time staff to expand capacity '
+    growthPoint: 3
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: -3
+  - answer: 'Hire part-time staff or freelancers to minimise costs '
     growthPoint: 2
     satisfactionPoint: 0
     innovationPoint: 0
-    moneyCurrencyPoints: -2
-  - answer: 'Hire part-time staff or freelancers to minimise costs '
-    growthPoint: 1
-    satisfactionPoint: 0
+    moneyCurrencyPoints: -1
+  - answer: Redistribute tasks among existing staff
+    growthPoint: 0
+    satisfactionPoint: 1
     innovationPoint: 1
     moneyCurrencyPoints: 0
-  - answer: Redistribute tasks among existing staff
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
   - answer: Postpone hiring and prioritise process optimisation
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 1
     moneyCurrencyPoints: 0

@@ -17,22 +17,22 @@ MonoBehaviour:
     you decide regarding  the barn construction?a
   answerData:
   - answer: I will apply for a loan from the bank and build the barn.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    growthPoint: 2
+    satisfactionPoint: -1
+    innovationPoint: 2
+    moneyCurrencyPoints: -1
   - answer: I will wait another year and try to save some money.
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 0
   - answer: I will wait for a call for grants.
     growthPoint: 0
     satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 1
   - answer: I will not build the barn.
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: -1
+    moneyCurrencyPoints: 1

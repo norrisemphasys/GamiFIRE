@@ -16,22 +16,22 @@ MonoBehaviour:
   question: 'A client delays payment, impacting your cash flow. Do you:'
   answerData:
   - answer: Trust their promise and wait for payment
-    growthPoint: 2
-    satisfactionPoint: 0
+    growthPoint: 0
+    satisfactionPoint: 2
     innovationPoint: 0
     moneyCurrencyPoints: -2
   - answer: Enforce strict payment terms immediately
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
+    growthPoint: 0
+    satisfactionPoint: -1
+    innovationPoint: 0
+    moneyCurrencyPoints: 2
   - answer: Offer flexible payment terms to maintain goodwill
-    growthPoint: 1
-    satisfactionPoint: 0
+    growthPoint: 0
+    satisfactionPoint: 2
     innovationPoint: 0
     moneyCurrencyPoints: 1
   - answer: 'Seek legal advice to recover the payment '
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
+    growthPoint: 0
+    satisfactionPoint: -1
+    innovationPoint: 1
     moneyCurrencyPoints: 0

@@ -17,23 +17,23 @@ MonoBehaviour:
     have urgent work on the farm.  How will you decide?
   answerData:
   - answer: I will not attend the event, as the farm work is more important
-    growthPoint: 3
-    satisfactionPoint: -2
+    growthPoint: 0
+    satisfactionPoint: -1
     innovationPoint: 0
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 2
   - answer: I will attend the event and leave the work for later
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 0
   - answer: I will attend the event, as others can take care of the work
-    growthPoint: 0
+    growthPoint: 1
     satisfactionPoint: 1
-    innovationPoint: 2
+    innovationPoint: 0
     moneyCurrencyPoints: 0
   - answer: I will organize myself well to complete the work on time and attend the
       event
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: -1

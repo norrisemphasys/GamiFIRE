@@ -17,22 +17,22 @@ MonoBehaviour:
     What do you plan to do?
   answerData:
   - answer: I will attend the trainings, as I want to learn something new.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
+    growthPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: 1
     moneyCurrencyPoints: 0
   - answer: I will not attend the trainings, as they are not useful to me.
-    growthPoint: 1
-    satisfactionPoint: 3
+    growthPoint: 0
+    satisfactionPoint: 1
     innovationPoint: -1
-    moneyCurrencyPoints: -1
+    moneyCurrencyPoints: 1
   - answer: I will attend the trainings only if time allows.
     growthPoint: 0
     satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 1
   - answer: I will send my neighbor to the training.
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 2
+    innovationPoint: -1
+    moneyCurrencyPoints: -1

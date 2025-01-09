@@ -17,22 +17,22 @@ MonoBehaviour:
     with certain costs.  How will you decide?
   answerData:
   - answer: I will not opt for smart farming
-    growthPoint: 3
-    satisfactionPoint: -2
+    growthPoint: -1
+    satisfactionPoint: 1
     innovationPoint: 0
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 1
   - answer: I will choose smart farming regardless of the costs
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
+    satisfactionPoint: 1
+    innovationPoint: 1
+    moneyCurrencyPoints: 0
   - answer: I will postpone the decision as I don't have enough money
     growthPoint: 0
     satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 1
   - answer: I will decide to go for it, as it will reduce costs in the long term
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
+    satisfactionPoint: 1
+    innovationPoint: 1
     moneyCurrencyPoints: 0

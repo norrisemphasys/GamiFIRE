@@ -17,22 +17,22 @@ MonoBehaviour:
     take?
   answerData:
   - answer: I check reviews and website security before buying.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
+    growthPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: 1
     moneyCurrencyPoints: 0
   - answer: I avoid the website and stick to trusted retailers.
-    growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
-  - answer: I use a virtual credit card for the purchase.
     growthPoint: 0
-    satisfactionPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 0
+    moneyCurrencyPoints: 1
+  - answer: I use a virtual credit card for the purchase.
+    growthPoint: 1
+    satisfactionPoint: 0
     innovationPoint: 2
     moneyCurrencyPoints: 0
   - answer: I purchase without precautions, hoping for the best.
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    growthPoint: 0
+    satisfactionPoint: -1
+    innovationPoint: 0
+    moneyCurrencyPoints: -2

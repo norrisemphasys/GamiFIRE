@@ -16,22 +16,22 @@ MonoBehaviour:
   question: 'A new tax incentive is available for green investments. Do you:'
   answerData:
   - answer: Invest fully to claim the maximum benefit
-    growthPoint: 2
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 0
+    innovationPoint: 3
     moneyCurrencyPoints: -2
   - answer: 'Focus on immediate profits and delay the investment '
-    growthPoint: 1
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
+    innovationPoint: -1
+    moneyCurrencyPoints: 2
   - answer: Make small changes to qualify for some benefits
-    growthPoint: 1
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: -1
   - answer: Research long-term benefits before committing fully
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 1
     moneyCurrencyPoints: 0

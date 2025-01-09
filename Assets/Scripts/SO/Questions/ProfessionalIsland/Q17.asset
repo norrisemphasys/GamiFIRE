@@ -17,22 +17,22 @@ MonoBehaviour:
     needs. Do you:'
   answerData:
   - answer: Purchase now to save long-term
-    growthPoint: 2
-    satisfactionPoint: 0
+    growthPoint: 3
+    satisfactionPoint: -2
     innovationPoint: 0
-    moneyCurrencyPoints: -2
-  - answer: Decline to avoid overstocking
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
     moneyCurrencyPoints: 0
-  - answer: Ask for a smaller discount for fewer items
-    growthPoint: 1
-    satisfactionPoint: 0
+  - answer: Decline to avoid overstocking
+    growthPoint: 0
+    satisfactionPoint: 2
     innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: Postpone until demand increases
-    growthPoint: 1
+    moneyCurrencyPoints: -1
+  - answer: Ask for a smaller discount for fewer items
+    growthPoint: 0
     satisfactionPoint: 0
+    innovationPoint: -1
+    moneyCurrencyPoints: 2
+  - answer: Postpone until demand increases
+    growthPoint: 0
+    satisfactionPoint: 1
     innovationPoint: 0
     moneyCurrencyPoints: 0

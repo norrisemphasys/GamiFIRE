@@ -16,22 +16,22 @@ MonoBehaviour:
   question: 'A dissatisfied customer posts negative feedback online. Do you:'
   answerData:
   - answer: Address the issue publicly and apologise
-    growthPoint: 2
-    satisfactionPoint: 0
+    growthPoint: 0
+    satisfactionPoint: 3
     innovationPoint: 0
-    moneyCurrencyPoints: -2
+    moneyCurrencyPoints: -1
   - answer: Ignore the feedback and focus on other clients
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
+    growthPoint: 0
+    satisfactionPoint: -2
+    innovationPoint: 2
     moneyCurrencyPoints: 0
   - answer: Contact the customer privately to resolve the issue
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: 'Offer a discount or incentive to win back their goodwill '
-    growthPoint: 1
-    satisfactionPoint: 0
+    growthPoint: 0
+    satisfactionPoint: 2
     innovationPoint: 0
     moneyCurrencyPoints: 0
+  - answer: 'Offer a discount or incentive to win back their goodwill '
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 0
+    moneyCurrencyPoints: -1

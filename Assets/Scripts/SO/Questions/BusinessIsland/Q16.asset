@@ -17,22 +17,22 @@ MonoBehaviour:
     cut. How do you adjust your finances?
   answerData:
   - answer: I revise my budget to focus on essentials.
-    growthPoint: 3
-    satisfactionPoint: -2
+    growthPoint: 2
+    satisfactionPoint: 0
     innovationPoint: 0
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 1
   - answer: I seek freelance work to compensate.
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
-  - answer: I negotiate flexible work hours for cost savings.
-    growthPoint: 0
-    satisfactionPoint: 1
+    satisfactionPoint: 0
     innovationPoint: 2
     moneyCurrencyPoints: 0
-  - answer: I dip into my emergency fund temporarily.
+  - answer: I negotiate flexible work hours for cost savings.
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
+    satisfactionPoint: 1
+    innovationPoint: 1
     moneyCurrencyPoints: 0
+  - answer: I dip into my emergency fund temporarily.
+    growthPoint: 0
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 3

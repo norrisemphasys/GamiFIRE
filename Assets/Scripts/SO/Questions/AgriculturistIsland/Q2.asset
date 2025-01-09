@@ -16,22 +16,22 @@ MonoBehaviour:
   question: Your crops have been attacked by bugs.  What will you do?
   answerData:
   - answer: Use insecticide to poison the bugs.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: Pick the bugs by hand.
     growthPoint: 1
-    satisfactionPoint: 3
+    satisfactionPoint: 2
     innovationPoint: -1
     moneyCurrencyPoints: -1
-  - answer: Plant plants that repel bugs.
+  - answer: Pick the bugs by hand.
     growthPoint: 0
+    satisfactionPoint: 3
+    innovationPoint: -1
+    moneyCurrencyPoints: 0
+  - answer: Plant plants that repel bugs.
+    growthPoint: 2
     satisfactionPoint: 1
     innovationPoint: 2
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: -2
   - answer: You dont do anything.
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    growthPoint: 2
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 3

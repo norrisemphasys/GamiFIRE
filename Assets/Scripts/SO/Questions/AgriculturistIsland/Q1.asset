@@ -17,22 +17,22 @@ MonoBehaviour:
     it. What will you do?
   answerData:
   - answer: Buy machinery for harvesting.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: Rent machinery for harvesting.
-    growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
-  - answer: Hire someone for harvesting the crops.
     growthPoint: 0
     satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
-  - answer: Harvest the crops by hand.
-    growthPoint: 1
-    satisfactionPoint: -2
     innovationPoint: 3
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: -3
+  - answer: Rent machinery for harvesting.
+    growthPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: 1
+    moneyCurrencyPoints: -1
+  - answer: Hire someone for harvesting the crops.
+    growthPoint: 2
+    satisfactionPoint: 2
+    innovationPoint: 1
+    moneyCurrencyPoints: -2
+  - answer: Harvest the crops by hand.
+    growthPoint: 0
+    satisfactionPoint: -1
+    innovationPoint: 0
+    moneyCurrencyPoints: 2

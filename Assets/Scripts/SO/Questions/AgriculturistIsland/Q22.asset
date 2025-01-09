@@ -18,22 +18,22 @@ MonoBehaviour:
     expense.  What will you do?
   answerData:
   - answer: I will call the veterinarian, regardless of the cost.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    growthPoint: 2
+    satisfactionPoint: 2
+    innovationPoint: 1
+    moneyCurrencyPoints: -2
   - answer: I will call another farmer who has experience with difficult calvings.
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
-  - answer: I will try to solve the issue myself.
-    growthPoint: 0
     satisfactionPoint: 1
-    innovationPoint: 2
+    innovationPoint: 0
+    moneyCurrencyPoints: 0
+  - answer: I will try to solve the issue myself.
+    growthPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: -1
     moneyCurrencyPoints: 0
   - answer: I will not do anything
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    growthPoint: 0
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 1

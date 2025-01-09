@@ -17,22 +17,22 @@ MonoBehaviour:
     What\u2019s your decision?"
   answerData:
   - answer: I continue renting and invest savings for the future.
-    growthPoint: 3
-    satisfactionPoint: -2
+    growthPoint: 1
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 2
+  - answer: I start saving for a down payment to buy a home.
+    growthPoint: 2
+    satisfactionPoint: 1
     innovationPoint: 0
     moneyCurrencyPoints: 0
-  - answer: I start saving for a down payment to buy a home.
-    growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
   - answer: I buy a home now because interest rates are low.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 0
+    moneyCurrencyPoints: -1
   - answer: I rent and focus on building a flexible lifestyle.
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 1

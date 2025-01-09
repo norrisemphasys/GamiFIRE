@@ -18,22 +18,22 @@ MonoBehaviour:
     will you do?
   answerData:
   - answer: I will quit farming and sell the farm.
-    growthPoint: 3
-    satisfactionPoint: -2
+    growthPoint: 0
+    satisfactionPoint: -1
     innovationPoint: 0
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 2
   - answer: I will review the causes of the financial loss.
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 0
   - answer: I will continue farming, regardless of the loss.
     growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 2
+    innovationPoint: 0
+    moneyCurrencyPoints: -1
   - answer: I will offer an additional activity to generate extra income.
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
+    satisfactionPoint: 0
+    innovationPoint: 2
     moneyCurrencyPoints: 0

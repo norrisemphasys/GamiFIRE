@@ -18,21 +18,21 @@ MonoBehaviour:
   answerData:
   - answer: ' I find freelance work to make up the difference.'
     growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I reduce discretionary expenses and stick to essentials.
-    growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
+    satisfactionPoint: -1
+    innovationPoint: 1
     moneyCurrencyPoints: -1
-  - answer: I seek financial advice to optimize my spending.
+  - answer: I reduce discretionary expenses and stick to essentials.
     growthPoint: 0
-    satisfactionPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 0
+    moneyCurrencyPoints: 1
+  - answer: I seek financial advice to optimize my spending.
+    growthPoint: 1
+    satisfactionPoint: 0
     innovationPoint: 2
     moneyCurrencyPoints: 0
   - answer: ' I negotiate flexible payment terms with creditors.'
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    growthPoint: 0
+    satisfactionPoint: -1
+    innovationPoint: 1
+    moneyCurrencyPoints: 3

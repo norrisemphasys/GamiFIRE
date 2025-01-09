@@ -16,22 +16,22 @@ MonoBehaviour:
   question: 'A new law requires significant changes in your processes. Do you:'
   answerData:
   - answer: 'Implement changes immediately, despite high costs '
-    growthPoint: 2
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: -2
+    innovationPoint: 3
+    moneyCurrencyPoints: -3
   - answer: 'Plan and phase in changes over time '
-    growthPoint: 1
+    growthPoint: -1
     satisfactionPoint: 0
-    innovationPoint: 1
+    innovationPoint: 2
     moneyCurrencyPoints: 0
   - answer: Adopt minimal changes to comply with the regulation
-    growthPoint: 1
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 0
+    innovationPoint: 1
     moneyCurrencyPoints: 1
   - answer: 'Hire an expert to guide you through compliance '
-    growthPoint: 1
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: -1

@@ -16,22 +16,22 @@ MonoBehaviour:
   question: 'An unexpected expense impacts your budget. Do you:'
   answerData:
   - answer: Cut back on other areas like marketing to cover costs
-    growthPoint: 2
+    growthPoint: 0
+    satisfactionPoint: 0
+    innovationPoint: 3
+    moneyCurrencyPoints: -1
+  - answer: 'Take a loan to address the expense immediately '
+    growthPoint: -2
     satisfactionPoint: 0
     innovationPoint: 0
-    moneyCurrencyPoints: -2
-  - answer: 'Take a loan to address the expense immediately '
-    growthPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: Postpone planned investments to free up funds
+    growthPoint: 0
     satisfactionPoint: 0
     innovationPoint: 1
     moneyCurrencyPoints: 0
-  - answer: Postpone planned investments to free up funds
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
   - answer: Seek financial advice for a long-term solution
     growthPoint: 1
     satisfactionPoint: 0
-    innovationPoint: 0
+    innovationPoint: 1
     moneyCurrencyPoints: 0

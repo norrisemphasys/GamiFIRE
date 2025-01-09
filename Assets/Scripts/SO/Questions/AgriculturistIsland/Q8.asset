@@ -17,22 +17,22 @@ MonoBehaviour:
     going to protect your crop form hail?
   answerData:
   - answer: Insure our crops at the insurance company.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: Protect the crops with a net.
-    growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
+    growthPoint: 2
+    satisfactionPoint: 2
+    innovationPoint: -2
     moneyCurrencyPoints: -1
+  - answer: Protect the crops with a net.
+    growthPoint: 2
+    satisfactionPoint: 2
+    innovationPoint: 1
+    moneyCurrencyPoints: -2
   - answer: Take a risk, dont do anything.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
+    growthPoint: -1
+    satisfactionPoint: 0
+    innovationPoint: -1
+    moneyCurrencyPoints: 3
   - answer: Do the same thing as your neighbor.
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    growthPoint: 0
+    satisfactionPoint: 2
+    innovationPoint: -2
+    moneyCurrencyPoints: 1

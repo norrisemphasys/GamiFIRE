@@ -17,24 +17,24 @@ MonoBehaviour:
     asparagus on the market than  supply. How will you take advantage of this?
   answerData:
   - answer: I will offer the asparagus at a lower price than expected.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 1
+    moneyCurrencyPoints: -1
   - answer: I will offer the asparagus at a higher price than expected, as I want
       to earn more.
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
+    satisfactionPoint: 1
+    innovationPoint: 0
+    moneyCurrencyPoints: 1
   - answer: I will promote my asparagus offer more to gain better recognition in
       the area.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
-  - answer: I will preserve the asparagus and add value to it.
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 2
+    innovationPoint: 1
+    moneyCurrencyPoints: -2
+  - answer: I will preserve the asparagus and add value to it.
+    growthPoint: 2
+    satisfactionPoint: 0
+    innovationPoint: 2
+    moneyCurrencyPoints: -1

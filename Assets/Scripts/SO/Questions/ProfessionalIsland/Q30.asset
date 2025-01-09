@@ -16,22 +16,22 @@ MonoBehaviour:
   question: 'A potential business partner suggests collaboration. Do you:'
   answerData:
   - answer: Agree to the partnership to expand quickly
-    growthPoint: 2
+    growthPoint: 3
     satisfactionPoint: 0
     innovationPoint: 0
     moneyCurrencyPoints: -2
   - answer: Decline to maintain full control of your operations
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: Talk about terms that minimise risk while sharing benefits
-    growthPoint: 1
-    satisfactionPoint: 0
+    growthPoint: 0
+    satisfactionPoint: 1
     innovationPoint: 0
     moneyCurrencyPoints: 1
+  - answer: Talk about terms that minimise risk while sharing benefits
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 0
+    moneyCurrencyPoints: 0
   - answer: 'Offer a consulting role instead of full collaboration '
     growthPoint: 1
-    satisfactionPoint: 0
+    satisfactionPoint: 1
     innovationPoint: 0
     moneyCurrencyPoints: 0

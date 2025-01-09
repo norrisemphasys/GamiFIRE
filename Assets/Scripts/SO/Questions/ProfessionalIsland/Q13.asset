@@ -22,17 +22,17 @@ MonoBehaviour:
     innovationPoint: 0
     moneyCurrencyPoints: -2
   - answer: Decline to focus on your priorities
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: Set clear boundaries for mentoring sessions
-    growthPoint: 1
-    satisfactionPoint: 0
+    growthPoint: 0
+    satisfactionPoint: -2
     innovationPoint: 0
     moneyCurrencyPoints: 1
+  - answer: Set clear boundaries for mentoring sessions
+    growthPoint: -1
+    satisfactionPoint: 2
+    innovationPoint: 0
+    moneyCurrencyPoints: 0
   - answer: Delay the decision until your schedule allows
-    growthPoint: 1
+    growthPoint: 0
     satisfactionPoint: 0
     innovationPoint: 0
     moneyCurrencyPoints: 0

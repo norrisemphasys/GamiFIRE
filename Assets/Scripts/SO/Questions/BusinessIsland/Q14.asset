@@ -17,22 +17,22 @@ MonoBehaviour:
     time?
   answerData:
   - answer: I schedule dedicated hours for the side gig.
-    growthPoint: 3
-    satisfactionPoint: -2
+    growthPoint: 2
+    satisfactionPoint: 1
     innovationPoint: 0
     moneyCurrencyPoints: 0
   - answer: I prioritize my main job and limit side gig work.
     growthPoint: 1
-    satisfactionPoint: 3
+    satisfactionPoint: 2
     innovationPoint: -1
-    moneyCurrencyPoints: -1
-  - answer: I hire help to manage some tasks.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 2
     moneyCurrencyPoints: 0
+  - answer: I hire help to manage some tasks.
+    growthPoint: 1
+    satisfactionPoint: 0
+    innovationPoint: 2
+    moneyCurrencyPoints: -1
   - answer: I use automation tools to streamline operations.
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 1

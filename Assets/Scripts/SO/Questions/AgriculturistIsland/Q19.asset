@@ -17,22 +17,22 @@ MonoBehaviour:
     year, you have a profit on the farm.  What will you do with the money?
   answerData:
   - answer: Buy a new car
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    growthPoint: 0
+    satisfactionPoint: 2
+    innovationPoint: 1
+    moneyCurrencyPoints: -2
   - answer: Invest part of the money in the farm and use part for a better lifestyle
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
+    satisfactionPoint: 1
+    innovationPoint: 1
+    moneyCurrencyPoints: 0
   - answer: Invest all the money back into the farm
-    growthPoint: 0
+    growthPoint: 1
     satisfactionPoint: 1
     innovationPoint: 2
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: -1
   - answer: Deposit the money in the bank for emergencies
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    growthPoint: -1
+    satisfactionPoint: 2
+    innovationPoint: -2
+    moneyCurrencyPoints: 2

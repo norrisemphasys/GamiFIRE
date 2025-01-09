@@ -71,8 +71,11 @@ public class EnvironmentController : MonoBehaviour
             {
                 if (_prevEnableIndex != enableIdx)
                 {
+                    bool isLock = environments[islandTypeIdx].view[enableIdx].data.IsLock;
                     // Send events when ready to buy building.
-                    GameEvents.OnShowBuilding.Invoke();
+
+                    if (isLock)
+                        GameEvents.OnShowBuilding.Invoke();
                     Debug.LogError("Show building");
 
                     /*for(int i = 0; i < envLen; i++)

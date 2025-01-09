@@ -16,22 +16,22 @@ MonoBehaviour:
   question: 'Your cash flow is affected by multiple delayed payments. Do you:'
   answerData:
   - answer: Contact clients and charge fees for late payments
-    growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: -2
-  - answer: Offer flexible payment plans to keep clients happy
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: Get a short loan to cover the shortage
-    growthPoint: 1
-    satisfactionPoint: 0
+    growthPoint: 0
+    satisfactionPoint: 2
     innovationPoint: 0
     moneyCurrencyPoints: 1
-  - answer: Focus on getting new clients to make up for the loss
-    growthPoint: 1
+  - answer: Offer flexible payment plans to keep clients happy
+    growthPoint: 0
+    satisfactionPoint: 2
+    innovationPoint: 0
+    moneyCurrencyPoints: -1
+  - answer: Get a short loan to cover the shortage
+    growthPoint: -1
     satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 2
+  - answer: Focus on getting new clients to make up for the loss
+    growthPoint: 2
+    satisfactionPoint: -2
     innovationPoint: 0
     moneyCurrencyPoints: 0

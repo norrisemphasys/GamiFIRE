@@ -16,22 +16,22 @@ MonoBehaviour:
   question: 'Your clients face budget cuts due to an economic downturn. Do you:'
   answerData:
   - answer: Lower your prices to retain clients
+    growthPoint: 0
+    satisfactionPoint: 3
+    innovationPoint: 0
+    moneyCurrencyPoints: -1
+  - answer: Focus on premium clients with larger budgets
+    growthPoint: 0
+    satisfactionPoint: -2
+    innovationPoint: 0
+    moneyCurrencyPoints: 2
+  - answer: Offer flexible payment options to attract clients
+    growthPoint: 0
+    satisfactionPoint: 2
+    innovationPoint: 0
+    moneyCurrencyPoints: -1
+  - answer: Diversify your offerings to meet new demands
     growthPoint: 2
     satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: -2
-  - answer: Focus on premium clients with larger budgets
-    growthPoint: 1
-    satisfactionPoint: 0
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: Offer flexible payment options to attract clients
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: Diversify your offerings to meet new demands
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
     moneyCurrencyPoints: 0

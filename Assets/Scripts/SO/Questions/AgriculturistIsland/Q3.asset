@@ -18,21 +18,21 @@ MonoBehaviour:
   answerData:
   - answer: Borrow electric generator to power the milking machine.
     growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: Wait for power to return.
-    growthPoint: 1
     satisfactionPoint: 3
     innovationPoint: -1
-    moneyCurrencyPoints: -1
-  - answer: Milk them by hand.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
-  - answer: Dont milk them.
-    growthPoint: 1
+    moneyCurrencyPoints: -3
+  - answer: Wait for power to return.
+    growthPoint: -3
     satisfactionPoint: -2
     innovationPoint: 3
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 3
+  - answer: Milk them by hand.
+    growthPoint: -2
+    satisfactionPoint: 1
+    innovationPoint: 0
+    moneyCurrencyPoints: 3
+  - answer: Dont milk them.
+    growthPoint: -2
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: -2

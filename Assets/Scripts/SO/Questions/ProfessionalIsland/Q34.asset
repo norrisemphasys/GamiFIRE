@@ -16,22 +16,22 @@ MonoBehaviour:
   question: 'Your branding appears outdated. Do you:'
   answerData:
   - answer: Rebrand entirely to align with current trends
-    growthPoint: 2
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: -2
+    innovationPoint: 3
+    moneyCurrencyPoints: -3
   - answer: Focus on delivering quality services instead
-    growthPoint: 1
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
+    innovationPoint: -1
+    moneyCurrencyPoints: 2
   - answer: Update key branding elements, like logos or website design
-    growthPoint: 1
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: -1
   - answer: 'Seek feedback from clients before making decisions '
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 1
     moneyCurrencyPoints: 0

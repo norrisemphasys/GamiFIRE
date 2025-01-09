@@ -17,23 +17,23 @@ MonoBehaviour:
     coverage and cost. Which option do you choose?
   answerData:
   - answer: I choose the premium plan with full coverage, including dental and vision.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I opt for the basic plan to save money and invest in other areas.
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
+    satisfactionPoint: 2
+    innovationPoint: 0
     moneyCurrencyPoints: -1
-  - answer: I select a middle-ground plan to balance cost and coverage
+  - answer: I opt for the basic plan to save money and invest in other areas.
     growthPoint: 0
     satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 2
+  - answer: I select a middle-ground plan to balance cost and coverage
+    growthPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: 0
+    moneyCurrencyPoints: 1
   - answer: I decline the employer's plan and seek coverage through an independent
       provider.
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
+    satisfactionPoint: 1
+    innovationPoint: 1
     moneyCurrencyPoints: 0

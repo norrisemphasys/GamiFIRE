@@ -17,22 +17,22 @@ MonoBehaviour:
     stability during this period. What\u2019s your strategy?"
   answerData:
   - answer: I save in advance to cover expenses.
-    growthPoint: 3
-    satisfactionPoint: -2
+    growthPoint: 2
+    satisfactionPoint: 0
     innovationPoint: 0
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 1
   - answer: I explore government benefits and allowances.
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
-  - answer: I negotiate a phased return to work.
-    growthPoint: 0
     satisfactionPoint: 1
-    innovationPoint: 2
+    innovationPoint: 0
+    moneyCurrencyPoints: 1
+  - answer: I negotiate a phased return to work.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 0
     moneyCurrencyPoints: 0
   - answer: I consider remote work options.
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
+    satisfactionPoint: 0
+    innovationPoint: 2
     moneyCurrencyPoints: 0

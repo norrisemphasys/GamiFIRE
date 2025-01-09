@@ -17,23 +17,23 @@ MonoBehaviour:
   answerData:
   - answer: Buy fertilizer you have  used in the past. This fertilizer  is good but
       expensive.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: Buy fertilizer which you havent  used in the past. The fertilizer  is
-      highly rated.
     growthPoint: 1
     satisfactionPoint: 3
     innovationPoint: -1
-    moneyCurrencyPoints: -1
+    moneyCurrencyPoints: -2
+  - answer: Buy fertilizer which you havent  used in the past. The fertilizer  is
+      highly rated.
+    growthPoint: 2
+    satisfactionPoint: 2
+    innovationPoint: 1
+    moneyCurrencyPoints: -2
   - answer: Buy cheap and less effective fertilizer.
-    growthPoint: 0
-    satisfactionPoint: 1
+    growthPoint: 1
+    satisfactionPoint: -1
     innovationPoint: 2
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 1
   - answer: Dont fertilize fields.
     growthPoint: 1
     satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 1

@@ -16,22 +16,22 @@ MonoBehaviour:
   question: You receive an unexpected inheritance. How do you manage it wisely?
   answerData:
   - answer: I invest in a diversified portfolio.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
+    growthPoint: 2
+    satisfactionPoint: 0
+    innovationPoint: 1
     moneyCurrencyPoints: 0
   - answer: I clear all outstanding debts first.
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
-  - answer: I seek professional financial advice.
-    growthPoint: 0
     satisfactionPoint: 1
-    innovationPoint: 2
+    innovationPoint: 0
+    moneyCurrencyPoints: 1
+  - answer: I seek professional financial advice.
+    growthPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: 1
     moneyCurrencyPoints: 0
   - answer: I save it in a high-interest account.
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    growthPoint: 0
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 3

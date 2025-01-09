@@ -17,22 +17,22 @@ MonoBehaviour:
     a significant investment. Do you:'
   answerData:
   - answer: 'Fully invest and adopt the technology '
-    growthPoint: 2
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: -2
+    innovationPoint: 3
+    moneyCurrencyPoints: -3
   - answer: Wait for a more affordable alternative
-    growthPoint: 1
+    growthPoint: 0
+    satisfactionPoint: 0
+    innovationPoint: -1
+    moneyCurrencyPoints: 2
+  - answer: Lease or trial the technology before full adoption
+    growthPoint: 0
+    satisfactionPoint: 0
+    innovationPoint: 2
+    moneyCurrencyPoints: -1
+  - answer: Research other options that offer similar benefits
+    growthPoint: 0
     satisfactionPoint: 0
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: Lease or trial the technology before full adoption
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
     moneyCurrencyPoints: 1
-  - answer: Research other options that offer similar benefits
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 0

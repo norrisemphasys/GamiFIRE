@@ -17,22 +17,22 @@ MonoBehaviour:
     you:'
   answerData:
   - answer: 'Adopt the tool and invest in cybersecurity measures '
-    growthPoint: 2
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 0
+    innovationPoint: 3
     moneyCurrencyPoints: -2
   - answer: 'Use the tool carefully for safe tasks '
-    growthPoint: 1
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: Stick with current methods to avoid risks
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
+    innovationPoint: 2
     moneyCurrencyPoints: 1
+  - answer: Stick with current methods to avoid risks
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: -1
+    moneyCurrencyPoints: 0
   - answer: 'Consult a specialist to evaluate the tool before use '
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 1
     moneyCurrencyPoints: 0

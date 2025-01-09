@@ -16,22 +16,22 @@ MonoBehaviour:
   question: 'You consider upgrading your systems for efficiency. Do you:'
   answerData:
   - answer: 'Invest in state-of-the-art tools despite high costs '
-    growthPoint: 2
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: -2
+    innovationPoint: 3
+    moneyCurrencyPoints: -3
   - answer: 'Choose affordable, basic upgrades for gradual improvement '
-    growthPoint: 1
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
+    innovationPoint: 2
+    moneyCurrencyPoints: -1
   - answer: Stick with your current systems to maintain stability
-    growthPoint: 1
-    satisfactionPoint: 0
+    growthPoint: 0
+    satisfactionPoint: 1
     innovationPoint: 0
     moneyCurrencyPoints: 1
   - answer: Trial new tools before committing fully
     growthPoint: 1
     satisfactionPoint: 0
-    innovationPoint: 0
+    innovationPoint: 1
     moneyCurrencyPoints: 0

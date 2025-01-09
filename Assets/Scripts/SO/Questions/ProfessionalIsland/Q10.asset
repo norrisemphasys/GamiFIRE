@@ -16,22 +16,22 @@ MonoBehaviour:
   question: 'You want to improve your social media presence. Do you:'
   answerData:
   - answer: 'Invest in a large advertising campaign '
-    growthPoint: 2
+    growthPoint: 3
     satisfactionPoint: 0
     innovationPoint: 0
     moneyCurrencyPoints: -2
   - answer: Focus on organic growth strategies
     growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: 0
     moneyCurrencyPoints: 0
   - answer: Collaborate with influencers to expand reach
-    growthPoint: 1
+    growthPoint: 2
     satisfactionPoint: 0
     innovationPoint: 0
-    moneyCurrencyPoints: 1
+    moneyCurrencyPoints: -1
   - answer: Test a small budget for paid advertisements
     growthPoint: 1
     satisfactionPoint: 0
-    innovationPoint: 0
+    innovationPoint: 1
     moneyCurrencyPoints: 0

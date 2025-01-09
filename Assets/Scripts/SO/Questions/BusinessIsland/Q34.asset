@@ -17,22 +17,22 @@ MonoBehaviour:
     is limited. How do you proceed?"
   answerData:
   - answer: I start with small, regular contributions to build it over time.
-    growthPoint: 3
-    satisfactionPoint: -2
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 0
+    moneyCurrencyPoints: 1
+  - answer: I wait until my income is more stable before starting.
+    growthPoint: 0
+    satisfactionPoint: 0
     innovationPoint: 0
     moneyCurrencyPoints: 0
-  - answer: I wait until my income is more stable before starting.
-    growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
   - answer: I allocate a higher percentage of my income to the fund now.
+    growthPoint: 1
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: -1
+  - answer: I keep my savings in a regular savings account.
     growthPoint: 0
     satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
-  - answer: I keep my savings in a regular savings account.
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
+    innovationPoint: 1
     moneyCurrencyPoints: 0

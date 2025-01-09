@@ -17,22 +17,22 @@ MonoBehaviour:
     will you do to recover the  cost of the purchase as soon as possible?
   answerData:
   - answer: I will offer additional machinery services.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    growthPoint: 1
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 1
   - answer: I will occasionally rent out the machine.
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
+    satisfactionPoint: 1
+    innovationPoint: 0
+    moneyCurrencyPoints: 1
   - answer: I will use the machine only for my own farm, as I have a large farm.
     growthPoint: 0
     satisfactionPoint: 1
-    innovationPoint: 2
+    innovationPoint: 0
     moneyCurrencyPoints: 0
   - answer: I will sell the machine in two years.
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: -1
+    moneyCurrencyPoints: 2

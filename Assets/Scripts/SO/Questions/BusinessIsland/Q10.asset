@@ -17,22 +17,22 @@ MonoBehaviour:
     but increasing home expenses. How do you adjust?
   answerData:
   - answer: I invest in a home office setup to boost productivity.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I save the money from commuting for future expenses.
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
-  - answer: I explore part-time co-working spaces for balance.
-    growthPoint: 0
     satisfactionPoint: 1
     innovationPoint: 2
+    moneyCurrencyPoints: -1
+  - answer: I save the money from commuting for future expenses.
+    growthPoint: 0
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 3
+  - answer: I explore part-time co-working spaces for balance.
+    growthPoint: 0
+    satisfactionPoint: 2
+    innovationPoint: 1
     moneyCurrencyPoints: 0
   - answer: I renegotiate my utility bills to manage costs.
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    satisfactionPoint: -1
+    innovationPoint: 1
+    moneyCurrencyPoints: 2

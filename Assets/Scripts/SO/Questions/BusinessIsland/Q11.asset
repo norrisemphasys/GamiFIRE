@@ -17,22 +17,22 @@ MonoBehaviour:
     increase. What\u2019s your strategy?"
   answerData:
   - answer: I gather evidence of my achievements and request a meeting with my manager.
-    growthPoint: 3
-    satisfactionPoint: -2
+    growthPoint: 2
+    satisfactionPoint: 1
     innovationPoint: 0
     moneyCurrencyPoints: 0
   - answer: I research industry standards and present a market comparison.
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 1
   - answer: I accept non-monetary benefits like extra leave.
     growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 2
+    innovationPoint: 0
+    moneyCurrencyPoints: 1
   - answer: I pursue additional certifications to boost my value.
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
+    growthPoint: 2
+    satisfactionPoint: 0
+    innovationPoint: 1
     moneyCurrencyPoints: 0

@@ -16,22 +16,22 @@ MonoBehaviour:
   question: 'You consider an eco-focused marketing campaign. Do you:'
   answerData:
   - answer: Invest in a large-scale campaign despite high costs
-    growthPoint: 2
+    growthPoint: 3
     satisfactionPoint: 0
     innovationPoint: 0
     moneyCurrencyPoints: -2
   - answer: Use organic marketing techniques to reduce costs
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 0
     moneyCurrencyPoints: 0
   - answer: Focus on educating clients about your sustainable practices
-    growthPoint: 1
+    growthPoint: 2
     satisfactionPoint: 0
     innovationPoint: 0
-    moneyCurrencyPoints: 1
+    moneyCurrencyPoints: 0
   - answer: Partner with eco-friendly organisations to co-promote
     growthPoint: 1
     satisfactionPoint: 0
-    innovationPoint: 0
+    innovationPoint: 1
     moneyCurrencyPoints: 0

@@ -17,22 +17,22 @@ MonoBehaviour:
     the most of it. How do you proceed?
   answerData:
   - answer: I invest in professional development courses.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
+    growthPoint: 2
+    satisfactionPoint: 0
+    innovationPoint: 1
     moneyCurrencyPoints: 0
   - answer: I treat myself to a small luxury item.
-    growthPoint: 1
+    growthPoint: -1
     satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
-  - answer: I add it to my emergency fund.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 2
+    innovationPoint: 0
     moneyCurrencyPoints: 0
+  - answer: I add it to my emergency fund.
+    growthPoint: 1
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 2
   - answer: I seek financial advice for investment options.
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
+    satisfactionPoint: 0
+    innovationPoint: 2
     moneyCurrencyPoints: 0

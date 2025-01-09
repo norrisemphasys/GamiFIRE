@@ -17,22 +17,22 @@ MonoBehaviour:
     about secure transactions.  How will you decide?
   answerData:
   - answer: I will not sell products online
-    growthPoint: 3
-    satisfactionPoint: -2
+    growthPoint: -2
+    satisfactionPoint: 1
+    innovationPoint: 1
+    moneyCurrencyPoints: 1
+  - answer: I will study online payment systems and then decide whether to sell online
+    growthPoint: 2
+    satisfactionPoint: 1
     innovationPoint: 0
     moneyCurrencyPoints: 0
-  - answer: I will study online payment systems and then decide whether to sell online
-    growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
   - answer: I will hire a company to manage my online sales
     growthPoint: 0
     satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: -1
   - answer: Selling online is safe, so there is no need for concerns
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 1
+    innovationPoint: 1
+    moneyCurrencyPoints: -1

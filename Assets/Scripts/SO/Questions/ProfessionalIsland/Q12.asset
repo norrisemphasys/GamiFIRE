@@ -16,22 +16,22 @@ MonoBehaviour:
   question: A key client is dissatisfied with your service. Do you
   answerData:
   - answer: Offer a discount or refund to appease them
-    growthPoint: 2
-    satisfactionPoint: 0
+    growthPoint: 0
+    satisfactionPoint: 3
     innovationPoint: 0
-    moneyCurrencyPoints: -2
+    moneyCurrencyPoints: 3
   - answer: Maintain your terms and address the issues
-    growthPoint: 1
-    satisfactionPoint: 0
+    growthPoint: 0
+    satisfactionPoint: 1
     innovationPoint: 1
     moneyCurrencyPoints: 0
   - answer: Politely suggest they seek another provider
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
+    growthPoint: 0
+    satisfactionPoint: -2
+    innovationPoint: 2
+    moneyCurrencyPoints: 0
   - answer: Arrange a meeting to resolve the conflict collaboratively
-    growthPoint: 1
-    satisfactionPoint: 0
+    growthPoint: 0
+    satisfactionPoint: 2
     innovationPoint: 0
     moneyCurrencyPoints: 0

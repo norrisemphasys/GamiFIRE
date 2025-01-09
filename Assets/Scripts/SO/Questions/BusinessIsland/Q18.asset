@@ -17,22 +17,22 @@ MonoBehaviour:
     the costs. How do you handle it?
   answerData:
   - answer: I dip into my emergency fund.
-    growthPoint: 3
-    satisfactionPoint: -2
+    growthPoint: 0
+    satisfactionPoint: 0
     innovationPoint: 0
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 3
   - answer: I negotiate a payment plan with the hospital.
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
+    satisfactionPoint: 2
+    innovationPoint: 0
+    moneyCurrencyPoints: 0
   - answer: I apply for a short-term loan.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
-  - answer: I use credit cards and plan to repay soon.
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 1
+  - answer: I use credit cards and plan to repay soon.
+    growthPoint: 0
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 2

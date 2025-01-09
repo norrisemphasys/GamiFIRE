@@ -17,22 +17,22 @@ MonoBehaviour:
     knowledge.  Who will you turn to for advice?
   answerData:
   - answer: A respected farmer
-    growthPoint: 3
-    satisfactionPoint: -2
+    growthPoint: 1
+    satisfactionPoint: 1
     innovationPoint: 0
     moneyCurrencyPoints: 0
   - answer: Agricultural advisory service
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
-  - answer: You will learn on your own from online literature
-    growthPoint: 0
     satisfactionPoint: 1
-    innovationPoint: 2
+    innovationPoint: 0
+    moneyCurrencyPoints: 0
+  - answer: You will learn on your own from online literature
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 0
     moneyCurrencyPoints: 0
   - answer: A friend
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 0
     moneyCurrencyPoints: 0

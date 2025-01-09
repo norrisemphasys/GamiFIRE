@@ -17,22 +17,22 @@ MonoBehaviour:
     you:'
   answerData:
   - answer: Consult a tax expert to ensure compliance
-    growthPoint: 2
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 0
+    innovationPoint: 2
     moneyCurrencyPoints: -2
   - answer: Research and handle sales tax (VAT) calculations yourself.
-    growthPoint: 1
+    growthPoint: 0
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 1
+  - answer: Use an automated tool to simplify the process
+    growthPoint: 0
     satisfactionPoint: 0
     innovationPoint: 1
     moneyCurrencyPoints: 0
-  - answer: Use an automated tool to simplify the process
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
   - answer: Delay the process until other priorities are addressed
-    growthPoint: 1
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    innovationPoint: -1
+    moneyCurrencyPoints: 1

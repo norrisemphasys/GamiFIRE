@@ -17,23 +17,23 @@ MonoBehaviour:
     Do you:'
   answerData:
   - answer: 'Accept and prioritise their project '
-    growthPoint: 2
-    satisfactionPoint: 0
+    growthPoint: 3
+    satisfactionPoint: -3
     innovationPoint: 0
-    moneyCurrencyPoints: -2
+    moneyCurrencyPoints: 0
   - answer: Decline to maintain balance with existing clients
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
+    growthPoint: -1
+    satisfactionPoint: 2
+    innovationPoint: 0
     moneyCurrencyPoints: 0
   - answer: Talk to find a solution that works for both the client and your current
       work.
-    growthPoint: 1
-    satisfactionPoint: 0
+    growthPoint: 2
+    satisfactionPoint: 1
     innovationPoint: 0
-    moneyCurrencyPoints: 1
+    moneyCurrencyPoints: 0
   - answer: Refer the client to another professional
-    growthPoint: 1
-    satisfactionPoint: 0
+    growthPoint: -1
+    satisfactionPoint: 1
     innovationPoint: 0
     moneyCurrencyPoints: 0

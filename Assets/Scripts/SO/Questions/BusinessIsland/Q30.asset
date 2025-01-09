@@ -17,22 +17,22 @@ MonoBehaviour:
     members. This affects your ability to focus on your work. How do you handle it?'
   answerData:
   - answer: I step in as a mediator to resolve the conflict.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
+    growthPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: 1
     moneyCurrencyPoints: 0
   - answer: I report the issue to HR and let them handle it.
-    growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
+    growthPoint: 0
+    satisfactionPoint: 2
+    innovationPoint: 0
+    moneyCurrencyPoints: 0
   - answer: I avoid getting involved and focus on my own tasks.
     growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 0
     moneyCurrencyPoints: 0
   - answer: I suggest team-building activities to improve relations.
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 1
+    moneyCurrencyPoints: -1

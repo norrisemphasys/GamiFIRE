@@ -16,22 +16,22 @@ MonoBehaviour:
   question: 'Your customers are dissatisfied with the current service level. Do you:'
   answerData:
   - answer: Invest in training and tools to improve customer service
-    growthPoint: 2
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 0
+    innovationPoint: 2
     moneyCurrencyPoints: -2
   - answer: Implement self-service platforms to increase efficiency
-    growthPoint: 1
+    growthPoint: 0
     satisfactionPoint: 0
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: Maintain the current level of service while focusing on other priorities
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
     moneyCurrencyPoints: 1
-  - answer: Outsource customer service to an external company
-    growthPoint: 1
-    satisfactionPoint: 0
+  - answer: Maintain the current level of service while focusing on other priorities
+    growthPoint: 0
+    satisfactionPoint: 1
     innovationPoint: 0
     moneyCurrencyPoints: 0
+  - answer: Outsource customer service to an external company
+    growthPoint: 0
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: -1

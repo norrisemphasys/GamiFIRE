@@ -16,22 +16,22 @@ MonoBehaviour:
   question: You are invited to join a high-cost professional association. Do you
   answerData:
   - answer: Join to access resources and networks
+    growthPoint: 3
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: -3
+  - answer: 'Decline to maintain current financial stability '
+    growthPoint: -1
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 2
+  - answer: Attend as a guest to evaluate its value
     growthPoint: 2
     satisfactionPoint: 0
     innovationPoint: 0
-    moneyCurrencyPoints: -2
-  - answer: 'Decline to maintain current financial stability '
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: Attend as a guest to evaluate its value
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
+    moneyCurrencyPoints: -1
   - answer: Try to get lower membership fees
     growthPoint: 1
     satisfactionPoint: 0
     innovationPoint: 0
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 1

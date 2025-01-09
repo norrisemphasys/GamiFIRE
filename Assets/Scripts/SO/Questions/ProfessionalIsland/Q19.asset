@@ -17,22 +17,22 @@ MonoBehaviour:
     Do you:'
   answerData:
   - answer: Invest in tools to monitor and reduce emissions
-    growthPoint: 2
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 0
+    innovationPoint: 2
     moneyCurrencyPoints: -2
   - answer: Highlight existing eco-practices and focus on their improvement
-    growthPoint: 1
-    satisfactionPoint: 0
+    growthPoint: 0
+    satisfactionPoint: 1
     innovationPoint: 1
     moneyCurrencyPoints: 0
   - answer: Delay action until a specific need arises
-    growthPoint: 1
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 0
+    innovationPoint: 1
     moneyCurrencyPoints: 1
   - answer: Engage a consultant to develop a long-term strategy
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 2
     moneyCurrencyPoints: 0

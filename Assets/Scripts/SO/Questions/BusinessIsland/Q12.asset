@@ -17,22 +17,22 @@ MonoBehaviour:
     the best option for your needs. What do you prioritize?
   answerData:
   - answer: I choose the plan with the lowest premiums.
-    growthPoint: 3
-    satisfactionPoint: -2
+    growthPoint: 0
+    satisfactionPoint: 0
     innovationPoint: 0
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 3
   - answer: ' I opt for comprehensive coverage, even if it costs more.'
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
+    satisfactionPoint: 2
+    innovationPoint: 0
+    moneyCurrencyPoints: 0
   - answer: I consult HR for detailed plan comparisons
-    growthPoint: 0
+    growthPoint: 1
     satisfactionPoint: 1
-    innovationPoint: 2
+    innovationPoint: 1
     moneyCurrencyPoints: 0
   - answer: I explore external insurance options for better rates.
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 0
+    innovationPoint: 2
+    moneyCurrencyPoints: -1

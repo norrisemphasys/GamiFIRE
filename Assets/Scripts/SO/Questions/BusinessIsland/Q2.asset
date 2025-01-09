@@ -18,22 +18,22 @@ MonoBehaviour:
     decision?"
   answerData:
   - answer: ' I choose health insurance and a retirement plan for security'
-    growthPoint: 3
-    satisfactionPoint: -2
+    growthPoint: 2
+    satisfactionPoint: -1
     innovationPoint: 0
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 1
   - answer: I opt for a gym membership and flexible working hours
-    growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
-  - answer: I consult HR to customize my benefits package
     growthPoint: 0
-    satisfactionPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: -1
+    moneyCurrencyPoints: 1
+  - answer: I consult HR to customize my benefits package
+    growthPoint: 1
+    satisfactionPoint: 0
     innovationPoint: 2
     moneyCurrencyPoints: 0
   - answer: I maximize immediate savings with health insurance and vouchers.
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: -1
+    moneyCurrencyPoints: 2

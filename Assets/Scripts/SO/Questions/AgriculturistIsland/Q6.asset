@@ -16,22 +16,22 @@ MonoBehaviour:
   question: Yield is higher than usual. What will you do with the surplus crop?
   answerData:
   - answer: Sell the surplus curp.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: Give the crop away to friends.
-    growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
-  - answer: Process the crop into new products.
     growthPoint: 0
     satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
-  - answer: Let the extra crop to rot.
+    innovationPoint: 0
+    moneyCurrencyPoints: 2
+  - answer: Give the crop away to friends.
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
+    satisfactionPoint: 2
+    innovationPoint: 0
+    moneyCurrencyPoints: -2
+  - answer: Process the crop into new products.
+    growthPoint: 1
+    satisfactionPoint: 1
+    innovationPoint: -1
+    moneyCurrencyPoints: 1
+  - answer: Let the extra crop to rot.
+    growthPoint: 0
+    satisfactionPoint: -1
+    innovationPoint: 2
     moneyCurrencyPoints: 0

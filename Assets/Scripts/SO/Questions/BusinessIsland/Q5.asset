@@ -17,15 +17,15 @@ MonoBehaviour:
     You want to start an emergency fund. What\u2019s your approach?"
   answerData:
   - answer: I save a fixed percentage of each paycheck.
-    growthPoint: 3
-    satisfactionPoint: -2
+    growthPoint: 2
+    satisfactionPoint: 0
     innovationPoint: 0
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 1
   - answer: I cut down on non-essential spending to boost savings.
-    growthPoint: 1
-    satisfactionPoint: 3
+    growthPoint: 0
+    satisfactionPoint: 1
     innovationPoint: -1
-    moneyCurrencyPoints: -1
+    moneyCurrencyPoints: 3
   - answer: I explore high-yield savings accounts for better returns.
     growthPoint: 0
     satisfactionPoint: 1
@@ -33,6 +33,6 @@ MonoBehaviour:
     moneyCurrencyPoints: 0
   - answer: I sell unused items to jumpstart my fund.
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 1

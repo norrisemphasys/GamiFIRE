@@ -17,24 +17,24 @@ MonoBehaviour:
     to  sustainable farming. What will you do?
   answerData:
   - answer: I will read the guidelines and throw them in the trash.
-    growthPoint: 3
-    satisfactionPoint: -2
+    growthPoint: -1
+    satisfactionPoint: 1
     innovationPoint: 0
     moneyCurrencyPoints: 0
   - answer: I will not read the guidelines, as I don't intend to farm sustainably.
-    growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
-  - answer: I will carefully read the guidelines and learn about sustainable farming
-      options.
     growthPoint: 0
     satisfactionPoint: 1
-    innovationPoint: 2
+    innovationPoint: 0
     moneyCurrencyPoints: 0
+  - answer: I will carefully read the guidelines and learn about sustainable farming
+      options.
+    growthPoint: 2
+    satisfactionPoint: -1
+    innovationPoint: 1
+    moneyCurrencyPoints: 1
   - answer: I will not read the guidelines, but I will consult with a friend on the
       matter.
     growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 2
+    innovationPoint: -1
+    moneyCurrencyPoints: 1

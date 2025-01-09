@@ -17,21 +17,21 @@ MonoBehaviour:
   answerData:
   - answer: Accept the project to maintain the relationship
     growthPoint: 2
-    satisfactionPoint: 0
+    satisfactionPoint: -2
     innovationPoint: 0
-    moneyCurrencyPoints: -2
+    moneyCurrencyPoints: 0
   - answer: Decline the request to uphold your ethics
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
+    growthPoint: -1
+    satisfactionPoint: 2
+    innovationPoint: 0
     moneyCurrencyPoints: 0
   - answer: Propose an alternative solution that aligns with your values
     growthPoint: 1
-    satisfactionPoint: 0
+    satisfactionPoint: 1
     innovationPoint: 0
-    moneyCurrencyPoints: 1
+    moneyCurrencyPoints: 0
   - answer: Seek advice from a mentor or peer before deciding
     growthPoint: 1
     satisfactionPoint: 0
-    innovationPoint: 0
+    innovationPoint: 1
     moneyCurrencyPoints: 0

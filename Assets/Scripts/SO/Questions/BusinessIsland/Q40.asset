@@ -17,22 +17,22 @@ MonoBehaviour:
     want it to interfere with your main job. What type of side hustle do you choose?"
   answerData:
   - answer: I start a small e-commerce store that runs on autopilot.
-    growthPoint: 3
-    satisfactionPoint: -2
+    growthPoint: 2
+    satisfactionPoint: 0
     innovationPoint: 0
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 1
   - answer: I become a freelance consultant in my field of expertise.
-    growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
+    growthPoint: 0
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 1
   - answer: I do gig economy jobs like food delivery in my free time.
     growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 0
+    innovationPoint: 0
+    moneyCurrencyPoints: 2
   - answer: I offer online courses or tutoring services.
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 1
+    moneyCurrencyPoints: 1

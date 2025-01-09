@@ -17,22 +17,22 @@ MonoBehaviour:
     you do untill the ham cures? (You need the money)
   answerData:
   - answer: Take an extra job to earn money.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: Sell other products at higher prices.
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
+    satisfactionPoint: -3
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: Sell other products at higher prices.
+    growthPoint: -2
+    satisfactionPoint: 2
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
   - answer: Buy cheaper products and resell them at a higher price.
     growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 2
+    innovationPoint: -1
+    moneyCurrencyPoints: 1
   - answer: Sell raw, non-cured ham.
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 0
+    growthPoint: 0
+    satisfactionPoint: 3
+    innovationPoint: -3
+    moneyCurrencyPoints: 3

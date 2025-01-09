@@ -18,23 +18,23 @@ MonoBehaviour:
     your  expected price. What will you do to sell your garlic well?
   answerData:
   - answer: I will intensively promote my farm and the garlic offer.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    growthPoint: 1
+    satisfactionPoint: -1
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
   - answer: I will process the garlic and add value.
     growthPoint: 1
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
+    satisfactionPoint: -2
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
   - answer: I will accept the garlic price as it is.
     growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 2
+    innovationPoint: 0
+    moneyCurrencyPoints: -1
   - answer: I will not harvest the garlic from the field, as it is not profitable
       to produce it.
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 3
+    growthPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 0
     moneyCurrencyPoints: 0

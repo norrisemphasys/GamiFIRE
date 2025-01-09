@@ -17,22 +17,22 @@ MonoBehaviour:
     Do you:'
   answerData:
   - answer: Switch to sustainable suppliers regardless of the cost
-    growthPoint: 2
+    growthPoint: 0
     satisfactionPoint: 0
-    innovationPoint: 0
+    innovationPoint: 2
     moneyCurrencyPoints: -2
   - answer: 'Negotiate for bulk discounts or shared costs '
-    growthPoint: 1
+    growthPoint: 0
     satisfactionPoint: 0
     innovationPoint: 1
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 1
   - answer: Delay until your financial situation improves
-    growthPoint: 1
+    growthPoint: 0
     satisfactionPoint: 0
     innovationPoint: 0
     moneyCurrencyPoints: 1
   - answer: Maintain current suppliers while researching alternatives
     growthPoint: 1
     satisfactionPoint: 0
-    innovationPoint: 0
+    innovationPoint: 1
     moneyCurrencyPoints: 0
