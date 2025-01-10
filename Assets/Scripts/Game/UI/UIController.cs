@@ -89,6 +89,7 @@ public class UIController : MonoBehaviour
                 case UIState.RESULT_MENU: GetContoller<ResultController>(state).OnEnter(); break;
                 case UIState.BUILDING_MENU: GetContoller<BuildingUIController>(state).OnEnter(); break;
                 case UIState.ISLAND_TUTORIAL_MENU: GetContoller<IslandTutorialController>(state).OnEnter(); break;
+                case UIState.POINTS_MENU: GetContoller<PointsController>(state).OnEnter(); break;
 
                 // MINI GAME
                 case UIState.MGIGONE_MENU: GetContoller<MGIGOneController>(state).OnEnter(); break;
@@ -133,6 +134,7 @@ public class UIController : MonoBehaviour
                 case UIState.RESULT_MENU: GetContoller<ResultController>(state).OnExit(); break;
                 case UIState.BUILDING_MENU: GetContoller<BuildingUIController>(state).OnExit(); break;
                 case UIState.ISLAND_TUTORIAL_MENU: GetContoller<IslandTutorialController>(state).OnExit(); break;
+                case UIState.POINTS_MENU: GetContoller<PointsController>(state).OnExit(); break;
 
                 // MINI GAME
                 case UIState.MGIGONE_MENU: GetContoller<MGIGOneController>(state).OnExit(); break;
@@ -202,6 +204,8 @@ public enum UIState
 
     BUILDING_MENU,
     ISLAND_TUTORIAL_MENU,
+
+    POINTS_MENU,
 
     NONE
 }
