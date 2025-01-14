@@ -124,7 +124,11 @@ public class EnvironmentController : MonoBehaviour
             environments[islandTypeIdx].view[i].EnableButton(false);
 
         for (int i = 0; i < envLen; i++)
-            environments[islandTypeIdx].view[i].EnableButton(i <= enableIdx);
+        {
+            bool islock = environments[islandTypeIdx].view[i].data.IsLock;
+            if (islock)
+                environments[islandTypeIdx].view[i].EnableButton(i <= enableIdx || i < 3);
+        }   
     }
 
     public void AnimateBuildingList()

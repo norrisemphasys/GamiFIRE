@@ -15,9 +15,11 @@ public class BuildingListView : MonoBehaviour
     [SerializeField] Button buttonBuy;
     [SerializeField] Button buttonSelect;
 
+    private GameObject lockGO;
+
     private void Awake()
     {
-       
+        lockGO = transform.Find("Lock").gameObject;
     }
 
     private void Start()
@@ -37,7 +39,7 @@ public class BuildingListView : MonoBehaviour
         if (!data.IsLock)
             buttonSelect.gameObject.SetActive(!data.IsSelected);
 
-        Debug.LogError("BUILD LIST VIEW START");
+        lockGO.SetActive(data.IsLock);
     }
 
     void AddListener()

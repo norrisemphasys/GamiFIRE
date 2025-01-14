@@ -49,8 +49,11 @@ public class MGTwo : MiniGame
     {
         Vector3 newPosition = gameManager.sceneController.cameraController
             .minigameCamera.ScreenToWorldPoint(pos);
+
         newPosition.y = 0;
         newPosition.z = 0;
+        newPosition.x = Mathf.Clamp(newPosition.x, -3.6f, 3.6f);
+
         player.SetPlayerPosition(newPosition);
     }
 

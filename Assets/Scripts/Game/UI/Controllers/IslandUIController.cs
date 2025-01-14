@@ -43,7 +43,7 @@ public class IslandUIController : BasicController
 		Time.timeScale = 1;
 
 		view.SetIslandName( UserManager.GetJobName( gameManager.IslandType ));
-		view.buttonBuilding.interactable = false;
+		//view.buttonBuilding.interactable = false;
 
 		sceneController = gameManager.sceneController;
 		if (gameManager.previousState == UIState.ROLL_MENU)

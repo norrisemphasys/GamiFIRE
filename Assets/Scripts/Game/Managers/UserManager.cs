@@ -7,7 +7,13 @@ public class UserManager : MonoSingleton<UserManager>
 {
     private User _currentUser;
     public User currentUser { get { return _currentUser; } set { _currentUser = value; } }
-    public void SetCurrentUser(User user) { _currentUser = user; }
+    public void SetCurrentUser(User user) 
+    {
+        if (user == null && _currentUser != null)
+            return;
+
+        _currentUser = user; 
+    }
     public void ResetUserPoints()
     {
         currentUser.Coin = 0;
@@ -66,6 +72,54 @@ public class UserManager : MonoSingleton<UserManager>
 
         return "HIGHER EDUCATION STUDENT";
     }
+
+#if UNITY_EDITOR
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Keypad8))
+            AddPointsValue();
+    }
+
+    void AddPointsValue()
+    {
+        if(_currentUser != null)
+        {
+            currentUser.Coin = 100;
+            currentUser.Score = 100;
+            currentUser.GrowthPoint = 100;
+            currentUser.InnovationPoint = 100;
+            currentUser.CurrencyPoint = 100;
+            currentUser.SatisfactionPoint = 100;
+
+            Debug.LogError("Add points to existing user");
+        }
+        else
+        {
+            User newUser = new User
+            {
+                ID = System.Guid.NewGuid().ToString(),
+                Username = "Test User",
+                Email = "test@test.com",
+                Password = Utils.GetMD5Hash("1234567890"),
+                isAnExistingAccount = false,
+
+                JobType = 0,
+                Gender = 0,
+                Coin = 100,
+                Score = 100,
+                GrowthPoint = 100,
+                InnovationPoint = 100,
+                CurrencyPoint = 100,
+                SatisfactionPoint = 100,
+                Costume = ""
+            };
+
+            SetCurrentUser(newUser);
+
+            Debug.LogError("Add points to new user");
+        }
+    }
+#endif
 }
 
 public enum JobType
