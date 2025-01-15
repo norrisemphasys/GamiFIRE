@@ -1,13 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Proyecto26;
 using UnityEngine.Events;
 using System;
 using System.Linq;
-using Newtonsoft.Json;
-using System.Text;
 using Unity.VisualScripting.FullSerializer;
+using Newtonsoft.Json;
 
 public class DBManager : MonoSingleton<DBManager>
 {
@@ -113,14 +111,17 @@ public class DBManager : MonoSingleton<DBManager>
         });
     }
 
-    public static void GetAllUsersByLocalId(UnityAction<User[]> callback = null)
+    public static void GetAllUsersByToken(UnityAction<User[]> callback = null)
     {
         RestClient.Get(GameConstants.USERS_DB_URL + ".json?auth=" + _idToken).Then(res =>
         {
-            fsData userData = fsJsonParser.Parse(res.Text);
+            // OLD IMPLEMENTATION - NOT WORKING IN WEBGL.
 
-            Dictionary<string, User> users = null;
-            serializer.TryDeserialize(userData, ref users);
+            //fsData userData = fsJsonParser.Parse(res.Text);
+            //Dictionary<string, User> users = new Dictionary<string, User>();
+            //serializer.TryDeserialize(userData, ref users);
+
+            Dictionary<string, User> users = JsonConvert.DeserializeObject<Dictionary<string, User>>(res.Text);
 
             Debug.Log("All users count " + users.Count);
             callback?.Invoke(users.Values.ToArray());

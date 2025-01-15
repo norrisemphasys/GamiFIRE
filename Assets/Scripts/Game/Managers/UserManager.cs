@@ -77,10 +77,10 @@ public class UserManager : MonoSingleton<UserManager>
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Keypad8))
-            AddPointsValue();
+            CreateAndEditUserData();
     }
-
-    void AddPointsValue()
+#endif
+    public void CreateAndEditUserData()
     {
         if(_currentUser != null)
         {
@@ -119,7 +119,7 @@ public class UserManager : MonoSingleton<UserManager>
             Debug.LogError("Add points to new user");
         }
     }
-#endif
+
 }
 
 public enum JobType

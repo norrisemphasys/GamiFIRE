@@ -32,12 +32,12 @@ public class OnTriggerObject : MonoBehaviour
 
             if(uiState == UIState.LEADERBOARD_MENU)
             {
-                GameManager.instance.playerController.SetPause(true);
+               /* GameManager.instance.playerController.SetPause(true);
                 PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("Here you can see your score and compare it to other players! The content is not ready yet but make sure to come back and check it!", () =>
                 {
                     GameManager.instance.playerController.SetPause(false);
                     GameManager.instance.uiController.Show(UIState.PORT_INGAME);
-                }));
+                }));*/
             }
             else if (uiState == UIState.CUSTOMIZATION_MENU)
             {
