@@ -41,12 +41,12 @@ public class OnTriggerObject : MonoBehaviour
             }
             else if (uiState == UIState.CUSTOMIZATION_MENU)
             {
-                GameManager.instance.playerController.SetPause(true);
+               /* GameManager.instance.playerController.SetPause(true);
                 PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("Here you can customize your player to your taste! The content is not ready yet but make sure to come back and check it!", () =>
                 {
                     GameManager.instance.playerController.SetPause(false);
                     GameManager.instance.uiController.Show(UIState.PORT_INGAME);
-                }));
+                }));*/
             }
             else if(uiState == UIState.GAMEINFO_MENU)
             {

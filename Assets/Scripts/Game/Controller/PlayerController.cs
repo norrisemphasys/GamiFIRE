@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] ThirdPersonOrbitCamBasic thirdPersonController;
     public bool IsOccupied { get; set; }
 
+    public Camera uiCamera;
+
     public void SetPause(bool pause)
     {
         basicBehavior.pause = pause;

@@ -75,6 +75,7 @@ public class UIController : MonoBehaviour
                 case UIState.PORT_INGAME: GetContoller<InGamePortController>(state).OnEnter(); break;
                 case UIState.PORT_TUTORIAL_MENU: GetContoller<PortTutotrialController>(state).OnEnter(); break;
                 case UIState.LEADERBOARD_MENU: GetContoller<LeaderboardController>(state).OnEnter(); break;
+                case UIState.CUSTOMIZATION_MENU: GetContoller<CustomizationController>(state).OnEnter(); break;
 
                 // ISLAND TRIP
                 case UIState.IT_INGAME: GetContoller<InGameITController>(state).OnEnter(); break;
@@ -121,6 +122,7 @@ public class UIController : MonoBehaviour
                 case UIState.PORT_INGAME: GetContoller<InGamePortController>(state).OnExit(); break;
                 case UIState.PORT_TUTORIAL_MENU: GetContoller<PortTutotrialController>(state).OnExit(); break;
                 case UIState.LEADERBOARD_MENU: GetContoller<LeaderboardController>(state).OnExit(); break;
+                case UIState.CUSTOMIZATION_MENU: GetContoller<CustomizationController>(state).OnExit(); break;
 
                 // ISLAND TRIP
                 case UIState.IT_INGAME: GetContoller<InGameITController>(state).OnExit(); break;
