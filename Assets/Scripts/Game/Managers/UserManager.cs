@@ -73,6 +73,21 @@ public class UserManager : MonoSingleton<UserManager>
         return "HIGHER EDUCATION STUDENT";
     }
 
+    public void LoadCostume()
+    {
+
+    }
+
+    public void SaveCostume(string costume)
+    {
+        _currentUser.Costume = costume;
+    }
+
+    void ParseCostume()
+    {
+
+    }
+
 #if UNITY_EDITOR
     private void Update()
     {

@@ -20,6 +20,11 @@ public class CustomizationView : BasicView
 
     public GameObject equippedGO;
 
+    [Header("Selected Color Block")]
+    public ColorBlock selectedColorBlock;
+    [Header("Default Color Block")]
+    public ColorBlock defaultColorBlock;
+
     [SerializeField]
     private TextMeshProUGUI textName;
 

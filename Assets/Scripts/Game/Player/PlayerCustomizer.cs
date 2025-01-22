@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class PlayerCustomizer : MonoBehaviour
 {
@@ -21,22 +22,25 @@ public class PlayerCustomizer : MonoBehaviour
     [Header("Data")]
     [Space(5)]
 
-    [SerializeField]
-    private CustomItemSO[] avatarData;
-
-    [SerializeField]
-    private CustomItemSO[] headGearData;
-
-    [SerializeField]
-    private CustomItemSO[] skinColorData;
-
-    [SerializeField]
-    private CustomItemSO[] clotesStyleData;
+    public CustomItemSO[] avatarData;
+    public CustomItemSO[] headGearData;
+    public CustomItemSO[] skinColorData;
+    public CustomItemSO[] clotesStyleData;
 
     private int _currentAvatar = 0;
     private int _currentHeadGear = 0;
     private int _currentSkinColor = 0;
     private int _currentStyle = 0;
+
+    public int avatarCount => avatars.Length;
+    public int headGearCount => headGears.Length;
+    public int skinCount => skinColors.Length;
+    public int styleCount => clotheStyles.Length;
+
+    public CustomItemSO CurrentAvatarData => avatarData[_currentAvatar];
+    public CustomItemSO CurrentHeadGearData => headGearData[_currentHeadGear];
+    public CustomItemSO CurrentSkinData => skinColorData[_currentSkinColor];
+    public CustomItemSO CurrentStyleData => clotesStyleData[_currentStyle];
 
     public void SetAvatar(int idx)
     {
@@ -76,6 +80,19 @@ public class PlayerCustomizer : MonoBehaviour
         renderer.sharedMaterial = clotheStyles[_currentSkinColor].styles[id];
 
         _currentStyle = id;
+    }
+
+    public void LoadPlayerCostume()
+    {
+        int aIDX = avatarData.ToList().FindIndex(x => x.isSelected);
+        int hIDX = headGearData.ToList().FindIndex(x => x.isSelected);
+        int cIDX = skinColorData.ToList().FindIndex(x => x.isSelected);
+        int sIDX = clotesStyleData.ToList().FindIndex(x => x.isSelected);
+
+        SetAvatar(aIDX);
+        SetHeadGear(hIDX);
+        SetSkinColor(cIDX);
+        SetStyle(sIDX);
     }
 }
 
