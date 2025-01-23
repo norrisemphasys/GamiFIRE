@@ -27,6 +27,11 @@ public class PlayerCustomizer : MonoBehaviour
     public CustomItemSO[] skinColorData;
     public CustomItemSO[] clotesStyleData;
 
+    public int currentAvatarIndex => _currentAvatar;
+    public int currentHeadGearIndex => _currentHeadGear;
+    public int currentSkinIndex => _currentSkinColor;
+    public int currentStyleIndex => _currentStyle;
+
     private int _currentAvatar = 0;
     private int _currentHeadGear = 0;
     private int _currentSkinColor = 0;
@@ -89,10 +94,18 @@ public class PlayerCustomizer : MonoBehaviour
         int cIDX = skinColorData.ToList().FindIndex(x => x.isSelected);
         int sIDX = clotesStyleData.ToList().FindIndex(x => x.isSelected);
 
+        Debug.LogError("aIDX " + aIDX + " hIDX " + hIDX + " cIDX " + cIDX + " sIDX " + sIDX);
+
         SetAvatar(aIDX);
         SetHeadGear(hIDX);
         SetSkinColor(cIDX);
         SetStyle(sIDX);
+    }
+
+    public void ResetData(CustomItemSO[] data)
+    {
+        for(int i = 0; i < data.Length; i++)
+            data[i].isSelected = false;
     }
 }
 

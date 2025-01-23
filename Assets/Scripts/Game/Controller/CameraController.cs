@@ -23,16 +23,17 @@ public class CameraController : MonoBehaviour
 
     private void Awake()
     {
-        isoCameraTransform = isoCamera.transform;
-        thirdPersonCameraTransform = thirdPersonCamera.transform;
-
-        SetCamera(cameraType);
+        
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        thirdPersonCamera = GameManager.instance.characterController.GetPlayer().thirdPersonCamera;
+        thirdPersonCameraTransform = GameManager.instance.characterController.GetPlayer().lookAtTarget;
+        isoCameraTransform = isoCamera.transform;
 
+        SetCamera(cameraType);
     }
 
     // Update is called once per frame

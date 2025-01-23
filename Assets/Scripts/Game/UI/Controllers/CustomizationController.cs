@@ -35,6 +35,8 @@ public class CustomizationController : BasicController
 
 	public override void OnExit()
 	{
+		_customizer.LoadPlayerCostume();
+
 		gameManager.characterController.Save();
 
 		gameManager.playerController.SetPause(false);
@@ -53,6 +55,11 @@ public class CustomizationController : BasicController
 		Audio.PlaySFXPortal();
 
 		_customizer = gameManager.characterController.GetPlayerCustomizer();
+
+		_avatarIndex = _customizer.currentAvatarIndex;
+		_headGearIndex = _customizer.currentHeadGearIndex;
+		_skinIndex = _customizer.currentSkinIndex;
+		_styleIndex = _customizer.currentStyleIndex;
 
 		_customizer.SetAvatar(_avatarIndex);
 		_customizer.SetHeadGear(_headGearIndex);
@@ -131,7 +138,60 @@ public class CustomizationController : BasicController
 
 	void OnClickBuy()
 	{
+		if (_isAvatar)
+		{
+			if (_customizer.CurrentAvatarData.price <= 10)
+				_customizer.CurrentAvatarData.isLock = false;
+		}
 
+		if (_isHeadGear)
+		{
+			if (_customizer.CurrentHeadGearData.price <= 10)
+				_customizer.CurrentHeadGearData.isLock = false;
+		}
+
+		if (_isSkin)
+		{
+			if (_customizer.CurrentSkinData.price <= 10)
+				_customizer.CurrentSkinData.isLock = false;
+		}
+
+		if (_isStyle)
+		{
+			if (_customizer.CurrentStyleData.price <= 10)
+				_customizer.CurrentStyleData.isLock = false;
+		}
+
+		UpdateCustomizer();
+	}
+
+	void OnClickSelect()
+	{
+		if (_isAvatar)
+		{
+			_customizer.ResetData(_customizer.avatarData);
+			_customizer.CurrentAvatarData.isSelected = true;
+		}
+
+		if (_isHeadGear)
+		{
+			_customizer.ResetData(_customizer.headGearData);
+			_customizer.CurrentHeadGearData.isSelected = true;
+		}
+
+		if (_isSkin)
+		{
+			_customizer.ResetData(_customizer.skinColorData);
+			_customizer.CurrentSkinData.isSelected = true;
+		}
+
+		if (_isStyle)
+		{
+			_customizer.ResetData(_customizer.clotesStyleData);
+			_customizer.CurrentStyleData.isSelected = true;
+		}
+
+		UpdateCustomizer();
 	}
 
 	void OnClickNext()
@@ -172,11 +232,6 @@ public class CustomizationController : BasicController
 			_styleIndex = _customizer.styleCount;
 
 		UpdateCustomizer();
-	}
-
-	void OnClickSelect()
-	{
-
 	}
 
 	void UpdateCustomizer()

@@ -5,6 +5,9 @@ using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
+    public Camera thirdPersonCamera;
+    public Transform lookAtTarget;
+
     [SerializeField] CellController cellController;
 
     [SerializeField] int maxGuideCount;

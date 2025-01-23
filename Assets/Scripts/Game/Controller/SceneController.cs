@@ -78,6 +78,9 @@ public class SceneController : MonoBehaviour
 
     public void StartPlayerCellMove(UnityAction callback = null)
     {
+        if (player == null)
+            player = GameManager.instance.characterController.GetPlayer();
+
         player.StartMove(MoveCounter, callback);
     }
 }

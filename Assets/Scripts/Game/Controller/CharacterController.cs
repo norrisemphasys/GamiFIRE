@@ -44,6 +44,17 @@ public class CharacterController : MonoBehaviour
         return character[idx].GetComponent<PlayerCustomizer>();
     }
 
+    public Player GetPlayer()
+    {
+        User currentUser = UserManager.instance.currentUser;
+        int idx = 0;
+
+        if (currentUser != null)
+            idx = currentUser.JobType;
+
+        return character[idx].GetComponent<Player>();
+    }
+
     private void Update()
     {
 #if UNITY_EDITOR
@@ -92,6 +103,7 @@ public class CharacterController : MonoBehaviour
 
     public void Load(string costume, int idx)
     {
+        Debug.LogError("Load Costume " + costume);
         if (string.IsNullOrEmpty(costume))
             return;
 
