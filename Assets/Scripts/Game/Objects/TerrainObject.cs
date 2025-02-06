@@ -15,6 +15,8 @@ public class TerrainObject : MonoBehaviour
 
     private float currentSpeed;
 
+    private bool recycle = true;
+
     private void Awake()
     {
         terrain = transform;
@@ -60,13 +62,24 @@ public class TerrainObject : MonoBehaviour
         startUpdate = start;
     }
 
+    public void StopRecyling()
+    {
+        recycle = false;
+    }
+
     public void UpdateTerrain() 
     {
         Vector3 pos = terrain.position;
         pos.z -= Time.deltaTime * currentSpeed;
 
-        if (pos.z < playerDistance)
+        if (pos.z < playerDistance && recycle)
             pos.z = maxDistance;
+
+        if(!recycle)
+        {
+            if (terrain.position.z > 280)
+                gameObject.SetActive(false);
+        }
 
         terrain.position = pos;
     }

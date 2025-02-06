@@ -17,7 +17,7 @@ public class GameManager : MonoSingleton<GameManager>
         } 
     }
 
-    public CharacterController characterController { get { return FindObjectOfType<CharacterController>(); } }
+    public CharacterPlayerController characterController { get { return FindObjectOfType<CharacterPlayerController>(); } }
     public PlayerController playerController { get { return characterController.GetPlayerController(); } }
     public TerrainController terrainController { get { return FindObjectOfType <TerrainController>();} }
     public SceneController sceneController { get { return FindObjectOfType<SceneController>(); } }

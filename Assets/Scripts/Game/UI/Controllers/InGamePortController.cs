@@ -24,6 +24,8 @@ public class InGamePortController : BasicController
 	public override void OnExit()
 	{
 		RemoveListener();
+
+		view.ShowMiniMap(false);
 		view.Hide(ShowNextMenu);
 	}
 
@@ -32,6 +34,8 @@ public class InGamePortController : BasicController
 		User currentUser = UserManager.instance.currentUser;
 		if (currentUser != null)
 			view.UpdateUserPoints(currentUser);
+
+		view.ShowMiniMap(true);
 	}
 
 	public void ShowNextMenu()

@@ -15,9 +15,11 @@ public class InGamePortView : BasicView
     [SerializeField] TextMeshProUGUI textUserName;
     [SerializeField] TextMeshProUGUI textJobType;
 
+    [SerializeField] CanvasGroup miniMapCanvas;
+
     public void Init()
     {
-
+        ShowMiniMap(false);
     }
 
     public void UpdateUserPoints(User user)
@@ -31,5 +33,12 @@ public class InGamePortView : BasicView
         textGrowthPoint.text = user.GrowthPoint != 0 ? string.Format("{0:#,#}", user.GrowthPoint) : "0";
         textInnovationPoint.text = user.InnovationPoint != 0 ? string.Format("{0:#,#}", user.InnovationPoint) : "0";
         textSatisfactionPoint.text = user.SatisfactionPoint != 0 ? string.Format("{0:#,#}", user.SatisfactionPoint) : "0";
+    }
+
+    public void ShowMiniMap(bool show)
+    {
+        miniMapCanvas.alpha = show ? 1 : 0;
+        miniMapCanvas.interactable = show;
+        miniMapCanvas.blocksRaycasts = show;
     }
 }

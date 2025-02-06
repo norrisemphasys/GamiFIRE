@@ -23,12 +23,20 @@ public class CutsceneAnimation : MonoBehaviour
 
     [SerializeField] bool enableAudio = true;
 
+    [SerializeField] GameObject[] islands;
+
     JobType islandType;
     string currentIsland;
 
     // Start is called before the first frame update
     void Start()
     {
+        int islandType = 0;
+        islandType = (int)GameManager.instance.IslandType;
+
+        for(int i= 0; i < islands.Length; i++)
+            islands[i].SetActive(i == islandType);
+
         Time.timeScale = 1;
         PlayCutScene();
     }

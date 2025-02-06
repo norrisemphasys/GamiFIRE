@@ -66,6 +66,16 @@ public class TerrainController : MonoBehaviour
         startSpawnObstacle = start;
     }
 
+    public void StopRecycling()
+    {
+        startSpawnObstacle = false;
+        for (int i = 0; i < terrainPool.Count; i++)
+        {
+            TerrainObject to = terrainPool[i].GetComponent<TerrainObject>();
+            to.StopRecyling();
+        }
+    }
+
     void InitializeTerrain()
     {
         float maxDistance = ( terrainPool.Count - 1 ) * terrainDistance;

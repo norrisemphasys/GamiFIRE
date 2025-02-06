@@ -150,7 +150,10 @@ public class InGameITController : BasicController
             {
 				// Win
 				gameManager.WinITMode = true;
-				OnClickDefault(UIState.IT_GAMEOVER);
+				//OnClickDefault(UIState.IT_GAMEOVER);
+
+				gameManager.terrainController.StopRecycling();
+				StartCoroutine(ShowGameOverEnum());
 			}
             else
             {
@@ -195,4 +198,10 @@ public class InGameITController : BasicController
     {
 		RemoveListener();
     }
+
+	IEnumerator ShowGameOverEnum()
+    {
+		yield return new WaitForSeconds(10f);
+		OnClickDefault(UIState.IT_GAMEOVER);
+	}
 }
