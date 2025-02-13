@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c22f870f6543a94a9a2ef11a6ba7300, type: 3}
+  m_Name: Employee
+  m_EditorClassIdentifier: 
+  textAsset: {fileID: 4900000, guid: 2e84c7947ef61ab44a95148fd21ff6f1, type: 3}
+  infos:
+  - Title: Deductions
+    Content: "Money taken out of your paycheck for things like taxes, insurance,
+      or retirement savings.\r"
+  - Title: Financial Security
+    Content: "Having enough money to meet your basic needs and handle unexpected
+      expenses.\r"
+  - Title: Investment
+    Content: "Putting your money into things like stocks, bonds, or real estate with
+      the goal of earning more money over time.\r"
+  - Title: Career Growth
+    Content: "Advancing in your career by gaining new skills, responsibilities, and
+      higher pay over time.\r"
+  - Title: Health Insurance
+    Content: "A type of insurance that covers medical expenses, such as doctor visits,
+      surgeries, or prescriptions.\r"
+  - Title: Premium Plan
+    Content: "A high-cost insurance plan with more coverage and fewer out-of-pocket
+      expenses.\r"
+  - Title: Basic Plan
+    Content: "A lower-cost insurance plan with fewer benefits and higher out-of-pocket
+      expenses.\r"
+  - Title: Middle-Ground Plan
+    Content: "An insurance plan that balances the cost and coverage, offering moderate
+      benefits for a reasonable price.\r"
+  - Title: Independent Provider
+    Content: "A non-employer insurance plan that you buy directly from a company
+      instead of through your employer.\r"
+  - Title: E-commerce Platforms
+    Content: "Websites or apps where you can buy and sell goods and services online
+      (e.g. Amazon, eBay).\r"
+  - Title: Cybersecurity
+    Content: "Measures taken to protect your personal information and money when
+      using the internet or online shopping.\r"
+  - Title: Investment Platforms
+    Content: "Websites or apps that allow you to invest money in stocks, bonds, or
+      other financial products.\r"
+  - Title: Financial Tools
+    Content: "Apps or programs used to help manage your money, like budgeting apps
+      or investment trackers.\r"
+  - Title: Job Satisfaction
+    Content: "How happy you are with your job, including aspects like work environment,
+      pay, and personal fulfillment.\r"
+  - Title: Salary Package
+    Content: "The total compensation offered by an employer, including salary, benefits,
+      bonuses, and other perks.\r"
+  - Title: Work Ethics
+    Content: "The attitude and effort you bring to your work, including honesty,
+      responsibility, and reliability.\r"
+  - Title: Retirement Planning
+    Content: "Preparing for life after work by saving and investing money for the
+      future.\r"
+  - Title: Tax Deductions
+    Content: "Money subtracted from your taxable income, lowering the amount you
+      owe in taxes.\r"
+  - Title: Job Flexibility
+    Content: "The ability to have control over when and where you work, like remote
+      work or flexible hours.\r"
+  - Title: Financial Preparedness
+    Content: "Being ready for unexpected financial challenges by having savings and
+      a financial plan.\r"
+  - Title: Budgeting Apps
+    Content: "Tools that help you track your spending, set savings goals, and manage
+      your money.\r"
+  - Title: Savings Goal
+    Content: "A specific amount of money you aim to save for something important,
+      like a vacation or buying a car.\r"
+  - Title: Peer Support
+    Content: "Getting guidance or help from friends, colleagues, or mentors to achieve
+      personal or career goals.\r"
+  - Title: Credit Score
+    Content: "A number that shows how reliable you are at repaying borrowed money.
+      A higher score means you're more trusted by lenders.\r"
+  - Title: Compound Interest
+    Content: "Interest earned on both the original amount of money (principal) and
+      the interest that has been added to it.\r"
+  - Title: Credit Card
+    Content: "A type of card that lets you borrow money up to a certain limit to
+      make purchases, which you pay back later.\r"
+  - Title: Fixed Expenses
+    Content: "Regular, predictable costs, like rent or subscriptions, that stay the
+      same each month.\r"
+  - Title: Variable Expenses
+    Content: "Costs that change month-to-month, like groceries, entertainment, or
+      utility bills.\r"
+  - Title: Savings Account
+    Content: "A bank account where you deposit money and earn interest over time.\r"
+  - Title: Financial Independence
+    Content: "The ability to support yourself financially without relying on others,
+      like parents or a partner.\r"
+  - Title: Income Tax
+    Content: "Money paid to the government based on your earnings, which helps fund
+      public services.\r"
+  - Title: Social Security
+    Content: "A government program that provides financial assistance to people who
+      are retired, unemployed, or unable to work due to illness or disability.\r"
+  - Title: Pension
+    Content: "A regular payment made to a person after they retire, typically funded
+      by the government or employer.\r"
+  - Title: Financial Advisor
+    Content: "A professional who gives advice about how to manage your money, invest,
+      or plan for retirement.\r"
+  - Title: Stock Market
+    Content: "A system where people can buy and sell shares of companies to make
+      money.\r"
+  - Title: Dividend
+    Content: "A payment made by a company to its shareholders, usually from profits.\r"
+  - Title: Budget Surplus
+    Content: "When your income is higher than your expenses, leaving extra money.\r"
+  - Title: Budget Deficit
+    Content: "When your expenses are higher than your income, leading to borrowing
+      or using savings.\r"
+  - Title: Tax Return
+    Content: "A form you submit to the government to report your income and taxes
+      paid, potentially leading to a refund.\r"
+  - Title: Online Payment Systems
+    Content: "Methods for making payments online, such as through PayPal, credit
+      cards, or mobile apps.\r"
+  - Title: Asset
+    Content: "Something valuable that you own, like a car, house, or savings account.\r"
+  - Title: Liability
+    Content: "Money you owe or are responsible for paying, like a mortgage or loan.\r"
+  - Title: Diversification
+    Content: "Spreading your investments across different types of assets (like stocks,
+      bonds, and real estate) to reduce risk.\r"
+  - Title: Tax-Deferred
+    Content: "Money that is not taxed until a later date, usually found in retirement
+      savings accounts.\r"
+  - Title: Net Worth
+    Content: "The total value of everything you own (assets) minus everything you
+      owe (liabilities).\r"
+  - Title: Disposable Income
+    Content: "The money left over after paying for necessary expenses like housing,
+      food, and taxes. This is what you can use for savings, entertainment, or other
+      non-essentials.\r"
+  - Title: Compound Savings
+    Content: "Savings that grow over time because interest is added to both the initial
+      amount and the interest already earned.\r"
+  - Title: Credit Limit
+    Content: "The maximum amount of money you can borrow on a credit card or loan.\r"
+  - Title: Bankruptcy
+    Content: "A legal process where someone who can't repay their debts can seek
+      relief from some or all of their obligations,\r"
+  - Title: Subsidized Loan
+    Content: "A loan where the government pays the interest while you\u2019re in
+      school or during other qualifying periods.\r"
+  - Title: Unsubsidized Loan
+    Content: "A loan where you are responsible for paying the interest as soon as
+      you receive the loan.\r"
+  - Title: Crowdfunding
+    Content: "Raising small amounts of money from many people, typically online,
+      to fund a project or business idea.\r"
+  - Title: Passive Income
+    Content: Money earned with minimal effort or work, such as earnings from investments
+      or royalties.

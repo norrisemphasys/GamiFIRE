@@ -238,6 +238,7 @@ public class IslandUIController : BasicController
 	{
 		view.buttonRoll.onClick.AddListener(OnClickRoll);
 		view.buttonPause.onClick.AddListener(OnClickPause);
+		view.buttonInfo.onClick.AddListener(OnClickInfo);
 
 		//view.buttonStart.onClick.AddListener(OnClickStart);
 		view.buttonBuilding.onClick.AddListener(OnClickBuilding);
@@ -252,7 +253,7 @@ public class IslandUIController : BasicController
 	{
 		view.buttonRoll.onClick.RemoveListener(OnClickRoll);
 		view.buttonPause.onClick.RemoveListener(OnClickPause);
-
+		view.buttonInfo.onClick.RemoveListener(OnClickInfo);
 		//view.buttonStart.onClick.RemoveListener(OnClickStart);
 		view.buttonBuilding.onClick.RemoveListener(OnClickBuilding);
 
@@ -262,6 +263,12 @@ public class IslandUIController : BasicController
 			view.buttonPoints[i].onClick.RemoveAllListeners();
 
 	}
+
+	void OnClickInfo()
+    {
+		if (!gameManager.sceneController.StartGame)
+			OnClickDefault(UIState.GAMEINFO_MENU);
+    }
 
 	void OnClickPoints(int idx)
     {

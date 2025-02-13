@@ -22,9 +22,11 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: OceanScene-Water-Preset 1
   m_Shader: {fileID: 4800000, guid: efcaf526ceb1f4efd9eb4e4c30c6ade6, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _COLORMODE_LINEAR
-  - _FOAMMODE_TEXTURE
+  - _FOAMMODE_NONE
   - _WAVEMODE_GRID
   m_InvalidKeywords:
   - _OPAQUE_OFF
@@ -35,6 +37,7 @@ Material:
   stringTagMap:
     RenderType: Transparent
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -97,7 +100,7 @@ Material:
     - _FoamDepth: 0.47
     - _FoamDirection: -0.12
     - _FoamFromTexture: 1
-    - _FoamMode: 2
+    - _FoamMode: 0
     - _FoamNoiseAmount: 1
     - _FoamProcedural: 1
     - _FoamScale: 0.29

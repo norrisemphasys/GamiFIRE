@@ -71,6 +71,15 @@ public class BasicController : MonoBehaviour
 		});
     }
 
+	protected void AddToggleListener(int idx, Toggle toggle, 
+		UnityAction<bool, int> callback) 
+	{
+		toggle.onValueChanged.AddListener((b) => 
+		{
+			callback?.Invoke(b, idx);
+		});
+	}
+
 	public void ShowNextState(UIState _state)
 	{
 		nextState = _state;

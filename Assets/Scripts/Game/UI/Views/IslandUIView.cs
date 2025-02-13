@@ -7,6 +7,7 @@ using TMPro;
 
 public class IslandUIView : BasicView
 {
+    public Button buttonInfo;
     public Button buttonRoll;
     public Button buttonPause;
     public Button buttonStart;

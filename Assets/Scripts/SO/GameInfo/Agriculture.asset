@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c22f870f6543a94a9a2ef11a6ba7300, type: 3}
+  m_Name: Agriculture
+  m_EditorClassIdentifier: 
+  textAsset: {fileID: 4900000, guid: 7134856ac36b0a747b27b0e0b8a2b6c5, type: 3}
+  infos:
+  - Title: Investment
+    Content: "Allocating resources, such as money or time, to acquire equipment or
+      improve productivity.\r"
+  - Title: Risk Management
+    Content: "Strategies to minimize financial losses, e.g. insuring crops or diversifying
+      income sources.\r"
+  - Title: Cost-Benefit Analysis
+    Content: "Comparing potential benefits and costs before making decisions, such
+      as buying machinery.\r"
+  - Title: Budgeting
+    Content: "Planning income and expenditures to ensure financial stability.\r"
+  - Title: Loan
+    Content: "Borrowing money to cover immediate needs, often from local credit unions
+      or European funding sources.\r"
+  - Title: Microfinance
+    Content: "Small-scale financial services for rural or small-scale farmers, often
+      supported by European initiatives.\r"
+  - Title: Emergency Fund
+    Content: "Savings reserved for unexpected expenses, such as equipment breakdowns
+      or crop damage.\r"
+  - Title: Marketing Strategy
+    Content: "Planning promotions and sales efforts, such as selling through farmers'
+      markets or cooperatives.\r"
+  - Title: Supply Chain Management
+    Content: "Overseeing the movement of goods from farm to local or regional markets.\r"
+  - Title: Cash Flow Management
+    Content: "Monitoring the inflow and outflow of money to ensure liquidity for
+      operational needs.\r"
+  - Title: Subsidies
+    Content: "Financial support from the government or EU to assist with farming
+      activities.\r"
+  - Title: Grants
+    Content: "Non-repayable funds provided for sustainable or innovative farming
+      projects.\r"
+  - Title: Diversification
+    Content: "Engaging in varied farming activities, such as crop rotation or agritourism,
+      to spread risk.\r"
+  - Title: Leasing
+    Content: "Renting equipment or land as a cost-effective alternative to purchasing.\r"
+  - Title: Savings Plan
+    Content: "Setting aside money over time to prepare for future needs or investments.\r"
+  - Title: Break-Even Point
+    Content: "The point at which total revenues equal total costs, resulting in no
+      profit or loss.\r"
+  - Title: Debt Consolidation
+    Content: "Combining multiple loans into a single, manageable repayment plan.\r"
+  - Title: Crowdfunding
+    Content: "Collecting small contributions from individuals, often through online
+      platforms, to fund farm projects.\r"
+  - Title: Cooperative
+    Content: "A group of farmers pooling resources to share costs and market collectively.\r"
+  - Title: Negotiation Skills
+    Content: "The ability to secure better prices or terms for goods and services,
+      such as seed purchases.\r"
+  - Title: Capital Expenditure
+    Content: "Money spent on acquiring or upgrading physical assets, such as farm
+      machinery or buildings.\r"
+  - Title: Yield Management
+    Content: "Adjusting strategies to maximize profitability from crop or livestock
+      production.\r"
+  - Title: Insurance
+    Content: "Financial protection against risks like crop failure, livestock loss,
+      or natural disasters.\r"
+  - Title: Revenue Sharing
+    Content: "Splitting income among partners, cooperatives, or stakeholders.\r"
+  - Title: Sustainability
+    Content: "Adopting practices that balance current farming needs with long-term
+      environmental preservation.\r"
+  - Title: Smart Farming
+    Content: "Using technology, such as sensors or automation, to improve efficiency
+      and sustainability.\r"
+  - Title: Value Addition
+    Content: "Enhancing the value of products through processing or packaging, e.g.
+      turning milk into cheese.\r"
+  - Title: Market Analysis
+    Content: "Researching local and regional demand, prices, and consumer preferences
+      to inform sales strategies.\r"
+  - Title: Fixed Costs
+    Content: "Expenses that remain constant, such as equipment leases or barn maintenance.\r"
+  - Title: Variable Costs
+    Content: "Costs that fluctuate with production levels, such as seeds or animal
+      feed.\r"
+  - Title: Profit Margins
+    Content: "The percentage of revenue remaining after costs are deducted, showing
+      farm profitability.\r"
+  - Title: Liquidity
+    Content: "The ability to access cash quickly to meet immediate financial needs.\r"
+  - Title: Opportunity Cost
+    Content: "The potential benefits lost when choosing one option over another,
+      such as planting wheat over corn.\r"
+  - Title: ROI (Return on Investment)
+    Content: "A measure of the profitability of investments, such as new irrigation
+      systems.\r"
+  - Title: Resilience Planning
+    Content: "Preparing for unexpected challenges, such as climate change impacts
+      or market fluctuations.\r"
+  - Title: Fixed Assets
+    Content: "Long-term assets like land or buildings essential for farming operations.\r"
+  - Title: Short-Term Financing
+    Content: "Borrowing funds to address immediate needs, such as seeds or fertilizers,
+      often repaid after harvest.\r"
+  - Title: Networking
+    Content: "Building connections with other farmers or stakeholders for knowledge-sharing
+      and resource pooling.\r"
+  - Title: Education Grants
+    Content: "Financial support for training or acquiring new skills, such as sustainable
+      farming techniques.\r"
+  - Title: Asset Management
+    Content: "Optimizing the use of physical resources, such as machinery or livestock,
+      to maximize efficiency.\r"
+  - Title: Entrepreneurship
+    Content: "Innovating or expanding farming activities to increase income, such
+      as agritourism ventures.\r"
+  - Title: Compliance
+    Content: "Adhering to EU laws, regulations, or subsidy requirements.\r"
+  - Title: Bookkeeping
+    Content: Recording financial transactions to track income, expenses, and profitability.

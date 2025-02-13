@@ -50,12 +50,12 @@ public class OnTriggerObject : MonoBehaviour
             }
             else if(uiState == UIState.GAMEINFO_MENU)
             {
-                GameManager.instance.playerController.SetPause(true);
+               /* GameManager.instance.playerController.SetPause(true);
                 PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("Here you will get to learn more about financial literacy! The content is not ready yet but make sure to come back and check it!", () =>
                 {
                     GameManager.instance.playerController.SetPause(false);
                     GameManager.instance.uiController.Show(UIState.PORT_INGAME);
-                }));
+                }));*/
             }
 
             OnEnterTrigger?.Invoke();

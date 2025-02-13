@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c22f870f6543a94a9a2ef11a6ba7300, type: 3}
+  m_Name: General
+  m_EditorClassIdentifier: 
+  textAsset: {fileID: 4900000, guid: 3a0a8c0478b8ab0468f026d39ec1eed2, type: 3}
+  infos:
+  - Title: Budgeting
+    Content: "Making a plan for how to spend and save your money.\r"
+  - Title: Savings
+    Content: "Money you keep for future needs.\r"
+  - Title: Investments
+    Content: "Using your money to try to make more money, like buying stocks or property.\r"
+  - Title: Debt management
+    Content: "Taking care of money you owe and paying it back on time.\r"
+  - Title: Risk management
+    Content: "Finding and reducing money problems you might face.\r"
+  - Title: Financial planning
+    Content: "Making a plan for your money for now and the future.\r"
+  - Title: Credit
+    Content: "Borrowing money and paying it back later with extra cost (interest).\r"
+  - Title: Taxes
+    Content: "Money you pay to the government from your income or purchases.\r"
+  - Title: Sustainability
+    Content: "Making money choices that help the environment and society.\r"
+  - Title: Digital finance
+    Content: "Using apps and online tools to manage money.\r"
+  - Title: Retirement planning
+    Content: "Saving and planning for when you stop working.\r"
+  - Title: Insurance
+    Content: "Paying money to get help if something bad happens, like an accident.\r"
+  - Title: Asset management
+    Content: "Taking care of what you own to grow its value.\r"
+  - Title: Inflation
+    Content: "When prices go up, making things cost more over time.\r"
+  - Title: Interest rates
+    Content: "The extra money you earn or pay on savings or loans.\r"
+  - Title: Compound interest
+    Content: "Interest that adds to your money over time, helping it grow faster.\r"
+  - Title: Financial resilience
+    Content: "Being ready for money problems and recovering quickly.\r"
+  - Title: Pension schemes
+    Content: "Plans that give you money when you retire.\r"
+  - Title: Mortgage
+    Content: "A loan to buy a house, paid back over many years.\r"
+  - Title: Loans
+    Content: "Money you borrow and pay back later, often with extra cost.\r"
+  - Title: Financial literacy
+    Content: "Knowing how to use and manage money wisely.\r"
+  - Title: Emergency fund
+    Content: "Money saved for unexpected problems, like losing a job.\r"
+  - Title: Wealth creation
+    Content: Building more money or valuable things over time.

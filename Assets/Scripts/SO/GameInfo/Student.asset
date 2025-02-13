@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c22f870f6543a94a9a2ef11a6ba7300, type: 3}
+  m_Name: Student
+  m_EditorClassIdentifier: 
+  textAsset: {fileID: 4900000, guid: 6d97306808177d84493b9428d0065adb, type: 3}
+  infos:
+  - Title: Opportunity Cost
+    Content: "The loss of potential gain from other alternatives when one option
+      is chosen.\r"
+  - Title: Liquidity
+    Content: "The ability to access cash quickly to cover expenses.\r"
+  - Title: Debt and Borrowing
+    Content: "Taking a loan or borrowing money to meet immediate financial needs.\r"
+  - Title: Return on Investment (ROI)
+    Content: "The benefit gained from an investment compared to its cost.\r"
+  - Title: Income Diversification
+    Content: "Earning income from multiple sources to reduce financial risk.\r"
+  - Title: Financial Planning
+    Content: "Strategically managing money to achieve long-term financial goals.\r"
+  - Title: Risk Management
+    Content: "Identifying and mitigating financial risks.\r"
+  - Title: Savings and Emergency Funds
+    Content: "Setting aside money for unforeseen circumstances.\r"
+  - Title: Grants and Scholarships
+    Content: "Financial aid provided without repayment requirements.\r"
+  - Title: Financial Negotiation
+    Content: "Discussing and modifying financial agreements for better terms.\r"
+  - Title: Investment in Education and Skills
+    Content: "Spending money or time on education for future benefits.\r"
+  - Title: Compound Interest
+    Content: "The process where interest is added to the principal amount, growing
+      exponentially over time.\r"
+  - Title: Credit Score
+    Content: "A numerical rating that represents a person's creditworthiness and
+      ability to repay debts.\r"
+  - Title: Fixed vs. Variable Expenses
+    Content: "Fixed expenses remain constant (e.g. rent), while variable expenses
+      change (e.g. entertainment).\r"
+  - Title: Student Loans
+    Content: "Loans specifically designed for students to finance their education,
+      often with lower interest rates.\r"
+  - Title: Inflation
+    Content: "The rate at which the general level of prices for goods and services
+      rises, reducing purchasing power.\r"
+  - Title: Tax Deductions
+    Content: "Expenses that can be deducted from taxable income, reducing overall
+      tax liability.\r"
+  - Title: Net Worth
+    Content: "The total value of assets minus liabilities.\r"
+  - Title: Emergency Fund
+    Content: "Savings set aside to cover unexpected expenses or financial emergencies.\r"
+  - Title: Diversification
+    Content: "Spreading investments across different assets to reduce risk.\r"
+  - Title: Interest Rates
+    Content: "The cost of borrowing money, expressed as a percentage.\r"
+  - Title: Asset vs. Liability
+    Content: "Assets provide future benefits, while liabilities are debts owed.\r"
+  - Title: Bankruptcy
+    Content: "A legal process where individuals or businesses declare their inability
+      to repay debts.\r"
+  - Title: Passive Income
+    Content: "Earnings derived from investments or business activities that require
+      minimal effort.\r"
+  - Title: Financial Independence
+    Content: "The ability to sustain a lifestyle without relying on employment income.\r"
+  - Title: Retirement Savings
+    Content: "Investment accounts designed to help individuals save for retirement.\r"
+  - Title: Debt-to-Income Ratio
+    Content: A measure of how much debt a person has compared to their income.
