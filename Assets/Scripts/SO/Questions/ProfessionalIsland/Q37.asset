@@ -12,26 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q37
   m_EditorClassIdentifier: 
-  questionTitle: Aligning marketing strategies with sustainability
-  question: 'You consider an eco-focused marketing campaign. Do you:'
+  questionTitle: Planning for Retirement
+  question: "You\u2019ve started thinking about retirement but aren\u2019t sure how
+    much you should be saving."
   answerData:
-  - answer: Invest in a large-scale campaign despite high costs
+  - answer: Consult with a financial advisor to create a retirement plan that aligns
+      with your career goals, factoring in potential promotions and salary increases
+      to adjust your savings over time.
+    growthPoint: 4
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 1
+  - answer: Set retirement goals based on the lifestyle you envision, focusing on
+      achieving a balance between enjoying your current life and feeling secure about
+      your future.
     growthPoint: 3
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: -2
-  - answer: Use organic marketing techniques to reduce costs
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: Use digital retirement planning tools or apps that analyze your current
+      income, expenses, and future projections to recommend personalized savings
+      strategies.
     growthPoint: 2
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: Focus on educating clients about your sustainable practices
-    growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: Partner with eco-friendly organisations to co-promote
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: Invest in diversified assets such as index funds, real estate, or pension
+      schemes with high returns to maximize long-term growth and accumulate more
+      wealth for retirement.
     growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

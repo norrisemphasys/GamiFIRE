@@ -16,23 +16,27 @@ MonoBehaviour:
   question: "You\u2019re considering how to start saving for retirement. What\u2019s
     your approach?"
   answerData:
-  - answer: "I enroll in my company\u2019s retirement plan immediately."
-    growthPoint: 2
+  - answer: I invest in career advancement opportunities like certifications to boost
+      earning potential and retirement savings.
+    growthPoint: 4
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I consult a financial planner to create a strategy.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I invest in low-risk, long-term bonds.
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 2
-  - answer: I research high-growth investments for better returns.
-    growthPoint: 1
-    satisfactionPoint: 0
     innovationPoint: 2
-    moneyCurrencyPoints: -1
+    moneyCurrencyPoints: 3
+  - answer: I create a balanced savings plan that contributes to retirement while
+      allowing for present enjoyment.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2
+  - answer: I use automated investing apps or robo-advisors to build a diversified
+      retirement portfolio for long-term growth.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
+  - answer: I start a side business or invest in passive income streams like rental
+      properties or dividend stocks to supplement retirement income.
+    growthPoint: 3
+    satisfactionPoint: 2
+    innovationPoint: 1
+    moneyCurrencyPoints: 4

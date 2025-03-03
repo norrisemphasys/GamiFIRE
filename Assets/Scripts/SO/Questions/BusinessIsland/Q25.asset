@@ -16,23 +16,29 @@ MonoBehaviour:
   question: Your car breaks down unexpectedly, and repairs are costly. How do you
     handle this expense?
   answerData:
-  - answer: I use my emergency fund to cover the cost.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 2
-  - answer: I negotiate with the mechanic for a payment plan.
-    growthPoint: 1
-    satisfactionPoint: 1
+  - answer: I negotiate with my employer for temporary remote work or flexible hours
+      to reduce commuting costs while I save for the repairs, showing adaptability
+      and responsibility.
+    growthPoint: 4
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 1
+  - answer: I dip into my emergency savings fund, feeling reassured that I planned
+      ahead for unexpected expenses like this.
+    growthPoint: 3
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I sell the car and switch to public transport.
+    moneyCurrencyPoints: 2
+  - answer: I join a local car-sharing service or start a carpool arrangement with
+      colleagues, reducing my dependency on the car while saving for future repairs.
     growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I use a credit card and plan to pay it off quickly.
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 2
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: 'I take on a short-term freelance project or sell unused items online
+      to quickly generate the extra cash needed for the repairs without impacting
+      my regular budget. '
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

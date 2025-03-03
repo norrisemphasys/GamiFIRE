@@ -16,23 +16,27 @@ MonoBehaviour:
   question: "You\u2019re planning your career path and want to set achievable long-term
     goals. What\u2019s your strategy?"
   answerData:
-  - answer: I set clear goals for the next five years and work backwards.
-    growthPoint: 2
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I focus on gaining experience and see where it leads.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I aim to become an expert in a specific area of my field.
-    growthPoint: 2
-    satisfactionPoint: 1
+  - answer: I identify key skills and qualifications for my desired role and create
+      a development plan with training, certifications, and mentorship.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: I reflect on my values and interests, setting goals that balance career
+      success, job satisfaction, and work-life harmony.
+    growthPoint: 3
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I prioritize balancing career goals with personal life.
+    moneyCurrencyPoints: 2
+  - answer: I use the SMART method to adopt a flexible career plan that adapts to
+      industry trends and new opportunities.
     growthPoint: 1
     satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I focus on high-paying roles, gain relevant experience, and seek opportunities
+      for salary increases, promotions, or side income to achieve financial goals.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

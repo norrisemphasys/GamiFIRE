@@ -34,8 +34,8 @@ public class PortTutotrialController : BasicController
 
 	public override void Initialize()
 	{
-		Audio.PlayBGMPort();
-		Audio.PlayBGMSea();
+
+		_maxStep = view.goTextInfo.Length;
 
 		UpdateTutorial();
 

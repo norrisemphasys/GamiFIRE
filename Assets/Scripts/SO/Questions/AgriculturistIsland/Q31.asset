@@ -12,27 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q31
   m_EditorClassIdentifier: 
-  questionTitle: Education
-  question: To receive subsidies, you must attend at least two  trainings per year.
-    What do you plan to do?
+  questionTitle: Product Line Diversification
+  question: You have an option to diversify into a new product line. How do you decide?
   answerData:
-  - answer: I will attend the trainings, as I want to learn something new.
-    growthPoint: 1
+  - answer: I take an aggressive expansion approach with high investment.
+    growthPoint: 4
     satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I will not attend the trainings, as they are not useful to me.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: -1
-    moneyCurrencyPoints: 1
-  - answer: I will attend the trainings only if time allows.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: I will send my neighbor to the training.
-    growthPoint: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: 3
+  - answer: I expand cautiously by testing the market before committing.
+    growthPoint: 3
     satisfactionPoint: 2
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
+  - answer: I wait for more data before making a decision.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 1
+    moneyCurrencyPoints: 4
+  - answer: I avoid expansion to focus on maintaining current operations.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2

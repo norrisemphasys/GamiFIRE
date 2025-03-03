@@ -9,6 +9,7 @@ public class SQUIView : BasicView
 {
     public Button[] btnAnswers;
     public Button buttonCollect;
+    public Button buttonInfo;
 
     [SerializeField] TextMeshProUGUI textQuestion;
     [SerializeField] TextMeshProUGUI textTitle;
@@ -19,6 +20,9 @@ public class SQUIView : BasicView
     [SerializeField] TextMeshProUGUI textInnovation;
     [SerializeField] TextMeshProUGUI textSatisfaction;
     [SerializeField] TextMeshProUGUI textCoin;
+
+    [SerializeField] GameObject[] selectedScore;
+    [SerializeField] GameObject[] iconPoint;
 
     public void Init()
     {
@@ -35,9 +39,22 @@ public class SQUIView : BasicView
         textTitle.text = text;
     }
 
-    public void ShowScorePopup(bool show)
+    public void ShowScorePopup(bool show, int id = -1)
     {
         scorePopup.gameObject.SetActive(show);
+        ShowSelectedScore(id);
+    }
+
+    public void ShowSelectedScore(int idx)
+    {
+        for (int i = 0; i < selectedScore.Length; i++)
+            selectedScore[i].SetActive(i == idx);
+    }
+
+    public void SetPoint(int idx)
+    {
+        for (int i = 0; i < iconPoint.Length; i++)
+            iconPoint[i].SetActive(i == idx);
     }
 
     public void SetPoints(int gp, int ip, int sp, int mcp)

@@ -11,6 +11,8 @@ public class QuestionController : MonoBehaviour
     [SerializeField] List<QuestionSO> argriculturistQuestions;
     [SerializeField] List<QuestionSO> businessmanQuestions;
 
+    public int currentQuestionCount = 0;
+
     public void Init()
     {
         questionBank.Add(JobType.STUDENT, studentQuestions);

@@ -12,28 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q25
   m_EditorClassIdentifier: 
-  questionTitle: Increased Livestock
-  question: You have increased the number of cattle on your  farm. You need additional
-    space, which is associated  with costs. What will you do?
+  questionTitle: Evaluating Production Outsourcing
+  question: You are considering outsourcing part of your production. How do you evaluate
+    the risks?
   answerData:
-  - answer: I will find a suitable space on the farm and convert it into a barn.
-    growthPoint: 1
+  - answer: I take an aggressive expansion approach with high investment.
+    growthPoint: 4
     satisfactionPoint: 1
     innovationPoint: 2
-    moneyCurrencyPoints: -1
-  - answer: I will place the livestock in the pasture.
-    growthPoint: 0
+    moneyCurrencyPoints: 3
+  - answer: I expand cautiously by testing the market before committing.
+    growthPoint: 3
     satisfactionPoint: 2
-    innovationPoint: 0
+    innovationPoint: 4
     moneyCurrencyPoints: 1
-  - answer: I will build a new barn.
+  - answer: I wait for more data before making a decision.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 1
+    moneyCurrencyPoints: 4
+  - answer: I avoid expansion to focus on maintaining current operations.
     growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: -2
-  - answer: I will house the animals with a neighbor who has vacant space suitable
-      for livestock.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2

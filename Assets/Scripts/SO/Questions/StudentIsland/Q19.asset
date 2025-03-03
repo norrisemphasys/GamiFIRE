@@ -12,26 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q19
   m_EditorClassIdentifier: 
-  questionTitle: Handling Academic Rejection
-  question: You applied for an academic program but did not get accepted.
+  questionTitle: Peer Pressure Spending
+  question: Your friends invite you on a trip you cannot afford. How do you handle
+    it?
   answerData:
-  - answer: I reflect on my weaknesses and plan to improve for next time.
-    growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I seek feedback from the selection committee.
-    growthPoint: 1
-    satisfactionPoint: 1
+  - answer: I explain my financial situation and suggest a more budget-friendly alternative.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: I go on the trip anyway, prioritizing the experience and worrying about
+      money later.
+    growthPoint: 3
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I apply for another program that fits my profile.
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I talk to a mentor to better understand my options.
-    growthPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I look for creative ways to afford the trip, such as travel deals or
+      part-time gigs.
+    growthPoint: 2
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I decline the trip and instead save the money for future financial stability.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

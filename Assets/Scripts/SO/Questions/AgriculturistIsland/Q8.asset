@@ -12,27 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q8
   m_EditorClassIdentifier: 
-  questionTitle: Crop protection.
-  question: Because of the weather changes, weather is unpredictable. How are you
-    going to protect your crop form hail?
+  questionTitle: Direct Sales via E-Commerce
+  question: A new e-commerce platform offers direct sales to customers. How do you
+    approach this?
   answerData:
-  - answer: Insure our crops at the insurance company.
-    growthPoint: 2
-    satisfactionPoint: 2
-    innovationPoint: -2
-    moneyCurrencyPoints: -1
-  - answer: Protect the crops with a net.
-    growthPoint: 2
-    satisfactionPoint: 2
-    innovationPoint: 1
-    moneyCurrencyPoints: -2
-  - answer: Take a risk, dont do anything.
-    growthPoint: -1
-    satisfactionPoint: 0
-    innovationPoint: -1
+  - answer: I develop a direct sales model and marketing strategy.
+    growthPoint: 4
+    satisfactionPoint: 1
+    innovationPoint: 2
     moneyCurrencyPoints: 3
-  - answer: Do the same thing as your neighbor.
-    growthPoint: 0
+  - answer: I list products online and see how sales perform.
+    growthPoint: 3
     satisfactionPoint: 2
-    innovationPoint: -2
+    innovationPoint: 4
     moneyCurrencyPoints: 1
+  - answer: I rely on traditional selling methods.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 1
+    moneyCurrencyPoints: 4
+  - answer: I avoid online sales due to perceived risks.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2

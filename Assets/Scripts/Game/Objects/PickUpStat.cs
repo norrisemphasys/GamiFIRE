@@ -81,6 +81,8 @@ public class PickUpStat : MonoBehaviour
 
     public void AddScoreToUser()
     {
+        //ScoreManager.instance.AddScore(1);
+
         switch (type)
         {
             case PickUpType.GROWTH:
@@ -93,7 +95,7 @@ public class PickUpStat : MonoBehaviour
                 ScoreManager.instance.AddSatisfactionPoint(1);
                 break;
             case PickUpType.COIN:
-                ScoreManager.instance.AddCoin(1);
+                ScoreManager.instance.AddCurrencyPoint(1);
                 break;
         }
 

@@ -22,6 +22,9 @@ public class InGameITView : BasicView
 
     [SerializeField] Slider sliderTimeTravel;
 
+    [SerializeField] Image profilePicture;
+    [SerializeField] Sprite[] icons;
+
     public void Init()
     {
         textTimer.transform.DOScale(Vector3.zero, 0f);
@@ -43,6 +46,9 @@ public class InGameITView : BasicView
     {
         SetUsername(user.Username);
         SetJob(user.JobType);
+
+        int idx = (int)user.JobType;
+        profilePicture.sprite = icons[idx];
     }
 
     void SetUsername(string name)
@@ -83,5 +89,10 @@ public class InGameITView : BasicView
     public void ShowEffect(bool show)
     {
         particleEffect.SetActive(show);
+    }
+
+    public void HideUI()
+    {
+        canvasGroup.DOFade(0, 0.2f);
     }
 }

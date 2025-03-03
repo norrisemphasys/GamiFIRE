@@ -36,6 +36,9 @@ public class SceneController : MonoBehaviour
 
     private void Awake()
     {
+        GameManager.instance.SelectedPointIndex = -1;
+        UserManager.instance.ResetPoints();
+
         questionController.Init();
         cellController.Init();
         minigameController.Init();

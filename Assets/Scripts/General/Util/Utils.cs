@@ -8,9 +8,11 @@ using System.Linq;
 
 public static class Utils
 {
-    #region STRING ENCRYPTION
+	private static System.Random rng = new System.Random();
 
-    public static string GetMD5Hash(string input)
+	#region STRING ENCRYPTION
+
+	public static string GetMD5Hash(string input)
     {
         using (MD5 md5Hash = MD5.Create())
         {
@@ -76,10 +78,20 @@ public static class Utils
         }
     }
 
-    #endregion
+	public static void Shuffle<T>(this T[] array)
+	{
+		int n = array.Length;
+		for (int i = n - 1; i > 0; i--)
+		{
+			int j = rng.Next(0, i + 1); // Random index
+			(array[i], array[j]) = (array[j], array[i]); // Swap elements using tuple swap
+		}
+	}
 
-    #region TIME HELPER
-    public static void Delay(UnityEngine.MonoBehaviour mono, Action callback, float time)
+	#endregion
+
+	#region TIME HELPER
+	public static void Delay(UnityEngine.MonoBehaviour mono, Action callback, float time)
     {
         mono.StartCoroutine(DelayEnum(callback, time));
     }

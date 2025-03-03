@@ -12,27 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q10
   m_EditorClassIdentifier: 
-  questionTitle: Academic Integrity
-  question: You are struggling with an assignment and a classmate offers you their
-    completed work.
+  questionTitle: Exam Preparation
+  question: You need study materials for your exams but have a limited budget.
   answerData:
-  - answer: I decline and work on it myself.
+  - answer: I search for second-hand textbooks to minimize costs.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: I buy brand-new books and study materials without worrying about the
+      cost because I value convenience and enjoyment.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I create a strict budget for my study needs, cutting out unnecessary
+      expenses like eating out to afford the materials.
     growthPoint: 2
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I accept and use it as a reference.
-    growthPoint: -2
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I plan ahead by saving a small amount each month throughout the semester
+      to cover study material costs without financial stress.
+    growthPoint: 1
     satisfactionPoint: 2
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I seek help from the professor instead.
-    growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I work with a tutor to understand the assignment better.
-    growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: -1
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

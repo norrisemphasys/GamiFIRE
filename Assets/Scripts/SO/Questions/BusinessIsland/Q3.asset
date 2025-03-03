@@ -16,23 +16,33 @@ MonoBehaviour:
   question: " Your company is experiencing financial difficulties and announces temporary
     pay cuts. You need to adapt your budget. What\u2019s your response?"
   answerData:
-  - answer: ' I find freelance work to make up the difference.'
+  - answer: Use this period to reassess your career goals and invest in free or low-cost
+      professional development opportunities. Focus on skills that could position
+      you for promotions or better roles once the company's financial situation improves.
+    growthPoint: 4
+    satisfactionPoint: 1
+    innovationPoint: 3
+    moneyCurrencyPoints: 2
+  - answer: Adjust your budget by cutting non-essential expenses (e.g., dining out,
+      entertainment) but maintain spending on activities or items that bring you
+      personal satisfaction, like hobbies or fitness, to stay motivated during this
+      challenging time.
     growthPoint: 3
-    satisfactionPoint: -1
-    innovationPoint: 1
-    moneyCurrencyPoints: -1
-  - answer: I reduce discretionary expenses and stick to essentials.
-    growthPoint: 0
-    satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: I seek financial advice to optimize my spending.
-    growthPoint: 1
-    satisfactionPoint: 0
+    satisfactionPoint: 4
     innovationPoint: 2
-    moneyCurrencyPoints: 0
-  - answer: ' I negotiate flexible payment terms with creditors.'
-    growthPoint: 0
-    satisfactionPoint: -1
-    innovationPoint: 1
+    moneyCurrencyPoints: 1
+  - answer: Explore creative ways to supplement your income, such as freelancing,
+      selling unused items, or participating in the gig economy. At the same time,
+      propose cost-saving measures or process improvements at work to showcase your
+      value to the company.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 4
     moneyCurrencyPoints: 3
+  - answer: Prioritize essential expenses like rent, utilities, and groceries by
+      creating a strict budget. Look into government subsidies, tax relief programs,
+      or side income opportunities that could temporarily offset the pay cut.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 1
+    moneyCurrencyPoints: 4

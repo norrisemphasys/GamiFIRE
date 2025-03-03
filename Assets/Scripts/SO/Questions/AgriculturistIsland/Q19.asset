@@ -12,27 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q19
   m_EditorClassIdentifier: 
-  questionTitle: Profit
-  question: You had a successful year and made a good profit.  At the end of the
-    year, you have a profit on the farm.  What will you do with the money?
+  questionTitle: Long-Term Buyer Contract Negotiation
+  question: A major buyer is offering a long-term contract at lower prices. How do
+    you respond?
   answerData:
-  - answer: Buy a new car
-    growthPoint: 0
-    satisfactionPoint: 2
-    innovationPoint: 1
-    moneyCurrencyPoints: -2
-  - answer: Invest part of the money in the farm and use part for a better lifestyle
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: Invest all the money back into the farm
-    growthPoint: 1
+  - answer: I take an aggressive expansion approach with high investment.
+    growthPoint: 4
     satisfactionPoint: 1
     innovationPoint: 2
-    moneyCurrencyPoints: -1
-  - answer: Deposit the money in the bank for emergencies
-    growthPoint: -1
+    moneyCurrencyPoints: 3
+  - answer: I expand cautiously by testing the market before committing.
+    growthPoint: 3
     satisfactionPoint: 2
-    innovationPoint: -2
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
+  - answer: I wait for more data before making a decision.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 1
+    moneyCurrencyPoints: 4
+  - answer: I avoid expansion to focus on maintaining current operations.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
     moneyCurrencyPoints: 2

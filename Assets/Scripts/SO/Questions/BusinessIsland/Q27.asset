@@ -16,23 +16,29 @@ MonoBehaviour:
   question: You find a great deal on an unfamiliar website. What precautions do you
     take?
   answerData:
-  - answer: I check reviews and website security before buying.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I avoid the website and stick to trusted retailers.
-    growthPoint: 0
+  - answer: "I research the website\u2019s credibility and learn about secure payment
+      practices, using this experience to improve my digital literacy and share tips
+      with colleagues."
+    growthPoint: 4
     satisfactionPoint: 2
-    innovationPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 3
+  - answer: "I check reviews, verify the website\u2019s security features (like HTTPS),
+      and use a secure payment method, feeling confident and at ease with my safe
+      purchase."
+    growthPoint: 2
+    satisfactionPoint: 4
+    innovationPoint: 3
     moneyCurrencyPoints: 1
-  - answer: I use a virtual credit card for the purchase.
+  - answer: I use a virtual credit card or a disposable payment method to minimize
+      risk while testing the reliability of the site in a controlled, secure way.
+    growthPoint: 3
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 2
+  - answer: "I compare the deal with trusted websites to ensure it\u2019s genuinely
+      a bargain, potentially finding a better offer elsewhere and saving more money."
     growthPoint: 1
-    satisfactionPoint: 0
+    satisfactionPoint: 3
     innovationPoint: 2
-    moneyCurrencyPoints: 0
-  - answer: I purchase without precautions, hoping for the best.
-    growthPoint: 0
-    satisfactionPoint: -1
-    innovationPoint: 0
-    moneyCurrencyPoints: -2
+    moneyCurrencyPoints: 4

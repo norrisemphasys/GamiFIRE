@@ -28,7 +28,16 @@ public class OnTriggerObject : MonoBehaviour
         if (other.gameObject.tag.Equals(objectTag))
         {
             if(uiState != UIState.NONE)
-                GameManager.instance.uiController.ShowHidePreviousState(uiState);
+            {
+                UIState currentState = GameManager.instance.currentState;
+                //if (currentState == UIState.PORT_INGAME)
+                    GameManager.instance.uiController.
+                        GetContoller<BasicController>(currentState).nextState = uiState;
+
+                GameManager.instance.uiController.
+                    Hide(currentState);
+            }
+               
 
             if(uiState == UIState.LEADERBOARD_MENU)
             {

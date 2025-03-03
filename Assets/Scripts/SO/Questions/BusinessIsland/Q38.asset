@@ -18,22 +18,22 @@ MonoBehaviour:
     do you choose?"
   answerData:
   - answer: I accept the high-paying job for financial security and career growth.
-    growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: I choose the job with better work-life balance to maintain my well-being.
-    growthPoint: 0
+    growthPoint: 4
     satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
-  - answer: I negotiate for a better salary and flexibility in the high-paying job.
-    growthPoint: 1
-    satisfactionPoint: 1
     innovationPoint: 1
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 3
+  - answer: I choose the job with better work-life balance to maintain my well-being.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2
+  - answer: I negotiate for a better salary and flexibility in the high-paying job.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
   - answer: I turn down both offers to explore better opportunities later.
-    growthPoint: 0
+    growthPoint: 3
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

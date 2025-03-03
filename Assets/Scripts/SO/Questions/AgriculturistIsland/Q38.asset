@@ -12,28 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q38
   m_EditorClassIdentifier: 
-  questionTitle: Crop Loss
-  question: Due to adverse weather conditions, you have lost a  significant portion
-    of your crop. This has led you to  consider quitting farming. What will you do?
+  questionTitle: Optimizing Limited Marketing Budget
+  question: Your marketing budget is limited. Where do you allocate funds?
   answerData:
-  - answer: I will not quit farming, as I am prepared for adverse weather conditions.
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 1
-  - answer: I will quit farming because I don't want to take the risk.
-    growthPoint: -1
-    satisfactionPoint: 2
-    innovationPoint: -2
-    moneyCurrencyPoints: 2
-  - answer: I will not quit farming, and in the future, I will insure my crop.
-    growthPoint: 2
+  - answer: I take an aggressive expansion approach with high investment.
+    growthPoint: 4
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
-  - answer: I will not quit farming. I will try to learn as much as I can from the
-      situation.
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: 3
+  - answer: I expand cautiously by testing the market before committing.
+    growthPoint: 3
+    satisfactionPoint: 2
+    innovationPoint: 4
     moneyCurrencyPoints: 1
+  - answer: I wait for more data before making a decision.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 1
+    moneyCurrencyPoints: 4
+  - answer: I avoid expansion to focus on maintaining current operations.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2

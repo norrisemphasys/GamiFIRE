@@ -12,27 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q20
   m_EditorClassIdentifier: 
-  questionTitle: Organizing a Student-Led Event
-  question: You have been asked to organize a student-led event, but it requires
-    a lot of planning.
+  questionTitle: Grocery Shopping
+  question: You need to cut your grocery costs. What is your strategy?
   answerData:
-  - answer: I take charge and lead the entire event planning.
+  - answer: I plan meals in advance, stick to a shopping list, and buy in bulk for
+      discounts.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: I continue shopping at my favorite stores without making major adjustments.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I explore budget-friendly supermarkets, discount stores, and online grocery
+      deals.
     growthPoint: 2
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
-  - answer: I form a team and delegate tasks to share the responsibility.
-    growthPoint: 0
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I switch to basic, low-cost food items and cook at home to save money.
+    growthPoint: 1
     satisfactionPoint: 2
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I ask for support from university staff.
-    growthPoint: -1
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I suggest organizing a smaller version of the event.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

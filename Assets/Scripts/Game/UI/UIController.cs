@@ -107,6 +107,7 @@ public class UIController : MonoBehaviour
                 case UIState.LOGIN: GetContoller<LoginController>(state).OnEnter(); break;
                 case UIState.GENDER_MENU: GetContoller<GenderMenuController>(state).OnEnter(); break;
                 case UIState.JOB_MENU: GetContoller<JobMenuController>(state).OnEnter(); break;
+                case UIState.GAME_INTRO_MENU: GetContoller<GameIntroController>(state).OnEnter(); break;
             }   
         }
     }
@@ -155,6 +156,7 @@ public class UIController : MonoBehaviour
                 case UIState.LOGIN: GetContoller<LoginController>(state).OnExit(); break;
                 case UIState.GENDER_MENU: GetContoller<GenderMenuController>(state).OnExit(); break;
                 case UIState.JOB_MENU: GetContoller<JobMenuController>(state).OnExit(); break;
+                case UIState.GAME_INTRO_MENU: GetContoller<GameIntroController>(state).OnExit(); break;
             }
         }
     }
@@ -212,6 +214,7 @@ public enum UIState
     ISLAND_TUTORIAL_MENU,
 
     POINTS_MENU,
+    GAME_INTRO_MENU,
 
     NONE
 }

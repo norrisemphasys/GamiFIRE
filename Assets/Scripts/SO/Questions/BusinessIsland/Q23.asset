@@ -16,23 +16,30 @@ MonoBehaviour:
   question: "You\u2019re interested in investing in cryptocurrency but unsure about
     its risks. What\u2019s your decision?"
   answerData:
-  - answer: I invest a small, manageable amount.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I research extensively before making a move.
-    growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I avoid it and choose safer investments.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 2
-  - answer: I consult a financial advisor for insights.
-    growthPoint: 1
+  - answer: I report the phishing attempt to my company's IT security team and suggest
+      a cybersecurity awareness session for employees, positioning myself as proactive
+      in workplace security.
+    growthPoint: 4
     satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    innovationPoint: 3
+    moneyCurrencyPoints: 1
+  - answer: "I delete the email immediately, feeling confident in my ability to recognize
+      scams and satisfied that I\u2019ve protected my personal information."
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I use the phishing attempt as a case study to create an internal guide
+      or quick video tutorial on spotting cyber scams, sharing it with colleagues
+      to promote digital safety.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I report the scam to the relevant cybersecurity authority or fraud hotline,
+      potentially qualifying for a small reward or recognition in fraud prevention
+      programs.
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

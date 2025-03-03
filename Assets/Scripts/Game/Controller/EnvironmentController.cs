@@ -150,6 +150,7 @@ public class EnvironmentController : MonoBehaviour
 
     public void AnimateBuilding(GameObject go, float delay = 0)
     {
+        Audio.PlaySFXEngine();
         startAnimation = true;
 
         go.transform.DOKill();
@@ -159,6 +160,7 @@ public class EnvironmentController : MonoBehaviour
         {
             startAnimation = false;
             particle.SetActive(false);
+            Audio.StopEngine();
         });
 
         particle.transform.position = go.transform.position;

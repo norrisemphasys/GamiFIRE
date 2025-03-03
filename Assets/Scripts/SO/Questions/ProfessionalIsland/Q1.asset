@@ -12,27 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q1
   m_EditorClassIdentifier: 
-  questionTitle: Invest in marketing
-  question: 'You have the option to invest in marketing to increase visibility. Do
-    you:'
+  questionTitle: Negotiating Your First Salary
+  question: "You\u2019ve received a job offer with a salary slightly below industry
+    standards. Negotiating might improve it, but you worry about risking the opportunity.
+    How do you handle this?"
   answerData:
-  - answer: Invest fully in a high-cost campaign to attract immediate attention
-    growthPoint: 3
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: -2
-  - answer: 'Focus on low-cost alternatives to minimise expenses '
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 2
-  - answer: Delay the decision to assess future outcomes
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: Combine low-cost efforts with a smaller marketing push
+  - answer: I discuss the offer, emphasizing my enthusiasm for the role and propose
+      a counteroffer based on my research of industry standards.
+    growthPoint: 4
+    satisfactionPoint: 2
+    innovationPoint: 1
+    moneyCurrencyPoints: 3
+  - answer: I accept the salary as is but ask for additional benefits such as flexible
+      hours, professional development opportunities, or performance-based reviews
+      to ensure future growth and satisfaction in the role.
     growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 1
+  - answer: I ropose a performance-based salary adjustment plan. Suggest starting
+      at the offered salary but with a clear timeline (e.g., 6 months) for a review
+      based on my contributions, demonstrating my willingness to prove my worth before
+      renegotiating.
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: 4
+    moneyCurrencyPoints: 2
+  - answer: I highlight my skills and accomplishments in the interview, comparing
+      them with industry benchmarks, and firmly but respectfully negotiate for a
+      salary closer to the market rate, emphasizing the value you bring to the company.
+    growthPoint: 3
+    satisfactionPoint: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

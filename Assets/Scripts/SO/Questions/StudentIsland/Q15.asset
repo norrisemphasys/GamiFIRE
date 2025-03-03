@@ -12,27 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q15
   m_EditorClassIdentifier: 
-  questionTitle: Applying for a Scholarship
-  question: You find a scholarship opportunity, but the application process is very
-    demanding.
+  questionTitle: Scholarship vs Loan
+  question: You have the option of applying for a scholarship or taking a loan. What
+    do you choose?
   answerData:
-  - answer: I dedicate extra time to complete the application.
-    growthPoint: 2
-    satisfactionPoint: -1
-    innovationPoint: 0
+  - answer: I actively apply for multiple scholarships and grants to reduce my financial
+      burden.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
     moneyCurrencyPoints: 1
-  - answer: I ask a mentor for help with the application.
-    growthPoint: 1
-    satisfactionPoint: 1
+  - answer: I take out a student loan to enjoy more flexibility in my finances and
+      focus on studying instead of financial stress.
+    growthPoint: 3
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I decide to skip this opportunity and look for an easier one.
-    growthPoint: -2
-    satisfactionPoint: 1
-    innovationPoint: 0
     moneyCurrencyPoints: 2
-  - answer: I use past application materials to save time.
-    growthPoint: 0
+  - answer: I research different funding options, including work-study programs or
+      employer tuition assistance, to avoid excessive debt.
+    growthPoint: 2
     satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I borrow the minimum amount necessary and commit to a strict repayment
+      plan to minimize long-term debt.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

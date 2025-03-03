@@ -12,28 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q1
   m_EditorClassIdentifier: 
-  questionTitle: Completing a challenging project
+  questionTitle: Managing Monthly Budget
   question: You are assigned a challenging project that will significantly impact
     your overall grade, requiring a deep understanding of the subject, extensive
     research, and the application of various skills.
   answerData:
-  - answer: I work extra hours to finish the project on time.
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I ask for an extension to ensure high quality.
-    growthPoint: 1
+  - answer: I avoid spending and try to live on as little as possible.
+    growthPoint: 4
     satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -1
-  - answer: I collaborate with peers to share the workload.
-    growthPoint: 0
-    satisfactionPoint: 1
     innovationPoint: 2
-    moneyCurrencyPoints: 0
-  - answer: I use online resources to improve my skills.
+    moneyCurrencyPoints: 1
+  - answer: I use an expense-tracking app to optimize spending and save smartly.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I create a strict budget and track every expense to save money.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I spend freely and enjoy student life, worrying about money later.
     growthPoint: 1
-    satisfactionPoint: -2
+    satisfactionPoint: 2
     innovationPoint: 3
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 4

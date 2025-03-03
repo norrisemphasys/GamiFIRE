@@ -12,26 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q4
   m_EditorClassIdentifier: 
-  questionTitle: Handling Group Conflicts
-  question: Your project group is having conflicts that are slowing down progress
+  questionTitle: Credit Card Usage
+  question: You receive an offer for a student credit card. How do you proceed?
   answerData:
-  - answer: I mediate and help resolve the conflicts.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
+  - answer: I use my credit card freely and only make minimum payments.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
     moneyCurrencyPoints: 1
-  - answer: I focus only on my part and let others deal with the conflict.
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: I suggest consulting the professor for guidance.
-    growthPoint: 1
-    satisfactionPoint: 0
+  - answer: I use a credit card only for emergencies and pay off the full balance.
+    growthPoint: 3
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I encourage the group to set clear goals and responsibilities.
-    growthPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I use cashback or rewards programs to maximize benefits.
+    growthPoint: 2
     satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I avoid credit cards completely to stay debt-free.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

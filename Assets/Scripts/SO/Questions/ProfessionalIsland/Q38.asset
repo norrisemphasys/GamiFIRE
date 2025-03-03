@@ -12,26 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q38
   m_EditorClassIdentifier: 
-  questionTitle: Choosing suppliers based on green goals
-  question: 'Your supplier offers sustainable products at higher prices. Do you:'
+  questionTitle: Job Offer Decision
+  question: "You\u2019ve received two job offers: one with a high salary but long
+    hours, and another with a moderate salary and better work-life balance. Which
+    do you choose?"
   answerData:
-  - answer: Switch to them for long-term environmental benefits
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 2
-    moneyCurrencyPoints: -2
-  - answer: Negotiate for better terms or discounts
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
+  - answer: I accept the high-paying job for financial security and career growth.
+    growthPoint: 4
+    satisfactionPoint: 2
+    innovationPoint: 3
     moneyCurrencyPoints: 1
-  - answer: Maintain your current suppliers for budget reasons
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: Partner with other businesses to share costs
-    growthPoint: 1
-    satisfactionPoint: 0
+  - answer: I choose the job with better work-life balance to maintain my well-being.
+    growthPoint: 3
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 2
+  - answer: I negotiate for a better salary and flexibility in the high-paying job.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I turn down both offers to explore better opportunities later.
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

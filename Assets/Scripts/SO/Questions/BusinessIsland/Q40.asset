@@ -16,23 +16,30 @@ MonoBehaviour:
   question: "You want to increase your income by starting a side hustle but don\u2019t
     want it to interfere with your main job. What type of side hustle do you choose?"
   answerData:
-  - answer: I start a small e-commerce store that runs on autopilot.
-    growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 0
+  - answer: I start freelance consulting or coaching in my current field, allowing
+      me to deepen my expertise while building a professional network without conflicting
+      with my main job.
+    growthPoint: 4
+    satisfactionPoint: 2
+    innovationPoint: 3
     moneyCurrencyPoints: 1
-  - answer: I become a freelance consultant in my field of expertise.
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: I do gig economy jobs like food delivery in my free time.
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 2
-  - answer: I offer online courses or tutoring services.
-    growthPoint: 0
+  - answer: I pursue a passion project, like creating handmade crafts, writing, or
+      photography, that provides both personal fulfillment and extra income in my
+      free time.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 2
+    moneyCurrencyPoints: 3
+  - answer: I launch an online business with passive income potential, such as developing
+      a digital course, app, or blog that generates revenue with minimal ongoing
+      effort.
+    growthPoint: 3
     satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 2
+  - answer: I choose a high-demand gig economy job, like food delivery, ridesharing,
+      or short-term online tasks, offering flexible hours and quick financial returns.
+    growthPoint: 2
+    satisfactionPoint: 3
     innovationPoint: 1
-    moneyCurrencyPoints: 1
+    moneyCurrencyPoints: 4

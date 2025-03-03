@@ -38,4 +38,10 @@ public static class PopupMessage
     {
         return CreatePopupData("INFORMATION", message, showCancel: false, showClose: false, onClickOk: OnClickOk);
     }
+
+    public static PopupData OptionPopup(string message, string ok, string cancel , UnityAction OnClickOk)
+    {
+        return CreatePopupData("SELECT", message, ok, cancel, showClose: false, onClickOk: OnClickOk);
+    }
 }
+

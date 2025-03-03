@@ -12,27 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q14
   m_EditorClassIdentifier: 
-  questionTitle: Dealing with Exam Anxiety
-  question: You are feeling anxious about an upcoming exam that is crucial for your
-    major.
+  questionTitle: Dealing with Inflation
+  question: The cost of food and rent has increased. How do you adjust your budget?
   answerData:
-  - answer: I take a practice test to build confidence.
+  - answer: I track my expenses carefully and cut down on non-essential spending
+      like entertainment and dining out.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: I continue my usual spending habits, prioritizing comfort and finding
+      ways to enjoy life despite rising costs.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I explore additional income sources, like freelancing or part-time work,
+      to compensate for increased expenses.
     growthPoint: 2
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I speak with a counselor for coping strategies.
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I switch to cheaper alternatives, buy in bulk, and take advantage of
+      student discounts to save as much as possible.
     growthPoint: 1
     satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
-  - answer: I study with a friend to feel more prepared.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I take short breaks to manage stress while studying.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

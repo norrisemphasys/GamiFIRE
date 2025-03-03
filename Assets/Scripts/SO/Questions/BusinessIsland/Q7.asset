@@ -16,23 +16,31 @@ MonoBehaviour:
   question: You have multiple debts to pay off. Managing them efficiently is crucial.
     How do you proceed?
   answerData:
-  - answer: I prioritize paying off high-interest debt first.
-    growthPoint: 2
-    satisfactionPoint: -1
-    innovationPoint: 0
-    moneyCurrencyPoints: 2
-  - answer: I make minimum payments on all debts to maintain flexibility.
-    growthPoint: -1
-    satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: 2
-  - answer: I consolidate my debts for easier management.
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
-  - answer: I negotiate with creditors for better terms.
-    growthPoint: 0
+  - answer: Take on an upskilling course to qualify for a higher-paying job or promotion.
+      Use the increased income to prioritize and pay off debts faster while enhancing
+      your career prospects
+    growthPoint: 4
     satisfactionPoint: 1
-    innovationPoint: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: 3
+  - answer: Create a realistic repayment plan that balances debt payments with small,
+      guilt-free indulgences to maintain your mental well-being while staying on
+      track.
+    growthPoint: 2
+    satisfactionPoint: 4
+    innovationPoint: 3
     moneyCurrencyPoints: 1
+  - answer: Consolidate your debts into one lower-interest loan or use an app that
+      automates repayments, gamifying the process with progress tracking and rewards
+      for milestones achieved.
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: 4
+    moneyCurrencyPoints: 2
+  - answer: Start a side hustle or sell unneeded items online to generate additional
+      income and allocate the extra money toward paying off your highest-interest
+      debts first.
+    growthPoint: 3
+    satisfactionPoint: 2
+    innovationPoint: 1
+    moneyCurrencyPoints: 4

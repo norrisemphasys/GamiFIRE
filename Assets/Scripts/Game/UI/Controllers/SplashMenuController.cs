@@ -44,12 +44,12 @@ public class SplashMenuController : BasicController
 		Application.ExternalCall("GoToFullScreen");
 		//Screen.fullScreen = true;
 		//WebGLExternalManager.FullScreen();
-		OnClickDefault(UIState.LOGIN);
+		OnClickDefault(UIState.GAME_INTRO_MENU);
 	}
 
 	void OnCancel()
     {
-		OnClickDefault(UIState.LOGIN);
+		OnClickDefault(UIState.GAME_INTRO_MENU);
 	}
 
 	public void ShowNextMenu()

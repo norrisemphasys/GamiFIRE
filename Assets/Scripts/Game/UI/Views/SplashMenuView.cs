@@ -11,11 +11,13 @@ public class SplashMenuView : BasicView
     [SerializeField] Image imgLogo;
     [SerializeField] RectTransform rectText;
     [SerializeField] GameObject whitePanel;
+    [SerializeField] Transform rectEU;
 
     public void Init()
     {
         imgLogo.DOFade(0f, 0f);
         rectText.DOScaleY(0f, 0f);
+        rectEU.DOScaleY(0f, 0f);
     }
 
     public void PlaySplashSequence(UnityAction callback = null)
@@ -25,6 +27,11 @@ public class SplashMenuView : BasicView
         seq.Append(imgLogo.DOFade(1f, 4f));
         seq.AppendInterval(1f);
         seq.Append(imgLogo.DOFade(0f, 1f));
+        seq.AppendInterval(1f);
+        seq.Append(rectEU.DOScaleY(1f, 0.2f));
+        seq.AppendInterval(5f);
+        seq.Append(rectEU.DOScaleY(0f, 0.2f));
+        seq.AppendInterval(1f);
         seq.Append(rectText.DOScaleY(1, 0.2f));
         seq.AppendInterval(5f);
         seq.Append(rectText.DOScaleY(0f, 0.2f));

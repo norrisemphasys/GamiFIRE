@@ -12,26 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q2
   m_EditorClassIdentifier: 
-  questionTitle: Time investment in self-development
-  question: 'You want to improve your skills but lack time. Do you:'
+  questionTitle: Choosing Employee Benefits
+  question: "Your employer offers a benefits package that includes health insurance,
+    gym membership, and a retirement plan. You can only choose two. What\u2019s your
+    decision?"
   answerData:
-  - answer: 'Enrol in a comprehensive course, reducing your work hours temporarily '
-    growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: -2
-  - answer: Take an online course at your own pace
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: Use free resources for self-study
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
+  - answer: Choose the retirement plan and professional development benefits (e.g.,
+      funding for certifications, courses, or conferences), focusing on building
+      skills and securing long-term financial stability to enhance your career trajectory.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
     moneyCurrencyPoints: 1
-  - answer: 'Postpone personal development until you have more time '
+  - answer: Select flexible working hours to enjoy a better work-life balance and
+      ensure long-term security while meeting your personal and family needs.
     growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2
+  - answer: Opt for remote work flexibility and a transportation allowance, allowing
+      you to save on commuting costs and time while working in an environment that
+      suits your productivity.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: Choose the retirement plan and a monthly meal voucher allowance or housing
+      allowance, both of which directly save you money on living expenses and maximize
+      your take-home value.
+    growthPoint: 3
+    satisfactionPoint: 2
+    innovationPoint: 1
+    moneyCurrencyPoints: 4

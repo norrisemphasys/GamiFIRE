@@ -16,23 +16,28 @@ MonoBehaviour:
   question: "You\u2019re starting to save for an emergency fund, but your income
     is limited. How do you proceed?"
   answerData:
-  - answer: I start with small, regular contributions to build it over time.
+  - answer: I identify opportunities for professional development that could lead
+      to higher-paying roles or promotions, allocating salary increases to my emergency
+      fund.
+    growthPoint: 4
+    satisfactionPoint: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: 3
+  - answer: I set small, realistic savings goals to build financial security without
+      feeling overwhelmed.
     growthPoint: 2
-    satisfactionPoint: 1
-    innovationPoint: 0
+    satisfactionPoint: 4
+    innovationPoint: 3
     moneyCurrencyPoints: 1
-  - answer: I wait until my income is more stable before starting.
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I allocate a higher percentage of my income to the fund now.
+  - answer: I use automated savings apps to round up daily purchases and transfer
+      spare change to my emergency fund.
     growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
-  - answer: I keep my savings in a regular savings account.
-    growthPoint: 0
-    satisfactionPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: 4
+    moneyCurrencyPoints: 2
+  - answer: I take on occasional freelance work or side gigs to create an additional
+      income stream for my emergency fund.
+    growthPoint: 3
+    satisfactionPoint: 2
     innovationPoint: 1
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 4

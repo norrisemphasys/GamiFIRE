@@ -7,6 +7,9 @@ using TMPro;
 
 public class InGamePortView : BasicView
 {
+    public Button buttonInfo;
+
+    [SerializeField] Image profilePicture;
     [SerializeField] TextMeshProUGUI textCoin;
     [SerializeField] TextMeshProUGUI textGrowthPoint;
     [SerializeField] TextMeshProUGUI textInnovationPoint;
@@ -17,6 +20,8 @@ public class InGamePortView : BasicView
 
     [SerializeField] CanvasGroup miniMapCanvas;
 
+    [SerializeField] Sprite[] icons;
+
     public void Init()
     {
         ShowMiniMap(false);
@@ -26,13 +31,16 @@ public class InGamePortView : BasicView
     {
         JobType job = (JobType)user.JobType;
 
+        int idx = (int)user.JobType;
+        profilePicture.sprite = icons[idx];
+
         textUserName.text = user.Username;
         textJobType.text = UserManager.GetJobName( job );
 
-        textCoin.text = user.CurrencyPoint != 0 ? string.Format("{0:#,#}", user.CurrencyPoint) : "0";
-        textGrowthPoint.text = user.GrowthPoint != 0 ? string.Format("{0:#,#}", user.GrowthPoint) : "0";
-        textInnovationPoint.text = user.InnovationPoint != 0 ? string.Format("{0:#,#}", user.InnovationPoint) : "0";
-        textSatisfactionPoint.text = user.SatisfactionPoint != 0 ? string.Format("{0:#,#}", user.SatisfactionPoint) : "0";
+        textCoin.text = user.Coin != 0 ? string.Format("{0:#,#}", user.Coin) : "0";
+        //textGrowthPoint.text = user.GrowthPoint != 0 ? string.Format("{0:#,#}", user.GrowthPoint) : "0";
+        //textInnovationPoint.text = user.InnovationPoint != 0 ? string.Format("{0:#,#}", user.InnovationPoint) : "0";
+        textSatisfactionPoint.text = user.Score != 0 ? string.Format("{0:#,#}", user.Score) : "0";
     }
 
     public void ShowMiniMap(bool show)

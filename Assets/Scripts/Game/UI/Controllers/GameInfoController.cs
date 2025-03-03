@@ -74,8 +74,17 @@ public class GameInfoController : BasicController
 				OnClickDefault(UIState.PORT_INGAME);
 				break;
 			case SCENE_TYPE.ISLAND_SCENE:
-				OnClickDefault(UIState.ISLAND_MENU);
-				break;
+				if (gameManager.previousState == UIState.SQ_MENU)
+				{
+					nextState = UIState.NONE;
+					gameManager.SetGameState(UIState.SQ_MENU);
+					OnExit();
+				}
+                else
+                {
+					OnClickDefault(UIState.ISLAND_MENU);
+				}
+			break;
 		}
     }
 

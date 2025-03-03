@@ -12,26 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q29
   m_EditorClassIdentifier: 
-  questionTitle: Limited Time for Assignments
-  question: You have two assignments due at the same time.
+  questionTitle: Choosing a Bank Account
+  question: You need a bank account as a student. What do you prioritize?
   answerData:
-  - answer: I prioritize one and ask for an extension on the other.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I finish both with minimal quality.
-    growthPoint: -1
-    satisfactionPoint: 0
-    innovationPoint: 0
+  - answer: I choose a student-friendly account with no fees and high-interest savings
+      options.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
     moneyCurrencyPoints: 1
-  - answer: I ask a peer to review one of them for feedback.
-    growthPoint: 1
-    satisfactionPoint: 0
+  - answer: I stick with my current bank out of convenience, even if it has fees.
+    growthPoint: 3
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I manage time carefully to complete both on time.
+    moneyCurrencyPoints: 2
+  - answer: I explore digital banks with innovative financial tools and cashback
+      rewards.
     growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I keep my money in cash and avoid using a bank account altogether.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

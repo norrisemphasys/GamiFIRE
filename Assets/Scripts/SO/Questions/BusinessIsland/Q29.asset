@@ -16,23 +16,29 @@ MonoBehaviour:
   question: "You\u2019re considering switching to a new industry but worry about
     financial stability. How do you proceed?"
   answerData:
-  - answer: I take a part-time job while transitioning.
-    growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I save a financial cushion before switching.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: I invest in courses to gain relevant skills.
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
-  - answer: I remain in my current job for security.
-    growthPoint: 0
+  - answer: I pursue part-time courses or certifications related to the new industry
+      while staying in my current job, gradually building the skills needed for a
+      smooth transition.
+    growthPoint: 4
     satisfactionPoint: 2
-    innovationPoint: 0
+    innovationPoint: 3
     moneyCurrencyPoints: 1
+  - answer: I reflect on my personal goals and values, then choose a career path
+      that aligns with my passions, even if it means a temporary financial adjustment
+      for long-term fulfillment.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I test the waters by taking on freelance or consulting projects in the
+      new field, gaining hands-on experience without fully leaving my current job.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I secure a new job offer in the desired industry before resigning, ensuring
+      a continuous income stream and minimizing financial risk during the transition.
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

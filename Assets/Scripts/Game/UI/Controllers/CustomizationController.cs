@@ -263,8 +263,10 @@ public class CustomizationController : BasicController
 
 	void UpdateButtons(CustomItemSO data)
 	{
-		view.buttonBuy.gameObject.SetActive(data.isLock);
-		if (data.isLock)
+		bool isLocked = data.isLock;
+		view.buttonBuy.gameObject.SetActive(isLocked);
+
+		if (isLocked)
         {
 			view.buttonSelect.gameObject.SetActive(false);
 			view.equippedGO.SetActive(false);

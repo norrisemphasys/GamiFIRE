@@ -7,6 +7,7 @@ using TMPro;
 
 public class IslandUIView : BasicView
 {
+    public Button buttonPointsInfo;
     public Button buttonInfo;
     public Button buttonRoll;
     public Button buttonPause;
@@ -15,10 +16,13 @@ public class IslandUIView : BasicView
 
     public Button[] buttonPoints;
 
-    [SerializeField] TextMeshProUGUI textCoin;
+    [SerializeField] TextMeshProUGUI textCurrency;
     [SerializeField] TextMeshProUGUI textGrowthPoint;
     [SerializeField] TextMeshProUGUI textInnovationPoint;
     [SerializeField] TextMeshProUGUI textSatisfactionPoint;
+
+    [SerializeField] TextMeshProUGUI textCoin;
+    [SerializeField] TextMeshProUGUI textScore;
 
     [SerializeField] TextMeshProUGUI textUserName;
     [SerializeField] TextMeshProUGUI textJobType;
@@ -35,6 +39,9 @@ public class IslandUIView : BasicView
 
     [SerializeField] TextMeshProUGUI textIslandName;
     [SerializeField] GameObject notif;
+
+    [SerializeField] Image profilePicture;
+    [SerializeField] Sprite[] icons;
 
     ScoreManager.TempScore tempScore;
 
@@ -84,7 +91,12 @@ public class IslandUIView : BasicView
 
         tempScore = ScoreManager.instance.tempScore;
 
-        //textCoin.text = user.CurrencyPoint != 0 ? string.Format("{0:#,#}", user.CurrencyPoint) : "0";
+        int idx = (int)user.JobType;
+        profilePicture.sprite = icons[idx];
+
+        textCoin.text = user.Coin != 0 ? string.Format("{0:#,#}", user.Coin) : "0";
+        textScore.text = user.Score != 0 ? string.Format("{0:#,#}", user.Score) : "0";
+        
         //textGrowthPoint.text = user.GrowthPoint != 0 ? string.Format("{0:#,#}", user.GrowthPoint) : "0";
         //textInnovationPoint.text = user.InnovationPoint != 0 ? string.Format("{0:#,#}", user.InnovationPoint) : "0";
         //textSatisfactionPoint.text = user.SatisfactionPoint != 0 ? string.Format("{0:#,#}", user.SatisfactionPoint) : "0"
@@ -187,19 +199,19 @@ public class IslandUIView : BasicView
 
         if (origValue == endValue)
         {
-            textCoin.text = origValue != 0 ? string.Format("{0:#,#}", origValue) : "0";
+            textCurrency.text = origValue != 0 ? string.Format("{0:#,#}", origValue) : "0";
         }
         else
         {
-            textCoin.rectTransform.DOScale(Vector3.one * 1.5f, 0.1f).SetLoops(tempScore.coin);
+            textCurrency.rectTransform.DOScale(Vector3.one * 1.5f, 0.1f).SetLoops(tempScore.coin);
 
             DOTween.To(() => origValue, x => origValue = x, endValue, 1)
             .OnUpdate(() => {
-                textCoin.text = origValue != 0 ? string.Format("{0:#,#}", origValue) : "0";
+                textCurrency.text = origValue != 0 ? string.Format("{0:#,#}", origValue) : "0";
             }).OnComplete(()=> 
             {
-                textCoin.rectTransform.DOKill();
-                textCoin.rectTransform.DOScale(Vector3.one , 0.1f);
+                textCurrency.rectTransform.DOKill();
+                textCurrency.rectTransform.DOScale(Vector3.one , 0.1f);
             });
         }
     }

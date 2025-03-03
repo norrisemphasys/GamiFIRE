@@ -16,24 +16,30 @@ MonoBehaviour:
   question: "You have the chance to travel for work, but it\u2019s expensive and
     requires personal time off. Do you go?"
   answerData:
-  - answer: I go because the career benefits and networking opportunities are worth
-      it.
-    growthPoint: 2
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: -1
-  - answer: I stay home and save the money for future investments.
-    growthPoint: 0
+  - answer: I accept the opportunity as an investment in networking, skill development,
+      and expanding my professional horizons, even if it requires personal expenses
+      and time.
+    growthPoint: 4
     satisfactionPoint: 2
-    innovationPoint: 0
+    innovationPoint: 3
     moneyCurrencyPoints: 1
-  - answer: I go, but only if the company covers all expenses.
+  - answer: I consider how the trip aligns with my personal interests and work-life
+      balance, deciding to go for personal fulfillment if it offers meaningful experiences.
     growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 2
+    moneyCurrencyPoints: 3
+  - answer: I negotiate with my employer to cover part of the expenses or offer flexible
+      work arrangements, making the trip financially feasible while maintaining work
+      commitments.
+    growthPoint: 3
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I skip it for personal reasons, despite the career benefits.
-    growthPoint: 0
+    innovationPoint: 4
+    moneyCurrencyPoints: 2
+  - answer: I decline the trip, focusing on work projects that directly contribute
+      to my income or career advancement, ensuring no financial strain from travel
+      costs.
+    growthPoint: 2
     satisfactionPoint: 3
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 4

@@ -12,26 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q36
   m_EditorClassIdentifier: 
-  questionTitle: Managing a Group Project
-  question: Your team project deadline is approaching, but one member is unresponsive.
+  questionTitle: Planning for Graduation Costs
+  question: You need to prepare for graduation expenses.
   answerData:
-  - answer: I take on their tasks to ensure completion.
-    growthPoint: 1
-    satisfactionPoint: -1
-    innovationPoint: 0
+  - answer: I start saving early and create a budget for graduation fees, attire,
+      and celebration costs to avoid financial stress.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
     moneyCurrencyPoints: 1
-  - answer: I reach out to them and ask for an update.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I suggest redistributing the work among active members.
-    growthPoint: 1
-    satisfactionPoint: 1
+  - answer: "I don\u2019t worry about costs now and will figure out how to cover
+      them when graduation gets close"
+    growthPoint: 3
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I inform the professor about the situation.
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 2
+  - answer: I look for sponsorships, crowdfunding, or financial aid programs that
+      help cover graduation expenses.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I keep graduation costs to a minimum by skipping unnecessary expenses
+      like a party or expensive clothing.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

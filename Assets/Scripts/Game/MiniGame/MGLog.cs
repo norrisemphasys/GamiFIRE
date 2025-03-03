@@ -18,7 +18,7 @@ public class MGLog : MonoBehaviour
     private void Awake()
     {
         r2D = GetComponent<Rigidbody2D>();
-        sprRenderer = GetComponent<SpriteRenderer>();
+        sprRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void FixedUpdate()

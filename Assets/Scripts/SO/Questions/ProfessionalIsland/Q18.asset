@@ -12,27 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q18
   m_EditorClassIdentifier: 
-  questionTitle: Sourcing sustainable suppliers
-  question: 'You want to transition to a sustainable supplier, but costs are higher.
-    Do you:'
+  questionTitle: Unexpected Medical Expenses
+  question: A sudden medical issue arises, and while your national healthcare system
+    covers most of the costs, there are still additional expenses for prescriptions,
+    specialized treatments, and time off work. How do you handle it?
   answerData:
-  - answer: Switch to sustainable suppliers regardless of the cost
-    growthPoint: 0
-    satisfactionPoint: 0
+  - answer: Check if your employer offers any health-related benefits, paid sick
+      leave, or financial assistance programs. If the situation affects your long-term
+      ability to work, explore vocational training or career counseling to adapt
+      your skills.
+    growthPoint: 4
+    satisfactionPoint: 3
     innovationPoint: 2
-    moneyCurrencyPoints: -2
-  - answer: 'Negotiate for bulk discounts or shared costs '
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 1
     moneyCurrencyPoints: 1
-  - answer: Delay until your financial situation improves
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: Maintain current suppliers while researching alternatives
+  - answer: Adjust your budget to accommodate the extra costs while maintaining essential
+      self-care activities. Prioritize a healthy lifestyle to aid recovery and prevent
+      future medical expenses.
     growthPoint: 1
-    satisfactionPoint: 0
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2
+  - answer: Research EU-wide or national social assistance programs that provide
+      financial aid for medical-related costs. Consider community-based crowdfunding
+      or mutual aid initiatives to ease the financial burden.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: Look into short-term freelance or gig work that fits your health condition,
+      or apply for temporary government assistance programs designed to support individuals
+      facing unexpected financial difficulties.
+    growthPoint: 3
+    satisfactionPoint: 2
     innovationPoint: 1
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 4

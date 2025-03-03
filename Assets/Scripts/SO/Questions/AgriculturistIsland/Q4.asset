@@ -12,26 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q4
   m_EditorClassIdentifier: 
-  questionTitle: Lack of eggs.
-  question: 'The chickens arent laying enough eggs. '
+  questionTitle: Farm Expansion Risk Assessment
+  question: You want to expand your farm but are unsure about the financial risks.
   answerData:
-  - answer: Buy extra chickens.
-    growthPoint: 1
+  - answer: I conduct a financial risk assessment before expansion.
+    growthPoint: 4
+    satisfactionPoint: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: 3
+  - answer: I use personal funds and reinvest profits into the farm.
+    growthPoint: 3
     satisfactionPoint: 2
-    innovationPoint: 1
-    moneyCurrencyPoints: -2
-  - answer: Replace the flock.
-    growthPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
+  - answer: I take out a large loan to cover all expansion needs.
+    growthPoint: 2
     satisfactionPoint: 3
     innovationPoint: 1
-    moneyCurrencyPoints: -3
-  - answer: Buy extra eggs.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: -1
-  - answer: Dont do anything.
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
+    moneyCurrencyPoints: 4
+  - answer: I hold off expansion until financial conditions are ideal.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2

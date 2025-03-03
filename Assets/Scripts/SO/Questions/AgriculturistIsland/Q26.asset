@@ -12,29 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q26
   m_EditorClassIdentifier: 
-  questionTitle: High Demand
-  question: You grow asparagus on your farm. There is currently  more demand for
-    asparagus on the market than  supply. How will you take advantage of this?
+  questionTitle: Weighing Costly New Technology
+  question: A new technology promises higher efficiency but is costly. How do you
+    decide?
   answerData:
-  - answer: I will offer the asparagus at a lower price than expected.
-    growthPoint: 0
+  - answer: I take an aggressive expansion approach with high investment.
+    growthPoint: 4
     satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: -1
-  - answer: I will offer the asparagus at a higher price than expected, as I want
-      to earn more.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: I will promote my asparagus offer more to gain better recognition in
-      the area.
-    growthPoint: 1
-    satisfactionPoint: 2
-    innovationPoint: 1
-    moneyCurrencyPoints: -2
-  - answer: I will preserve the asparagus and add value to it.
-    growthPoint: 2
-    satisfactionPoint: 0
     innovationPoint: 2
-    moneyCurrencyPoints: -1
+    moneyCurrencyPoints: 3
+  - answer: I expand cautiously by testing the market before committing.
+    growthPoint: 3
+    satisfactionPoint: 2
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
+  - answer: I wait for more data before making a decision.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 1
+    moneyCurrencyPoints: 4
+  - answer: I avoid expansion to focus on maintaining current operations.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2

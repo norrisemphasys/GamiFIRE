@@ -213,4 +213,9 @@ public static class Audio
     {
         MundoSound.Stop("BGMMGTwo");
     }
+
+    public static void StopEngine()
+    {
+        MundoSound.Stop("SFXEngine");
+    }
 }

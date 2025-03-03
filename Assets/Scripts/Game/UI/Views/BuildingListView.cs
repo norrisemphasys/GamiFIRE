@@ -60,12 +60,12 @@ public class BuildingListView : MonoBehaviour
 
         if (user != null)
         {
-            if(user.CurrencyPoint >= data.Price)
+            if(user.Coin >= data.Price)
             {
                 data.IsLock = false;
-                user.CurrencyPoint -= data.Price;
+                user.Coin -= data.Price;
 
-                GameEvents.OnCoinUpdate.Invoke(user.CurrencyPoint);
+                GameEvents.OnCoinUpdate.Invoke(user.Coin);
                 UserManager.instance.currentUser = user;
 
                 UpdateView();

@@ -19,7 +19,7 @@ public class PortTutorialView : BasicView
 
     public void Init()
     {
-
+        steps = goTextInfo.Length;
     }
 
     public void ShowTutorial(int index)

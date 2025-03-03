@@ -12,27 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q2
   m_EditorClassIdentifier: 
-  questionTitle: Balancing Work and Study
-  question: You need to find a way to balance your part-time job with the upcoming
-    exams, which are crucial for your academic progress.
+  questionTitle: Emergency Savings
+  question: Your laptop suddenly breaks, and you need to replace it. How do you manage
+    the cost?
   answerData:
-  - answer: I reduce my work hours to focus more on studying.
+  - answer: I find a way to earn quick extra cash through gig work.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: I use my credit card and worry about repayment later.
     growthPoint: 3
-    satisfactionPoint: -1
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
-  - answer: I create a strict study schedule around my work hours.
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I set aside money every month to build an emergency fund.
     growthPoint: 2
-    satisfactionPoint: -1
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: I take on extra shifts and plan to catch up with studying later.
-    growthPoint: 0
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 3
-  - answer: I ask my employer for more flexible hours.
-    growthPoint: 1
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I ask my parents or friends for help when needed.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

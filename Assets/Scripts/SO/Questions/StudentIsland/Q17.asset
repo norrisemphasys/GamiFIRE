@@ -12,27 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q17
   m_EditorClassIdentifier: 
-  questionTitle: Preparing for a Competitive Exam
-  question: You need to prepare for a competitive exam that could open many career
-    opportunities.
+  questionTitle: Mobile Payment Apps
+  question: You want to start using a digital wallet. What factors do you consider?
   answerData:
-  - answer: I enroll in a preparatory course.
+  - answer: I compare security features and choose a well-established payment app
+      with fraud protection.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: I use whichever app is easiest and most popular among my friends for
+      quick transactions.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I explore new fintech solutions that offer cashback, discounts, and budgeting
+      tools.
     growthPoint: 2
     satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: -3
-  - answer: I study using free resources available online.
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I stick to cash and traditional banking, avoiding digital wallets to
+      keep full control over my finances.
     growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I form a study group with peers who are also taking the exam.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I ask a professor for advice on how to prepare effectively.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SQUIController : BasicController
@@ -24,10 +23,9 @@ public class SQUIController : BasicController
 
 	public override void OnExit()
 	{
+		gameManager.sceneController.UpdateQuestionCounter();
 		RemoveListener();
 		view.Hide(ShowNextMenu);
-
-		gameManager.sceneController.UpdateQuestionCounter();
 		Audio.StopBGMScenarioQuestion();
 	}
 
@@ -42,8 +40,11 @@ public class SQUIController : BasicController
 
 		view.SetTextTitle(question.questionTitle);
 		view.SetTextQuestion(question.question);
+		view.SetPoint(gameManager.SelectedPointIndex);
 
-		for(int i = 0; i < view.btnAnswers.Length; i++)
+		question.answerData.Shuffle();
+
+		for (int i = 0; i < view.btnAnswers.Length; i++)
         {
 			AnswerView av = view.btnAnswers[i].GetComponent<AnswerView>();
 			AnswerData data = question.answerData[i];
@@ -64,6 +65,7 @@ public class SQUIController : BasicController
 			AddButtonListener(i, view.btnAnswers[i], OnClickAnswer);
 
 		view.buttonCollect.onClick.AddListener(OnClickContinue);
+		view.buttonInfo.onClick.AddListener(OnClickInfo);
 	}
 
 	void RemoveListener()
@@ -72,13 +74,20 @@ public class SQUIController : BasicController
 			view.btnAnswers[i].onClick.RemoveAllListeners();
 
 		view.buttonCollect.onClick.RemoveListener(OnClickContinue);
+		view.buttonInfo.onClick.RemoveListener(OnClickInfo);
 	}
+
+	void OnClickInfo()
+    {
+		gameManager.uiController.Show(UIState.GAMEINFO_MENU);
+    }
 
 	void OnClickAnswer(int idx)
     {
 		Debug.Log("Answer IDX " + idx);
+		int sidx = gameManager.SelectedPointIndex;
 
-		view.ShowScorePopup(true);
+		view.ShowScorePopup(true, sidx);
 
 		QuestionSO question = gameManager.sceneController.GetCurrentQuestion();
 		AnswerData data = question.answerData[idx];
@@ -89,6 +98,28 @@ public class SQUIController : BasicController
 		scoreManager.AddSatisfactionPoint(data.satisfactionPoint);
 
 		view.SetPoints(data.growthPoint, data.innovationPoint, data.satisfactionPoint, data.moneyCurrencyPoints);
+		gameManager.sceneController.questionController.currentQuestionCount++;
+
+		if(sidx == 0 && data.growthPoint == 4)
+        {
+			scoreManager.AddCoin(10);
+			PopupManager.instance.ShowNotification("Congratualtions! You got an extra 10 coins for choosing the right answer!");
+        }
+		else if(sidx == 1 && data.satisfactionPoint == 4)
+        {
+			scoreManager.AddCoin(10);
+			PopupManager.instance.ShowNotification("Congratualtions! You got an extra 10 coins for choosing the right answer!");
+		}
+		else if (sidx == 2 && data.innovationPoint == 4)
+		{
+			scoreManager.AddCoin(10);
+			PopupManager.instance.ShowNotification("Congratualtions! You got an extra 10 coins for choosing the right answer!");
+		}
+		else if (sidx == 3 && data.moneyCurrencyPoints == 4)
+		{
+			scoreManager.AddCoin(10);
+			PopupManager.instance.ShowNotification("Congratualtions! You got an extra 10 coins for choosing the right answer!");
+		}
 
 		Audio.PlaySFXStageClick();
 	}

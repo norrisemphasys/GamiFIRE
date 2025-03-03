@@ -12,28 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q29
   m_EditorClassIdentifier: 
-  questionTitle: ' A high-profile client with demands'
-  question: 'A high-profile client wants your full attention, risking other commitments.
-    Do you:'
+  questionTitle: Planning a Career Change
+  question: "You\u2019re considering switching to a new industry but worry about
+    financial stability. How do you proceed?"
   answerData:
-  - answer: 'Accept and prioritise their project '
-    growthPoint: 3
-    satisfactionPoint: -3
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: Decline to maintain balance with existing clients
-    growthPoint: -1
+  - answer: Pursue part-time courses or certifications related to the new industry
+      while staying in your current job, gradually building the skills needed for
+      a smooth transition.
+    growthPoint: 4
     satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: Talk to find a solution that works for both the client and your current
-      work.
+    innovationPoint: 3
+    moneyCurrencyPoints: 1
+  - answer: Reflect on your personal goals and values, then choose a career path
+      that aligns with your passions, even if it means a temporary financial adjustment
+      for long-term fulfillment.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: Test the waters by taking on freelance or consulting projects in the
+      new field, gaining hands-on experience without fully leaving your current job.
     growthPoint: 2
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: Refer the client to another professional
-    growthPoint: -1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: Secure a new job offer in the desired industry before resigning, ensuring
+      a continuous income stream and minimizing financial risk during the transition.
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

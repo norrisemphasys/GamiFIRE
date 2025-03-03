@@ -12,27 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q7
   m_EditorClassIdentifier: 
-  questionTitle: Networking Event
-  question: There is a networking event happening, but you have a lot of assignments
-    to finish.
+  questionTitle: Investing as a Student
+  question: You have saved some money. Should you invest it or keep it in savings?
   answerData:
-  - answer: I attend to make new connections.
-    growthPoint: 1
-    satisfactionPoint: 1
+  - answer: I start investing a small amount regularly for long-term growth.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: I explore new investment options like crypto or stocks.
+    growthPoint: 3
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I stay home to finish my assignments.
+    moneyCurrencyPoints: 2
+  - answer: I keep my money in a savings account instead of investing.
     growthPoint: 2
-    satisfactionPoint: -1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I attend the event briefly and then work late.
-    growthPoint: 0
     satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: -1
-  - answer: I ask a friend to help with assignments so I can attend the event.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: -1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I spend my money now and invest later when I earn more.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

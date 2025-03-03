@@ -12,27 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q35
   m_EditorClassIdentifier: 
-  questionTitle: Selling at the Market
-  question: You want to sell your products at the market, but  you're unsure how
-    to get started and need advice.  Where will you turn for advice?
+  questionTitle: Employee Financial Literacy Program
+  question: You need to improve financial literacy among employees. What is your
+    approach?
   answerData:
-  - answer: I will turn to the agricultural advisory service for advice.
-    growthPoint: 0
+  - answer: I take an aggressive expansion approach with high investment.
+    growthPoint: 4
+    satisfactionPoint: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: 3
+  - answer: I expand cautiously by testing the market before committing.
+    growthPoint: 3
     satisfactionPoint: 2
-    innovationPoint: -1
+    innovationPoint: 4
     moneyCurrencyPoints: 1
-  - answer: I will turn to another successful farmer for advice.
-    growthPoint: -1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: I will turn to the local municipality for advice.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: -1
-    moneyCurrencyPoints: 1
-  - answer: I will research all the necessary legislation myself and find a solution.
-    growthPoint: 1
-    satisfactionPoint: 0
+  - answer: I wait for more data before making a decision.
+    growthPoint: 2
+    satisfactionPoint: 3
     innovationPoint: 1
-    moneyCurrencyPoints: 1
+    moneyCurrencyPoints: 4
+  - answer: I avoid expansion to focus on maintaining current operations.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2

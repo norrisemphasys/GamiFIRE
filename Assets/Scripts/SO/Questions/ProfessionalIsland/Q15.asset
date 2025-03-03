@@ -12,26 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q15
   m_EditorClassIdentifier: 
-  questionTitle: Networking at events
-  question: 'You are invited to a costly networking event. Do you:'
+  questionTitle: Handling a Financial Windfall
+  question: You receive an unexpected inheritance. How do you manage it wisely?
   answerData:
-  - answer: 'Attend to build high-value connections '
+  - answer: Invest part of the inheritance in further education, professional certifications,
+      or business training programs available through EU funding to enhance career
+      opportunities.
+    growthPoint: 4
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 1
+  - answer: Use a portion of the money to improve your quality of life, such as funding
+      meaningful travel, supporting a passion project, or achieving a personal goal
+      while maintaining financial stability.
     growthPoint: 3
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: -2
-  - answer: Decline to focus on current clients
-    growthPoint: -1
-    satisfactionPoint: 0
-    innovationPoint: 0
+    satisfactionPoint: 4
+    innovationPoint: 1
     moneyCurrencyPoints: 2
-  - answer: Attend virtually, if possible, to save costs
+  - answer: Consult an EU-based financial advisor to explore tax-efficient investment
+      strategies, such as sustainable funds, real estate, or pension schemes that
+      align with European financial regulations.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: Invest the inheritance in diversified assets like EU government bonds,
+      ETFs, or starting a small business, ensuring long-term financial growth while
+      taking advantage of EU economic stability.
     growthPoint: 2
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: Check the attendees to see if it's worth the investment before deciding.
-    growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

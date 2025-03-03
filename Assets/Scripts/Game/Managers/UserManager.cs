@@ -16,14 +16,20 @@ public class UserManager : MonoSingleton<UserManager>
     }
     public void ResetUserPoints()
     {
-        currentUser.Coin = 0;
-        currentUser.Score = 0;
         currentUser.GrowthPoint = 0;
         currentUser.InnovationPoint = 0;
         currentUser.CurrencyPoint = 0;
         currentUser.SatisfactionPoint = 0;
 
         currentUser.isAnExistingAccount = false;
+    }
+
+    public void ResetPoints()
+    {
+        currentUser.GrowthPoint = 0;
+        currentUser.InnovationPoint = 0;
+        currentUser.CurrencyPoint = 0;
+        currentUser.SatisfactionPoint = 0;
     }
 
     public void SaveUser(UnityAction callback = null)

@@ -12,26 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q11
   m_EditorClassIdentifier: 
-  questionTitle: Managing ethical conflicts with clients
-  question: 'A client requests a service that conflicts with your values. Do you:'
+  questionTitle: Negotiating a Salary Increase
+  question: "After a year of successful projects, you believe you deserve a salary
+    increase. What\u2019s your strategy?"
   answerData:
-  - answer: Accept the project to maintain the relationship
+  - answer: Prepare a detailed report showcasing your achievements, skills development,
+      and the value you've added to the company. Use this as leverage to justify
+      your request for a salary increase.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: "If a salary increase isn\u2019t possible, negotiate for non-monetary
+      benefits such as additional vacation days, flexible work arrangements, or professional
+      development opportunities to improve work-life balance."
     growthPoint: 2
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: Decline the request to uphold your ethics
-    growthPoint: -1
-    satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: Propose an alternative solution that aligns with your values
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: Seek advice from a mentor or peer before deciding
-    growthPoint: 1
-    satisfactionPoint: 0
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 3
+  - answer: Suggest a performance-based raise structure, where specific goals or
+      milestones trigger salary increases, ensuring both you and the company benefit
+      from your continued success.
+    growthPoint: 3
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 2
+  - answer: If the raise is denied, consider exploring side income opportunities,
+      freelance work, or even looking for a higher-paying job elsewhere to maximize
+      your earnings.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

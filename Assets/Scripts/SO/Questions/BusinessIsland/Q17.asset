@@ -16,23 +16,29 @@ MonoBehaviour:
   question: "You\u2019re preparing for parental leave and want to ensure financial
     stability during this period. What\u2019s your strategy?"
   answerData:
-  - answer: I save in advance to cover expenses.
-    growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: I explore government benefits and allowances.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: I negotiate a phased return to work.
-    growthPoint: 1
+  - answer: I look into remote or part-time work opportunities to stay engaged in
+      my career while managing parental responsibilities.
+    growthPoint: 4
     satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I consider remote work options.
+    innovationPoint: 3
+    moneyCurrencyPoints: 1
+  - answer: I plan a realistic budget that covers essential expenses and allows for
+      small comforts, ensuring quality time with my child without financial stress.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I use budgeting apps and automated savings plans to ensure steady financial
+      support during leave and explore government benefits or employer assistance
+      programs.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I set up passive income streams, like renting out unused space, selling
+      digital products, or monetizing a hobby, to supplement my income during parental
+      leave.
     growthPoint: 1
-    satisfactionPoint: 0
+    satisfactionPoint: 3
     innovationPoint: 2
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 4

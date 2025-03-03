@@ -10615,7 +10615,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 1bba45b26d66044d98f884189784b0a9, type: 2}
+      objectReference: {fileID: 2100000, guid: 2f7b033c505046a46b6dc1847f7e99b5, type: 2}
     - target: {fileID: 919132149155446097, guid: ed25b85c5f725de4c9b7c503fad6cbd9,
         type: 3}
       propertyPath: m_Name
@@ -13785,6 +13785,12 @@ MonoBehaviour:
   textJob: {fileID: 691103621}
   textTimeTraveled: {fileID: 1838288227}
   sliderTimeTravel: {fileID: 1807740668}
+  profilePicture: {fileID: 1448013603}
+  icons:
+  - {fileID: 21300000, guid: 226889e540ceea045afbd68ca3de660a, type: 3}
+  - {fileID: 21300000, guid: b13e83e59e9fe2e4a885132c734d73bc, type: 3}
+  - {fileID: 21300000, guid: 45bb5cc544b3409459d9a338eb05070a, type: 3}
+  - {fileID: 21300000, guid: 62372002aae89ac45ba2769a9d7ddef7, type: 3}
 --- !u!114 &2017828259
 MonoBehaviour:
   m_ObjectHideFlags: 0

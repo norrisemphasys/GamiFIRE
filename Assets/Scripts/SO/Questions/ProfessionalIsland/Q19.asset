@@ -12,27 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q19
   m_EditorClassIdentifier: 
-  questionTitle: 'Carbon footprint reduction '
-  question: 'A client requests that you reduce your business''s carbon footprint.
-    Do you:'
+  questionTitle: Budgeting a Family Vacation
+  question: "You want to plan a family vacation on a limited budget. What\u2019s
+    your strategy?"
   answerData:
-  - answer: Invest in tools to monitor and reduce emissions
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 2
-    moneyCurrencyPoints: -2
-  - answer: Highlight existing eco-practices and focus on their improvement
-    growthPoint: 0
-    satisfactionPoint: 1
+  - answer: Look for educational or cultural trips where your family can explore
+      historical sites, museums, or nature reserves that offer free or discounted
+      entry through EU programs or local initiatives.
+    growthPoint: 4
+    satisfactionPoint: 2
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: Delay action until a specific need arises
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 1
+    moneyCurrencyPoints: 3
+  - answer: Plan a nearby getaway, such as camping, rural tourism, or visiting family-friendly
+      destinations within your country to enjoy a relaxing break without overspending
+      on travel costs.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2
+  - answer: Use budget-friendly travel options like EU-wide rail passes, low-cost
+      airlines, or home exchanges. Take advantage of off-season discounts and cashback
+      programs to save money
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 4
     moneyCurrencyPoints: 1
-  - answer: Engage a consultant to develop a long-term strategy
-    growthPoint: 0
+  - answer: Set up a small vacation fund in advance by selling unused items, taking
+      on short-term freelance work, or using a savings challenge to gradually set
+      aside money for the trip.
+    growthPoint: 3
     satisfactionPoint: 1
     innovationPoint: 2
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 4

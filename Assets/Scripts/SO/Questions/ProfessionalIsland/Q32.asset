@@ -12,26 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q32
   m_EditorClassIdentifier: 
-  questionTitle: Addressing public negative feedback
-  question: 'A dissatisfied customer posts negative feedback online. Do you:'
+  questionTitle: Setting Long-Term Career Goals
+  question: "You\u2019re planning your career path and want to set achievable long-term
+    goals. What\u2019s your strategy?"
   answerData:
-  - answer: Address the issue publicly and apologise
-    growthPoint: 0
+  - answer: Identify key skills and qualifications needed for your desired role,
+      then create a development plan that includes training, certifications, and
+      mentorship opportunities to support continuous learning.
+    growthPoint: 4
     satisfactionPoint: 3
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
-  - answer: Ignore the feedback and focus on other clients
-    growthPoint: 0
-    satisfactionPoint: -2
     innovationPoint: 2
-    moneyCurrencyPoints: 0
-  - answer: Contact the customer privately to resolve the issue
-    growthPoint: 0
+    moneyCurrencyPoints: 1
+  - answer: Reflect on your personal values and interests, setting goals that balance
+      career success with job satisfaction, work-life harmony, and meaningful professional
+      experiences.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: Adopt a flexible career plan using the SMART (Specific, Measurable, Achievable,
+      Relevant, Time-bound) method, allowing you to adapt goals based on emerging
+      industry trends and new opportunities.
+    growthPoint: 1
     satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: 'Offer a discount or incentive to win back their goodwill '
-    growthPoint: 0
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: Adopt a flexible career plan using the SMART (Specific, Measurable, Achievable,
+      Relevant, Time-bound) method, allowing you to adapt goals based on emerging
+      industry trends and new opportunities.
+    growthPoint: 2
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

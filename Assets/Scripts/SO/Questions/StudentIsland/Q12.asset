@@ -12,27 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q12
   m_EditorClassIdentifier: 
-  questionTitle: Preparing for a Research Presentation
-  question: You need to prepare for an important research presentation that is a
-    major part of your grade.
+  questionTitle: Transportation Costs
+  question: You need to choose between public transport and a personal vehicle.
   answerData:
-  - answer: I spend extra hours perfecting my presentation.
-    growthPoint: 2
-    satisfactionPoint: -1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I practice with a study group to get feedback.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I use online templates to save time.
-    growthPoint: 0
-    satisfactionPoint: -1
+  - answer: I budget ahead and compare the total long-term costs of owning a car
+      versus using public transport before making a decision.
+    growthPoint: 4
+    satisfactionPoint: 3
     innovationPoint: 2
-    moneyCurrencyPoints: 0
-  - answer: I consult my professor for advice.
-    growthPoint: 1
+    moneyCurrencyPoints: 1
+  - answer: I buy a comfortable personal car, prioritizing convenience and avoiding
+      the hassle of public transport, even if it means higher costs.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I use ride-sharing apps, carpooling services, or student discounts to
+      reduce transportation expenses while maintaining flexibility.
+    growthPoint: 2
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I rely on public transport, walking, or cycling to minimize expenses
+      and save money for other priorities.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

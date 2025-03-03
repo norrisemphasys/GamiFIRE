@@ -12,27 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q34
   m_EditorClassIdentifier: 
-  questionTitle: Deciding on Volunteering
-  question: A volunteer opportunity aligns with your values but conflicts with your
-    studies.
+  questionTitle: Understanding Interest Rates
+  question: You need a loan to help you with your studies. How does interest affect
+    repayment?
   answerData:
-  - answer: I volunteer only for specific tasks.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I fully commit to the opportunity.
-    growthPoint: 1
-    satisfactionPoint: 0
+  - answer: I choose the lowest interest rate available and make extra payments whenever
+      possible to reduce total costs.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: I take out the loan without worrying too much about interest rates, focusing
+      on fulfilling my immediate financial needs.
+    growthPoint: 3
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I decline to focus on studies.
+    moneyCurrencyPoints: 2
+  - answer: I compare different loan structures, including variable and fixed rates,
+      to find the best repayment strategy.
     growthPoint: 2
-    satisfactionPoint: -1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I suggest virtual volunteering for flexibility.
-    growthPoint: 0
     satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I avoid taking any loans to prevent debt accumulation and stick to a
+      strict cash-only financial plan.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

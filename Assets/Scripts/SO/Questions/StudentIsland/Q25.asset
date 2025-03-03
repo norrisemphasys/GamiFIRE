@@ -12,26 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q25
   m_EditorClassIdentifier: 
-  questionTitle: Submitting on a Tight Deadline
-  question: You have a tight deadline for a critical submission.
+  questionTitle: Summer Internship
+  question: You have an unpaid internship offer but need money. What do you do?
   answerData:
-  - answer: I skip sleep to finish it on time.
+  - answer: I take the internship, balancing it with a part-time job to cover expenses.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: I decline and focus on paid opportunities instead.
     growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I request an extension to ensure quality.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I ask for help to complete it faster.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I submit a draft and request feedback.
-    growthPoint: 1
-    satisfactionPoint: 0
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 2
+  - answer: I apply for grants that support unpaid internships.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I cut expenses and rely on savings while gaining valuable experience.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

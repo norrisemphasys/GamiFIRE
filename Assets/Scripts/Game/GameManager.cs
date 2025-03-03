@@ -65,6 +65,8 @@ public class GameManager : MonoSingleton<GameManager>
 
     private SCENE_TYPE _currentScene = SCENE_TYPE.LOGIN_SCENE;
     public SCENE_TYPE currentScene { get { return _currentScene; } set { _currentScene = value; } }
+
+    public int SelectedPointIndex { get; set; }
     
 }
 

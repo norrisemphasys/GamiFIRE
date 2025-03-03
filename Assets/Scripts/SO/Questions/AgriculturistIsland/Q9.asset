@@ -12,27 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q9
   m_EditorClassIdentifier: 
-  questionTitle: Buy new machine
-  question: You need to buy machine for fertilize your crops.  But you don t have
-    enough money.  What whill you do?
+  questionTitle: Prioritizing Technology Investments
+  question: You need to invest in technology but have a limited budget. What is your
+    priority?
   answerData:
-  - answer: Took out a loan from the bank
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 1
-  - answer: Borrowed money from a friend
-    growthPoint: -1
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 1
-  - answer: Waited until he gathered enough money
-    growthPoint: 1
-    satisfactionPoint: 2
-    innovationPoint: -1
-    moneyCurrencyPoints: 0
-  - answer: Applied for a subsidy grant
-    growthPoint: 1
+  - answer: I Invest in essential technology that provides the best ROI.
+    growthPoint: 4
     satisfactionPoint: 1
-    innovationPoint: 0
+    innovationPoint: 2
+    moneyCurrencyPoints: 3
+  - answer: I spread investment across various tools.
+    growthPoint: 3
+    satisfactionPoint: 2
+    innovationPoint: 4
     moneyCurrencyPoints: 1
+  - answer: I rely on existing technology and minimize spending.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 1
+    moneyCurrencyPoints: 4
+  - answer: I postpone technological upgrades for the future.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2

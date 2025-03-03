@@ -12,27 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q3
   m_EditorClassIdentifier: 
-  questionTitle: Milking cows
-  question: There has been a power outage while milking cows  with milking machine.
-    What will you do?
+  questionTitle: Managing Climate-Related Losses
+  question: Your farm is facing unexpected financial losses due to climate change
+    effects.
   answerData:
-  - answer: Borrow electric generator to power the milking machine.
-    growthPoint: 3
-    satisfactionPoint: 3
-    innovationPoint: -1
-    moneyCurrencyPoints: -3
-  - answer: Wait for power to return.
-    growthPoint: -3
-    satisfactionPoint: -2
-    innovationPoint: 3
-    moneyCurrencyPoints: 3
-  - answer: Milk them by hand.
-    growthPoint: -2
+  - answer: I diversify crops and explore climate-resistant farming techniques.
+    growthPoint: 4
     satisfactionPoint: 1
-    innovationPoint: 0
+    innovationPoint: 2
     moneyCurrencyPoints: 3
-  - answer: Dont milk them.
-    growthPoint: -2
+  - answer: I apply for financial relief programs and insurance.
+    growthPoint: 3
     satisfactionPoint: 2
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
+  - answer: I reduce production to cut losses and stabilize costs.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 1
+    moneyCurrencyPoints: 4
+  - answer: I wait for market conditions to improve before acting.
+    growthPoint: 1
+    satisfactionPoint: 4
     innovationPoint: 3
-    moneyCurrencyPoints: -2
+    moneyCurrencyPoints: 2

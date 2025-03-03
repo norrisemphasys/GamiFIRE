@@ -12,27 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q20
   m_EditorClassIdentifier: 
-  questionTitle: Land Purchase
-  question: You have the opportunity to purchase new land at  a favorable price.
-    What will you do?
+  questionTitle: Enhancing Supply Chain Efficiency
+  question: You need to improve efficiency in your supply chain. What approach do
+    you take?
   answerData:
-  - answer: I will take out a loan.
-    growthPoint: 1
-    satisfactionPoint: -1
-    innovationPoint: 0
-    moneyCurrencyPoints: 2
-  - answer: I will use my long-term savings.
-    growthPoint: 1
-    satisfactionPoint: -1
-    innovationPoint: 1
-    moneyCurrencyPoints: 1
-  - answer: I will not buy the land.
-    growthPoint: 0
-    satisfactionPoint: 2
-    innovationPoint: -1
-    moneyCurrencyPoints: 0
-  - answer: I will borrow money from a friend.
-    growthPoint: 0
+  - answer: I take an aggressive expansion approach with high investment.
+    growthPoint: 4
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    innovationPoint: 2
+    moneyCurrencyPoints: 3
+  - answer: I expand cautiously by testing the market before committing.
+    growthPoint: 3
+    satisfactionPoint: 2
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
+  - answer: I wait for more data before making a decision.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 1
+    moneyCurrencyPoints: 4
+  - answer: I avoid expansion to focus on maintaining current operations.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2

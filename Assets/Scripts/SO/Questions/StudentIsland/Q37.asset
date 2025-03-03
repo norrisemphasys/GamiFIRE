@@ -12,27 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q37
   m_EditorClassIdentifier: 
-  questionTitle: Choosing an Extracurricular Activity
-  question: "You have an opportunity to join an extracurricular activity, but it\u2019s
-    outside your main area of study."
+  questionTitle: Handling Inflation
+  question: Your daily expenses have increased due to inflation. How do you adjust?
   answerData:
-  - answer: I join to gain new skills and broaden my experience.
-    growthPoint: 1
-    satisfactionPoint: 1
+  - answer: I reassess my budget, track my expenses, and cut back on non-essential
+      spending to maintain financial stability.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: I continue my usual spending habits and adapt over time, focusing on
+      maintaining my lifestyle.
+    growthPoint: 3
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I decline to focus on my major coursework.
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I ask the club leader if I can try it out for a few sessions first.
-    growthPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I look for new income sources such as freelancing, gig work, or investing
+      to offset rising costs.
+    growthPoint: 2
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I join as an observer to learn without taking on responsibilities.
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I drastically reduce spending, prioritizing only the absolute necessities
+      like rent and food.
     growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

@@ -12,26 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q22
   m_EditorClassIdentifier: 
-  questionTitle: Dealing with unexpected expenses
-  question: 'An unexpected expense impacts your budget. Do you:'
+  questionTitle: Navigating a Cyber Scam
+  question: You receive an email that appears to be from your bank asking for personal
+    details. What do you do?
   answerData:
-  - answer: Cut back on other areas like marketing to cover costs
-    growthPoint: 0
-    satisfactionPoint: 0
+  - answer: Report the phishing attempt to your company's IT security team and suggest
+      a cybersecurity awareness session for employees, positioning yourself as proactive
+      in workplace security.
+    growthPoint: 4
+    satisfactionPoint: 1
     innovationPoint: 3
-    moneyCurrencyPoints: -1
-  - answer: 'Take a loan to address the expense immediately '
-    growthPoint: -2
-    satisfactionPoint: 0
-    innovationPoint: 0
     moneyCurrencyPoints: 2
-  - answer: Postpone planned investments to free up funds
-    growthPoint: 0
-    satisfactionPoint: 0
+  - answer: "Delete the email immediately, feeling confident in your ability to recognize
+      scams and satisfied that you\u2019ve protected your personal information."
+    growthPoint: 2
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: Seek financial advice for a long-term solution
+    moneyCurrencyPoints: 3
+  - answer: Use the phishing attempt as a case study to create an internal guide
+      or quick video tutorial on spotting cyber scams, sharing it with colleagues
+      to promote digital safety.
+    growthPoint: 3
+    satisfactionPoint: 2
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
+  - answer: Report the scam to the relevant cybersecurity authority or fraud hotline,
+      potentially qualifying for a small reward or recognition in fraud prevention
+      programs.
     growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

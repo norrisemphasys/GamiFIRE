@@ -40,17 +40,27 @@ public class InGamePortController : BasicController
 
 	public void ShowNextMenu()
 	{
-		uiController.Show(nextState);
+		if(nextState != UIState.NONE)
+			uiController.Show(nextState);
 	}
 
 	void AddListener()
 	{
-		
+		view.buttonInfo.onClick.AddListener(OnClickInfo);
 	}
 
 	void RemoveListener()
 	{
-		
+		view.buttonInfo.onClick.RemoveListener(OnClickInfo);
 	}
 
+	void OnClickInfo()
+    {
+		OnClickDefault(UIState.PORT_TUTORIAL_MENU);
+    }
+
+	private void OnDestroy()
+	{
+		RemoveListener();
+	}
 }

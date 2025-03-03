@@ -57,14 +57,17 @@ public class JobMenuController : BasicController
 
 		LoadingManager.instance.ShowLoader(true);
 
+		JobType professionType = (JobType)idx;
+
 		DBManager.AddEditUserLocalID(updatedUser, res =>
 		{
-			PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("Your account has been updated.", () =>
-			{
-				LoadPortScene();
-			}));
+			PopupManager.instance.ShowPopup(PopupMessage.OptionPopup("You have selected the Profession of " + UserManager.GetJobName(professionType), 
+				"OK", "Select Other Profession", ()=> 
+				{
+					LoadPortScene();
+					UserManager.instance.SetCurrentUser(res);
+				}));
 
-			UserManager.instance.SetCurrentUser(res);
 			LoadingManager.instance.ShowLoader(false);
 		});
 	}
@@ -79,5 +82,10 @@ public class JobMenuController : BasicController
 		{
 			LoadingManager.instance.ShowLoader(false);
 		});
+	}
+
+	private void OnDestroy()
+	{
+		RemoveListener();
 	}
 }

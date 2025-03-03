@@ -16,23 +16,30 @@ MonoBehaviour:
   question: You receive a job offer with a higher salary but fewer benefits. What
     do you prioritize?
   answerData:
-  - answer: I accept the offer for financial growth.
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 2
-  - answer: I negotiate for additional benefits.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I consult a mentor before deciding.
-    growthPoint: 2
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I choose the current job for stability.
-    growthPoint: 0
+  - answer: I evaluate if the job offers strong career advancement, networking, or
+      skill development for better long-term prospects, even with limited benefits.
+    growthPoint: 4
     satisfactionPoint: 2
-    innovationPoint: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 3
+  - answer: I prioritize work-life balance and job satisfaction, considering whether
+      the benefits of my current or alternative offers provide better quality of
+      life, even with a slightly lower salary.
+    growthPoint: 2
+    satisfactionPoint: 4
+    innovationPoint: 3
     moneyCurrencyPoints: 1
+  - answer: I negotiate additional perks like remote work, professional development
+      support, or performance-based bonuses to compensate for the lack of standard
+      benefits.
+    growthPoint: 3
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 2
+  - answer: I choose the higher salary if it allows me to secure important benefits
+      like private pension contributions or additional insurance, ensuring financial
+      stability on my own terms.
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

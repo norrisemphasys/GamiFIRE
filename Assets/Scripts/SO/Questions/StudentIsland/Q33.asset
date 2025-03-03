@@ -12,26 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q33
   m_EditorClassIdentifier: 
-  questionTitle: Handling Constructive Criticism
-  question: You receive constructive criticism on a project.
+  questionTitle: Renting a Place
+  question: You are renting an apartment. What factors do you consider?
   answerData:
-  - answer: I reflect on it and make improvements.
+  - answer: I choose an affordable place within my budget while considering long-term
+      costs such as utilities and maintenance.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: I rent a luxurious apartment with premium amenities, even if it stretches
+      my budget, to maximize comfort and lifestyle.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I explore house-sharing, co-living spaces, or rent-to-own options to
+      reduce costs while maintaining a good standard of living.
     growthPoint: 2
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I acknowledge it but maintain my approach.
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I pick the cheapest apartment available, even if it means sacrificing
+      comfort, to save as much money as possible.
     growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I discuss it further for clarity.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I integrate feedback gradually into my work.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

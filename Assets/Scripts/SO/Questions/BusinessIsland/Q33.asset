@@ -16,23 +16,27 @@ MonoBehaviour:
   question: You need a new laptop for work but are unsure if you should invest in
     a high-end or budget model.
   answerData:
-  - answer: I buy the high-end model for its performance and longevity.
+  - answer: I invest in a high-performance laptop with advanced features to enhance
+      productivity and handle complex projects.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: I choose a mid-range laptop that balances performance and cost, meeting
+      my current work needs.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I consider a refurbished or modular laptop, reducing costs while maintaining
+      flexibility for future upgrades.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I opt for a budget-friendly model that fulfills basic work needs, saving
+      the remaining funds for investments or savings.
     growthPoint: 1
     satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
-  - answer: I buy a budget model and save the rest for future expenses.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 2
-  - answer: I look for a used or refurbished laptop in good condition.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 1
-  - answer: I take time to research and wait for a sale or promotion.
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 1
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

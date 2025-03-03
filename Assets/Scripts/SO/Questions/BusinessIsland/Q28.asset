@@ -16,23 +16,28 @@ MonoBehaviour:
   question: "You\u2019ve received a salary increase and want to make the most of
     it. What\u2019s your strategy?"
   answerData:
-  - answer: I increase my savings and investments
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: I upgrade my lifestyle with better purchases.
-    growthPoint: 0
-    satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: I allocate funds for skill development courses.
-    growthPoint: 2
-    satisfactionPoint: 0
+  - answer: I invest in professional development courses, certifications, or networking
+      events to enhance my skills and open doors for future career advancement.
+    growthPoint: 4
+    satisfactionPoint: 3
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I pay off outstanding debts.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
+    moneyCurrencyPoints: 2
+  - answer: I allocate a portion of the increase for personal enjoyment, like travel
+      or hobbies, while maintaining a balanced budget to improve my overall well-being.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 2
     moneyCurrencyPoints: 1
+  - answer: I use the extra income to start a side project or invest in a passion-driven
+      venture, turning my salary boost into a creative and potentially profitable
+      opportunity.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I invest the additional income in stocks, real estate, or a high-yield
+      savings account to maximize long-term financial growth and wealth accumulation.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

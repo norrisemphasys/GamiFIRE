@@ -30,7 +30,7 @@ public class BuildingUIController : BasicController
 	{
 		User currentUser = UserManager.instance.currentUser;
 		if (currentUser != null)
-			view.SetCoin(currentUser.CurrencyPoint);
+			view.SetCoin(currentUser.Coin);
 
 
 		int islandTypeIdx = (int)gameManager.IslandType;

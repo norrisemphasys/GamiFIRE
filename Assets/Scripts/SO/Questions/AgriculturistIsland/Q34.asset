@@ -12,27 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q34
   m_EditorClassIdentifier: 
-  questionTitle: Barn Construction
-  question: You need money to build a new barn, but you don't  have enough. How will
-    you decide regarding  the barn construction?a
+  questionTitle: Adapting to Regulatory Changes
+  question: Your industry is facing new regulations. How do you adapt?
   answerData:
-  - answer: I will apply for a loan from the bank and build the barn.
-    growthPoint: 2
-    satisfactionPoint: -1
+  - answer: I take an aggressive expansion approach with high investment.
+    growthPoint: 4
+    satisfactionPoint: 1
     innovationPoint: 2
-    moneyCurrencyPoints: -1
-  - answer: I will wait another year and try to save some money.
+    moneyCurrencyPoints: 3
+  - answer: I expand cautiously by testing the market before committing.
+    growthPoint: 3
+    satisfactionPoint: 2
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
+  - answer: I wait for more data before making a decision.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 1
+    moneyCurrencyPoints: 4
+  - answer: I avoid expansion to focus on maintaining current operations.
     growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I will wait for a call for grants.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 1
-  - answer: I will not build the barn.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: -1
-    moneyCurrencyPoints: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2

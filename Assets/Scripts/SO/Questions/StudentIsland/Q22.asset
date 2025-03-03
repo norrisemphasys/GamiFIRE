@@ -12,26 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q22
   m_EditorClassIdentifier: 
-  questionTitle: Choosing Elective Courses
-  question: You need to select an elective course, but the options seem equally beneficial.
+  questionTitle: Freelancing
+  question: You have an opportunity to freelance, but payments are irregular. How
+    do you manage?
   answerData:
-  - answer: I pick a course that aligns with my career goals.
-    growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I select a course that challenges me.
-    growthPoint: 1
-    satisfactionPoint: 1
+  - answer: I create a budgeting system to manage income fluctuations and save extra
+      during high-earning months.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: "I enjoy the flexibility freelancing provides and don\u2019t stress too
+      much about financial stability."
+    growthPoint: 3
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I choose a course based on workload manageability.
-    growthPoint: 1
-    satisfactionPoint: -1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I consult an advisor for advice on options.
-    growthPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I use freelancing as a stepping stone to network and build long-term
+      career opportunities.
+    growthPoint: 2
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I maintain a separate emergency fund specifically for when freelance
+      income is lower.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

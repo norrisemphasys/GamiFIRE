@@ -12,29 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q24
   m_EditorClassIdentifier: 
-  questionTitle: High Supply
-  question: You grow garlic on your farm. This year, the garlic  crop is large, so
-    there is an oversupply of garlic on  the market. The price of garlic falls below
-    your  expected price. What will you do to sell your garlic well?
+  questionTitle: Handling Delayed Customer Payments
+  question: Your company is struggling with late customer payments. What is your
+    solution?
   answerData:
-  - answer: I will intensively promote my farm and the garlic offer.
-    growthPoint: 1
-    satisfactionPoint: -1
-    innovationPoint: 1
-    moneyCurrencyPoints: 2
-  - answer: I will process the garlic and add value.
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 2
-    moneyCurrencyPoints: 1
-  - answer: I will accept the garlic price as it is.
-    growthPoint: 0
-    satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
-  - answer: I will not harvest the garlic from the field, as it is not profitable
-      to produce it.
-    growthPoint: 0
+  - answer: I take an aggressive expansion approach with high investment.
+    growthPoint: 4
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    innovationPoint: 2
+    moneyCurrencyPoints: 3
+  - answer: I expand cautiously by testing the market before committing.
+    growthPoint: 3
+    satisfactionPoint: 2
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
+  - answer: I wait for more data before making a decision.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 1
+    moneyCurrencyPoints: 4
+  - answer: I avoid expansion to focus on maintaining current operations.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2

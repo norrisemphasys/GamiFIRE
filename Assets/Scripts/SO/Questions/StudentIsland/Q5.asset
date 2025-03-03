@@ -12,27 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q5
   m_EditorClassIdentifier: 
-  questionTitle: Unexpected Financial Expenses
-  question: You face unexpected expenses this month, which affect your ability to
-    pay for study materials.
+  questionTitle: Online Subscriptions
+  question: You have multiple online subscriptions but need to cut costs. What do
+    you do?
   answerData:
-  - answer: I borrow money from a friend.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
-  - answer: I look for additional freelance work.
-    growthPoint: 1
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 2
-  - answer: I apply for a short-term loan from the student support office.
-    growthPoint: 1
-    satisfactionPoint: 1
+  - answer: I share accounts with friends to split the cost.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: I review my subscriptions monthly and cancel unnecessary ones.
+    growthPoint: 3
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: -1
-  - answer: I sell some of my belongings to cover the expenses.
-    growthPoint: 0
-    satisfactionPoint: -1
-    innovationPoint: 0
     moneyCurrencyPoints: 2
+  - answer: I keep all subscriptions because I enjoy the content.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I avoid online subscriptions to save more money.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

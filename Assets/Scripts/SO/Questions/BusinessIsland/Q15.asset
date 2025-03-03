@@ -15,23 +15,28 @@ MonoBehaviour:
   questionTitle: Handling a Financial Windfall
   question: You receive an unexpected inheritance. How do you manage it wisely?
   answerData:
-  - answer: I invest in a diversified portfolio.
-    growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I clear all outstanding debts first.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
+  - answer: I invest part of the inheritance in further education, professional certifications,
+      or business training through EU funding to boost career opportunities.
+    growthPoint: 4
+    satisfactionPoint: 2
+    innovationPoint: 3
     moneyCurrencyPoints: 1
-  - answer: I seek professional financial advice.
-    growthPoint: 1
-    satisfactionPoint: 1
+  - answer: I use a portion of the inheritance to enhance my quality of life, like
+      funding meaningful travel or supporting a passion project, while maintaining
+      financial stability.
+    growthPoint: 3
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I save it in a high-interest account.
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 0
+    moneyCurrencyPoints: 2
+  - answer: I consult an EU-based financial advisor to explore tax-efficient investment
+      strategies like sustainable funds, real estate, or pension schemes.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 4
     moneyCurrencyPoints: 3
+  - answer: I invest in diversified assets like EU government bonds, ETFs, or a small
+      business for long-term financial growth, benefiting from EU economic stability.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

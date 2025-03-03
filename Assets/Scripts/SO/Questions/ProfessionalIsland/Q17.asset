@@ -12,27 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q17
   m_EditorClassIdentifier: 
-  questionTitle: Negotiating bulk discounts
-  question: 'A supplier offers a bulk discount, but the order exceeds your current
-    needs. Do you:'
+  questionTitle: Planning for Parental Leave
+  question: "You\u2019re preparing for parental leave and want to ensure financial
+    stability during this period. What\u2019s your strategy?"
   answerData:
-  - answer: Purchase now to save long-term
-    growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: Decline to avoid overstocking
-    growthPoint: 0
+  - answer: Look into remote or part-time work opportunities that allow you to stay
+      engaged in your career while managing parental responsibilities.
+    growthPoint: 4
     satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
-  - answer: Ask for a smaller discount for fewer items
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: -1
+    innovationPoint: 3
+    moneyCurrencyPoints: 1
+  - answer: Plan a realistic budget that covers essential expenses while allowing
+      for small comforts to enjoy quality time with your child without financial
+      stress.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 1
     moneyCurrencyPoints: 2
-  - answer: Postpone until demand increases
-    growthPoint: 0
+  - answer: Use budgeting apps and automated savings plans to ensure steady financial
+      support during leave, and explore government benefits or employer assistance
+      programs.
+    growthPoint: 2
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: Set up passive income streams, such as renting out unused space, selling
+      digital products, or monetizing a hobby, to supplement your income during parental
+      leave.
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

@@ -152,6 +152,7 @@ public class InGameITController : BasicController
 				gameManager.WinITMode = true;
 				//OnClickDefault(UIState.IT_GAMEOVER);
 
+				view.HideUI();
 				gameManager.terrainController.StopRecycling();
 				StartCoroutine(ShowGameOverEnum());
 			}

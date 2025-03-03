@@ -12,26 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q9
   m_EditorClassIdentifier: 
-  questionTitle: Attending an Optional Workshop
-  question: An optional skills workshop is available, but it costs money to attend.
+  questionTitle: Food Budgeting
+  question: You are spending too much on takeout. How do you adjust your budget?
   answerData:
-  - answer: I attend the workshop to improve my skills.
+  - answer: I cut down costs and focus on saving as much as possible.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: I prioritize personal comfort and spend on what makes life enjoyable
+      now.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I plan ahead and create a strict financial strategy to manage expenses.
     growthPoint: 2
     satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: -2
-  - answer: I skip it and look for free online resources.
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I use meal planning apps to find budget-friendly recipes.
     growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I ask if the university can subsidize the cost.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I ask my peers if they have notes from the workshop.
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

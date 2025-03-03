@@ -12,27 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q10
   m_EditorClassIdentifier: 
-  questionTitle: Transition to Sustainable Farming
-  question: You want to transition to sustainable farming,  but you don't have enough
-    knowledge.  Who will you turn to for advice?
+  questionTitle: Handling a Financial Crisis
+  question: A financial crisis has increased the cost of production. What measures
+    do you take?
   answerData:
-  - answer: A respected farmer
-    growthPoint: 1
+  - answer: I cut down non-essential expenses while maintaining productivity.
+    growthPoint: 4
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: Agricultural advisory service
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: You will learn on your own from online literature
+    innovationPoint: 2
+    moneyCurrencyPoints: 3
+  - answer: I seek government aid and subsidies to offset costs.
+    growthPoint: 3
+    satisfactionPoint: 2
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
+  - answer: I pass increased costs to customers via price hikes.
     growthPoint: 2
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: A friend
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 3
+    innovationPoint: 1
+    moneyCurrencyPoints: 4
+  - answer: I wait and see how the market stabilizes.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2

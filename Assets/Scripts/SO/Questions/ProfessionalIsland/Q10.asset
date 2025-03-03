@@ -12,26 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q10
   m_EditorClassIdentifier: 
-  questionTitle: Social media marketing
-  question: 'You want to improve your social media presence. Do you:'
+  questionTitle: Adapting to Remote Work
+  question: Your company shifts to a remote work model, saving you commuting costs
+    but increasing home expenses. How do you adjust?
   answerData:
-  - answer: 'Invest in a large advertising campaign '
-    growthPoint: 3
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: -2
-  - answer: Focus on organic growth strategies
+  - answer: Invest in creating a productive home office setup with ergonomic furniture
+      and tools to enhance focus and efficiency, ensuring you can excel in the new
+      remote work environment.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: Establish a balanced routine that separates work and personal life, ensuring
+      you can enjoy the flexibility of remote work while maintaining your well-being
+      and happiness.
     growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: Collaborate with influencers to expand reach
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2
+  - answer: Explore cost-saving technologies, like energy-efficient devices or apps
+      that track and reduce home utility expenses, to offset the increased home costs.
     growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
-  - answer: Test a small budget for paid advertisements
-    growthPoint: 1
-    satisfactionPoint: 0
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: Leverage the saved commuting time to start a freelance gig or learn a
+      new skill that can bring in extra income alongside your regular job.
+    growthPoint: 3
+    satisfactionPoint: 2
     innovationPoint: 1
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 4

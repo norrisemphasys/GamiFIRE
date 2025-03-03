@@ -12,26 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q6
   m_EditorClassIdentifier: 
-  questionTitle: High yield
-  question: Yield is higher than usual. What will you do with the surplus crop?
+  questionTitle: Financial Strategy for Crop Prices
+  question: Your crop prices are fluctuating significantly in the market. What is
+    your financial strategy?
   answerData:
-  - answer: Sell the surplus curp.
-    growthPoint: 0
+  - answer: I use financial hedging strategies to stabilize prices.
+    growthPoint: 4
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 2
-  - answer: Give the crop away to friends.
-    growthPoint: 1
-    satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: -2
-  - answer: Process the crop into new products.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: -1
-    moneyCurrencyPoints: 1
-  - answer: Let the extra crop to rot.
-    growthPoint: 0
-    satisfactionPoint: -1
     innovationPoint: 2
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 3
+  - answer: I sell crops at lower prices to ensure steady cash flow.
+    growthPoint: 3
+    satisfactionPoint: 2
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
+  - answer: I store crops and wait for better market prices.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 1
+    moneyCurrencyPoints: 4
+  - answer: I reduce production until price stability improves.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2

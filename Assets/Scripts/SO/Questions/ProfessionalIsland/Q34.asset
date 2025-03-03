@@ -12,26 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q34
   m_EditorClassIdentifier: 
-  questionTitle: Branding for modern relevance
-  question: 'Your branding appears outdated. Do you:'
+  questionTitle: Emergency Fund Savings
+  question: "You\u2019re starting to save for an emergency fund, but your income
+    is limited. How do you proceed?"
   answerData:
-  - answer: Rebrand entirely to align with current trends
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 3
-    moneyCurrencyPoints: -3
-  - answer: Focus on delivering quality services instead
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: -1
-    moneyCurrencyPoints: 2
-  - answer: Update key branding elements, like logos or website design
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 2
-    moneyCurrencyPoints: -1
-  - answer: 'Seek feedback from clients before making decisions '
-    growthPoint: 0
+  - answer: Identify opportunities for professional development that could lead to
+      higher-paying roles or promotions, allocating any salary increases directly
+      to your emergency fund.
+    growthPoint: 4
     satisfactionPoint: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: 3
+  - answer: "Set small, realistic savings goals, even if it\u2019s just a few euros
+      per week, to build a sense of financial security without feeling overwhelmed."
+    growthPoint: 2
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 1
+  - answer: Use automated savings apps that round up your daily purchases and transfer
+      the spare change to your emergency fund effortlessly.
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: 4
+    moneyCurrencyPoints: 2
+  - answer: Take on occasional freelance work or side gigs to create an additional
+      income stream dedicated solely to growing your emergency fund faster.
+    growthPoint: 3
+    satisfactionPoint: 2
     innovationPoint: 1
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 4

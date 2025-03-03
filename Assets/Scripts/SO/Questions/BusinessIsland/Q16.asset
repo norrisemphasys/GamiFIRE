@@ -16,23 +16,28 @@ MonoBehaviour:
   question: Your company faces financial challenges and implements a temporary pay
     cut. How do you adjust your finances?
   answerData:
-  - answer: I revise my budget to focus on essentials.
-    growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 0
+  - answer: I use this opportunity to upskill or network, improving my chances for
+      a higher-paying job or promotion once the company stabilizes.
+    growthPoint: 4
+    satisfactionPoint: 2
+    innovationPoint: 3
     moneyCurrencyPoints: 1
-  - answer: I seek freelance work to compensate.
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 2
-    moneyCurrencyPoints: 0
-  - answer: I negotiate flexible work hours for cost savings.
-    growthPoint: 1
-    satisfactionPoint: 1
+  - answer: I reevaluate my budget, prioritizing essential expenses while allowing
+      small treats for normalcy and well-being.
+    growthPoint: 3
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I dip into my emergency fund temporarily.
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 0
+    moneyCurrencyPoints: 2
+  - answer: I find creative ways to save money, like switching to cost-effective
+      subscriptions, negotiating bills, or using cashback and budgeting apps to maximize
+      savings.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 4
     moneyCurrencyPoints: 3
+  - answer: I explore freelance work, side hustles, or passive income streams to
+      supplement my reduced salary and maintain financial stability.
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

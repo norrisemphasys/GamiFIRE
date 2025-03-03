@@ -16,23 +16,27 @@ MonoBehaviour:
   question: Your company offers multiple health insurance plans. You need to pick
     the best option for your needs. What do you prioritize?
   answerData:
-  - answer: I choose the plan with the lowest premiums.
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 3
-  - answer: ' I opt for comprehensive coverage, even if it costs more.'
+  - answer: I choose a plan with preventive care, mental health support, and rehabilitation
+      for long-term well-being, especially when working across EU countries.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I prioritize a plan with broad coverage for specialist visits and chronic
+      conditions for high-quality healthcare within the EU.
+    growthPoint: 2
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 1
+  - answer: I use the European Health Insurance Card (EHIC) for necessary healthcare
+      in the EU and compare private insurance for extra benefits.
     growthPoint: 1
     satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I consult HR for detailed plan comparisons
-    growthPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I opt for a plan with tax deductions or reimbursements, ensuring adequate
+      coverage for unexpected medical expenses.
+    growthPoint: 3
     satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I explore external insurance options for better rates.
-    growthPoint: 1
-    satisfactionPoint: 0
     innovationPoint: 2
-    moneyCurrencyPoints: -1
+    moneyCurrencyPoints: 4

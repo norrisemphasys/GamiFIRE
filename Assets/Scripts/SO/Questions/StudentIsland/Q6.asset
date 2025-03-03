@@ -12,27 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q6
   m_EditorClassIdentifier: 
-  questionTitle: Forming Study Groups
-  question: You hear that study groups can help improve learning, but you usually
-    study alone.
+  questionTitle: Part-Time Job
+  question: You are considering getting a part-time job to support your expenses.
   answerData:
-  - answer: I decide to join a study group.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I continue studying alone as I find it more efficient.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I suggest creating an online study group for flexibility.
-    growthPoint: 0
-    satisfactionPoint: 0
+  - answer: I start freelancing or a side business for flexible income.
+    growthPoint: 4
+    satisfactionPoint: 3
     innovationPoint: 2
-    moneyCurrencyPoints: 0
-  - answer: I create a hybrid plan to study alone and in a group.
-    growthPoint: 1
-    satisfactionPoint: 1
+    moneyCurrencyPoints: 1
+  - answer: I get a part-time job to gain experience and income.
+    growthPoint: 3
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 2
+  - answer: I focus on my studies and avoid extra work.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I rely on student loans and savings instead of working.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

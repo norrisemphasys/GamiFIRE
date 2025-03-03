@@ -12,26 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q3
   m_EditorClassIdentifier: 
-  questionTitle: Pricing strategy
-  question: 'You must decide how to price your product or service. Do you:'
+  questionTitle: Managing a Pay Cut
+  question: " Your company is experiencing financial difficulties and announces temporary
+    pay cuts. You need to adapt your budget. What\u2019s your response?"
   answerData:
-  - answer: 'Set high prices to maximise profit '
-    growthPoint: -2
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 3
-  - answer: Use a competitive pricing strategy to attract clients
-    growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: Lower prices to increase demand quickly
-    growthPoint: 1
+  - answer: Use this period to reassess your career goals and invest in free or low-cost
+      professional development opportunities. Focus on skills that could position
+      you for promotions or better roles once the company's financial situation improves.
+    growthPoint: 4
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
-  - answer: Introduce a flexible pricing model based on customer needs
+    innovationPoint: 3
+    moneyCurrencyPoints: 2
+  - answer: Adjust your budget by cutting non-essential expenses (e.g., dining out,
+      entertainment) but maintain spending on activities or items that bring you
+      personal satisfaction, like hobbies or fitness, to stay motivated during this
+      challenging time.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: Explore creative ways to supplement your income, such as freelancing,
+      selling unused items, or participating in the gig economy. At the same time,
+      propose cost-saving measures or process improvements at work to showcase your
+      value to the company.
     growthPoint: 1
-    satisfactionPoint: 0
+    satisfactionPoint: 2
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: Prioritize essential expenses like rent, utilities, and groceries by
+      creating a strict budget. Look into government subsidies, tax relief programs,
+      or side income opportunities that could temporarily offset the pay cut.
+    growthPoint: 2
+    satisfactionPoint: 3
     innovationPoint: 1
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 4

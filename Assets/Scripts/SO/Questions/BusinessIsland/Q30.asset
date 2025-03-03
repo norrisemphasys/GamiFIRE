@@ -16,23 +16,31 @@ MonoBehaviour:
   question: ' Your team is struggling due to internal conflicts between two team
     members. This affects your ability to focus on your work. How do you handle it?'
   answerData:
-  - answer: I step in as a mediator to resolve the conflict.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I report the issue to HR and let them handle it.
-    growthPoint: 0
+  - answer: I offer to mediate a constructive dialogue between the conflicting team
+      members, using this as an opportunity to develop and showcase my leadership
+      and conflict resolution skills.
+    growthPoint: 4
     satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I avoid getting involved and focus on my own tasks.
-    growthPoint: 0
-    satisfactionPoint: 3
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I suggest team-building activities to improve relations.
-    growthPoint: 2
-    satisfactionPoint: 1
     innovationPoint: 1
-    moneyCurrencyPoints: -1
+    moneyCurrencyPoints: 3
+  - answer: I set clear personal boundaries, limit my involvement in the conflict,
+      and focus on my tasks, creating a peaceful work environment for myself despite
+      the tension.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2
+  - answer: I propose a team-building activity or workshop designed to improve communication
+      and collaboration, addressing the root cause of the conflict in an engaging
+      way.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
+  - answer: I leverage the situation by volunteering for additional responsibilities
+      that arise due to the conflict, positioning myself for a potential bonus or
+      promotion.
+    growthPoint: 3
+    satisfactionPoint: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

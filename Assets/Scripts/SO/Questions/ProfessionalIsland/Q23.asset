@@ -12,27 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q23
   m_EditorClassIdentifier: 
-  questionTitle: Adopting AI tools with cybersecurity risks
-  question: 'A new AI tool promises efficiency but poses data security risks. Do
-    you:'
+  questionTitle: Investing in Cryptocurrency
+  question: "You\u2019re interested in investing in cryptocurrency but unsure about
+    its risks. What\u2019s your decision?"
   answerData:
-  - answer: 'Adopt the tool and invest in cybersecurity measures '
-    growthPoint: 0
-    satisfactionPoint: 0
+  - answer: Enroll in a certified course on blockchain and cryptocurrency to build
+      a solid understanding before making any investment decisions, turning it into
+      a learning opportunity.
+    growthPoint: 4
+    satisfactionPoint: 2
     innovationPoint: 3
-    moneyCurrencyPoints: -2
-  - answer: 'Use the tool carefully for safe tasks '
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 2
     moneyCurrencyPoints: 1
-  - answer: Stick with current methods to avoid risks
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: -1
-    moneyCurrencyPoints: 0
-  - answer: 'Consult a specialist to evaluate the tool before use '
-    growthPoint: 0
-    satisfactionPoint: 1
+  - answer: "Invest a small, affordable amount that you\u2019re comfortable potentially
+      losing, giving you peace of mind while satisfying your curiosity about the
+      crypto market."
+    growthPoint: 3
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 2
+  - answer: Diversify your investment by exploring emerging crypto projects focused
+      on sustainability or social impact, aiming to support innovative technologies
+      while investing.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: Conduct thorough research, identify high-potential coins, and invest
+      aggressively with a strategy focused on maximizing short-term profits through
+      active trading.
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

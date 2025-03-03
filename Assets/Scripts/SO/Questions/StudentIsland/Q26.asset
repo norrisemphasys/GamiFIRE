@@ -12,26 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q26
   m_EditorClassIdentifier: 
-  questionTitle: Managing Limited Resources
-  question: Your University club has limited resources for an upcoming event.
+  questionTitle: Online Shopping
+  question: You need to buy a phone online. What payment method do you use?
   answerData:
-  - answer: I fundraise to increase resources.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
+  - answer: I compare prices and pay with a credit card to earn cashback and buyer
+      protection.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
     moneyCurrencyPoints: 1
-  - answer: I adjust the event scope to fit the budget.
+  - answer: I choose buy-now-pay-later options to spread the cost over time.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I check online marketplaces for refurbished deals or discounts.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I use my debit card or cash on delivery to avoid overspending.
     growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I ask for in-kind donations to supplement resources.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I propose a virtual event to save costs.
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 1
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

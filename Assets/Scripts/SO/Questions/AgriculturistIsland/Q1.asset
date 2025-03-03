@@ -12,27 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q1
   m_EditorClassIdentifier: 
-  questionTitle: Harvesting crops
-  question: You have to harvest the crops, but you dont have machinery to harvest
-    it. What will you do?
+  questionTitle: Annual Farm Budgeting
+  question: You need to decide how to allocate your annual farm budget efficiently.
   answerData:
-  - answer: Buy machinery for harvesting.
-    growthPoint: 0
+  - answer: I prioritize investment in technology and high-efficiency equipment.
+    growthPoint: 4
     satisfactionPoint: 1
-    innovationPoint: 3
-    moneyCurrencyPoints: -3
-  - answer: Rent machinery for harvesting.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: -1
-  - answer: Hire someone for harvesting the crops.
-    growthPoint: 2
+    innovationPoint: 2
+    moneyCurrencyPoints: 3
+  - answer: I allocate resources equally across all farm activities.
+    growthPoint: 3
     satisfactionPoint: 2
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
+  - answer: I focus on low-cost maintenance strategies.
+    growthPoint: 2
+    satisfactionPoint: 3
     innovationPoint: 1
-    moneyCurrencyPoints: -2
-  - answer: Harvest the crops by hand.
-    growthPoint: 0
-    satisfactionPoint: -1
-    innovationPoint: 0
+    moneyCurrencyPoints: 4
+  - answer: I reduce investment and save funds for emergencies.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
     moneyCurrencyPoints: 2

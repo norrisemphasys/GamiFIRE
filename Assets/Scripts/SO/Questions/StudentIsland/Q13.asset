@@ -12,27 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q13
   m_EditorClassIdentifier: 
-  questionTitle: Balancing Extracurriculars
-  question: You have taken on multiple extracurricular activities, but your academic
-    performance is slipping.
+  questionTitle: Building Credit
+  question: You want to start building a good credit score while studying. What do
+    you do?
   answerData:
-  - answer: I drop some activities to focus on my studies.
-    growthPoint: 2
-    satisfactionPoint: -1
-    innovationPoint: 0
+  - answer: I apply for a student credit card and make regular purchases, paying
+      off the full balance every month.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
     moneyCurrencyPoints: 1
-  - answer: I create a detailed schedule to manage everything.
+  - answer: I use my debit card instead of credit, focusing on my daily financial
+      needs without worrying about credit scores.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I research and use credit-building tools, like secured credit cards or
+      rent reporting services, to improve my score.
     growthPoint: 2
     satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: -1
-  - answer: I ask for help from peers in managing my time.
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I avoid taking on any credit or loans, relying only on cash and savings
+      to manage my finances.
     growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I decide to focus on activities that align with my career goals.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

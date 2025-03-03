@@ -16,23 +16,31 @@ MonoBehaviour:
   question: "You want to go on a vacation but need to budget carefully. What\u2019s
     your strategy?"
   answerData:
-  - answer: I create a detailed budget and stick to it.
-    growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: I book a package deal to save money.
-    growthPoint: 0
-    satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: I look for creative ways to travel on a budget.
-    growthPoint: 0
-    satisfactionPoint: 0
+  - answer: Research freelance or remote work opportunities in the destination you
+      want to visit. Take on a temporary project or work part-time during your vacation
+      to offset costs while gaining valuable professional experience in a new environment.
+    growthPoint: 4
+    satisfactionPoint: 1
     innovationPoint: 2
-    moneyCurrencyPoints: 1
-  - answer: "I delay the trip until I\u2019ve saved enough."
-    growthPoint: 0
-    satisfactionPoint: -1
-    innovationPoint: 0
     moneyCurrencyPoints: 3
+  - answer: Plan a staycation or a local getaway where you can relax without overspending.
+      Focus on simple pleasures like hiking, picnics, or exploring nearby attractions
+      to recharge and feel fulfilled
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: Use a gamified savings app to set aside funds for your vacation. Set
+      creative milestones, such as earning rewards or unlocking destination tips,
+      to stay motivated while saving up.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
+  - answer: Sell unused items or monetize a hobby (like photography or crafts) to
+      generate extra cash for your vacation. Use online platforms to reach buyers
+      and maximize your profits.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

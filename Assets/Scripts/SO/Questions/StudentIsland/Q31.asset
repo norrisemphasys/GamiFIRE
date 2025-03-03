@@ -12,27 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q31
   m_EditorClassIdentifier: 
-  questionTitle: Preparing for Public Speaking
-  question: You need to prepare for a major public speaking event your University
-    is organizing.
+  questionTitle: Health Insurance
+  question: You need to decide whether to get student health insurance.
   answerData:
-  - answer: I practice daily in front of friends.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I watch videos to learn public speaking techniques.
-    growthPoint: 0
-    satisfactionPoint: 0
+  - answer: I get a comprehensive student insurance plan that covers emergencies,
+      prescriptions, and check-ups to ensure long-term health security.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: I skip insurance to save money, assuming I will not need medical care.
+    growthPoint: 3
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I seek feedback from a mentor.
-    growthPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I research government or university-sponsored health programs that provide
+      free or low-cost coverage for students.
+    growthPoint: 2
     satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I rehearse alone to gain confidence.
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I choose the most basic, low-cost insurance plan that only covers emergencies
+      to minimize expenses.
     growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

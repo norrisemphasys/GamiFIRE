@@ -16,24 +16,31 @@ MonoBehaviour:
   question: "You\u2019ve started thinking about retirement but aren\u2019t sure how
     much you should be saving."
   answerData:
-  - answer: I consult a retirement planner to create a solid plan.
-    growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 0
+  - answer: I consult with a financial advisor to create a retirement plan that aligns
+      with my career goals, factoring in potential promotions and salary increases
+      to adjust my savings over time.
+    growthPoint: 4
+    satisfactionPoint: 2
+    innovationPoint: 3
     moneyCurrencyPoints: 1
-  - answer: I open a retirement account and contribute regularly.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: I delay retirement savings to focus on immediate financial goals.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 0
+  - answer: I set retirement goals based on the lifestyle I envision, focusing on
+      achieving a balance between enjoying my current life and feeling secure about
+      my future.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 1
     moneyCurrencyPoints: 2
-  - answer: "I save in a regular savings account until I\u2019m more sure about my
-      future."
-    growthPoint: 0
+  - answer: I use digital retirement planning tools or apps that analyze my current
+      income, expenses, and future projections to recommend personalized savings
+      strategies.
+    growthPoint: 2
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I invest in diversified assets such as index funds, real estate, or pension
+      schemes with high returns to maximize long-term growth and accumulate more
+      wealth for retirement.
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

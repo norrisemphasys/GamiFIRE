@@ -12,26 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q27
   m_EditorClassIdentifier: 
-  questionTitle: Joining a professional association
-  question: You are invited to join a high-cost professional association. Do you
+  questionTitle: Online Shopping Security
+  question: You find a great deal on an unfamiliar website. What precautions do you
+    take?
   answerData:
-  - answer: Join to access resources and networks
-    growthPoint: 3
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: -3
-  - answer: 'Decline to maintain current financial stability '
-    growthPoint: -1
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 2
-  - answer: Attend as a guest to evaluate its value
+  - answer: "Research the website\u2019s credibility and learn about secure payment
+      practices, using this experience to improve your digital literacy and share
+      tips with colleagues."
+    growthPoint: 4
+    satisfactionPoint: 2
+    innovationPoint: 1
+    moneyCurrencyPoints: 3
+  - answer: "Check reviews, verify the website\u2019s security features (like HTTPS),
+      and use a secure payment method, feeling confident and at ease with your safe
+      purchase"
     growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
-  - answer: Try to get lower membership fees
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
+    satisfactionPoint: 4
+    innovationPoint: 3
     moneyCurrencyPoints: 1
+  - answer: Use a virtual credit card or a disposable payment method to minimize
+      risk while testing the reliability of the site in a controlled, secure way.
+    growthPoint: 3
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 2
+  - answer: "Compare the deal with trusted websites to ensure it\u2019s genuinely
+      a bargain, potentially finding a better offer elsewhere and saving more money."
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

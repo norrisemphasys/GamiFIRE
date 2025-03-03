@@ -16,23 +16,30 @@ MonoBehaviour:
   question: You receive an email that appears to be from your bank asking for personal
     details. What do you do?
   answerData:
-  - answer: I verify the email with the bank before responding.
-    growthPoint: 1
+  - answer: Report the phishing attempt to your company's IT security team and suggest
+      a cybersecurity awareness session for employees, positioning yourself as proactive
+      in workplace security.
+    growthPoint: 4
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: I ignore the email and report it as spam.
-    growthPoint: 0
-    satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: I research online safety tips and update my passwords.
-    growthPoint: 1
-    satisfactionPoint: 1
+    innovationPoint: 3
+    moneyCurrencyPoints: 2
+  - answer: "Delete the email immediately, feeling confident in your ability to recognize
+      scams and satisfied that you\u2019ve protected your personal information."
+    growthPoint: 2
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I click the link and provide limited information.
-    growthPoint: 0
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
+    moneyCurrencyPoints: 3
+  - answer: Use the phishing attempt as a case study to create an internal guide
+      or quick video tutorial on spotting cyber scams, sharing it with colleagues
+      to promote digital safety.
+    growthPoint: 3
+    satisfactionPoint: 2
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
+  - answer: Report the scam to the relevant cybersecurity authority or fraud hotline,
+      potentially qualifying for a small reward or recognition in fraud prevention
+      programs.
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

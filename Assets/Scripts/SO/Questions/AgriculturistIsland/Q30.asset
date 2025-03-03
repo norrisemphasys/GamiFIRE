@@ -12,29 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q30
   m_EditorClassIdentifier: 
-  questionTitle: Sustainable Farming
-  question: You have received guidelines from the EU  Commission regarding the transition
-    to  sustainable farming. What will you do?
+  questionTitle: Dealing with Financial Fraud
+  question: A financial fraud attempt was detected in your business. What steps do
+    you take?
   answerData:
-  - answer: I will read the guidelines and throw them in the trash.
-    growthPoint: -1
+  - answer: I take an aggressive expansion approach with high investment.
+    growthPoint: 4
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I will not read the guidelines, as I don't intend to farm sustainably.
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I will carefully read the guidelines and learn about sustainable farming
-      options.
-    growthPoint: 2
-    satisfactionPoint: -1
-    innovationPoint: 1
-    moneyCurrencyPoints: 1
-  - answer: I will not read the guidelines, but I will consult with a friend on the
-      matter.
-    growthPoint: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: 3
+  - answer: I expand cautiously by testing the market before committing.
+    growthPoint: 3
     satisfactionPoint: 2
-    innovationPoint: -1
+    innovationPoint: 4
     moneyCurrencyPoints: 1
+  - answer: I wait for more data before making a decision.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 1
+    moneyCurrencyPoints: 4
+  - answer: I avoid expansion to focus on maintaining current operations.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2

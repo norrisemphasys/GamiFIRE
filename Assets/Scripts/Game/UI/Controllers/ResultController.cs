@@ -33,7 +33,49 @@ public class ResultController : BasicController
 
 		User currentUser = UserManager.instance.currentUser;
 		if (currentUser != null)
+        {
 			view.UpdateUserPoints(currentUser);
+
+			int idx = gameManager.SelectedPointIndex;
+			int totalScore = 0;
+			int currentScore = currentUser.Score;
+
+			if (idx == 0)
+				totalScore = currentUser.GrowthPoint + currentScore;
+			else if (idx == 1)
+				totalScore = currentUser.SatisfactionPoint + currentScore;
+			else if (idx == 2)
+				totalScore = currentUser.InnovationPoint + currentScore;
+			else if (idx == 3)
+				totalScore = currentUser.CurrencyPoint + currentScore;
+
+			currentUser.Score = totalScore;
+
+			// Slider 
+			Debug.LogError("c1 " + gameManager.sceneController.QuestionCounter + " c2 " + gameManager.sceneController.questionController.currentQuestionCount);
+			int totalAnsweredQuestion = gameManager.sceneController.QuestionCounter;
+			float totalPoints = totalAnsweredQuestion * 4;
+
+			float growthPercentage = currentUser.GrowthPoint / totalPoints;
+			float satisfactionPercentage = currentUser.SatisfactionPoint / totalPoints;
+			float innovationPercentage = currentUser.InnovationPoint / totalPoints;
+			float currencyPercentage = currentUser.CurrencyPoint / totalPoints;
+
+			view.UpdateSliders(growthPercentage, satisfactionPercentage, 
+				innovationPercentage, currencyPercentage);
+
+			view.UpdateScore(currentUser.Score);
+			view.ShowSelected(idx);
+
+			if (idx == 0)
+				view.ShowTextResult("GROWTH POINT", currentUser.GrowthPoint, growthPercentage * 100);
+			else if (idx == 1)
+				view.ShowTextResult("SATISFACTION POINT", currentUser.SatisfactionPoint, satisfactionPercentage * 100);
+			else if (idx == 2)
+				view.ShowTextResult("INNOVATION POINT", currentUser.InnovationPoint, innovationPercentage * 100);
+			else if (idx == 3)
+				view.ShowTextResult("CURRENCY POINT", currentUser.CurrencyPoint, currencyPercentage * 100);
+		}
 	}
 
 	public void ShowNextMenu()

@@ -40,8 +40,18 @@ public class ScoreManager : MonoSingleton<ScoreManager>
 
     public void AddCoin(int coin)
     {
-        AddCurrencyPoint(coin);
-        //userManager.currentUser.Coin += coin;
+        if (_hasUser)
+        {
+            if(GameManager.instance.currentScene == SCENE_TYPE.ISLAND_SCENE)
+                userManager.currentUser.Coin += GetBonusPointByType(coin);
+            else
+                userManager.currentUser.Coin += coin;
+
+            if (userManager.currentUser.Coin < 0)
+                userManager.currentUser.Coin = 0;
+        }
+
+        tempScore.coin += coin;
     }
 
     public void AddScore(int score)

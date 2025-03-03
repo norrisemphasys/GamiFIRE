@@ -73,7 +73,14 @@ public class CutsceneAnimation : MonoBehaviour
                 {
                     rectText.DOScaleY(0, 0.2f).OnComplete(()=> 
                     {
-                        textMessage.text = "Each choice you make will influence your path. Manage your time, money, and opportunities to thrive in this new academic adventure!";
+                        string text = "";
+
+                        if (islandType == JobType.STUDENT)
+                            text = "Academic Adventure!";
+                        else
+                            text = "Career Challenge!";
+
+                        textMessage.text = "Each choice you make will influence your path. Manage your time, money, and opportunities to thrive in this new " + text;
                         ShowText(false);
                     });
                 }, 4f);

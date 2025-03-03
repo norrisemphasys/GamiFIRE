@@ -16,23 +16,29 @@ MonoBehaviour:
   question: "You want to plan a family vacation on a limited budget. What\u2019s
     your strategy?"
   answerData:
-  - answer: I book early for discounts.
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 1
-  - answer: I choose a local destination to save money
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 2
-  - answer: "I plan a \u201Cstaycation\u201D with fun local activities."
-    growthPoint: 0
+  - answer: "I\u2019ll look for educational or cultural trips with free or discounted
+      entry to historical sites, museums, or nature reserves through EU programs
+      or local initiatives."
+    growthPoint: 4
     satisfactionPoint: 2
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I seek sponsorship deals or travel contests.
+    moneyCurrencyPoints: 3
+  - answer: "I\u2019ll plan a nearby getaway like camping or visiting family-friendly
+      destinations within my country to save on travel costs."
     growthPoint: 1
-    satisfactionPoint: 0
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2
+  - answer: "I\u2019ll use budget-friendly travel options like EU rail passes, low-cost
+      airlines, or home exchanges, and take advantage of off-season discounts or
+      cashback programs."
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
+  - answer: "I\u2019ll set up a vacation fund by selling unused items, doing short-term
+      freelance work, or using a savings challenge to save for the trip."
+    growthPoint: 3
+    satisfactionPoint: 1
     innovationPoint: 2
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 4

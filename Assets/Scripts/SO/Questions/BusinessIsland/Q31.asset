@@ -13,26 +13,35 @@ MonoBehaviour:
   m_Name: Q31
   m_EditorClassIdentifier: 
   questionTitle: Using a Credit Card
-  question: "You\u2019ve been offered a new credit card with rewards but also high-interest
-    rates. How do you use it?"
+  question: "ou\u2019ve been offered a new credit card with attractive cashback rewards
+    and travel benefits but also high annual fees and interest rates if not repaid
+    monthly. How do you manage it?"
   answerData:
-  - answer: I pay off the balance in full each month to avoid interest.
-    growthPoint: 2
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 1
-  - answer: I use it only for emergencies to avoid accumulating debt.
-    growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 2
-  - answer: I use it for rewards and plan to pay it off later.
-    growthPoint: 0
+  - answer: I use the credit card for business-related travel expenses, taking advantage
+      of insurance and purchase protection benefits, while improving my expense reporting
+      and financial planning skills.
+    growthPoint: 4
     satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
-  - answer: I rely on it for daily expenses and carry a balance.
-    growthPoint: -1
+    innovationPoint: 3
+    moneyCurrencyPoints: 1
+  - answer: I use the card occasionally for online purchases or secure transactions,
+      ensuring I repay the full balance monthly to avoid interest, enjoying the convenience
+      and buyer protection without financial stress.
+    growthPoint: 2
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 3
+  - answer: I link the credit card to budgeting and expense-tracking apps under PSD2
+      regulations, optimizing my spending for rewards while keeping real-time control
+      over my finances.
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: 4
+    moneyCurrencyPoints: 2
+  - answer: I strategically use the card for planned, high-cost purchases during
+      promotional periods to maximize cashback or travel rewards, ensuring I pay
+      the full balance within the grace period to avoid interest.
+    growthPoint: 3
     satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: -2
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

@@ -12,26 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q8
   m_EditorClassIdentifier: 
-  questionTitle: Managing Stress
-  question: You are feeling overwhelmed by the workload and need a break.
+  questionTitle: Rent vs Dorm
+  question: You need to decide whether to live in a shared apartment or a dormitory.
   answerData:
-  - answer: I take a day off to relax and recharge.
-    growthPoint: 0
+  - answer: I look for co-living or house-sharing to reduce costs.
+    growthPoint: 4
     satisfactionPoint: 3
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
-  - answer: I push through and complete the tasks.
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: I stay in a dorm for the lowest possible rent.
     growthPoint: 3
-    satisfactionPoint: -2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I practice mindfulness exercises daily.
-    growthPoint: 1
-    satisfactionPoint: 1
+    satisfactionPoint: 4
     innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I talk to a counselor about stress management.
+    moneyCurrencyPoints: 2
+  - answer: I choose the most comfortable option without worrying about cost.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I rent an apartment and budget accordingly.
     growthPoint: 1
     satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

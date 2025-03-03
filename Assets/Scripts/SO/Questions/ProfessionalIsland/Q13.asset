@@ -12,27 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q13
   m_EditorClassIdentifier: 
-  questionTitle: Mentoring junior professionals
-  question: 'You are approached to mentor a junior professional, which could enhance
-    your reputation but demands time. Do you:'
+  questionTitle: Saving for Retirement
+  question: "You\u2019re considering how to start saving for retirement. What\u2019s
+    your approach?"
   answerData:
-  - answer: Agree to mentor them fully, dedicating time from your business
+  - answer: Invest in career advancement opportunities, such as certifications or
+      skill development, to increase your earning potential, allowing you to contribute
+      more to your retirement savings over time.
+    growthPoint: 4
+    satisfactionPoint: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: 3
+  - answer: Create a balanced savings plan that allows you to contribute to retirement
+      while still enjoying life today, ensuring financial security without sacrificing
+      present happiness.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2
+  - answer: Use automated investing apps or robo-advisors to create a diversified
+      retirement portfolio, taking advantage of AI-driven strategies to maximize
+      long-term growth.
     growthPoint: 2
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: -2
-  - answer: Decline to focus on your priorities
-    growthPoint: 0
-    satisfactionPoint: -2
-    innovationPoint: 0
+    satisfactionPoint: 3
+    innovationPoint: 4
     moneyCurrencyPoints: 1
-  - answer: Set clear boundaries for mentoring sessions
-    growthPoint: -1
+  - answer: Start a side business or invest in passive income streams, such as rental
+      properties or dividend stocks, to build additional sources of income for retirement."
+    growthPoint: 3
     satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: Delay the decision until your schedule allows
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
+    innovationPoint: 1
+    moneyCurrencyPoints: 4

@@ -16,23 +16,27 @@ MonoBehaviour:
   question: "You\u2019re deciding whether to rent or buy a home in the next few years.
     What\u2019s your decision?"
   answerData:
-  - answer: I continue renting and invest savings for the future.
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 0
-    moneyCurrencyPoints: 2
-  - answer: I start saving for a down payment to buy a home.
-    growthPoint: 2
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I buy a home now because interest rates are low.
-    growthPoint: 1
+  - answer: I choose to rent in a city with strong career opportunities, allowing
+      flexibility for promotions, networking, or job prospects.
+    growthPoint: 4
     satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
-  - answer: I rent and focus on building a flexible lifestyle.
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
+    innovationPoint: 3
     moneyCurrencyPoints: 1
+  - answer: I decide to buy a home in a location where I feel a strong personal connection,
+      prioritizing stability and ownership.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 2
+    moneyCurrencyPoints: 3
+  - answer: I explore rent-to-own or co-housing options, combining the flexibility
+      of renting with the potential to invest in property gradually.
+    growthPoint: 3
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 2
+  - answer: I buy a property in an area with strong rental demand, living in part
+      of it and renting out the rest to generate passive income.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 1
+    moneyCurrencyPoints: 4

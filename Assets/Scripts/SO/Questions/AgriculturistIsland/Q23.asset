@@ -12,28 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q23
   m_EditorClassIdentifier: 
-  questionTitle: Loss on the Farm
-  question: You have finished the financial year with a loss on  the farm. As a result,
-    you are considering quitting  farming. However, the decision is difficult.  What
-    will you do?
+  questionTitle: Rebuilding Environmental Reputation
+  question: "Your company\u2019s reputation is affected by an environmental issue.
+    How do you react?"
   answerData:
-  - answer: I will quit farming and sell the farm.
-    growthPoint: 0
-    satisfactionPoint: -1
-    innovationPoint: 0
-    moneyCurrencyPoints: 2
-  - answer: I will review the causes of the financial loss.
-    growthPoint: 1
-    satisfactionPoint: 0
-    innovationPoint: 1
-    moneyCurrencyPoints: 0
-  - answer: I will continue farming, regardless of the loss.
-    growthPoint: 0
-    satisfactionPoint: 2
-    innovationPoint: 0
-    moneyCurrencyPoints: -1
-  - answer: I will offer an additional activity to generate extra income.
-    growthPoint: 1
-    satisfactionPoint: 0
+  - answer: I take an aggressive expansion approach with high investment.
+    growthPoint: 4
+    satisfactionPoint: 1
     innovationPoint: 2
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 3
+  - answer: I expand cautiously by testing the market before committing.
+    growthPoint: 3
+    satisfactionPoint: 2
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
+  - answer: I wait for more data before making a decision.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 1
+    moneyCurrencyPoints: 4
+  - answer: I avoid expansion to focus on maintaining current operations.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2

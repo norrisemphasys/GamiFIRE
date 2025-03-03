@@ -12,27 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q18
   m_EditorClassIdentifier: 
-  questionTitle: Online Marketing
-  question: You have the opportunity to sell products online,  but you have concerns
-    about secure transactions.  How will you decide?
+  questionTitle: Ensuring Sustainable Water Supply
+  question: "Your farm\u2019s water supply is becoming less reliable. How do you
+    ensure sustainability?"
   answerData:
-  - answer: I will not sell products online
-    growthPoint: -2
+  - answer: I take an aggressive expansion approach with high investment.
+    growthPoint: 4
     satisfactionPoint: 1
-    innovationPoint: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: 3
+  - answer: I expand cautiously by testing the market before committing.
+    growthPoint: 3
+    satisfactionPoint: 2
+    innovationPoint: 4
     moneyCurrencyPoints: 1
-  - answer: I will study online payment systems and then decide whether to sell online
+  - answer: I wait for more data before making a decision.
     growthPoint: 2
-    satisfactionPoint: 1
-    innovationPoint: 0
-    moneyCurrencyPoints: 0
-  - answer: I will hire a company to manage my online sales
-    growthPoint: 0
-    satisfactionPoint: 1
+    satisfactionPoint: 3
     innovationPoint: 1
-    moneyCurrencyPoints: -1
-  - answer: Selling online is safe, so there is no need for concerns
+    moneyCurrencyPoints: 4
+  - answer: I avoid expansion to focus on maintaining current operations.
     growthPoint: 1
-    satisfactionPoint: 1
-    innovationPoint: 1
-    moneyCurrencyPoints: -1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2

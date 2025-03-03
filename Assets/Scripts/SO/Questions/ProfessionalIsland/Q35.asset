@@ -12,26 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
   m_Name: Q35
   m_EditorClassIdentifier: 
-  questionTitle: Upgrading operations with technology
-  question: 'You consider upgrading your systems for efficiency. Do you:'
+  questionTitle: Renting vs. Buying a Home
+  question: "You\u2019re deciding whether to rent or buy a home in the next few years.
+    What\u2019s your decision?"
   answerData:
-  - answer: 'Invest in state-of-the-art tools despite high costs '
-    growthPoint: 0
-    satisfactionPoint: 0
+  - answer: Choose to rent in a city with strong career opportunities, giving you
+      the flexibility to relocate for promotions, networking, or new job prospects
+      without the commitment of property ownership.
+    growthPoint: 4
+    satisfactionPoint: 2
     innovationPoint: 3
-    moneyCurrencyPoints: -3
-  - answer: 'Choose affordable, basic upgrades for gradual improvement '
-    growthPoint: 0
-    satisfactionPoint: 0
-    innovationPoint: 2
-    moneyCurrencyPoints: -1
-  - answer: Stick with your current systems to maintain stability
-    growthPoint: 0
-    satisfactionPoint: 1
-    innovationPoint: 0
     moneyCurrencyPoints: 1
-  - answer: Trial new tools before committing fully
+  - answer: "Decide to buy a home in a location where you feel a strong personal
+      connection, prioritizing stability and the satisfaction of having a space that\u2019s
+      truly your own."
     growthPoint: 1
-    satisfactionPoint: 0
+    satisfactionPoint: 4
+    innovationPoint: 2
+    moneyCurrencyPoints: 3
+  - answer: Explore rent-to-own or co-housing options that combine the flexibility
+      of renting with the potential to invest in property gradually, reducing upfront
+      costs while building equity over time.
+    growthPoint: 3
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 2
+  - answer: Buy a property in an area with strong rental demand, allowing you to
+      live in part of it while renting out the rest to generate passive income and
+      offset mortgage costs.
+    growthPoint: 2
+    satisfactionPoint: 3
     innovationPoint: 1
-    moneyCurrencyPoints: 0
+    moneyCurrencyPoints: 4

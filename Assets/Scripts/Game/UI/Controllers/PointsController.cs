@@ -34,8 +34,20 @@ public class PointsController : BasicController
 
 	public override void Initialize()
 	{
-		view.ShowDescriptionPanel(false);
-		view.ShowPointsPanel(true);
+		if (gameManager.SelectedPointIndex >= 0)
+        {
+			OnClickPoints(gameManager.SelectedPointIndex);
+			view.buttonSelect.gameObject.SetActive(false);
+		}
+        else
+        {
+			view.ShowDescriptionPanel(false);
+			view.ShowPointsPanel(true);
+			view.buttonSelect.gameObject.SetActive(true);
+		}
+
+		Audio.PlayBGMStudentIsland();
+		Audio.PlayBGMSea();
 	}
 
 	public void ShowNextMenu()
@@ -63,16 +75,23 @@ public class PointsController : BasicController
 
 	void OnClickBack()
     {
-		view.ShowDescriptionPanel(false);
-		view.ShowPointsPanel(true);
+		if (gameManager.SelectedPointIndex >= 0)
+        {
+			OnClickDefault(UIState.ISLAND_MENU);
+		}
+        else
+        {
+			view.ShowDescriptionPanel(false);
+			view.ShowPointsPanel(true);
 
-		selectedIndex = -1;
+			selectedIndex = -1;
+		}
 	}
 
 	void OnClickSelect()
     {
 		// Selected point
-
+		gameManager.SelectedPointIndex = selectedIndex;
 		OnClickDefault(UIState.ISLAND_TUTORIAL_MENU);
     }
 
