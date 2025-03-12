@@ -13,6 +13,7 @@ public class IslandUIView : BasicView
     public Button buttonPause;
     public Button buttonStart;
     public Button buttonBuilding;
+    public Button buttonProfile;
 
     public Button[] buttonPoints;
 

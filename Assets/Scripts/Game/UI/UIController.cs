@@ -108,6 +108,8 @@ public class UIController : MonoBehaviour
                 case UIState.GENDER_MENU: GetContoller<GenderMenuController>(state).OnEnter(); break;
                 case UIState.JOB_MENU: GetContoller<JobMenuController>(state).OnEnter(); break;
                 case UIState.GAME_INTRO_MENU: GetContoller<GameIntroController>(state).OnEnter(); break;
+
+                case UIState.PROFILE_MENU: GetContoller<ProfileUIController>(state).OnEnter(); break;
             }   
         }
     }
@@ -157,6 +159,8 @@ public class UIController : MonoBehaviour
                 case UIState.GENDER_MENU: GetContoller<GenderMenuController>(state).OnExit(); break;
                 case UIState.JOB_MENU: GetContoller<JobMenuController>(state).OnExit(); break;
                 case UIState.GAME_INTRO_MENU: GetContoller<GameIntroController>(state).OnExit(); break;
+
+                case UIState.PROFILE_MENU: GetContoller<ProfileUIController>(state).OnExit(); break;
             }
         }
     }
@@ -215,6 +219,7 @@ public enum UIState
 
     POINTS_MENU,
     GAME_INTRO_MENU,
+    PROFILE_MENU,
 
     NONE
 }

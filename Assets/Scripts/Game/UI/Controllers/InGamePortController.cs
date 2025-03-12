@@ -47,17 +47,24 @@ public class InGamePortController : BasicController
 	void AddListener()
 	{
 		view.buttonInfo.onClick.AddListener(OnClickInfo);
+		view.buttonProfile.onClick.AddListener(OnClickProfile);
 	}
 
 	void RemoveListener()
 	{
 		view.buttonInfo.onClick.RemoveListener(OnClickInfo);
+		view.buttonProfile.onClick.RemoveListener(OnClickProfile);
 	}
 
 	void OnClickInfo()
     {
 		OnClickDefault(UIState.PORT_TUTORIAL_MENU);
     }
+
+	void OnClickProfile()
+    {
+		OnClickDefault(UIState.PROFILE_MENU);
+	}
 
 	private void OnDestroy()
 	{

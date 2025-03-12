@@ -8,6 +8,7 @@ using TMPro;
 public class InGamePortView : BasicView
 {
     public Button buttonInfo;
+    public Button buttonProfile;
 
     [SerializeField] Image profilePicture;
     [SerializeField] TextMeshProUGUI textCoin;
