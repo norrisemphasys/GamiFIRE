@@ -236,7 +236,8 @@ public class LoginController : BasicController
                 InnovationPoint = 0,
                 CurrencyPoint = 0,
                 SatisfactionPoint = 0,
-                Costume = ""
+                Costume = "",
+                HasBadge = false
             };
 
             UserManager.instance.SetCurrentUser(newUser);

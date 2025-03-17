@@ -37,6 +37,8 @@ public class ProfileUIController : BasicController
 		User currentUser = UserManager.instance.currentUser;
 		if (currentUser != null)
 			view.SetUser(currentUser);
+
+		ShowBadge();
 	}
 
 	public void ShowNextMenu()
@@ -66,6 +68,29 @@ public class ProfileUIController : BasicController
 				break;
 		}
 	}
+
+	void ShowBadge()
+    {
+		foreach(Transform t in view.badgeContent.transform)
+        {
+			if (t != view.badgeContent.transform)
+				GameObject.Destroy(t.gameObject);
+        }
+
+		for(int i = 0; i < BadgeManager.badgeList.Count; i++)
+        {
+			GameObject prefab = GameObject.Instantiate(view.prefabBadgeview);
+			prefab.SetActive(true);
+			prefab.transform.SetParent(view.badgeContent.transform);
+
+			prefab.transform.localPosition = Vector3.zero;
+			prefab.transform.localScale = Vector3.one;
+			prefab.transform.localRotation = Quaternion.identity;
+
+			BadgeListView bView = prefab.GetComponent<BadgeListView>();
+			bView.SetBadgeData(BadgeManager.badgeList[i]);
+        }
+    }
 
 	private void OnDestroy()
 	{

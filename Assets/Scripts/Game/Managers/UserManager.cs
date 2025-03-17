@@ -7,6 +7,9 @@ public class UserManager : MonoSingleton<UserManager>
 {
     private User _currentUser;
     public User currentUser { get { return _currentUser; } set { _currentUser = value; } }
+
+    public UserBadge userBadge { get; set; }
+
     public void SetCurrentUser(User user) 
     {
         if (user == null && _currentUser != null)
@@ -132,7 +135,8 @@ public class UserManager : MonoSingleton<UserManager>
                 InnovationPoint = 100,
                 CurrencyPoint = 100,
                 SatisfactionPoint = 100,
-                Costume = ""
+                Costume = "",
+                HasBadge = false
             };
 
             SetCurrentUser(newUser);

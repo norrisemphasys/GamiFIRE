@@ -168,7 +168,8 @@ public class LeaderboardController : BasicController
 				InnovationPoint = 100,
 				CurrencyPoint = 100,
 				SatisfactionPoint = 100,
-				Costume = ""
+				Costume = "",
+				HasBadge = false
 			};
 
 			userList.Add(newUser);

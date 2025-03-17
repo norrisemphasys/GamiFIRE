@@ -14,7 +14,12 @@ public static class GameConstants
     public static string SEND_PASSWORD_RESET_EMAIL_URL = "https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=";
     public static string CONFIRM_PASSWORD_RESET_URL = "https://identitytoolkit.googleapis.com/v1/accounts:resetPassword?key=";
 
-
     public static string USERS_DB_URL = DB_URL + "/users";
     public static string WEB_API_KEY = "AIzaSyD_mZ44fKkkFyhTkWR7XZf5WKBKZF-mK90";
+
+    public static string USERS_BADGE_URL = DB_URL + "/badges";
+
+    public static string BADGE_URL = "https://dcadmin.gear-up.nl";
+    public static string BADGE_TOKEN_URL = BADGE_URL + "/api/token";
+    public static string BADGE_CREDENTIAL_URL = BADGE_URL + "/api/create-credential";
 }

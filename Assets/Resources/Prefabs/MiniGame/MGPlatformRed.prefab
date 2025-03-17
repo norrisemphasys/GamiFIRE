@@ -202,6 +202,7 @@ MonoBehaviour:
   assets:
   - {fileID: 3104195366545661594}
   color: []
+  currentSpriteRenderer: {fileID: 0}
 --- !u!1 &6926279197257563989
 GameObject:
   m_ObjectHideFlags: 0

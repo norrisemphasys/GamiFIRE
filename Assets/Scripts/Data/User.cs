@@ -32,4 +32,6 @@ public class User
     public int SatisfactionPoint;
 
     public string Costume;
+
+    public bool HasBadge;
 }

@@ -13,6 +13,9 @@ public class DBManager : MonoSingleton<DBManager>
     private static string _localID;
 
     public static fsSerializer serializer = new fsSerializer();
+
+    #region OLD LOGIN IMPLEMENTATION
+
     public static void GetUserByObject(User user, UnityAction<User> callback = null)
     {
         RestClient.Get<User>(GameConstants.USERS_DB_URL + "/" + user.Username + ".json").Then(res =>
@@ -84,6 +87,8 @@ public class DBManager : MonoSingleton<DBManager>
         });
     }
 
+    #endregion
+
     #region USER AUTHENTICATION
     public static void AddEditUserLocalID(User user, UnityAction<User> callback = null)
     {
@@ -115,14 +120,7 @@ public class DBManager : MonoSingleton<DBManager>
     {
         RestClient.Get(GameConstants.USERS_DB_URL + ".json?auth=" + _idToken).Then(res =>
         {
-            // OLD IMPLEMENTATION - NOT WORKING IN WEBGL.
-
-            //fsData userData = fsJsonParser.Parse(res.Text);
-            //Dictionary<string, User> users = new Dictionary<string, User>();
-            //serializer.TryDeserialize(userData, ref users);
-
             Dictionary<string, User> users = JsonConvert.DeserializeObject<Dictionary<string, User>>(res.Text);
-
             Debug.Log("All users count " + users.Count);
             callback?.Invoke(users.Values.ToArray());
 
@@ -166,7 +164,8 @@ public class DBManager : MonoSingleton<DBManager>
                 InnovationPoint = 0,
                 CurrencyPoint = 0,
                 SatisfactionPoint = 0,
-                Costume = ""
+                Costume = "",
+                HasBadge = false
             };
 
             AddEditUserLocalID(newUser, callback);
@@ -242,6 +241,76 @@ public class DBManager : MonoSingleton<DBManager>
         RestClient.Post(GameConstants.CONFIRM_PASSWORD_RESET_URL + GameConstants.WEB_API_KEY, req).Then((res) =>
         {
             callback?.Invoke(res != null);
+        });
+    }
+
+    #endregion
+
+    #region BADGE INTEGRATION
+    public static void CreateUserBadge(UnityAction<UserBadge> callback = null)
+    {
+        UserBadge userBadge = new UserBadge
+        {
+            userID = BadgeManager.credentialRequest.userID,
+            templeteID = BadgeManager.credentialRequest.templeteID,
+            emailTempleteID = BadgeManager.credentialRequest.emailTempleteID,
+
+            badges = new Badge()
+        };
+
+        RestClient.Put<UserBadge>(GameConstants.USERS_BADGE_URL + "/" + userBadge.userID + ".json?auth=" + _idToken, userBadge).Then(res =>
+        {
+            if(res != null)
+            {
+                UserManager.instance.userBadge = res;
+                callback?.Invoke(res);
+
+                Debug.Log("User Badge Created");
+            }
+        })
+        .Catch(err =>
+        {
+            Debug.LogError("Error " + err.Message);
+            callback?.Invoke(null);
+        });
+    }
+
+    public static void GetAllUsersBadge(User user, UnityAction<bool> callback = null)
+    {
+        RestClient.Get(GameConstants.USERS_BADGE_URL + "/" + user.ID + "/badges" + ".json?auth=" + _idToken).Then(res =>
+        {
+            if (!string.IsNullOrEmpty(res.Text))
+            {
+                Dictionary<string, Badge> badges = JsonConvert.DeserializeObject<Dictionary<string, Badge>>(res.Text);
+
+                foreach (var badge in badges)
+                    BadgeManager.AddUserBadge(badge.Value);
+
+                callback?.Invoke(true);
+
+                Debug.Log("Get All Users Badge " + badges.Count);
+            }
+        }).Catch(err =>
+        {
+            Debug.Log("Error " + err.Message);
+            callback?.Invoke(false);
+        });
+    }
+
+    public static void AddNewBadge(string userID, Badge badge, UnityAction<bool> callback = null)
+    {
+        RestClient.Put<Badge>(GameConstants.USERS_BADGE_URL + "/" + userID + "/badges/" 
+            + badge.id + ".json?auth=" + _idToken, badge).Then(res =>
+        {
+            if (res != null)
+            {
+                callback?.Invoke(true);
+                Debug.Log("Added New Badge");
+            }
+        }).Catch(err =>
+        {
+            Debug.Log("Error " + err.Message);
+            callback?.Invoke(false);
         });
     }
 

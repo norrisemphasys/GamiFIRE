@@ -8,6 +8,8 @@ using TMPro;
 public class ProfileUIView : BasicView
 {
     public Button buttonClose;
+    public GameObject prefabBadgeview;
+    public RectTransform badgeContent;
 
     [SerializeField] TextMeshProUGUI textUserName;
     [SerializeField] TextMeshProUGUI textUserID;
@@ -17,7 +19,7 @@ public class ProfileUIView : BasicView
     [SerializeField] TextMeshProUGUI textScore;
     [SerializeField] TextMeshProUGUI textCoin;
 
-    [SerializeField] RectTransform badgeContent;
+
 
     [SerializeField] Image jobImage;
 

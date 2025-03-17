@@ -64,8 +64,32 @@ public class JobMenuController : BasicController
 			PopupManager.instance.ShowPopup(PopupMessage.OptionPopup("You have selected the Profession of " + UserManager.GetJobName(professionType), 
 				"OK", "Select Other Profession", ()=> 
 				{
-					LoadPortScene();
 					UserManager.instance.SetCurrentUser(res);
+					BadgeManager.CreateCredentialRequest(res);
+
+                    if (res.HasBadge) 
+					{
+						DBManager.GetAllUsersBadge(res, (success) => 
+						{
+							LoadPortScene();
+						});
+                    }
+                    else
+                    {
+						DBManager.CreateUserBadge((userbadge) =>
+						{
+							// Temporary getting of badge.
+							BadgeManager.GetBadge("");
+
+							if (!UserManager.instance.currentUser.HasBadge)
+								UserManager.instance.currentUser.HasBadge = true;
+
+							UserManager.instance.SaveUser(() => 
+							{
+								LoadPortScene();
+							});
+						});
+					}				
 				}));
 
 			LoadingManager.instance.ShowLoader(false);
