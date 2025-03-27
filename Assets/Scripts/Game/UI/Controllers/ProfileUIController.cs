@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ProfileUIController : BasicController
 {
 	private ProfileUIView view;
+
+	private List<BadgeListView> badgeListView = new List<BadgeListView>();
 	void Awake()
 	{
 		view = GetComponent<ProfileUIView>();
@@ -49,12 +52,20 @@ public class ProfileUIController : BasicController
 	void AddListener()
 	{
 		view.buttonClose.onClick.AddListener(OnClickClose);
+		view.buttonBadgeClose.onClick.AddListener(OnClickCloseBadge);
 	}
 
 	void RemoveListener()
 	{
 		view.buttonClose.onClick.RemoveListener(OnClickClose);
+		view.buttonBadgeClose.onClick.RemoveListener(OnClickCloseBadge);
 	}
+
+	void OnClickCloseBadge()
+    {
+		view.ShowBadgePopup(null, false);
+		view.buttonClaimLink.onClick.RemoveAllListeners();
+    }
 
 	void OnClickClose()
     {
@@ -71,7 +82,9 @@ public class ProfileUIController : BasicController
 
 	void ShowBadge()
     {
-		foreach(Transform t in view.badgeContent.transform)
+		badgeListView.Clear();
+
+		foreach (Transform t in view.badgeContent.transform)
         {
 			if (t != view.badgeContent.transform)
 				GameObject.Destroy(t.gameObject);
@@ -89,7 +102,20 @@ public class ProfileUIController : BasicController
 
 			BadgeListView bView = prefab.GetComponent<BadgeListView>();
 			bView.SetBadgeData(BadgeManager.badgeList[i]);
+
+			badgeListView.Add(bView);
+
+			AddButtonListener(i, prefab.GetComponent<Button>(), OnClickBadgeView);
         }
+    }
+
+	void OnClickBadgeView(int idx)
+    {
+		view.ShowBadgePopup(badgeListView[idx], true);
+		view.buttonClaimLink.onClick.AddListener(() => 
+		{
+			Application.OpenURL(BadgeManager.badgeList[idx].claimLink);
+		});
     }
 
 	private void OnDestroy()

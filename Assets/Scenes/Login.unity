@@ -3637,8 +3637,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -99.5}
-  m_SizeDelta: {x: 1126.35, y: 798}
+  m_AnchoredPosition: {x: 0, y: -21}
+  m_SizeDelta: {x: 1126.35, y: 723.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &244015083
 MonoBehaviour:
@@ -3660,7 +3660,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 79f69659ee2fa444b949372d1c0b9027, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b5928ab0296ff2148ac122df8550cac7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -24184,7 +24184,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Your mission is simple: collect coins, make wise financial choices, and
-    earn your badge as a <b>Finance Literacy \u2013 Gamifier Master!</b> But beware\u2014if
+    earn your badge as a <b>Finance Literacy \u2013 Gamifire Master!</b> But beware\u2014if
     you run out of coins, you\u2019ll have to rethink your strategy and try again.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e0962d31f1f084fa3ba7147d76f5b6e8, type: 2}

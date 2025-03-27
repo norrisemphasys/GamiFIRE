@@ -19,15 +19,25 @@ public class ProfileUIView : BasicView
     [SerializeField] TextMeshProUGUI textScore;
     [SerializeField] TextMeshProUGUI textCoin;
 
-
-
     [SerializeField] Image jobImage;
-
     [SerializeField] Sprite[] jobIcons;
+
+    [Header("Badge Popup View")]
+
+    public Button buttonBadgeClose;
+
+    [SerializeField] Image badgeIcon;
+    [SerializeField] TextMeshProUGUI textTitle;
+    [SerializeField] TextMeshProUGUI textDescription;
+    [SerializeField] Transform badgePopupMain;
+    [SerializeField] Transform badgePopup;
+
+    public Button buttonClaimLink;
 
     public void Init()
     {
-
+        badgePopupMain.gameObject.SetActive(false);
+        badgePopup.localScale = Vector3.zero;
     }
 
     public void SetUser(User user)
@@ -46,5 +56,28 @@ public class ProfileUIView : BasicView
         jobImage.sprite = jobIcons[idx];
 
         textJob.text = UserManager.GetJobName(job);
+    }
+
+    public void ShowBadgePopup(BadgeListView view, bool show)
+    {
+        if(show)
+        {
+            badgeIcon.sprite = view.sprite;
+            textTitle.text = view.title;
+            textDescription.text = view.description;
+
+            badgePopupMain.gameObject.SetActive(show);
+            badgePopup.DOScale(Vector3.one, 0.2f).OnComplete(() => 
+            {
+
+            });
+        }
+        else
+        {
+            badgePopup.DOScale(Vector3.zero, 0.2f).OnComplete(()=> 
+            {
+                badgePopupMain.gameObject.SetActive(show);
+            });
+        } 
     }
 }

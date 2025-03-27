@@ -41,7 +41,22 @@ public class BadgeManager : MonoSingleton<BadgeManager>
     public static void GetToken(UnityAction<string> callback = null)
     {
         string userData = "{\"email\": \"" + email + "\", \"password\" : \"" + password + "\"}";
-        RestClient.Post<Token>(GameConstants.BADGE_TOKEN_URL, userData).Then((res) => 
+
+       /* RequestHelper request = new RequestHelper
+        {
+            Uri = GameConstants.BADGE_TOKEN_URL,
+            Method = "POST",
+            Headers = new Dictionary<string, string> {
+                { "Access-Control-Allow-Origin", "*" },
+                { "Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers" },
+                { "Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT" }
+            },
+            BodyString = userData,
+            ContentType = "application/json"
+        };*/
+
+        RestClient.Post<Token>(GameConstants.BADGE_TOKEN_URL, userData).Then((res) =>
+        //RestClient.Post<Token>(request).Then((res) =>
         {
             if (res != null)
             { 
@@ -78,10 +93,13 @@ public class BadgeManager : MonoSingleton<BadgeManager>
             {
                 Uri = GameConstants.BADGE_CREDENTIAL_URL,
                 Method = "POST",
-                Headers = new Dictionary<string, string> {
-            {
-                "Authorization", $"Bearer {BadgeToken}"}
-            },
+                Headers = new Dictionary<string, string> 
+                {
+                    { "Authorization", $"Bearer {BadgeToken}" }//,
+                    /*{ "Access-Control-Allow-Origin", "*" },
+                    { "Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers" },
+                    { "Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT" }*/
+                },
                 BodyString = data,
                 ContentType = "application/json"
             };
@@ -94,6 +112,10 @@ public class BadgeManager : MonoSingleton<BadgeManager>
                     ["batch"]["template"]["credentialTemplateJson"]
                     ["credentialSubject"]["achievement"];
 
+                    var claimLink = JObject.Parse(res.Text)["claimLink"];
+
+                    Debug.Log(claimLink.ToString());
+
                     Achievement achievment = JsonConvert.DeserializeObject<Achievement>(achievement.ToString());
 
                     Badge newBadge = new Badge
@@ -102,7 +124,8 @@ public class BadgeManager : MonoSingleton<BadgeManager>
                         name = achievment.name,
                         imgURL = achievment.image.id,
                         criteria = achievment.criteria.narrative,
-                        description = achievment.description
+                        description = achievment.description,
+                        claimLink = claimLink.ToString()
                     };
 
                     if(!HasUserBadge(badgeID))

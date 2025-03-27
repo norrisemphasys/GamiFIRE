@@ -56,10 +56,10 @@ public class ResultController : BasicController
 			int totalAnsweredQuestion = gameManager.sceneController.QuestionCounter;
 			float totalPoints = totalAnsweredQuestion * 4;
 
-			float growthPercentage = currentUser.GrowthPoint / totalPoints;
-			float satisfactionPercentage = currentUser.SatisfactionPoint / totalPoints;
-			float innovationPercentage = currentUser.InnovationPoint / totalPoints;
-			float currencyPercentage = currentUser.CurrencyPoint / totalPoints;
+			float growthPercentage = Mathf.Clamp(currentUser.GrowthPoint, 0, totalPoints) / totalPoints;
+			float satisfactionPercentage = Mathf.Clamp(currentUser.SatisfactionPoint, 0, totalPoints) / totalPoints;
+			float innovationPercentage = Mathf.Clamp(currentUser.InnovationPoint, 0, totalPoints) / totalPoints;
+			float currencyPercentage = Mathf.Clamp(currentUser.CurrencyPoint, 0 , totalPoints) / totalPoints;
 
 			view.UpdateSliders(growthPercentage, satisfactionPercentage, 
 				innovationPercentage, currencyPercentage);

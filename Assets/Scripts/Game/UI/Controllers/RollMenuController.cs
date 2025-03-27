@@ -12,6 +12,8 @@ public class RollMenuController : BasicController
 	int miniGameCount = 0;
 	int spinnerCount = 0;
 
+	public List<float> diceProbability = new List<float>();
+
 	void Awake()
 	{
 		view = GetComponent<RollMenuView>();
@@ -84,6 +86,10 @@ public class RollMenuController : BasicController
 			view.ShowDiceFace(randIDX);
 			yield return new WaitForSeconds(easeTime);
         }
+
+		// Limit the percentage appearance of 5 and 6 to 10% and the rest to 20%.
+		randIDX = Utils.GetPrizeByProbability(diceProbability);
+		view.ShowDiceFace(randIDX);
 
 		int customIndex = RandomizeCustomIndex();
 		if (customIndex >= 0)

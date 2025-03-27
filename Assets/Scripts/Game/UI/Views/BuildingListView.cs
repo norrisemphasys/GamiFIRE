@@ -73,7 +73,7 @@ public class BuildingListView : MonoBehaviour
             else
             {
                 PopupManager.instance.ShowPopup(
-                    PopupMessage.InfoPopup("You don't have enough coins to Buy this item.", () =>
+                    PopupMessage.InfoPopup("You don't have enough coins to buy this item. Play more to unlock this building.", () =>
                     {
                        
                     })

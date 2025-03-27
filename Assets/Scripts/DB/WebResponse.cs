@@ -85,4 +85,6 @@ public class Badge
 
     public string criteria;
     public string description;
+
+    public string claimLink;
 }

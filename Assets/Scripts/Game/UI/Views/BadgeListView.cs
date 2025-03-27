@@ -12,18 +12,33 @@ public class BadgeListView : MonoBehaviour
     [SerializeField] TextMeshProUGUI textTitle;
     [SerializeField] TextMeshProUGUI textDescription;
 
+    public Sprite sprite { get { return icon.sprite; } }
+    public string title { get { return textTitle.text; } }
+    public string description { get { return textDescription.text; } }
+
     public void SetBadgeData(Badge badge)
     {
-        /* RestClient.Request(new RequestHelper { Uri = badge.imgURL, Method = "GET",
-             DefaultContentType = false
-         }).Then(res=> 
-         {
-             Texture2D texture = ((DownloadHandlerTexture)res.Request.downloadHandler).texture;
-             Sprite sprite = Sprite.Create(texture, new Rect(0, 0, 100, 100), new Vector2());
+       /* RestClient.Request(new RequestHelper
+        {
+            Uri = badge.imgURL,
+            Method = "GET",
+            Headers = new Dictionary<string, string> {
+            {
+                "Authorization", $"Bearer {BadgeManager.BadgeToken}"}
+            },
+            DownloadHandler = new DownloadHandlerFile(badge.imgURL),
+        }).Then(res =>
+        {
+            Texture2D texture = ((DownloadHandlerTexture)res.Request.downloadHandler).texture;
+            Sprite sprite = Sprite.Create(texture, new Rect(0, 0, 1024, 1024), new Vector2());
 
-             icon.sprite = sprite;
-             icon.preserveAspect = true;
-         });*/
+            icon.sprite = sprite;
+            icon.preserveAspect = true;
+        }).Catch(error =>
+        {
+            Debug.LogError(error);
+        });*/
+        GetComponent<Button>().enabled = false;
 
         StartCoroutine(DownloadTextureEnun(badge.imgURL));
 
@@ -34,6 +49,13 @@ public class BadgeListView : MonoBehaviour
     IEnumerator DownloadTextureEnun(string url)
     {
         UnityWebRequest www = UnityWebRequestTexture.GetTexture(url);
+
+       /* www.SetRequestHeader("Access-Control-Allow-Origin", "*");
+        www.SetRequestHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
+        www.SetRequestHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");*/
+
+        /*www.SetRequestHeader("Authorization", $"Bearer {BadgeManager.BadgeToken}");*/
+
         yield return www.SendWebRequest();
 
         if(www.result == UnityWebRequest.Result.Success)
@@ -43,6 +65,8 @@ public class BadgeListView : MonoBehaviour
 
             icon.sprite = sprite;
             icon.preserveAspect = true;
+
+            GetComponent<Button>().enabled = true;
         }
         else
         {

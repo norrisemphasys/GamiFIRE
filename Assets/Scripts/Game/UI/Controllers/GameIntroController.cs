@@ -35,8 +35,11 @@ public class GameIntroController : BasicController
 
 	public override void Initialize()
 	{
-		Audio.PlayBGMPort();
-		Audio.PlayBGMSea();
+		if (gameManager.currentScene == SCENE_TYPE.PORT_SCENE)
+        {
+			Audio.PlayBGMPort();
+			Audio.PlayBGMSea();
+		}
 
 		_maxStep = view.goTextInfo.Length;
 
