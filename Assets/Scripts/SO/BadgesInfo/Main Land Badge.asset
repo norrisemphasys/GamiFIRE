@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be376cb1abe3e8047aa1bddd145fa11e, type: 3}
+  m_Name: Main Land Badge
+  m_EditorClassIdentifier: 
+  badgeID: 66cdde692d72d391079b4faa
+  type: 0
+  icon: {fileID: 21300000, guid: aeb97cb47c531fc46abd65adc9f26a2c, type: 3}
+  title: Test Badge
+  description: This is a test badge sample desciption.
+  pointOfAttention: This is a test badge sample point of attention.
+  locked: 1

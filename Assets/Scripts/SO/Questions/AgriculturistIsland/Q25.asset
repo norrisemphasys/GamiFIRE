@@ -16,22 +16,22 @@ MonoBehaviour:
   question: You are considering outsourcing part of your production. How do you evaluate
     the risks?
   answerData:
-  - answer: I take an aggressive expansion approach with high investment.
+  - answer: Outsource to optimize production capacity and free resources for growth.
     growthPoint: 4
     satisfactionPoint: 1
     innovationPoint: 2
     moneyCurrencyPoints: 3
-  - answer: I expand cautiously by testing the market before committing.
+  - answer: Test outsourcing strategies on a small scale before full commitment.
     growthPoint: 3
     satisfactionPoint: 2
     innovationPoint: 4
     moneyCurrencyPoints: 1
-  - answer: I wait for more data before making a decision.
+  - answer: Delay outsourcing until risks and costs are fully assessed.
     growthPoint: 2
     satisfactionPoint: 3
     innovationPoint: 1
     moneyCurrencyPoints: 4
-  - answer: I avoid expansion to focus on maintaining current operations.
+  - answer: Maintain in-house production to ensure stability and control.
     growthPoint: 1
     satisfactionPoint: 4
     innovationPoint: 3

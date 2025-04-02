@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be376cb1abe3e8047aa1bddd145fa11e, type: 3}
+  m_Name: Growth Oriented Agriculturist
+  m_EditorClassIdentifier: 
+  badgeID: 
+  type: 2
+  icon: {fileID: 21300000, guid: 954fbc7b8fa50944b8359b1a6e8634ab, type: 3}
+  title: Growth Oriented Agriculturist
+  description: You earned this badge for showing long-term strategic thinking and
+    collaboration in developing your farm. It reflects your ambition and commitment
+    to personal and agricultural growth.
+  pointOfAttention: You might need to pay more attention to short-term needs or practicalities
+    that could impact immediate farm performance.
+  locked: 1

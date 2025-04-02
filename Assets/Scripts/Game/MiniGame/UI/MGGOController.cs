@@ -37,6 +37,8 @@ public class MGGOController : BasicController
 			Audio.StopBGMMGOne();
 		else if (type == MiniGameType.MG_TWO)
 			Audio.StopBGMMGTwo();
+		else if (type == MiniGameType.MG_THREE)
+			Audio.StopBGMMGThree();
 
 		if (gameManager.WinIslandMode)
         {

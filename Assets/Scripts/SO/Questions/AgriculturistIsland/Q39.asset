@@ -15,22 +15,26 @@ MonoBehaviour:
   questionTitle: Managing Large Credit Orders
   question: A major client requests a large order on credit. How do you respond?
   answerData:
-  - answer: I take an aggressive expansion approach with high investment.
+  - answer: Approve the large credit order to strengthen the client relationship
+      and foster long-term business.
     growthPoint: 4
     satisfactionPoint: 1
     innovationPoint: 2
     moneyCurrencyPoints: 3
-  - answer: I expand cautiously by testing the market before committing.
+  - answer: Offer partial credit while monitoring payment behavior before approving
+      larger amounts.
     growthPoint: 3
     satisfactionPoint: 2
     innovationPoint: 4
     moneyCurrencyPoints: 1
-  - answer: I wait for more data before making a decision.
+  - answer: Delay the decision to assess the financial risks associated with extending
+      credit.
     growthPoint: 2
     satisfactionPoint: 3
     innovationPoint: 1
     moneyCurrencyPoints: 4
-  - answer: I avoid expansion to focus on maintaining current operations.
+  - answer: Reject the request to maintain financial stability and reduce credit
+      risk.
     growthPoint: 1
     satisfactionPoint: 4
     innovationPoint: 3

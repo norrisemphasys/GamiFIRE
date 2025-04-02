@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be376cb1abe3e8047aa1bddd145fa11e, type: 3}
+  m_Name: Growth Oriented Student
+  m_EditorClassIdentifier: 
+  badgeID: 
+  type: 0
+  icon: {fileID: 21300000, guid: f251289ec8105b340a8a2fd4a9f4ba79, type: 3}
+  title: Growth Oriented Student
+  description: You received this badge for your commitment to personal and academic
+    development. It highlights your ambition, networking, and continuous learning.
+  pointOfAttention: Be mindful of burnout or spreading yourself too thin while trying
+    to grow in all directions.
+  locked: 1

@@ -167,8 +167,8 @@ public class BadgeManager : MonoSingleton<BadgeManager>
         CredentialPayload payload = new CredentialPayload();
 
         payload.credentialName = "Certification";
-        payload.earnerName = "affan";
-        payload.emailAddress = "affanashraf120@gmail.com";
+        payload.earnerName = user != null ? user.Username : "affan";
+        payload.emailAddress = user != null ? user.Email : "affanashraf120@gmail.com";
 
         credentialRequest.credentialPayload = payload;
     }

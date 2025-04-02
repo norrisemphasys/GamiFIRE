@@ -146,6 +146,11 @@ public static class Audio
         MundoSound.Play(AddressableManager.GetClip("BGMMGTwo"), bgmVolume, true);
     }
 
+    public static void PlayBGMMGThree()
+    {
+        MundoSound.Play(AddressableManager.GetClip("BGMMiniGame1"), bgmVolume, true);
+    }
+
     public static void PlaySFXMGCollect()
     {
         MundoSound.Play(AddressableManager.GetClip("SFXMGCollect"), sfxVolume);
@@ -212,6 +217,11 @@ public static class Audio
     public static void StopBGMMGTwo()
     {
         MundoSound.Stop("BGMMGTwo");
+    }
+
+    public static void StopBGMMGThree()
+    {
+        MundoSound.Stop("BGMMiniGame1");
     }
 
     public static void StopEngine()

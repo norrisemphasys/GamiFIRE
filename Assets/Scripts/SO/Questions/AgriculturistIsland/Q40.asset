@@ -16,22 +16,23 @@ MonoBehaviour:
   question: Your community expects corporate social responsibility initiatives. What
     do you prioritize?
   answerData:
-  - answer: I take an aggressive expansion approach with high investment.
+  - answer: Invest heavily in CSR initiatives to align with community expectations
+      and enhance brand reputation.
     growthPoint: 4
     satisfactionPoint: 1
     innovationPoint: 2
     moneyCurrencyPoints: 3
-  - answer: I expand cautiously by testing the market before committing.
+  - answer: Test smaller CSR programs before committing to long-term initiatives.
     growthPoint: 3
     satisfactionPoint: 2
     innovationPoint: 4
     moneyCurrencyPoints: 1
-  - answer: I wait for more data before making a decision.
+  - answer: Delay CSR efforts until financial resources are available.
     growthPoint: 2
     satisfactionPoint: 3
     innovationPoint: 1
     moneyCurrencyPoints: 4
-  - answer: I avoid expansion to focus on maintaining current operations.
+  - answer: Maintain current business operations without additional CSR involvement.
     growthPoint: 1
     satisfactionPoint: 4
     innovationPoint: 3

@@ -15,22 +15,22 @@ MonoBehaviour:
   questionTitle: Transitioning to Eco-Friendly Packaging
   question: You need to transition to more sustainable packaging. What is your plan?
   answerData:
-  - answer: I take an aggressive expansion approach with high investment.
+  - answer: Invest heavily in sustainable packaging to meet market demand and regulations.
     growthPoint: 4
     satisfactionPoint: 1
     innovationPoint: 2
     moneyCurrencyPoints: 3
-  - answer: I expand cautiously by testing the market before committing.
+  - answer: Test different packaging options before full implementation.
     growthPoint: 3
     satisfactionPoint: 2
     innovationPoint: 4
     moneyCurrencyPoints: 1
-  - answer: I wait for more data before making a decision.
+  - answer: Delay adoption to assess long-term financial impacts.
     growthPoint: 2
     satisfactionPoint: 3
     innovationPoint: 1
     moneyCurrencyPoints: 4
-  - answer: I avoid expansion to focus on maintaining current operations.
+  - answer: Maintain current packaging to avoid additional costs.
     growthPoint: 1
     satisfactionPoint: 4
     innovationPoint: 3

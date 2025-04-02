@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be376cb1abe3e8047aa1bddd145fa11e, type: 3}
+  m_Name: Satisfaction Focused Student
+  m_EditorClassIdentifier: 
+  badgeID: 
+  type: 0
+  icon: {fileID: 21300000, guid: f251289ec8105b340a8a2fd4a9f4ba79, type: 3}
+  title: Satisfaction Focused Student
+  description: This badge reflects your dedication to well-being and positive peer
+    relationships. You balanced academic duties with mental health and collaboration.
+  pointOfAttention: You may occasionally avoid challenging feedback or conflict in
+    group work to maintain harmony.
+  locked: 1

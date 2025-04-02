@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be376cb1abe3e8047aa1bddd145fa11e, type: 3}
+  m_Name: Growth Oriented Employee
+  m_EditorClassIdentifier: 
+  badgeID: 
+  type: 1
+  icon: {fileID: 21300000, guid: c655c4dda87f7e5418e107e66b79ab11, type: 3}
+  title: Growth Oriented Employee
+  description: This badge recognises your drive for continuous improvement and career
+    advancement. It reflects your networking ability, ambition, and learning mindset.
+  pointOfAttention: Your ambition might cause you to overcommit or overlook work-life
+    balance at times.
+  locked: 1

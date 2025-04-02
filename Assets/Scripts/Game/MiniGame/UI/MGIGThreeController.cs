@@ -43,6 +43,8 @@ public class MGIGThreeController : BasicController
 
 	public override void Initialize()
 	{
+		Audio.PlayBGMMGThree();
+		ScoreManager.instance.ResetTempScore();
 		uiController = gameManager.miniGameController.uiController;
 
 		_startState = true;

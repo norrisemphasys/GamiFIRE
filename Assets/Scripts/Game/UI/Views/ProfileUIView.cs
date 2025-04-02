@@ -32,6 +32,8 @@ public class ProfileUIView : BasicView
     [SerializeField] Transform badgePopupMain;
     [SerializeField] Transform badgePopup;
 
+    [SerializeField] GameObject iconLock;
+
     public Button buttonClaimLink;
 
     public void Init()
@@ -79,5 +81,11 @@ public class ProfileUIView : BasicView
                 badgePopupMain.gameObject.SetActive(show);
             });
         } 
+    }
+
+    public void ShowIfLock(bool islock)
+    {
+        iconLock.SetActive(islock);
+        buttonClaimLink.gameObject.SetActive(!islock);
     }
 }

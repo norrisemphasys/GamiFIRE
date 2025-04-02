@@ -15,22 +15,22 @@ MonoBehaviour:
   questionTitle: Adapting to Regulatory Changes
   question: Your industry is facing new regulations. How do you adapt?
   answerData:
-  - answer: I take an aggressive expansion approach with high investment.
+  - answer: Invest in compliance to ensure long-term business stability.
     growthPoint: 4
     satisfactionPoint: 1
     innovationPoint: 2
     moneyCurrencyPoints: 3
-  - answer: I expand cautiously by testing the market before committing.
+  - answer: Experiment with regulatory strategies before committing to changes.
     growthPoint: 3
     satisfactionPoint: 2
     innovationPoint: 4
     moneyCurrencyPoints: 1
-  - answer: I wait for more data before making a decision.
+  - answer: Delay compliance measures until more information is available.
     growthPoint: 2
     satisfactionPoint: 3
     innovationPoint: 1
     moneyCurrencyPoints: 4
-  - answer: I avoid expansion to focus on maintaining current operations.
+  - answer: Maintain current operations while monitoring regulatory developments.
     growthPoint: 1
     satisfactionPoint: 4
     innovationPoint: 3

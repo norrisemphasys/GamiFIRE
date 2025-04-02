@@ -16,22 +16,25 @@ MonoBehaviour:
   question: Your employees request a salary increase, but your budget is tight. What
     is your approach?
   answerData:
-  - answer: I take an aggressive expansion approach with high investment.
+  - answer: Increase salaries to boost productivity and retention despite financial
+      strain.
     growthPoint: 4
     satisfactionPoint: 1
     innovationPoint: 2
     moneyCurrencyPoints: 3
-  - answer: I expand cautiously by testing the market before committing.
+  - answer: Offer performance-based incentives to reward productivity while controlling
+      costs.
     growthPoint: 3
     satisfactionPoint: 2
     innovationPoint: 4
     moneyCurrencyPoints: 1
-  - answer: I wait for more data before making a decision.
+  - answer: Delay salary adjustments until the budget allows for sustainable increases.
     growthPoint: 2
     satisfactionPoint: 3
     innovationPoint: 1
     moneyCurrencyPoints: 4
-  - answer: I avoid expansion to focus on maintaining current operations.
+  - answer: Reject salary increases to preserve financial stability and maintain
+      existing policies.
     growthPoint: 1
     satisfactionPoint: 4
     innovationPoint: 3

@@ -16,22 +16,24 @@ MonoBehaviour:
   question: A major buyer is offering a long-term contract at lower prices. How do
     you respond?
   answerData:
-  - answer: I take an aggressive expansion approach with high investment.
+  - answer: Accept the contract for revenue stability, even at a lower price.
     growthPoint: 4
     satisfactionPoint: 1
     innovationPoint: 2
     moneyCurrencyPoints: 3
-  - answer: I expand cautiously by testing the market before committing.
+  - answer: Explore other buyers or pricing strategies before committing.
     growthPoint: 3
     satisfactionPoint: 2
     innovationPoint: 4
     moneyCurrencyPoints: 1
-  - answer: I wait for more data before making a decision.
+  - answer: Delay the decision to evaluate financial risks and better negotiation
+      terms.
     growthPoint: 2
     satisfactionPoint: 3
     innovationPoint: 1
     moneyCurrencyPoints: 4
-  - answer: I avoid expansion to focus on maintaining current operations.
+  - answer: Reject the contract to avoid long-term commitments with lower profit
+      margins.
     growthPoint: 1
     satisfactionPoint: 4
     innovationPoint: 3

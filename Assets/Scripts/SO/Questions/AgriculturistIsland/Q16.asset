@@ -16,22 +16,23 @@ MonoBehaviour:
   question: You must decide on a pricing strategy for a new product launch. What
     is your approach?
   answerData:
-  - answer: I take an aggressive expansion approach with high investment.
+  - answer: Set an aggressive pricing model to penetrate the market quickly and gain
+      customers.
     growthPoint: 4
     satisfactionPoint: 1
     innovationPoint: 2
     moneyCurrencyPoints: 3
-  - answer: I expand cautiously by testing the market before committing.
+  - answer: Test different pricing models to identify the most effective approach.
     growthPoint: 3
     satisfactionPoint: 2
     innovationPoint: 4
     moneyCurrencyPoints: 1
-  - answer: I wait for more data before making a decision.
+  - answer: Wait for more data before deciding on a final pricing strategy.
     growthPoint: 2
     satisfactionPoint: 3
     innovationPoint: 1
     moneyCurrencyPoints: 4
-  - answer: I avoid expansion to focus on maintaining current operations.
+  - answer: Maintain current pricing structures to avoid potential financial risks.
     growthPoint: 1
     satisfactionPoint: 4
     innovationPoint: 3

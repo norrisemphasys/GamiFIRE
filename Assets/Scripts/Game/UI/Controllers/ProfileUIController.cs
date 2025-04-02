@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class ProfileUIController : BasicController
 {
-	private ProfileUIView view;
+	public BadgeInfoSO[] badgeInfos;
 
+	private ProfileUIView view;
 	private List<BadgeListView> badgeListView = new List<BadgeListView>();
+
 	void Awake()
 	{
 		view = GetComponent<ProfileUIView>();
@@ -82,7 +84,7 @@ public class ProfileUIController : BasicController
 
 	void ShowBadge()
     {
-		badgeListView.Clear();
+		/*badgeListView.Clear();
 
 		foreach (Transform t in view.badgeContent.transform)
         {
@@ -106,17 +108,73 @@ public class ProfileUIController : BasicController
 			badgeListView.Add(bView);
 
 			AddButtonListener(i, prefab.GetComponent<Button>(), OnClickBadgeView);
-        }
+        }*/
+
+		badgeListView.Clear();
+
+		foreach (Transform t in view.badgeContent.transform)
+		{
+			if (t != view.badgeContent.transform)
+				GameObject.Destroy(t.gameObject);
+		}
+
+		for (int i = 0; i < badgeInfos.Length; i++)
+        {
+			GameObject prefab = GameObject.Instantiate(view.prefabBadgeview);
+			prefab.SetActive(true);
+			prefab.transform.SetParent(view.badgeContent.transform);
+
+			prefab.transform.localPosition = Vector3.zero;
+			prefab.transform.localScale = Vector3.one;
+			prefab.transform.localRotation = Quaternion.identity;
+
+			BadgeListView bView = prefab.GetComponent<BadgeListView>();
+			badgeListView.Add(bView);
+
+			BadgeInfoSO info = badgeInfos[i];
+
+			bool hasID = BadgeManager.badgeList.ContainsProperty(p => p.id, info.badgeID);
+			info.locked = !hasID;
+
+			bView.SetBadgeData(info);
+
+			AddButtonListener(i, prefab.GetComponent<Button>(), OnClickBadgeView);
+		}
     }
 
 	void OnClickBadgeView(int idx)
     {
+		BadgeInfoSO info = badgeInfos[idx];
+
 		view.ShowBadgePopup(badgeListView[idx], true);
-		view.buttonClaimLink.onClick.AddListener(() => 
-		{
-			Application.OpenURL(BadgeManager.badgeList[idx].claimLink);
-		});
-    }
+		view.ShowIfLock(info.locked);
+
+		if(!info.locked)
+        {
+			view.buttonClaimLink.onClick.AddListener(() =>
+			{
+				Application.OpenURL(BadgeManager.badgeList[idx].claimLink);
+			});
+		}
+
+		/*if (info.locked)
+        {
+			PopupManager.instance.ShowPopup(
+				PopupMessage.InfoPopup("This badge is still lock. Play more to unlock this badge.", () =>
+				{
+
+				})
+			);
+		}
+        else
+        {
+			view.ShowBadgePopup(badgeListView[idx], true);
+			view.buttonClaimLink.onClick.AddListener(() =>
+			{
+				Application.OpenURL(BadgeManager.badgeList[idx].claimLink);
+			});
+		}*/
+	}
 
 	private void OnDestroy()
 	{

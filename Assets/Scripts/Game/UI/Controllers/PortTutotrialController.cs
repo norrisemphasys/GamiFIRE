@@ -34,7 +34,7 @@ public class PortTutotrialController : BasicController
 
 	public override void Initialize()
 	{
-
+		_currentIndex = 0;
 		_maxStep = view.goTextInfo.Length;
 
 		UpdateTutorial();

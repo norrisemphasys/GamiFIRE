@@ -12,9 +12,25 @@ public class BadgeListView : MonoBehaviour
     [SerializeField] TextMeshProUGUI textTitle;
     [SerializeField] TextMeshProUGUI textDescription;
 
+    [SerializeField] GameObject lockedGO;
+
     public Sprite sprite { get { return icon.sprite; } }
     public string title { get { return textTitle.text; } }
-    public string description { get { return textDescription.text; } }
+    public string description { get { return content; } }
+
+    private string content;
+
+    public void SetBadgeData(BadgeInfoSO info)
+    {
+        textTitle.text = info.title;
+        textDescription.text = info.description;
+
+        content = info.description + "\n\n" + "<b>Point of Attention : </b>" + info.pointOfAttention;
+
+        icon.sprite = info.icon;
+
+        lockedGO.SetActive(info.locked);
+    }
 
     public void SetBadgeData(Badge badge)
     {
@@ -61,7 +77,7 @@ public class BadgeListView : MonoBehaviour
         if(www.result == UnityWebRequest.Result.Success)
         {
             Texture2D texture = ((DownloadHandlerTexture)www.downloadHandler).texture;
-            Sprite sprite = Sprite.Create(texture, new Rect(0, 0, 1024, 1024), new Vector2(0.5f, 0.5f));
+            Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
 
             icon.sprite = sprite;
             icon.preserveAspect = true;

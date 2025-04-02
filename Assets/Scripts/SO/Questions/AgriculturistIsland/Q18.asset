@@ -16,22 +16,22 @@ MonoBehaviour:
   question: "Your farm\u2019s water supply is becoming less reliable. How do you
     ensure sustainability?"
   answerData:
-  - answer: I take an aggressive expansion approach with high investment.
+  - answer: Invest in water management infrastructure to secure long-term sustainability.
     growthPoint: 4
     satisfactionPoint: 1
     innovationPoint: 2
     moneyCurrencyPoints: 3
-  - answer: I expand cautiously by testing the market before committing.
+  - answer: Test cost-effective sustainable water solutions before committing resources.
     growthPoint: 3
     satisfactionPoint: 2
     innovationPoint: 4
     moneyCurrencyPoints: 1
-  - answer: I wait for more data before making a decision.
+  - answer: Delay action to assess the best long-term water management strategy.
     growthPoint: 2
     satisfactionPoint: 3
     innovationPoint: 1
     moneyCurrencyPoints: 4
-  - answer: I avoid expansion to focus on maintaining current operations.
+  - answer: Maintain current water use practices to avoid additional costs.
     growthPoint: 1
     satisfactionPoint: 4
     innovationPoint: 3

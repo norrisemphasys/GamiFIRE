@@ -15,22 +15,22 @@ MonoBehaviour:
   questionTitle: Product Line Diversification
   question: You have an option to diversify into a new product line. How do you decide?
   answerData:
-  - answer: I take an aggressive expansion approach with high investment.
+  - answer: Expand into the new product line to maximize growth opportunities.
     growthPoint: 4
     satisfactionPoint: 1
     innovationPoint: 2
     moneyCurrencyPoints: 3
-  - answer: I expand cautiously by testing the market before committing.
+  - answer: Test the market before fully committing to diversification.
     growthPoint: 3
     satisfactionPoint: 2
     innovationPoint: 4
     moneyCurrencyPoints: 1
-  - answer: I wait for more data before making a decision.
+  - answer: Delay diversification to ensure financial stability before expanding.
     growthPoint: 2
     satisfactionPoint: 3
     innovationPoint: 1
     moneyCurrencyPoints: 4
-  - answer: I avoid expansion to focus on maintaining current operations.
+  - answer: Maintain current product offerings to minimize risk.
     growthPoint: 1
     satisfactionPoint: 4
     innovationPoint: 3

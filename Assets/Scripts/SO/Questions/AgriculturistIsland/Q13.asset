@@ -16,22 +16,23 @@ MonoBehaviour:
   question: You need to cut costs without sacrificing quality. What strategy do you
     choose?
   answerData:
-  - answer: I take an aggressive expansion approach with high investment.
+  - answer: Invest in cost-saving technologies or processes that maintain quality
+      and reduce expenses.
     growthPoint: 4
     satisfactionPoint: 1
     innovationPoint: 2
     moneyCurrencyPoints: 3
-  - answer: I expand cautiously by testing the market before committing.
+  - answer: Test cost-cutting strategies before fully committing to ensure efficiency.
     growthPoint: 3
     satisfactionPoint: 2
     innovationPoint: 4
     moneyCurrencyPoints: 1
-  - answer: I wait for more data before making a decision.
+  - answer: Delay decisions to assess long-term impacts before making financial commitments.
     growthPoint: 2
     satisfactionPoint: 3
     innovationPoint: 1
     moneyCurrencyPoints: 4
-  - answer: I avoid expansion to focus on maintaining current operations.
+  - answer: Maintain current operations to ensure stability and avoid financial risks.
     growthPoint: 1
     satisfactionPoint: 4
     innovationPoint: 3
