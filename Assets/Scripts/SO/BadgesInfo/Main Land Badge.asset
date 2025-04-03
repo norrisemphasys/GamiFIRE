@@ -12,10 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be376cb1abe3e8047aa1bddd145fa11e, type: 3}
   m_Name: Main Land Badge
   m_EditorClassIdentifier: 
-  badgeID: 66cdde692d72d391079b4faa
+  badgeID: 67ed253c4dc5c989a8cf5cf5
   type: 0
   icon: {fileID: 21300000, guid: aeb97cb47c531fc46abd65adc9f26a2c, type: 3}
-  title: Test Badge
-  description: This is a test badge sample desciption.
-  pointOfAttention: This is a test badge sample point of attention.
+  title: 'Mainland Badge: "Island Explorer"'
+  description: The "Island Explorer" badge represents the learner's foundational
+    journey into financial literacy. As the starting point in the GAMI.FI.RE. experience,
+    it introduces students to core financial concepts through interactive gameplay.
+    This badge marks the beginning of their exploration across different roles and
+    financial scenarios, equipping them with essential terms and basic budgeting
+    strategies.
+  pointOfAttention: "Make sure students don't skip this stage\u2014it's designed
+    to ensure they have a solid grounding in basic financial vocabulary and gameplay
+    mechanics before they explore more advanced scenarios. Pay attention to their
+    understanding of savings, income, expenses, and goal-setting as these concepts
+    are key to success in the role-specific islands."
   locked: 1

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be376cb1abe3e8047aa1bddd145fa11e, type: 3}
   m_Name: Satisfaction Focused Employee
   m_EditorClassIdentifier: 
-  badgeID: 
+  badgeID: 67ed2f014dc5c989a8cf5da9
   type: 1
   icon: {fileID: 21300000, guid: c655c4dda87f7e5418e107e66b79ab11, type: 3}
   title: Satisfaction Focused Employee

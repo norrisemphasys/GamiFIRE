@@ -79,7 +79,7 @@ public class JobMenuController : BasicController
 						DBManager.CreateUserBadge((userbadge) =>
 						{
 							// Temporary getting of badge.
-							BadgeManager.GetBadge("");
+							// BadgeManager.GetBadge("");
 
 							if (!UserManager.instance.currentUser.HasBadge)
 								UserManager.instance.currentUser.HasBadge = true;

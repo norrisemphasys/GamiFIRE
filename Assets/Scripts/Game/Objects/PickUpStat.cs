@@ -83,21 +83,21 @@ public class PickUpStat : MonoBehaviour
     {
         ScoreManager.instance.AddScore(1);
 
-       /* switch (type)
+        switch (type)
         {
             case PickUpType.GROWTH:
-                ScoreManager.instance.AddGrowthPoint(1);
+                ScoreManager.instance.AddGrowthPoint(1, false);
                 break;
             case PickUpType.INNOVATION:
-                ScoreManager.instance.AddInnovationPoint(1);
+                ScoreManager.instance.AddInnovationPoint(1, false);
                 break;
             case PickUpType.SATISFACTION:
-                ScoreManager.instance.AddSatisfactionPoint(1);
+                ScoreManager.instance.AddSatisfactionPoint(1, false);
                 break;
             case PickUpType.COIN:
-                ScoreManager.instance.AddCurrencyPoint(1);
+                ScoreManager.instance.AddCurrencyPoint(1, false);
                 break;
-        }*/
+        }
 
         ShowPlusOneEffect();
     }

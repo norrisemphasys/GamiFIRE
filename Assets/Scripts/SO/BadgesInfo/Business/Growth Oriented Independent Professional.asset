@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be376cb1abe3e8047aa1bddd145fa11e, type: 3}
   m_Name: Growth Oriented Independent Professional
   m_EditorClassIdentifier: 
-  badgeID: 
+  badgeID: 67ed33cc4dc5c989a8cf5e39
   type: 3
   icon: {fileID: 21300000, guid: 982be932f21b2b742a9d63714589fa60, type: 3}
   title: Growth Oriented Independent Professional

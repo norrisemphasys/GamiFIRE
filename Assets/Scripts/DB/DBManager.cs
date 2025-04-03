@@ -281,6 +281,8 @@ public class DBManager : MonoSingleton<DBManager>
         {
             if (!string.IsNullOrEmpty(res.Text))
             {
+                BadgeManager.ClearUsersBadge();
+
                 Dictionary<string, Badge> badges = JsonConvert.DeserializeObject<Dictionary<string, Badge>>(res.Text);
 
                 foreach (var badge in badges)

@@ -52,6 +52,7 @@ public class MGGOController : BasicController
 		}
 
 		view.UpdateUserPoints(ScoreManager.instance.tempScore);
+		ScoreManager.instance.ResetTempScore();
 
 		Cursor.visible = true;
 	}

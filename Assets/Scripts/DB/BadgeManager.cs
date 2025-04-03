@@ -23,6 +23,11 @@ public class BadgeManager : MonoSingleton<BadgeManager>
             badgeList.Add(badge);
     }
 
+    public static void ClearUsersBadge()
+    {
+        badgeList.Clear();
+    }
+
     public static bool HasUserBadge(string badgeID)
     {
         for (int i = 0; i < badgeList.Count; i++)
@@ -42,21 +47,7 @@ public class BadgeManager : MonoSingleton<BadgeManager>
     {
         string userData = "{\"email\": \"" + email + "\", \"password\" : \"" + password + "\"}";
 
-       /* RequestHelper request = new RequestHelper
-        {
-            Uri = GameConstants.BADGE_TOKEN_URL,
-            Method = "POST",
-            Headers = new Dictionary<string, string> {
-                { "Access-Control-Allow-Origin", "*" },
-                { "Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers" },
-                { "Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT" }
-            },
-            BodyString = userData,
-            ContentType = "application/json"
-        };*/
-
         RestClient.Post<Token>(GameConstants.BADGE_TOKEN_URL, userData).Then((res) =>
-        //RestClient.Post<Token>(request).Then((res) =>
         {
             if (res != null)
             { 
@@ -73,16 +64,16 @@ public class BadgeManager : MonoSingleton<BadgeManager>
         });
     }
 
-    public static void GetBadge(string badgeID)
+    public static void GetBadge(string badgeID, UnityAction<bool> callback = null)
     {
         try
         {
             if (credentialRequest != null)
-                credentialRequest.badgeID = "66cdde692d72d391079b4faa";//badgeID;
+                credentialRequest.badgeID =  string.IsNullOrEmpty(badgeID) ? "66cdde692d72d391079b4faa" : badgeID;
             else
             {
                 CreateCredentialRequest(UserManager.instance.currentUser);
-                credentialRequest.badgeID = "66cdde692d72d391079b4faa";
+                credentialRequest.badgeID = string.IsNullOrEmpty(badgeID) ? "66cdde692d72d391079b4faa" : badgeID;
             }
                 
             string data = JsonConvert.SerializeObject(credentialRequest);
@@ -95,10 +86,7 @@ public class BadgeManager : MonoSingleton<BadgeManager>
                 Method = "POST",
                 Headers = new Dictionary<string, string> 
                 {
-                    { "Authorization", $"Bearer {BadgeToken}" }//,
-                    /*{ "Access-Control-Allow-Origin", "*" },
-                    { "Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers" },
-                    { "Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT" }*/
+                    { "Authorization", $"Bearer {BadgeToken}" }
                 },
                 BodyString = data,
                 ContentType = "application/json"
@@ -137,6 +125,8 @@ public class BadgeManager : MonoSingleton<BadgeManager>
                                 AddUserBadge(newBadge);
 
                             Debug.Log("Successfully added badge " + sucess);
+
+                            callback?.Invoke(sucess);
                         });
                     } 
                 }
@@ -144,11 +134,13 @@ public class BadgeManager : MonoSingleton<BadgeManager>
             .Catch(error =>
             {
                 Debug.LogError(error);
+                callback?.Invoke(false);
             });
         }
         catch
         {
             Debug.LogError("Error Getting Badge");
+            callback?.Invoke(false);
         }
     }
 

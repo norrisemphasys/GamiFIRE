@@ -62,9 +62,9 @@ public class ScoreManager : MonoSingleton<ScoreManager>
         tempScore.score += score;
     }
 
-    public void AddGrowthPoint(int point)
+    public void AddGrowthPoint(int point, bool save = true)
     {
-        if(_hasUser)
+        if(_hasUser && save)
         {
             userManager.currentUser.GrowthPoint += GetBonusPointByType(point);
 
@@ -75,9 +75,9 @@ public class ScoreManager : MonoSingleton<ScoreManager>
         tempScore.growthPoint += point;
     }
 
-    public void AddInnovationPoint(int point)
+    public void AddInnovationPoint(int point, bool save = true)
     {
-        if (_hasUser)
+        if (_hasUser && save)
         {
             userManager.currentUser.InnovationPoint += GetBonusPointByType(point);
 
@@ -88,9 +88,9 @@ public class ScoreManager : MonoSingleton<ScoreManager>
         tempScore.innovationPoint += point;
     }
 
-    public void AddCurrencyPoint(int point)
+    public void AddCurrencyPoint(int point, bool save = true)
     {
-        if (_hasUser)
+        if (_hasUser && save)
         {
             userManager.currentUser.CurrencyPoint += GetBonusPointByType(point);
 
@@ -101,9 +101,9 @@ public class ScoreManager : MonoSingleton<ScoreManager>
         tempScore.coin += point;
     }
 
-    public void AddSatisfactionPoint(int point)
+    public void AddSatisfactionPoint(int point, bool save = true)
     {
-        if (_hasUser)
+        if (_hasUser && save)
         {
             userManager.currentUser.SatisfactionPoint += GetBonusPointByType(point);
 

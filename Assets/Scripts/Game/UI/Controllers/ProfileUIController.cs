@@ -149,11 +149,13 @@ public class ProfileUIController : BasicController
 		view.ShowBadgePopup(badgeListView[idx], true);
 		view.ShowIfLock(info.locked);
 
-		if(!info.locked)
+		int index = BadgeManager.badgeList.FindIndex(x => x.id == info.badgeID);
+
+		if (!info.locked)
         {
 			view.buttonClaimLink.onClick.AddListener(() =>
 			{
-				Application.OpenURL(BadgeManager.badgeList[idx].claimLink);
+				Application.OpenURL(BadgeManager.badgeList[index].claimLink);
 			});
 		}
 

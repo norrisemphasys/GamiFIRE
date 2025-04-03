@@ -118,7 +118,7 @@ public class MGThree : MiniGame
 
                 player.transformFollow = null;
 
-                if(_moveLimitCount > _maxMoveLimit)
+                if (_moveLimitCount > _maxMoveLimit)
                 {
                     roadController.MoveRoad(1);
                     roadController.SpawnRoad();
@@ -140,8 +140,8 @@ public class MGThree : MiniGame
             case Direction.DOWN:
 
                 player.transformFollow = null;
-               
-                if(_moveLimitCount > _maxMoveLimit)
+
+                if (_moveLimitCount > _maxMoveLimit)
                     roadController.MoveRoad(-1);
                 else
                     playerPos.y -= moveOffset;
