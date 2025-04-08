@@ -67,7 +67,32 @@ public class GameManager : MonoSingleton<GameManager>
     public SCENE_TYPE currentScene { get { return _currentScene; } set { _currentScene = value; } }
 
     public int SelectedPointIndex { get; set; }
-    
+
+    bool volumePopupShowing = false;
+
+    private void Update()
+    {
+        if(Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.V) && !volumePopupShowing)
+        {
+            PopupManager.instance.ShowPopup(PopupMessage.VolumePopup("Press the button below to turn on or off the volume.", 
+                () =>
+                {
+                    // Click Volume Off
+                    MundoSound.ToggleVolume(false);
+                    volumePopupShowing = false;
+                }, 
+                ()=> 
+                {
+                    // Click Volume On
+                    MundoSound.ToggleVolume(true);
+                    volumePopupShowing = false;
+                })
+            );
+
+            volumePopupShowing = true;
+        }
+    }
+
 }
 
 

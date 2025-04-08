@@ -17,30 +17,26 @@ MonoBehaviour:
     standards. Negotiating might improve it, but you worry about risking the opportunity.
     How do you handle this?"
   answerData:
-  - answer: I discuss the offer, emphasizing my enthusiasm for the role and propose
-      a counteroffer based on my research of industry standards.
+  - answer: I express enthusiasm, discuss the offer, and propose a counteroffer based
+      on industry standards.
     growthPoint: 4
     satisfactionPoint: 2
     innovationPoint: 1
     moneyCurrencyPoints: 3
-  - answer: I accept the salary as is but ask for additional benefits such as flexible
-      hours, professional development opportunities, or performance-based reviews
-      to ensure future growth and satisfaction in the role.
+  - answer: I accept the salary but request additional benefits like flexible hours
+      or professional development.
     growthPoint: 2
     satisfactionPoint: 4
     innovationPoint: 3
     moneyCurrencyPoints: 1
-  - answer: I ropose a performance-based salary adjustment plan. Suggest starting
-      at the offered salary but with a clear timeline (e.g., 6 months) for a review
-      based on my contributions, demonstrating my willingness to prove my worth before
-      renegotiating.
+  - answer: I suggest a performance-based salary review after a set period to prove
+      my value.
     growthPoint: 1
     satisfactionPoint: 3
     innovationPoint: 4
     moneyCurrencyPoints: 2
-  - answer: I highlight my skills and accomplishments in the interview, comparing
-      them with industry benchmarks, and firmly but respectfully negotiate for a
-      salary closer to the market rate, emphasizing the value you bring to the company.
+  - answer: I highlight my skills, compare with industry benchmarks, and negotiate
+      for a market-rate salary.
     growthPoint: 3
     satisfactionPoint: 1
     innovationPoint: 2

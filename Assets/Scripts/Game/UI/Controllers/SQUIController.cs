@@ -66,6 +66,7 @@ public class SQUIController : BasicController
 
 		view.buttonCollect.onClick.AddListener(OnClickContinue);
 		view.buttonInfo.onClick.AddListener(OnClickInfo);
+		view.buttonPointInfo.onClick.AddListener(OnClickPointInfo);
 	}
 
 	void RemoveListener()
@@ -75,12 +76,18 @@ public class SQUIController : BasicController
 
 		view.buttonCollect.onClick.RemoveListener(OnClickContinue);
 		view.buttonInfo.onClick.RemoveListener(OnClickInfo);
+		view.buttonPointInfo.onClick.RemoveListener(OnClickPointInfo);
 	}
 
 	void OnClickInfo()
     {
 		gameManager.uiController.Show(UIState.GAMEINFO_MENU);
     }
+
+	void OnClickPointInfo()
+    {
+		gameManager.uiController.Show(UIState.POINTS_MENU);
+	}
 
 	void OnClickAnswer(int idx)
     {

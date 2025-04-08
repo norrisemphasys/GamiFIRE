@@ -16,32 +16,26 @@ MonoBehaviour:
   question: " Your company is experiencing financial difficulties and announces temporary
     pay cuts. You need to adapt your budget. What\u2019s your response?"
   answerData:
-  - answer: Use this period to reassess your career goals and invest in free or low-cost
-      professional development opportunities. Focus on skills that could position
-      you for promotions or better roles once the company's financial situation improves.
+  - answer: I reassess my career goals and invest in free or low-cost skill development
+      for future growth.
     growthPoint: 4
     satisfactionPoint: 1
     innovationPoint: 3
     moneyCurrencyPoints: 2
-  - answer: Adjust your budget by cutting non-essential expenses (e.g., dining out,
-      entertainment) but maintain spending on activities or items that bring you
-      personal satisfaction, like hobbies or fitness, to stay motivated during this
-      challenging time.
+  - answer: I cut non-essential expenses but maintain hobbies or fitness to stay
+      motivated.
     growthPoint: 3
     satisfactionPoint: 4
     innovationPoint: 2
     moneyCurrencyPoints: 1
-  - answer: Explore creative ways to supplement your income, such as freelancing,
-      selling unused items, or participating in the gig economy. At the same time,
-      propose cost-saving measures or process improvements at work to showcase your
-      value to the company.
+  - answer: I explore side income options while proposing cost-saving measures at
+      work.
     growthPoint: 1
     satisfactionPoint: 2
     innovationPoint: 4
     moneyCurrencyPoints: 3
-  - answer: Prioritize essential expenses like rent, utilities, and groceries by
-      creating a strict budget. Look into government subsidies, tax relief programs,
-      or side income opportunities that could temporarily offset the pay cut.
+  - answer: I prioritize essentials with a strict budget and seek financial support
+      or side income.
     growthPoint: 2
     satisfactionPoint: 3
     innovationPoint: 1

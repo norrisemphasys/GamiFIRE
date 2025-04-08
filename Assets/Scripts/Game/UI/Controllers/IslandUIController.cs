@@ -132,7 +132,9 @@ public class IslandUIController : BasicController
 		if (currentUser != null)
 		{
 			int lowestPrice = gameManager.sceneController.environmentController.GetLowestBuildPrice();
-			bool hasAvailableBuilding = currentUser.CurrencyPoint >= lowestPrice;
+			//bool showBuilding = gameManager.sceneController.environmentController.IsShowBuilding();
+
+			bool hasAvailableBuilding = currentUser.Coin >= lowestPrice /*&& showBuilding*/;
 
 			view.ShowNotif(hasAvailableBuilding);
 			view.buttonBuilding.interactable = hasAvailableBuilding;
@@ -148,7 +150,7 @@ public class IslandUIController : BasicController
 		if (currentUser != null)
         {
 			int lowestPrice = gameManager.sceneController.environmentController.GetLowestBuildPrice();
-			if (currentUser.CurrencyPoint >= lowestPrice)
+			if (currentUser.Coin >= lowestPrice)
             {
 				//OnClickDefault(UIState.BUILDING_MENU);
 				// Show popup

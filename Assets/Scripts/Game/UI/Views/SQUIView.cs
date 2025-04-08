@@ -10,6 +10,7 @@ public class SQUIView : BasicView
     public Button[] btnAnswers;
     public Button buttonCollect;
     public Button buttonInfo;
+    public Button buttonPointInfo;
 
     [SerializeField] TextMeshProUGUI textQuestion;
     [SerializeField] TextMeshProUGUI textTitle;

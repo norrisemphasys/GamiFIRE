@@ -45,6 +45,19 @@ public class EnvironmentController : MonoBehaviour
         selectedBuildingData.Clear();
     }
 
+    public bool IsShowBuilding()
+    {
+        int islandTypeIdx = (int)gameManager.IslandType;
+        int totalCell = gameManager.sceneController.cellController.maxCellCount;
+        int currentCell = gameManager.sceneController.cellController.CurrentCellIndex;
+        int environmentLength = environments[islandTypeIdx].environments.Length;
+        int ratioCount = totalCell / environmentLength;
+        int enableIdx = currentCell / ratioCount;
+        int envLen = environments[islandTypeIdx].environments.Length;
+
+        return  enableIdx < envLen;
+    }
+
     public void UpdateEnvironment(bool force = false)
     {
         int islandTypeIdx = (int)gameManager.IslandType;
@@ -123,11 +136,15 @@ public class EnvironmentController : MonoBehaviour
         for (int i = 0; i < envLen; i++)
             environments[islandTypeIdx].view[i].EnableButton(false);
 
+        User user = UserManager.instance.currentUser;
+
         for (int i = 0; i < envLen; i++)
         {
             bool islock = environments[islandTypeIdx].view[i].data.IsLock;
+            //bool isPriceRight = user != null && user.Coin >= environments[islandTypeIdx].view[i].data.Price;
+
             if (islock)
-                environments[islandTypeIdx].view[i].EnableButton(i <= enableIdx || i < 3);
+                environments[islandTypeIdx].view[i].EnableButton(i <= enableIdx || i < 3 /*|| isPriceRight*/);
         }   
     }
 
@@ -164,7 +181,9 @@ public class EnvironmentController : MonoBehaviour
         });
 
         particle.transform.position = go.transform.position;
+
         particle.SetActive(true);
+        particle.GetComponent<ParticleSystem>().Play();
     }
 
     public void AnimateIsland(GameObject go, float delay = 0)

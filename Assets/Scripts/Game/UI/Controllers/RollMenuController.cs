@@ -13,11 +13,15 @@ public class RollMenuController : BasicController
 	int spinnerCount = 0;
 
 	public List<float> diceProbability = new List<float>();
+	bool toggleCustomSpin = true;
+
 
 	void Awake()
 	{
 		view = GetComponent<RollMenuView>();
 		view.Init();
+
+		toggleCustomSpin = true;
 	}
 
 	public override void OnEnter()
@@ -92,7 +96,7 @@ public class RollMenuController : BasicController
 		view.ShowDiceFace(randIDX);
 
 		int customIndex = RandomizeCustomIndex();
-		if (customIndex >= 0)
+		if (customIndex >= 0 && !toggleCustomSpin)
         {
 			randIDX = customIndex - 1;
 			view.ShowDiceFace(randIDX);
@@ -122,6 +126,8 @@ public class RollMenuController : BasicController
 		gameManager.sceneController.StartGame = true;
 
 		OnClickDefault(UIState.ISLAND_MENU);
+
+		toggleCustomSpin = !toggleCustomSpin;
 	}
 
 	

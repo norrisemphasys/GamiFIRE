@@ -16,32 +16,25 @@ MonoBehaviour:
   question: " You receive a performance bonus. You could invest it, pay down debt,
     or treat yourself to something special. What\u2019s your choice?"
   answerData:
-  - answer: Invest the bonus in professional development, such as enrolling in courses,
-      attending a conference, or purchasing tools and resources that enhance your
-      skills and career opportunities.
+  - answer: I invest in professional development through courses, conferences, or
+      career-enhancing tools.
     growthPoint: 4
     satisfactionPoint: 2
     innovationPoint: 3
     moneyCurrencyPoints: 1
-  - answer: "Treat yourself to something special, like a vacation, a new gadget,
-      or an experience you\u2019ve been wanting. Rewarding yourself for hard work
-      can boost morale and motivation for future achievements."
+  - answer: I treat myself to a vacation, gadget, or experience to boost motivation.
     growthPoint: 3
     satisfactionPoint: 4
     innovationPoint: 1
     moneyCurrencyPoints: 2
-  - answer: 'Split the bonus into three parts: invest a portion in a high-yield savings
-      account or stocks, use another portion to pay down debt, and reserve the rest
-      for a meaningful but modest treat, balancing financial growth and personal
-      enjoyment.'
+  - answer: I split the bonus between savings, debt repayment, and a small personal
+      reward
     growthPoint: 2
     satisfactionPoint: 1
     innovationPoint: 4
     moneyCurrencyPoints: 3
-  - answer: "Pay down high-interest debt first to reduce long-term financial burdens
-      and free up more disposable income in the future. If you\u2019re debt-free,
-      invest the entire bonus in assets that can grow, such as stocks or a retirement
-      fund."
+  - answer: I prioritize paying off high-interest debt or invest in long-term financial
+      growth.
     growthPoint: 1
     satisfactionPoint: 3
     innovationPoint: 2

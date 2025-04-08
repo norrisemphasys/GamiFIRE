@@ -82,6 +82,11 @@ public class LoginController : BasicController
             if(!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(password))
                 OnClickLogin();
         }
+
+       /* PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("Press Left Shift Key and V Key (Left Shift + V) to turn on or off the Sound Volume.", () =>
+        {
+
+        }));*/
     }
 
     public void ShowNextMenu()
@@ -202,7 +207,8 @@ public class LoginController : BasicController
         (res) => 
         {
             LoadingManager.instance.ShowLoader(false);
-            PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("New user successfuly created. Login your account to get started.",
+            string popupMessage = "Your account has been successfully created. Please login to your email app and click on the activation link to enable your new Gamifire Player Account.";
+            PopupManager.instance.ShowPopup(PopupMessage.InfoPopup(popupMessage,
             () =>
             {
                 view.ShowSignUp(false, () =>

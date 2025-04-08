@@ -598,7 +598,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &40974278
 RectTransform:
   m_ObjectHideFlags: 0
@@ -614,9 +614,9 @@ RectTransform:
   - {fileID: 571012624}
   m_Father: {fileID: 1164387443}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 375, y: -15}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &40974279
@@ -3682,6 +3682,7 @@ GameObject:
   - component: {fileID: 220964095}
   - component: {fileID: 220964097}
   - component: {fileID: 220964098}
+  - component: {fileID: 220964099}
   m_Layer: 0
   m_Name: _Managers
   m_TagString: Untagged
@@ -3740,6 +3741,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98d8d3b90ed9574690364e206375158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &220964099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220964094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e309d4749a73ac4681ccff0270cb145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentState: 30
 --- !u!1 &236358598
 GameObject:
   m_ObjectHideFlags: 0
@@ -9551,7 +9565,6 @@ MonoBehaviour:
   - {fileID: 1183213062}
   - {fileID: 1790588247}
   - {fileID: 576546559}
-  - {fileID: 2134881832}
   - {fileID: 1147891005}
   goTextInfo:
   - {fileID: 2053970117}
@@ -9559,7 +9572,6 @@ MonoBehaviour:
   - {fileID: 644982929}
   - {fileID: 1912528078}
   - {fileID: 1675555295}
-  - {fileID: 607810183}
   - {fileID: 63492694}
   goPagination:
   - {fileID: 1650957749}
@@ -9568,7 +9580,6 @@ MonoBehaviour:
   - {fileID: 236358598}
   - {fileID: 1514753779}
   - {fileID: 254206350}
-  - {fileID: 571012621}
 --- !u!114 &736740797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26265,6 +26276,16 @@ PrefabInstance:
     - target: {fileID: 5090636314265170339, guid: 990f71b7fcd21544bb54bb133908b0e7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5460931450561798617, guid: 990f71b7fcd21544bb54bb133908b0e7,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5460931450561798617, guid: 990f71b7fcd21544bb54bb133908b0e7,
+        type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7318273882761216114, guid: 990f71b7fcd21544bb54bb133908b0e7,

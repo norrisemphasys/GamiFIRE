@@ -20,6 +20,8 @@ public static class MundoSound {
 		return new GameObject(name);		
 	}
 
+	public static float mainVolume = 1f;
+
 	/// <summary>
 	/// Play sound with a specific AudioClip, Volume, Position, if it will loop, delay and a container to be placed this audioSource gameobject's.
 	///	This method will recycle AudioSource object.
@@ -65,7 +67,7 @@ public static class MundoSound {
                     //Reset a few parameters
                     audioPoolList[i].name = "Sound: " + clip.name;
 					audioPoolList[i].clip = clip;
-					audioPoolList[i].volume = volume;
+					audioPoolList[i].volume = mainVolume;
 					audioPoolList[i].pitch = 1;
 					audioPoolList[i].loop = loop;
 					if(container == null){
@@ -106,7 +108,7 @@ public static class MundoSound {
 		//Let's configure this audios souce with the information we got in the calling method
 		newAudioSource.clip = clip;
 		newAudioSource.loop = loop;
-		newAudioSource.volume = volume;
+		newAudioSource.volume = mainVolume;
 		newAudioSource.playOnAwake = false;
 
 		//Should we play this audio delayed?
@@ -251,6 +253,17 @@ public static class MundoSound {
 		}
 
 		return null;
+	}
+
+	public static void ToggleVolume(bool isOn)
+    {
+		mainVolume = isOn ? 1f : 0f;
+
+		foreach(Transform t in audioPoolContainer)
+        {
+			if(t.GetComponent<AudioSource>() != null)
+				t.GetComponent<AudioSource>().volume = mainVolume;
+		}	
 	}
 
 

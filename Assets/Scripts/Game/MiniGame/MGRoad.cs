@@ -123,7 +123,7 @@ public class MGRoad : MonoBehaviour
                 boneList.Add(mgBone);
 
                 cnt++;
-                Debug.LogError("enemy count " + cnt);
+                Debug.LogError("bone count " + cnt);
             }
             else
             {

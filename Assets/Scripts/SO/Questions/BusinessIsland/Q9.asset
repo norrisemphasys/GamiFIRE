@@ -16,27 +16,25 @@ MonoBehaviour:
   question: Your employer rewards you with a performance bonus. You want to make
     the most of it. How do you proceed?
   answerData:
-  - answer: Invest the bonus in a professional development course or certification
-      that can enhance your skills and increase your earning potential in the future
+  - answer: I invest the bonus in a course or certification to boost my skills and
+      earning potential.
     growthPoint: 4
     satisfactionPoint: 3
     innovationPoint: 1
     moneyCurrencyPoints: 2
-  - answer: Use the bonus to treat yourself to a meaningful experience, like a relaxing
-      trip or pursuing a hobby, to recharge and boost your happiness.
+  - answer: I treat myself to a meaningful experience, like a trip or hobby, to recharge
+      and boost happiness.
     growthPoint: 2
     satisfactionPoint: 4
     innovationPoint: 3
     moneyCurrencyPoints: 1
-  - answer: Allocate part of the bonus to a high-yield savings account or invest
-      it in stocks, allowing it to grow over time while experimenting with smart
-      financial strategies.
+  - answer: I allocate part of the bonus to a high-yield savings account or stocks
+      for long-term growth.
     growthPoint: 1
     satisfactionPoint: 2
     innovationPoint: 4
     moneyCurrencyPoints: 3
-  - answer: Use the bonus to start a small side business or invest in tools and resources
-      to expand an existing income-generating activity.
+  - answer: I use the bonus to start or expand a side business with tools and resources.
     growthPoint: 3
     satisfactionPoint: 1
     innovationPoint: 2

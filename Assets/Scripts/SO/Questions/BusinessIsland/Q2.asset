@@ -17,29 +17,25 @@ MonoBehaviour:
     gym membership, and a retirement plan. You can only choose two. What\u2019s your
     decision?"
   answerData:
-  - answer: Choose the retirement plan and professional development benefits (e.g.,
-      funding for certifications, courses, or conferences), focusing on building
-      skills and securing long-term financial stability to enhance your career trajectory.
+  - answer: I choose a retirement plan and professional development benefits to build
+      skills and ensure long-term financial stability.
     growthPoint: 4
     satisfactionPoint: 3
     innovationPoint: 2
     moneyCurrencyPoints: 1
-  - answer: Select flexible working hours to enjoy a better work-life balance and
-      ensure long-term security while meeting your personal and family needs.
+  - answer: I select flexible hours for better work-life balance and long-term security.
     growthPoint: 1
     satisfactionPoint: 4
     innovationPoint: 3
     moneyCurrencyPoints: 2
-  - answer: Opt for remote work flexibility and a transportation allowance, allowing
-      you to save on commuting costs and time while working in an environment that
-      suits your productivity.
+  - answer: I opt for remote work flexibility and a transportation allowance to save
+      on commuting costs and enhance productivity.
     growthPoint: 2
     satisfactionPoint: 1
     innovationPoint: 4
     moneyCurrencyPoints: 3
-  - answer: Choose the retirement plan and a monthly meal voucher allowance or housing
-      allowance, both of which directly save you money on living expenses and maximize
-      your take-home value.
+  - answer: I choose a retirement plan and a meal or housing allowance to maximize
+      savings and take-home pay.
     growthPoint: 3
     satisfactionPoint: 2
     innovationPoint: 1

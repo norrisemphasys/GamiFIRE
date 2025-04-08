@@ -74,13 +74,13 @@ public class ResultController : BasicController
 			view.ShowSelected(idx);
 
 			if (idx == 0)
-				view.ShowTextResult("GROWTH POINT", currentUser.GrowthPoint, growthPercentage * 100);
+				view.ShowTextResult("GROWTH", currentUser.GrowthPoint, growthPercentage * 100);
 			else if (idx == 1)
-				view.ShowTextResult("SATISFACTION POINT", currentUser.SatisfactionPoint, satisfactionPercentage * 100);
+				view.ShowTextResult("SATISFACTION", currentUser.SatisfactionPoint, satisfactionPercentage * 100);
 			else if (idx == 2)
-				view.ShowTextResult("INNOVATION POINT", currentUser.InnovationPoint, innovationPercentage * 100);
+				view.ShowTextResult("INNOVATION", currentUser.InnovationPoint, innovationPercentage * 100);
 			else if (idx == 3)
-				view.ShowTextResult("CURRENCY POINT", currentUser.CurrencyPoint, currencyPercentage * 100);
+				view.ShowTextResult("CURRENCY", currentUser.CurrencyPoint, currencyPercentage * 100);
 
 			JobType islandType = gameManager.IslandType;
 			bool hasGainBadge = false;

@@ -50,12 +50,16 @@ public class InGamePortController : BasicController
 	{
 		view.buttonInfo.onClick.AddListener(OnClickInfo);
 		view.buttonProfile.onClick.AddListener(OnClickProfile);
+
+		view.buttonVolume.onClick.AddListener(OnClickVolume);
 	}
 
 	void RemoveListener()
 	{
 		view.buttonInfo.onClick.RemoveListener(OnClickInfo);
 		view.buttonProfile.onClick.RemoveListener(OnClickProfile);
+
+		view.buttonVolume.onClick.RemoveListener(OnClickVolume);
 	}
 
 	void GetMainLandBadge()
@@ -71,6 +75,22 @@ public class InGamePortController : BasicController
 			}));
 		}
     }
+
+	void OnClickVolume()
+    {
+		PopupManager.instance.ShowPopup(PopupMessage.VolumePopup("Press the button below to turn on or off the volume.",
+			   () =>
+			   {
+					// Click Volume Off
+					MundoSound.ToggleVolume(false);
+			   },
+			   () =>
+			   {
+					// Click Volume On
+					MundoSound.ToggleVolume(true);
+			   })
+		   );
+	}
 
 	void OnClickClaimBadge()
     {

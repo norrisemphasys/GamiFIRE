@@ -16,34 +16,26 @@ MonoBehaviour:
   question: "You realize that your savings are insufficient to cover unexpected expenses.
     You want to start an emergency fund. What\u2019s your approach?"
   answerData:
-  - answer: Reduce discretionary spending and allocate a portion of your income each
-      month toward the emergency fund. At the same time, seek a side job or freelance
-      opportunities that align with your professional skills to increase your income
-      without sacrificing career growth.
+  - answer: I cut discretionary spending and pursue side income to grow my emergency
+      fund without hindering career growth.
     growthPoint: 4
     satisfactionPoint: 1
     innovationPoint: 2
     moneyCurrencyPoints: 3
-  - answer: Set a realistic savings goal and prioritize building your emergency fund
-      without drastically changing your lifestyle. Use budgeting apps to track expenses
-      and find small adjustments that help you save while still enjoying occasional
-      indulgences.
+  - answer: I set a realistic savings goal, use budgeting apps, and make small adjustments
+      to save while enjoying occasional treats.
     growthPoint: 1
     satisfactionPoint: 4
     innovationPoint: 3
     moneyCurrencyPoints: 2
-  - answer: Automate savings by setting up a separate account with recurring transfers
-      of a small, manageable amount from your paycheck. Combine this with creative
-      strategies like selling unused items, cashback apps, or participating in community
-      swap programs to save money in unique ways.
+  - answer: I automate savings with recurring transfers and use creative strategies
+      like selling items or cashback apps.
     growthPoint: 2
     satisfactionPoint: 3
     innovationPoint: 4
     moneyCurrencyPoints: 1
-  - answer: Dedicate a fixed percentage of your monthly income to the emergency fund
-      and invest in low-risk, short-term financial instruments (e.g., money market
-      accounts) to grow your savings. Consider temporary gig work or part-time roles
-      to accelerate the process.
+  - answer: I allocate a fixed percentage of income to my emergency fund and explore
+      low-risk investments or gig work to boost savings.
     growthPoint: 3
     satisfactionPoint: 2
     innovationPoint: 1

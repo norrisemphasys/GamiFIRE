@@ -48,5 +48,10 @@ public static class PopupMessage
     {
         return CreatePopupData("INFORMATION", message,textOk: "CLAIM", showCancel: false, showClose: false, onClickOk: OnClickOk);
     }
+
+    public static PopupData VolumePopup(string message, UnityAction OnClickCancel = null, UnityAction OnClickOk = null)
+    {
+        return CreatePopupData("VOLUME SETTING", message, textOk: "ON", textCancel: "OFF", showClose: false, onClickOk: OnClickOk, onClickCancel: OnClickCancel);
+    }
 }
 

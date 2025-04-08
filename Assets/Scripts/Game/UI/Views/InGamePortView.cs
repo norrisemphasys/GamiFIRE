@@ -9,6 +9,7 @@ public class InGamePortView : BasicView
 {
     public Button buttonInfo;
     public Button buttonProfile;
+    public Button buttonVolume;
 
     [SerializeField] Image profilePicture;
     [SerializeField] TextMeshProUGUI textCoin;

@@ -16,28 +16,25 @@ MonoBehaviour:
   question: Your company shifts to a remote work model, saving you commuting costs
     but increasing home expenses. How do you adjust?
   answerData:
-  - answer: Invest in creating a productive home office setup with ergonomic furniture
-      and tools to enhance focus and efficiency, ensuring you can excel in the new
-      remote work environment.
+  - answer: I invest in an ergonomic home office setup to boost focus and efficiency
+      for remote work.
     growthPoint: 4
     satisfactionPoint: 3
     innovationPoint: 2
     moneyCurrencyPoints: 1
-  - answer: Establish a balanced routine that separates work and personal life, ensuring
-      you can enjoy the flexibility of remote work while maintaining your well-being
-      and happiness.
+  - answer: I establish a balanced routine that separates work and personal life
+      for better well-being.
     growthPoint: 1
     satisfactionPoint: 4
     innovationPoint: 3
     moneyCurrencyPoints: 2
-  - answer: Explore cost-saving technologies, like energy-efficient devices or apps
-      that track and reduce home utility expenses, to offset the increased home costs.
+  - answer: I explore cost-saving technologies to reduce home utility expenses.
     growthPoint: 2
     satisfactionPoint: 1
     innovationPoint: 4
     moneyCurrencyPoints: 3
-  - answer: Leverage the saved commuting time to start a freelance gig or learn a
-      new skill that can bring in extra income alongside your regular job.
+  - answer: I leverage saved commuting time to start a freelance gig or learn a new
+      skill for extra income.
     growthPoint: 3
     satisfactionPoint: 2
     innovationPoint: 1

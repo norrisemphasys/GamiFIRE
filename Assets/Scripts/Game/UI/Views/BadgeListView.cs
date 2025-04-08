@@ -13,6 +13,7 @@ public class BadgeListView : MonoBehaviour
     [SerializeField] TextMeshProUGUI textDescription;
 
     [SerializeField] GameObject lockedGO;
+    [SerializeField] GameObject unlockedGO;
 
     public Sprite sprite { get { return icon.sprite; } }
     public string title { get { return textTitle.text; } }
@@ -25,11 +26,15 @@ public class BadgeListView : MonoBehaviour
         textTitle.text = info.title;
         textDescription.text = info.description;
 
-        content = info.description + "\n\n" + "<b>Point of Attention : </b>" + info.pointOfAttention;
+        if(info.badgeID.Equals("67ed253c4dc5c989a8cf5cf5"))
+            content = info.description;
+        else
+            content = info.description + "\n\n" + "<b>Point of Attention : </b>" + info.pointOfAttention;
 
         icon.sprite = info.icon;
 
         lockedGO.SetActive(info.locked);
+        unlockedGO.SetActive(!info.locked);
     }
 
     public void SetBadgeData(Badge badge)

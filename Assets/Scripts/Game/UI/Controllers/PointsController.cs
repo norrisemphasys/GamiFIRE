@@ -38,16 +38,25 @@ public class PointsController : BasicController
         {
 			OnClickPoints(gameManager.SelectedPointIndex);
 			view.buttonSelect.gameObject.SetActive(false);
+
+			if (gameManager.previousState != UIState.SQ_MENU)
+			{
+				Debug.LogError("play audio 1");
+				Audio.PlayBGMStudentIsland();
+				Audio.PlayBGMSea();
+
+			}
 		}
         else
         {
 			view.ShowDescriptionPanel(false);
 			view.ShowPointsPanel(true);
 			view.buttonSelect.gameObject.SetActive(true);
-		}
+			Debug.LogError("play audio 2");
+			Audio.PlayBGMStudentIsland();
+			Audio.PlayBGMSea();
 
-		Audio.PlayBGMStudentIsland();
-		Audio.PlayBGMSea();
+		}
 	}
 
 	public void ShowNextMenu()
@@ -77,7 +86,16 @@ public class PointsController : BasicController
     {
 		if (gameManager.SelectedPointIndex >= 0)
         {
-			OnClickDefault(UIState.ISLAND_MENU);
+			if (gameManager.previousState == UIState.SQ_MENU)
+			{
+				nextState = UIState.NONE;
+				gameManager.SetGameState(UIState.SQ_MENU);
+				OnExit();
+			}
+			else
+			{
+				OnClickDefault(UIState.ISLAND_MENU);
+			}
 		}
         else
         {

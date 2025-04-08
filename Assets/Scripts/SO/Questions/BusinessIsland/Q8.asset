@@ -16,30 +16,26 @@ MonoBehaviour:
   question: " You\u2019ve received a job offer with a lower salary but better benefits
     and work-life balance. What do you consider?"
   answerData:
-  - answer: Consider if the role offers opportunities for skill development, networking,
-      or advancement that could lead to better career prospects in the long term,
-      even with the lower initial salary.
+  - answer: I consider how the role offers long-term career prospects, even with
+      a lower initial salary.
     growthPoint: 4
     satisfactionPoint: 1
     innovationPoint: 2
     moneyCurrencyPoints: 3
-  - answer: Evaluate how the improved work-life balance aligns with your personal
-      goals and well-being. Prioritize a healthier lifestyle and more time for family
-      or hobbies.
+  - answer: I evaluate how the improved work-life balance aligns with my personal
+      goals and well-being.
     growthPoint: 1
     satisfactionPoint: 4
     innovationPoint: 3
     moneyCurrencyPoints: 2
-  - answer: Negotiate creative perks like flexible hours, remote work options, or
-      professional development stipends to make the offer more appealing and maximize
-      its overall value.
+  - answer: I negotiate perks like flexible hours, remote work, or development stipends
+      to increase the offer's value.
     growthPoint: 3
     satisfactionPoint: 2
     innovationPoint: 4
     moneyCurrencyPoints: 1
-  - answer: Assess if the benefits, such as healthcare, retirement plans, or bonuses,
-      offset the lower salary. Calculate the long-term monetary value of these perks
-      to determine if the offer is financially viable.
+  - answer: I assess if benefits like healthcare or retirement plans offset the lower
+      salary and calculate their long-term value.
     growthPoint: 2
     satisfactionPoint: 3
     innovationPoint: 1
