@@ -48,6 +48,10 @@ public class TutorialITController : BasicController
 		view.btnClose.onClick.AddListener(OnClickClose);
 		view.btnPrevious.onClick.AddListener(OnClickPrevious);
 		view.btnNext.onClick.AddListener(OnClickNext);
+
+		view.buttonEasy.onClick.AddListener(OnClickEasy);
+		view.buttonMedium.onClick.AddListener(OnClickMedium);
+		view.buttonHard.onClick.AddListener(OnClickEHard);
 	}
 
 	void RemoveListener()
@@ -55,11 +59,34 @@ public class TutorialITController : BasicController
 		view.btnClose.onClick.RemoveListener(OnClickClose);
 		view.btnPrevious.onClick.RemoveListener(OnClickPrevious);
 		view.btnNext.onClick.RemoveListener(OnClickNext);
+
+		view.buttonEasy.onClick.RemoveListener(OnClickEasy);
+		view.buttonMedium.onClick.RemoveListener(OnClickMedium);
+		view.buttonHard.onClick.RemoveListener(OnClickEHard);
+	}
+
+	void OnClickEasy()
+    {
+		gameManager.terrainController.Easy();
+		OnClickDefault(UIState.IT_INGAME);
+	}
+
+	void OnClickMedium()
+	{
+		gameManager.terrainController.Medium();
+		OnClickDefault(UIState.IT_INGAME);
+	}
+
+	void OnClickEHard()
+	{
+		gameManager.terrainController.Hard();
+		OnClickDefault(UIState.IT_INGAME);
 	}
 
 	void OnClickClose()
 	{
-		OnClickDefault(UIState.IT_INGAME);
+		view.ShowDifficulty(true);
+		//OnClickDefault(UIState.IT_INGAME);
 	}
 
 	void OnClickPrevious()

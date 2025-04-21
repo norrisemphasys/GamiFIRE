@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q22
+  m_EditorClassIdentifier: 
+  questionTitle: Navigating a Cyber Scam
+  question: You receive an email that appears to be from your bank asking for personal
+    details. What do you do?
+  answerData:
+  - answer: I report the phishing attempt to my company's IT security team and suggest
+      a cybersecurity awareness session for employees, positioning myself as proactive
+      in workplace security.
+    growthPoint: 4
+    satisfactionPoint: 1
+    innovationPoint: 3
+    moneyCurrencyPoints: 2
+  - answer: "I delete the email immediately, feeling confident in my ability to recognize
+      scams and satisfied that I\u2019ve protected my personal information."
+    growthPoint: 2
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 3
+  - answer: I use the phishing attempt as a case study to create an internal guide
+      or quick video tutorial on spotting cyber scams, sharing it with colleagues
+      to promote digital safety.
+    growthPoint: 3
+    satisfactionPoint: 2
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
+  - answer: I report the scam to the relevant cybersecurity authority or fraud hotline,
+      potentially qualifying for a small reward or recognition in fraud prevention
+      programs.
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

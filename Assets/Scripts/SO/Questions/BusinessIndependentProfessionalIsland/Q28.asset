@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q28
+  m_EditorClassIdentifier: 
+  questionTitle: Adjusting to new regulations
+  question: 'A new law requires significant changes in your processes. Do you:'
+  answerData:
+  - answer: I implement changes immediately, despite high costs
+    growthPoint: 3
+    satisfactionPoint: 2
+    innovationPoint: 1
+    moneyCurrencyPoints: 4
+  - answer: I plan and phase in changes over time
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: I adopt minimal changes to comply with the regulation
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2
+  - answer: I hire an expert to guide me through compliance
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3

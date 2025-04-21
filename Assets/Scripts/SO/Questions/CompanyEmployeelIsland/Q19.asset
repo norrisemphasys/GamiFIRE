@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q19
+  m_EditorClassIdentifier: 
+  questionTitle: Budgeting a Family Vacation
+  question: "You want to plan a family vacation on a limited budget. What\u2019s
+    your strategy?"
+  answerData:
+  - answer: "I\u2019ll look for educational or cultural trips with free or discounted
+      entry to historical sites, museums, or nature reserves through EU programs
+      or local initiatives."
+    growthPoint: 4
+    satisfactionPoint: 2
+    innovationPoint: 1
+    moneyCurrencyPoints: 3
+  - answer: "I\u2019ll plan a nearby getaway like camping or visiting family-friendly
+      destinations within my country to save on travel costs."
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2
+  - answer: "I\u2019ll use budget-friendly travel options like EU rail passes, low-cost
+      airlines, or home exchanges, and take advantage of off-season discounts or
+      cashback programs."
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
+  - answer: "I\u2019ll set up a vacation fund by selling unused items, doing short-term
+      freelance work, or using a savings challenge to save for the trip."
+    growthPoint: 3
+    satisfactionPoint: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

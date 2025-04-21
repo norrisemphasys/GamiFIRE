@@ -17,6 +17,8 @@ public class BuildingListView : MonoBehaviour
 
     private GameObject lockGO;
 
+    public bool isButtonBuyEnabled { get { return buttonBuy.interactable && buttonBuy.gameObject.activeSelf; } }
+
     private void Awake()
     {
         lockGO = transform.Find("Lock").gameObject;

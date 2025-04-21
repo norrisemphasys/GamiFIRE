@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q20
+  m_EditorClassIdentifier: 
+  questionTitle: Deciding on a Job Offer
+  question: You receive a job offer with a higher salary but fewer benefits. What
+    do you prioritize?
+  answerData:
+  - answer: I evaluate if the job offers strong career advancement, networking, or
+      skill development for better long-term prospects, even with limited benefits.
+    growthPoint: 4
+    satisfactionPoint: 2
+    innovationPoint: 1
+    moneyCurrencyPoints: 3
+  - answer: I prioritize work-life balance and job satisfaction, considering whether
+      the benefits of my current or alternative offers provide better quality of
+      life, even with a slightly lower salary.
+    growthPoint: 2
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 1
+  - answer: I negotiate additional perks like remote work, professional development
+      support, or performance-based bonuses to compensate for the lack of standard
+      benefits.
+    growthPoint: 3
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 2
+  - answer: I choose the higher salary if it allows me to secure important benefits
+      like private pension contributions or additional insurance, ensuring financial
+      stability on my own terms.
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

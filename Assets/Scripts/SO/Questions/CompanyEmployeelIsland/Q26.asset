@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q26
+  m_EditorClassIdentifier: 
+  questionTitle: Choosing a Health Insurance Plan
+  question: Your employer offers several health insurance plans with varying coverage
+    and costs. Which plan do you choose?
+  answerData:
+  - answer: I select a plan that includes comprehensive mental health and professional
+      wellness support, helping me maintain peak performance and career development.
+    growthPoint: 4
+    satisfactionPoint: 2
+    innovationPoint: 1
+    moneyCurrencyPoints: 3
+  - answer: I choose a balanced plan with moderate coverage and affordable premiums,
+      providing peace of mind without straining my monthly budget.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2
+  - answer: I opt for a flexible health savings account (HSA) plan, allowing me to
+      invest unused health funds for future medical needs while managing current
+      expenses creatively.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 4
+    moneyCurrencyPoints: 1
+  - answer: I pick the lowest-cost plan with basic coverage, using the money saved
+      on premiums to invest or build an emergency fund for unexpected health expenses.
+    growthPoint: 3
+    satisfactionPoint: 1
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

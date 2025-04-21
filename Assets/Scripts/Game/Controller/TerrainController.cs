@@ -22,6 +22,7 @@ public class TerrainController : MonoBehaviour
     [SerializeField] float reduceTerainSpeed;
 
     [SerializeField] float reduceSpeedTime;
+    [SerializeField] Material waterMaterial;
 
     private List<GameObject> terrainPool;
     private List<GameObject> obstaclePool;
@@ -33,6 +34,8 @@ public class TerrainController : MonoBehaviour
     private float speedTimer;
     private bool isSpeedReduce = false;
 
+    private InGameITController inGameController;
+
 
     private void Awake()
     {
@@ -42,6 +45,8 @@ public class TerrainController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        inGameController = FindObjectOfType<InGameITController>();
+
         terrainPool = PoolManager.instance.GetObjectPool("Terrain");
         obstaclePool = PoolManager.instance.GetObjectPool("Obstacle");
         coinPool = PoolManager.instance.GetObjectPool("Coin");
@@ -142,5 +147,44 @@ public class TerrainController : MonoBehaviour
                 isSpeedReduce = false;
             }
         }
+    }
+
+    public void Easy()
+    {
+        spawnTimer = 2f;
+
+        inGameController.maxTravelTime = 90;
+
+        terrainsSpeed = 30;
+        reduceTerainSpeed = 10;
+
+        waterMaterial.SetFloat("_FoamSpeed", -3);
+
+        GameEvents.OnChangeTerrainSpeed.Invoke(terrainsSpeed);
+    }
+
+    public void Medium()
+    {
+        spawnTimer = 1.2f;
+        inGameController.maxTravelTime = 60;
+
+        terrainsSpeed = 50;
+        reduceTerainSpeed = 30;
+
+        waterMaterial.SetFloat("_FoamSpeed", -5);
+
+        GameEvents.OnChangeTerrainSpeed.Invoke(terrainsSpeed);
+    }
+
+    public void Hard()
+    {
+        spawnTimer = 1.2f;
+        inGameController.maxTravelTime = 30;
+        terrainsSpeed = 70;
+        reduceTerainSpeed = 50;
+
+        waterMaterial.SetFloat("_FoamSpeed", -7);
+
+        GameEvents.OnChangeTerrainSpeed.Invoke(terrainsSpeed);
     }
 }

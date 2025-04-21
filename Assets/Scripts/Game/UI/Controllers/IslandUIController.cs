@@ -132,9 +132,9 @@ public class IslandUIController : BasicController
 		if (currentUser != null)
 		{
 			int lowestPrice = gameManager.sceneController.environmentController.GetLowestBuildPrice();
-			//bool showBuilding = gameManager.sceneController.environmentController.IsShowBuilding();
+			bool showBuilding = gameManager.sceneController.environmentController.IsShowBuilding();
 
-			bool hasAvailableBuilding = currentUser.Coin >= lowestPrice /*&& showBuilding*/;
+			bool hasAvailableBuilding = currentUser.Coin >= lowestPrice && showBuilding/**/;
 
 			view.ShowNotif(hasAvailableBuilding);
 			view.buttonBuilding.interactable = hasAvailableBuilding;

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q3
+  m_EditorClassIdentifier: 
+  questionTitle: Managing a Pay Cut
+  question: " Your company is experiencing financial difficulties and announces temporary
+    pay cuts. You need to adapt your budget. What\u2019s your response?"
+  answerData:
+  - answer: I reassess my career goals and invest in free or low-cost skill development
+      for future growth.
+    growthPoint: 4
+    satisfactionPoint: 1
+    innovationPoint: 3
+    moneyCurrencyPoints: 2
+  - answer: I cut non-essential expenses but maintain hobbies or fitness to stay
+      motivated.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: I explore side income options while proposing cost-saving measures at
+      work.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I prioritize essentials with a strict budget and seek financial support
+      or side income.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 1
+    moneyCurrencyPoints: 4

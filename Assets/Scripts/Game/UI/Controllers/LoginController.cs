@@ -110,6 +110,8 @@ public class LoginController : BasicController
         view.buttonShowPassword.onClick.AddListener(OnClickShowPassword);
 
         view.toggleAutoSignIn.onValueChanged.AddListener(OnToggleAutoLogin);
+
+        view.buttonShowPasswordSign.onClick.AddListener(OnClickShowPasswordSign);
     }
 
     void RemoveListener()
@@ -128,6 +130,8 @@ public class LoginController : BasicController
         view.buttonShowPassword.onClick.RemoveListener(OnClickShowPassword);
 
         view.toggleAutoSignIn.onValueChanged.RemoveListener(OnToggleAutoLogin);
+
+        view.buttonShowPasswordSign.onClick.RemoveListener(OnClickShowPasswordSign);
     }
 
     void OnToggleAutoLogin(bool isOn)
@@ -141,6 +145,11 @@ public class LoginController : BasicController
     void OnClickShowPassword()
     {
         view.ToggleShowPassword();
+    }
+
+    void OnClickShowPasswordSign()
+    {
+        view.ToggleShowPasswordSignIn();
     }
 
     void OnClickSignUpNewUser()

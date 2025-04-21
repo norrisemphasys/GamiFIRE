@@ -54,8 +54,18 @@ public class EnvironmentController : MonoBehaviour
         int ratioCount = totalCell / environmentLength;
         int enableIdx = currentCell / ratioCount;
         int envLen = environments[islandTypeIdx].environments.Length;
+        bool hasButtonEnabled = false;
 
-        return  enableIdx < envLen;
+        for (int i = 0; i < environments[islandTypeIdx].view.Length; i++)
+        {
+            if (environments[islandTypeIdx].view[i].isButtonBuyEnabled)
+            {
+                hasButtonEnabled = true;
+                break;
+            }
+        }
+
+        return  enableIdx < envLen && currentCell != 0 && hasButtonEnabled;
     }
 
     public void UpdateEnvironment(bool force = false)
@@ -141,10 +151,17 @@ public class EnvironmentController : MonoBehaviour
         for (int i = 0; i < envLen; i++)
         {
             bool islock = environments[islandTypeIdx].view[i].data.IsLock;
-            //bool isPriceRight = user != null && user.Coin >= environments[islandTypeIdx].view[i].data.Price;
+            bool isPriceRight = user != null && user.Coin >= environments[islandTypeIdx].view[i].data.Price;
 
             if (islock)
-                environments[islandTypeIdx].view[i].EnableButton(i <= enableIdx || i < 3 /*|| isPriceRight*/);
+            {
+                if(i <= enableIdx || i < 3)
+                    environments[islandTypeIdx].view[i].EnableButton(isPriceRight);
+                else
+                    environments[islandTypeIdx].view[i].EnableButton(false);
+
+                //environments[islandTypeIdx].view[i].EnableButton(i <= enableIdx || i < 3 /*|| isPriceRight*/);
+            }   
         }   
     }
 

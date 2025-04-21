@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q11
+  m_EditorClassIdentifier: 
+  questionTitle: Negotiating a Salary Increase
+  question: "After a year of successful projects, you believe you deserve a salary
+    increase. What\u2019s your strategy?"
+  answerData:
+  - answer: I prepare a detailed report on my achievements and skills to justify
+      a salary increase.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: "If a raise isn\u2019t possible, I negotiate for non-monetary benefits
+      like vacation days or flexible work."
+    growthPoint: 2
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 3
+  - answer: I suggest a performance-based raise structure with clear goals or milestones.
+    growthPoint: 3
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 2
+  - answer: If the raise is denied, I explore side income, freelance work, or higher-paying
+      job opportunities.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 4

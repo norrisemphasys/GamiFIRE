@@ -40,6 +40,9 @@ public class LoginViews : BasicView
 
     public Toggle toggleAutoSignIn;
 
+    [SerializeField] Image imgShowIconSign;
+    public Button buttonShowPasswordSign;
+
     public bool IsSignInVisible => signInRect.localScale == Vector3.one;
 
     [Header("Forgot Password")]
@@ -74,6 +77,8 @@ public class LoginViews : BasicView
     public string verificationCode { get { return verificationCodeInput?.text; } }
 
     bool showPassword = false;
+
+    bool showPasswordSignIn = false;
 
     public void SetEmailLoginText(string value)
     {
@@ -170,5 +175,17 @@ public class LoginViews : BasicView
 
         passwordInputSignUp.contentType = showPassword ? TMP_InputField.ContentType.Standard : TMP_InputField.ContentType.Password;
         passwordInputSignUp.ForceLabelUpdate();
+    }
+
+    public void ToggleShowPasswordSignIn()
+    {
+        showPasswordSignIn = !showPasswordSignIn;
+
+        Color c = imgShowIconSign.color;
+        c.a = showPasswordSignIn ? 1 : 0.6f;
+        imgShowIconSign.color = c;
+
+        passwordInputSignIn.contentType = showPasswordSignIn ? TMP_InputField.ContentType.Standard : TMP_InputField.ContentType.Password;
+        passwordInputSignIn.ForceLabelUpdate();
     }
 }

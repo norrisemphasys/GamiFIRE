@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q37
+  m_EditorClassIdentifier: 
+  questionTitle: Planning for Retirement
+  question: "You\u2019ve started thinking about retirement but aren\u2019t sure how
+    much you should be saving."
+  answerData:
+  - answer: I consult with a financial advisor to create a retirement plan that aligns
+      with my career goals, factoring in potential promotions and salary increases
+      to adjust my savings over time.
+    growthPoint: 4
+    satisfactionPoint: 2
+    innovationPoint: 3
+    moneyCurrencyPoints: 1
+  - answer: I set retirement goals based on the lifestyle I envision, focusing on
+      achieving a balance between enjoying my current life and feeling secure about
+      my future.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I use digital retirement planning tools or apps that analyze my current
+      income, expenses, and future projections to recommend personalized savings
+      strategies.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I invest in diversified assets such as index funds, real estate, or pension
+      schemes with high returns to maximize long-term growth and accumulate more
+      wealth for retirement.
+    growthPoint: 1
+    satisfactionPoint: 3
+    innovationPoint: 2
+    moneyCurrencyPoints: 4

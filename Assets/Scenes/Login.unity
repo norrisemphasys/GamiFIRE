@@ -13150,7 +13150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &972774735
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21986,6 +21986,8 @@ MonoBehaviour:
   signInButtonSignIn: {fileID: 442616376}
   forgotPasswordButton: {fileID: 415663353}
   toggleAutoSignIn: {fileID: 1072128083}
+  imgShowIconSign: {fileID: 972774737}
+  buttonShowPasswordSign: {fileID: 972774736}
   forgotPasswordRect: {fileID: 1896421736}
   typeEmailRect: {fileID: 1747381430}
   typeNewPasswordRect: {fileID: 686677502}
