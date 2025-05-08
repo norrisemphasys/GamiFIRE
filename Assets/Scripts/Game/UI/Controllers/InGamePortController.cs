@@ -38,6 +38,7 @@ public class InGamePortController : BasicController
 		view.ShowMiniMap(true);
 
 		GetMainLandBadge();
+		ShowSubscribeOption();
 	}
 
 	public void ShowNextMenu()
@@ -60,6 +61,24 @@ public class InGamePortController : BasicController
 		view.buttonProfile.onClick.RemoveListener(OnClickProfile);
 
 		view.buttonVolume.onClick.RemoveListener(OnClickVolume);
+	}
+
+	void ShowSubscribeOption()
+    {
+		User user = UserManager.instance.currentUser;
+		if(user != null && !user.IsNewsletterSubscriber)
+        {
+			bool showSubscription = Random.Range(0, 100) > 50;
+			if(showSubscription)
+            {
+				PopupManager.instance.ShowPopup(PopupMessage.Subscribe("Subscribe to our news letter to get the latest updates about GamiFIRE.", null, () =>
+				{
+					user.IsNewsletterSubscriber = true;
+					PlayerPrefs.SetInt("NewsLetter", user.IsNewsletterSubscriber ? 1 : 0);
+					UserManager.instance.SetCurrentUser(user);
+				}));
+			}
+		}
 	}
 
 	void GetMainLandBadge()

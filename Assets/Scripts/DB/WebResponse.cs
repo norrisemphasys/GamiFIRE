@@ -88,3 +88,10 @@ public class Badge
 
     public string claimLink;
 }
+
+public class Survey
+{
+    public string id;
+    public string question;
+    public string answer;
+}

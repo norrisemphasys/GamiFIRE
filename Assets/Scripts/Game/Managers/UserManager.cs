@@ -136,7 +136,9 @@ public class UserManager : MonoSingleton<UserManager>
                 CurrencyPoint = 100,
                 SatisfactionPoint = 100,
                 Costume = "",
-                HasBadge = false
+                HasBadge = false,
+                IsAdministrator = false,
+                IsNewsletterSubscriber = false,
             };
 
             SetCurrentUser(newUser);

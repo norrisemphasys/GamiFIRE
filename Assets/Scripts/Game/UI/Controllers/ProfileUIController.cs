@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Text;
 
 public class ProfileUIController : BasicController
 {
@@ -9,6 +10,8 @@ public class ProfileUIController : BasicController
 
 	private ProfileUIView view;
 	private List<BadgeListView> badgeListView = new List<BadgeListView>();
+
+	User currentUser;
 
 	void Awake()
 	{
@@ -39,11 +42,15 @@ public class ProfileUIController : BasicController
 		if (gameManager.currentScene == SCENE_TYPE.PORT_SCENE)
 			gameManager.playerController.SetPause(true);
 
-		User currentUser = UserManager.instance.currentUser;
+		currentUser = UserManager.instance.currentUser;
 		if (currentUser != null)
+        {
 			view.SetUser(currentUser);
+			view.buttonShowRequestEmail.gameObject.SetActive(currentUser.IsAdministrator);
+		}	
 
 		ShowBadge();
+
 	}
 
 	public void ShowNextMenu()
@@ -55,13 +62,74 @@ public class ProfileUIController : BasicController
 	{
 		view.buttonClose.onClick.AddListener(OnClickClose);
 		view.buttonBadgeClose.onClick.AddListener(OnClickCloseBadge);
+
+		view.buttonRequestEmails.onClick.AddListener(OnClickRequestEmail);
+		view.buttonShowRequestEmail.onClick.AddListener(OnClickShowRequestEmail);
+		view.buttonCloseRequest.onClick.AddListener(OnClickCloseRequestEmail);
 	}
 
 	void RemoveListener()
 	{
 		view.buttonClose.onClick.RemoveListener(OnClickClose);
 		view.buttonBadgeClose.onClick.RemoveListener(OnClickCloseBadge);
+
+		view.buttonRequestEmails.onClick.RemoveListener(OnClickRequestEmail);
+		view.buttonShowRequestEmail.onClick.RemoveListener(OnClickShowRequestEmail);
+		view.buttonCloseRequest.onClick.AddListener(OnClickCloseRequestEmail);
 	}
+
+	void OnClickCloseRequestEmail()
+    {
+		view.ShowRequestEmailPopup(false);
+	}
+
+	void OnClickShowRequestEmail()
+    {
+		view.ShowRequestEmailPopup(true);
+    }
+
+	void OnClickRequestEmail()
+    {
+		string email = view.inputFieldEmail.text;
+		if(Utils.IsValidEmail(email))
+        {
+			StringBuilder sb = new StringBuilder();
+
+			sb.Append("Hi " + currentUser.Username);
+			sb.Append("\n\n");
+			sb.Append("Below is the list of all the users who subscribe to the newsletter:");
+			sb.Append("\n\n");
+
+			LoadingManager.instance.ShowLoader(true);
+			DBManager.GetAllUsersByToken((users) =>
+			{
+				foreach (User user in users)
+                {
+					if (user.IsNewsletterSubscriber)
+						sb.Append(currentUser.Username + " : " + currentUser.Email);
+                }
+
+				sb.Append("\n\n");
+				sb.Append("Best Regards,");
+				sb.Append("\n");
+				sb.Append("GamiFIRE");
+
+#if UNITY_EDITOR
+				Debug.Log(sb.ToString());
+#endif
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+				EmailManager.instance.SendEmail(email, "GAMIFIRE NEWS LETTER EMAILS", sb.ToString());
+#endif
+				LoadingManager.instance.ShowLoader(false);
+				view.ShowRequestEmailPopup(false);
+			});
+        }
+        else
+        {
+			PopupManager.instance.ShowPopup(PopupMessage.ErrorPopup("You entered and invalid Email."));
+        }
+    }
 
 	void OnClickCloseBadge()
     {

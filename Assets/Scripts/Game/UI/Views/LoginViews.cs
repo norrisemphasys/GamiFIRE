@@ -39,6 +39,7 @@ public class LoginViews : BasicView
     public Button forgotPasswordButton;
 
     public Toggle toggleAutoSignIn;
+    public Toggle toggleNewsletter;
 
     [SerializeField] Image imgShowIconSign;
     public Button buttonShowPasswordSign;

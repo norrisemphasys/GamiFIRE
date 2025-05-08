@@ -36,10 +36,24 @@ public class ProfileUIView : BasicView
 
     public Button buttonClaimLink;
 
+    [Header("Request Email View")]
+
+    public Button buttonShowRequestEmail;
+    public Button buttonRequestEmails;
+    public Button buttonCloseRequest;
+
+    public TMP_InputField inputFieldEmail;
+
+    public Transform requestPopupMain;
+    public Transform requestPopup;
+
     public void Init()
     {
         badgePopupMain.gameObject.SetActive(false);
         badgePopup.localScale = Vector3.zero;
+
+        requestPopupMain.gameObject.SetActive(false);
+        requestPopup.localScale = Vector3.zero;
     }
 
     public void SetUser(User user)
@@ -58,6 +72,25 @@ public class ProfileUIView : BasicView
         jobImage.sprite = jobIcons[idx];
 
         textJob.text = UserManager.GetJobName(job);
+    }
+
+    public void ShowRequestEmailPopup(bool show)
+    {
+        if(show)
+        {
+            requestPopupMain.gameObject.SetActive(show);
+            requestPopup.DOScale(Vector3.one, 0.2f).OnComplete(() =>
+            {
+
+            });
+        }
+        else
+        {
+            requestPopup.DOScale(Vector3.zero, 0.2f).OnComplete(() =>
+            {
+                requestPopupMain.gameObject.SetActive(show);
+            });
+        }
     }
 
     public void ShowBadgePopup(BadgeListView view, bool show)

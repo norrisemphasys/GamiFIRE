@@ -165,7 +165,9 @@ public class DBManager : MonoSingleton<DBManager>
                 CurrencyPoint = 0,
                 SatisfactionPoint = 0,
                 Costume = "",
-                HasBadge = false
+                HasBadge = false,
+                IsAdministrator = false,
+                IsNewsletterSubscriber = false,
             };
 
             AddEditUserLocalID(newUser, callback);
@@ -316,5 +318,48 @@ public class DBManager : MonoSingleton<DBManager>
         });
     }
 
+    #endregion
+
+    #region SURVEY
+    public static void GetAllUsersSurvey(User user, UnityAction<Survey[]> callback = null)
+    {
+        RestClient.Get(GameConstants.USERS_BADGE_URL + "/" + user.ID + "/surveys" + ".json?auth=" + _idToken).Then(res =>
+        {
+            if (!string.IsNullOrEmpty(res.Text))
+            {
+                BadgeManager.ClearUsersBadge();
+
+                Dictionary<string, Survey> surveys = JsonConvert.DeserializeObject<Dictionary<string, Survey>>(res.Text);
+
+              /*  foreach (var badge in badges)
+                    BadgeManager.AddUserBadge(badge.Value);*/
+
+                callback?.Invoke(surveys.Values.ToArray());
+
+                Debug.Log("Get All Users Survey " + surveys.Count);
+            }
+        }).Catch(err =>
+        {
+            Debug.Log("Error " + err.Message);
+            callback?.Invoke(null);
+        });
+    }
+
+    public static void AddNewSurvey(User user, Survey survey, UnityAction<bool> callback = null)
+    {
+        RestClient.Put<Survey>(GameConstants.USERS_SURVEY_URL + "/" + user.ID + "/surveys/"
+            + survey.id + ".json?auth=" + _idToken, survey).Then(res =>
+            {
+                if (res != null)
+                {
+                    callback?.Invoke(true);
+                    Debug.Log("Added New Badge");
+                }
+            }).Catch(err =>
+            {
+                Debug.Log("Error " + err.Message);
+                callback?.Invoke(false);
+            });
+    }
     #endregion
 }

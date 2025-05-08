@@ -53,5 +53,10 @@ public static class PopupMessage
     {
         return CreatePopupData("VOLUME SETTING", message, textOk: "ON", textCancel: "OFF", showClose: false, onClickOk: OnClickOk, onClickCancel: OnClickCancel);
     }
+
+    public static PopupData Subscribe(string message, UnityAction OnClickCancel = null, UnityAction OnClickOk = null)
+    {
+        return CreatePopupData("INFORMATION", message, textOk: "SUBSCRIBE", textCancel: "CANCEL", showClose: false, onClickOk: OnClickOk, onClickCancel: OnClickCancel);
+    }
 }
 

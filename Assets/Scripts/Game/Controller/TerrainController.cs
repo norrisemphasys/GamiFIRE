@@ -178,7 +178,7 @@ public class TerrainController : MonoBehaviour
 
     public void Hard()
     {
-        spawnTimer = 1.2f;
+        spawnTimer = 1.2f; 
         inGameController.maxTravelTime = 30;
         terrainsSpeed = 70;
         reduceTerainSpeed = 50;

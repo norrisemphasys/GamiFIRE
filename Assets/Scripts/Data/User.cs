@@ -34,4 +34,8 @@ public class User
     public string Costume;
 
     public bool HasBadge;
+
+    public bool IsAdministrator;
+
+    public bool IsNewsletterSubscriber;
 }

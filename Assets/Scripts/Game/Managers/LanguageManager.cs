@@ -1,0 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class LanguageManager : MonoSingleton<LanguageManager>
+{
+    [SerializeField] LanguageBank uiTextBank;
+    [SerializeField] private LanguageType _currentLanguage = LanguageType.ENGLISH;
+    public LanguageType currentLanguage { get { return _currentLanguage; } }
+
+    public void SetCurrentLanguage(LanguageType lang) 
+    { 
+        _currentLanguage = lang;
+    }
+
+    public override void Init()
+    {
+        base.Init();
+
+        if(uiTextBank != null)
+            uiTextBank.ParseCSV();
+    }
+
+    public string GetUITranslatedText(string text)
+    {
+        if (_currentLanguage == LanguageType.ENGLISH)
+            return text;
+
+        string id = TextUtil.GetUniqueTextToSpeechFilename(text +'\r');
+
+        Debug.LogError("ID " + id + " Text " + text);
+        string translatedText = uiTextBank.GetTextByID(id, _currentLanguage);
+
+        if (string.IsNullOrEmpty(translatedText))
+            return text;
+
+        return translatedText;
+    }
+}

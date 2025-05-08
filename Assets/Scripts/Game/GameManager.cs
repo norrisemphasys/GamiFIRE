@@ -72,6 +72,7 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void Update()
     {
+#if UNITY_EDITOR
         if(Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.V) && !volumePopupShowing)
         {
             PopupManager.instance.ShowPopup(PopupMessage.VolumePopup("Press the button below to turn on or off the volume.", 
@@ -91,6 +92,7 @@ public class GameManager : MonoSingleton<GameManager>
 
             volumePopupShowing = true;
         }
+#endif
     }
 
 }

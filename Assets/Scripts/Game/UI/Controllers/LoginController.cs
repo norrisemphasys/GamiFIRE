@@ -14,6 +14,7 @@ public class LoginController : BasicController
     [SerializeField] bool isOffline = false;
 
     [SerializeField] bool isAutoLogin;
+    [SerializeField] bool isNewsLetter;
 
     private string email;
     private string password;
@@ -68,10 +69,13 @@ public class LoginController : BasicController
 
     public override void Initialize()
     {
-        isAutoLogin = PlayerPrefs.GetInt("AutoSignIn", 0) == 1;
+        isAutoLogin = false;// PlayerPrefs.GetInt("AutoSignIn", 0) == 1;
         view.toggleAutoSignIn.isOn = isAutoLogin;
 
-        if(isAutoLogin)
+        isNewsLetter = PlayerPrefs.GetInt("NewsLetter", 0) == 1;
+        view.toggleNewsletter.isOn = isNewsLetter;
+
+        if (isAutoLogin)
         {
             email = PlayerPrefs.GetString("Email");
             password = PlayerPrefs.GetString("Password");
@@ -110,6 +114,7 @@ public class LoginController : BasicController
         view.buttonShowPassword.onClick.AddListener(OnClickShowPassword);
 
         view.toggleAutoSignIn.onValueChanged.AddListener(OnToggleAutoLogin);
+        view.toggleNewsletter.onValueChanged.AddListener(OnToggleNewsLetter);
 
         view.buttonShowPasswordSign.onClick.AddListener(OnClickShowPasswordSign);
     }
@@ -130,8 +135,17 @@ public class LoginController : BasicController
         view.buttonShowPassword.onClick.RemoveListener(OnClickShowPassword);
 
         view.toggleAutoSignIn.onValueChanged.RemoveListener(OnToggleAutoLogin);
+        view.toggleNewsletter.onValueChanged.RemoveListener(OnToggleNewsLetter);
 
         view.buttonShowPasswordSign.onClick.RemoveListener(OnClickShowPasswordSign);
+    }
+
+    void OnToggleNewsLetter(bool isOn) 
+    {
+        isNewsLetter = isOn;
+        PlayerPrefs.SetInt("NewsLetter", isNewsLetter ? 1 : 0);
+
+        Debug.LogError("Is NewsLetter " + isNewsLetter);
     }
 
     void OnToggleAutoLogin(bool isOn)
@@ -252,7 +266,9 @@ public class LoginController : BasicController
                 CurrencyPoint = 0,
                 SatisfactionPoint = 0,
                 Costume = "",
-                HasBadge = false
+                HasBadge = false,
+                IsAdministrator = false,
+                IsNewsletterSubscriber = false,
             };
 
             UserManager.instance.SetCurrentUser(newUser);
@@ -349,6 +365,8 @@ public class LoginController : BasicController
             }
             else
             {
+                res.IsNewsletterSubscriber = isNewsLetter;
+
                 UserManager.instance.SetCurrentUser(res);
                 if (resetUserPoints)
                     UserManager.instance.ResetUserPoints();

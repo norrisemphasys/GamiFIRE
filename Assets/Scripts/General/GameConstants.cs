@@ -18,6 +18,7 @@ public static class GameConstants
     public static string WEB_API_KEY = "AIzaSyD_mZ44fKkkFyhTkWR7XZf5WKBKZF-mK90";
 
     public static string USERS_BADGE_URL = DB_URL + "/badges";
+    public static string USERS_SURVEY_URL = DB_URL + "/surveys";
 
     public static string BADGE_URL = "https://dcadmin.gear-up.nl";
     public static string BADGE_TOKEN_URL = BADGE_URL + "/api/token";

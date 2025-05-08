@@ -5,10 +5,16 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 public static class Utils
 {
 	private static System.Random rng = new System.Random();
+
+	private static readonly Regex emailRegex = new Regex(
+		@"^[^@\s]+@[^@\s]+\.[^@\s]+$",
+		RegexOptions.Compiled | RegexOptions.IgnoreCase
+	);
 
 	#region STRING ENCRYPTION
 
@@ -307,4 +313,40 @@ public static class Utils
 	}
 
 	#endregion
+
+	#region STRING VALIDATOR
+	/// <summary>
+	/// Validates whether the input string is a valid email address.
+	/// </summary>
+	/// <param name="email">The email string to validate.</param>
+	/// <returns>True if valid email, false otherwise.</returns>
+	public static bool IsValidEmail(string email)
+	{
+		if (string.IsNullOrWhiteSpace(email))
+			return false;
+
+		return emailRegex.IsMatch(email);
+	}
+    #endregion
+
+    #region GETCOMPONENT UTILITIES
+	public static List<T> GetAllChildComponents<T>(Transform parent) where T : Component
+    {
+		List<T> result = new List<T>();
+		GetChildComponentsRecursive(parent, result);
+		return result;
+	}
+
+	public static void GetChildComponentsRecursive<T>(Transform current, List<T> list) where T : Component
+    {
+		foreach(Transform child in current)
+        {
+			T component =  child.GetComponent<T>();
+			if (component != null)
+				list.Add(component);
+
+			GetChildComponentsRecursive(child, list);
+		}
+    }
+    #endregion
 }
