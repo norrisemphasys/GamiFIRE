@@ -10,6 +10,28 @@ public class UserManager : MonoSingleton<UserManager>
 
     public UserBadge userBadge { get; set; }
 
+    public User tempUser = new User
+    {
+        ID = "LpMAyTMQOXcwFZYfA72jmVnhUh82",
+        //Username = "Test User",
+        //Email = "test@test.com",
+        //Password = Utils.GetMD5Hash("1234567890"),
+        isAnExistingAccount = true,
+
+        JobType = 0,
+        Gender = 0,
+        Coin = 0,
+        Score = 0,
+        GrowthPoint = 0,
+        InnovationPoint = 0,
+        CurrencyPoint = 0,
+        SatisfactionPoint = 0,
+        //Costume = "",
+        HasBadge = true,
+        IsAdministrator = true,
+        IsNewsletterSubscriber = false,
+    };
+
     public void SetCurrentUser(User user) 
     {
         if (user == null && _currentUser != null)

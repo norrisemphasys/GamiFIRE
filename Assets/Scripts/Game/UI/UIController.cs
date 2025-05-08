@@ -109,6 +109,7 @@ public class UIController : MonoBehaviour
                 case UIState.JOB_MENU: GetContoller<JobMenuController>(state).OnEnter(); break;
                 case UIState.GAME_INTRO_MENU: GetContoller<GameIntroController>(state).OnEnter(); break;
                 case UIState.LANGUAGE_MENU: GetContoller<LanguageController>(state).OnEnter(); break;
+                case UIState.SURVEY_MENU: GetContoller<SurveyController>(state).OnEnter(); break;
 
                 case UIState.PROFILE_MENU: GetContoller<ProfileUIController>(state).OnEnter(); break;
             }   
@@ -161,6 +162,7 @@ public class UIController : MonoBehaviour
                 case UIState.JOB_MENU: GetContoller<JobMenuController>(state).OnExit(); break;
                 case UIState.GAME_INTRO_MENU: GetContoller<GameIntroController>(state).OnExit(); break;
                 case UIState.LANGUAGE_MENU: GetContoller<LanguageController>(state).OnExit(); break;
+                case UIState.SURVEY_MENU: GetContoller<SurveyController>(state).OnExit(); break;
 
                 case UIState.PROFILE_MENU: GetContoller<ProfileUIController>(state).OnExit(); break;
             }
@@ -224,6 +226,7 @@ public enum UIState
     PROFILE_MENU,
 
     LANGUAGE_MENU,
+    SURVEY_MENU,
 
     NONE
 }

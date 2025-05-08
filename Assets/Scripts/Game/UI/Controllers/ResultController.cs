@@ -40,6 +40,7 @@ public class ResultController : BasicController
 		User currentUser = UserManager.instance.currentUser;
 		if (currentUser != null)
 		{
+			Debug.LogError("user not null");
 			view.UpdateUserPoints(currentUser);
 
 			int idx = gameManager.SelectedPointIndex;
@@ -118,8 +119,24 @@ public class ResultController : BasicController
 				{
 					OnClickClaimBadge(badge.badgeID);
 				}));
+            }
+            else
+            {
+				ShowSurveyMenu();
 			}
-		}
+        }
+        
+	}
+
+	void ShowSurveyMenu()
+    {
+		Debug.LogError("Show Survey");
+		SurveySO surveySO = gameManager.surveyController.GetCurrentSurvey();
+		Survey survey = DBManager.allUsersSurvey.Find((x) => x.id == surveySO.id);
+		bool isSurveyExisting = survey != null;
+
+		if (!isSurveyExisting)
+			gameManager.uiController.Show(UIState.SURVEY_MENU);
 	}
 
 	void OnClickClaimBadge(string badgeID)
@@ -136,7 +153,7 @@ public class ResultController : BasicController
 					LoadingManager.instance.ShowLoader(false);
 					PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("You have successfully claimed the badge", () =>
 					{
-
+						ShowSurveyMenu();
 					}));
 				});	
 			}
@@ -145,6 +162,7 @@ public class ResultController : BasicController
 				LoadingManager.instance.ShowLoader(false);
 				PopupManager.instance.ShowPopup(PopupMessage.ErrorPopup("There was an error in the server when claiming the badge.", () =>
 				{
+					ShowSurveyMenu();
 				}));
 			}		
 		});

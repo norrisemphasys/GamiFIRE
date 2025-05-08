@@ -69,7 +69,7 @@ public class LoginController : BasicController
 
     public override void Initialize()
     {
-        isAutoLogin = false;// PlayerPrefs.GetInt("AutoSignIn", 0) == 1;
+        isAutoLogin = PlayerPrefs.GetInt("AutoSignIn", 0) == 1;
         view.toggleAutoSignIn.isOn = isAutoLogin;
 
         isNewsLetter = PlayerPrefs.GetInt("NewsLetter", 0) == 1;
@@ -385,8 +385,18 @@ public class LoginController : BasicController
                 }
                 else
                 {
-                    OnClickDefault(UIState.GENDER_MENU);
-                    LoadingManager.instance.ShowLoader(false);
+                    DBManager.GetAllUsersSurvey(res, (surveys) =>
+                    {
+                        SurveySO surveySO = gameManager.surveyController.GetCurrentSurvey();
+                        Survey survey = DBManager.allUsersSurvey.Find((x) => x.id == surveySO.id);
+
+                        if (survey != null)
+                            OnClickDefault(UIState.GENDER_MENU);
+                        else
+                            OnClickDefault(UIState.SURVEY_MENU);
+
+                        LoadingManager.instance.ShowLoader(false);
+                    });
                 }
 
                 if(isAutoLogin)

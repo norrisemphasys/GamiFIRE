@@ -92,6 +92,6 @@ public class Badge
 public class Survey
 {
     public string id;
-    public string question;
+    public string title;
     public string answer;
 }

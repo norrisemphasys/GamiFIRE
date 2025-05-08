@@ -23,6 +23,8 @@ public class GameManager : MonoSingleton<GameManager>
     public SceneController sceneController { get { return FindObjectOfType<SceneController>(); } }
     public MiniGameController miniGameController { get { return FindObjectOfType<MiniGameController>(); } }
 
+    public SurveyController surveyController { get { return FindAnyObjectByType<SurveyController>(); } }
+
     public UIState _currentState;
     public UIState currentState { get { return _currentState; } }
 

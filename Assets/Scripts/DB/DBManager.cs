@@ -9,6 +9,8 @@ using Newtonsoft.Json;
 
 public class DBManager : MonoSingleton<DBManager>
 {
+    public static List<Survey> allUsersSurvey = new List<Survey>();
+
     private static string _idToken;
     private static string _localID;
 
@@ -323,7 +325,9 @@ public class DBManager : MonoSingleton<DBManager>
     #region SURVEY
     public static void GetAllUsersSurvey(User user, UnityAction<Survey[]> callback = null)
     {
-        RestClient.Get(GameConstants.USERS_BADGE_URL + "/" + user.ID + "/surveys" + ".json?auth=" + _idToken).Then(res =>
+        allUsersSurvey.Clear();
+
+        RestClient.Get(GameConstants.USERS_SURVEY_URL + "/" + user.ID + "/surveys" + ".json?auth=" + _idToken).Then(res =>
         {
             if (!string.IsNullOrEmpty(res.Text))
             {
@@ -331,8 +335,11 @@ public class DBManager : MonoSingleton<DBManager>
 
                 Dictionary<string, Survey> surveys = JsonConvert.DeserializeObject<Dictionary<string, Survey>>(res.Text);
 
-              /*  foreach (var badge in badges)
-                    BadgeManager.AddUserBadge(badge.Value);*/
+                /*  foreach (var badge in badges)
+                      BadgeManager.AddUserBadge(badge.Value);*/
+
+                foreach (var survey in surveys)
+                    allUsersSurvey.Add(survey.Value);
 
                 callback?.Invoke(surveys.Values.ToArray());
 

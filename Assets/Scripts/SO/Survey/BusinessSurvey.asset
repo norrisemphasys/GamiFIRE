@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6ce8c2ab3060b04aadc871f4d0d1b9c, type: 3}
+  m_Name: BusinessSurvey
+  m_EditorClassIdentifier: 
+  id: a87ff679a2f3e71d9181a67b7542122c
+  title: Professional Survey
+  surveyQuestion:
+  - question: 1. I can use budgeting, income, and expenses in real-life situations.
+    options:
+    - Strongly Disagree
+    - Disagree
+    - Neutral
+    - Agree
+    - Strongly Agree
+  - question: 2. The game helped me understandhow to make decisionsthat lead to financialgrowth.
+    options:
+    - Strongly Disagree
+    - Disagree
+    - Neutral
+    - Agree
+    - Strongly Agree
+  - question: 3. The game encouraged me to try new and creative ways to solve money
+      problems.
+    options:
+    - Strongly Disagree
+    - Disagree
+    - Neutral
+    - Agree
+    - Strongly Agree
+  - question: 4. I learnedhow to balance things like income vs. costs and today vs.
+      the future when making decisions.
+    options:
+    - Strongly Disagree
+    - Disagree
+    - Neutral
+    - Agree
+    - Strongly Agree
+  - question: 5. I nowseehowmy money choices can affect the environment and society.
+    options:
+    - Strongly Disagree
+    - Disagree
+    - Neutral
+    - Agree
+    - Strongly Agree
+  - question: 6. I feel more confident in making financialdecisions and explainingthem
+      to others.
+    options:
+    - Strongly Disagree
+    - Disagree
+    - Neutral
+    - Agree
+    - Strongly Agree
