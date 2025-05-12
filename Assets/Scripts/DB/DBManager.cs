@@ -256,8 +256,8 @@ public class DBManager : MonoSingleton<DBManager>
         UserBadge userBadge = new UserBadge
         {
             userID = BadgeManager.credentialRequest.userID,
-            templeteID = BadgeManager.credentialRequest.templeteID,
-            emailTempleteID = BadgeManager.credentialRequest.emailTempleteID,
+            templateID = BadgeManager.credentialRequest.templateID,
+            emailTemplateID = BadgeManager.credentialRequest.emailTemplateID,
 
             badges = new Badge()
         };
@@ -339,7 +339,10 @@ public class DBManager : MonoSingleton<DBManager>
                       BadgeManager.AddUserBadge(badge.Value);*/
 
                 foreach (var survey in surveys)
+                {
                     allUsersSurvey.Add(survey.Value);
+                    Debug.LogError("ID " + survey.Value.id);
+                }
 
                 callback?.Invoke(surveys.Values.ToArray());
 

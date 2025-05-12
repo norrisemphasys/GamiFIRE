@@ -32,11 +32,13 @@ public class PauseITController : BasicController
 		Audio.StopBGMIslandTrip();
 
 		if(gameManager.currentScene == SCENE_TYPE.ISLAND_TRIP_SCENE)
-			view.SetIslandName("ISLAND TRIP");
+			view.SetIslandName(LanguageManager.instance.GetUITranslatedText("ISLAND TRIP"));
 		else if(gameManager.currentScene == SCENE_TYPE.ISLAND_SCENE)
         {
-			string IslandName = UserManager.GetJobName(gameManager.IslandType);
-			view.SetIslandName(IslandName + " ISLAND");
+			string jobTranslate = LanguageManager.instance.GetUITranslatedText(UserManager.GetJobName(gameManager.IslandType));
+			string IslandName = jobTranslate;
+			string islandTranslate = LanguageManager.instance.GetUITranslatedText("ISLAND");
+			view.SetIslandName(IslandName + " " + islandTranslate);
 		}
 	}
 

@@ -71,7 +71,7 @@ public class InGamePortController : BasicController
 			bool showSubscription = Random.Range(0, 100) > 50;
 			if(showSubscription)
             {
-				PopupManager.instance.ShowPopup(PopupMessage.Subscribe("Subscribe to our news letter to get the latest updates about GamiFIRE.", null, () =>
+				PopupManager.instance.ShowPopup(PopupMessage.Subscribe("Subscribe to our newsletter to get the latest updates about GAMI.FI.RE", null, () =>
 				{
 					user.IsNewsletterSubscriber = true;
 					PlayerPrefs.SetInt("NewsLetter", user.IsNewsletterSubscriber ? 1 : 0);
@@ -87,7 +87,12 @@ public class InGamePortController : BasicController
 
 		if (badgeCount == 0)
 		{
-			string message = "Congratulations! By joining this game you have obtained your first Badge! \n The Mainland Badge: Island Explorer";
+			LanguageType type = LanguageManager.instance.currentLanguage;
+			string message = "";
+			if (type == LanguageType.ENGLISH)
+				message = "Congratulations! By joining this game you have obtained your first Badge! \n The Mainland Badge: Island Explorer";
+			else
+				message = "Congratulations! By joining this game you have obtained your first Badge! The Mainland Badge: Island Explorer";
 			PopupManager.instance.ShowPopup(PopupMessage.ClaimPopup(message, () =>
 			{
 				OnClickClaimBadge();

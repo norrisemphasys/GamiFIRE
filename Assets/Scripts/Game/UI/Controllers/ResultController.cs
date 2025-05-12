@@ -130,11 +130,10 @@ public class ResultController : BasicController
 
 	void ShowSurveyMenu()
     {
-		Debug.LogError("Show Survey");
 		SurveySO surveySO = gameManager.surveyController.GetCurrentSurvey();
 		Survey survey = DBManager.allUsersSurvey.Find((x) => x.id == surveySO.id);
 		bool isSurveyExisting = survey != null;
-
+		Debug.LogError("Show Survey "  + isSurveyExisting + " id " + surveySO.id);
 		if (!isSurveyExisting)
 			gameManager.uiController.Show(UIState.SURVEY_MENU);
 	}

@@ -11,10 +11,17 @@ public static class PopupMessage
     {
         PopupData data = new();
 
-        data.Title = title;
-        data.Description = description;
-        data.TxtButtonOK = textOk;
-        data.TxtButtonCancel = textCancel;
+
+        string titleTranslate = LanguageManager.instance.GetUITranslatedText(title);
+        Debug.LogError("description "  + description);
+        string descriptionTranslate = LanguageManager.instance.GetUITranslatedText(description);
+        string textOkTranslate = LanguageManager.instance.GetUITranslatedText(textOk);
+        string textCancelTranslate = LanguageManager.instance.GetUITranslatedText(textCancel);
+
+        data.Title = titleTranslate;
+        data.Description = descriptionTranslate;
+        data.TxtButtonOK = textOkTranslate;
+        data.TxtButtonCancel = textCancelTranslate;
 
         data.ShowOk = showOk;
         data.ShowCancel = showCancel;

@@ -113,10 +113,13 @@ public class GameInfoController : BasicController
 		GameInfo[] infos = gameInfos[idx].infos.ToArray();
 		for (int i = 0; i < infos.Length; i++)
         {
-			if(i < listView.Count)
+			string titleTranslate = LanguageManager.instance.GetUITranslatedText(infos[i].Title);
+			string descriptionTranslate = LanguageManager.instance.GetUITranslatedText(infos[i].Content);
+
+			if (i < listView.Count)
             {
 				listView[i].gameObject.SetActive(true);
-				listView[i].SetData(infos[i].Title, infos[i].Content);
+				listView[i].SetData(titleTranslate, descriptionTranslate);
             }
             else
             {
@@ -127,7 +130,7 @@ public class GameInfoController : BasicController
 				infoT.localScale = Vector3.one;
 				infoT.rotation = Quaternion.identity;
 
-				infoT.GetComponent<GameInfoListView>().SetData(infos[i].Title, infos[i].Content);
+				infoT.GetComponent<GameInfoListView>().SetData(titleTranslate, descriptionTranslate);
 			}
         }
     }

@@ -15,47 +15,40 @@ MonoBehaviour:
   id: cfcd208495d565ef66e7dff9f98764da
   title: Start Game
   surveyQuestion:
-  - question: 1. I know the basics of managing money and making a budget.
+  - question: I know the basics of managing money and making a budget.
     options:
     - Strongly Disagree
     - Disagree
-    - Neutral
     - Agree
     - Strongly Agree
-  - question: 2. I feel confident in making decisions that help money grow over time.
+  - question: I feel confident in making decisions that help money grow over time.
     options:
     - Strongly Disagree
     - Disagree
-    - Neutral
     - Agree
     - Strongly Agree
-  - question: 3. I often think of new ways to solve money problems or make things
-      better.
+  - question: I often think of new ways to solve money problems or make things better.
     options:
     - Strongly Disagree
     - Disagree
-    - Neutral
     - Agree
     - Strongly Agree
-  - question: 4. I think about both short-term and long-term effects when making
-      money decisions.
+  - question: I think about both short-term and long-term effects when making money
+      decisions.
     options:
     - Strongly Disagree
     - Disagree
-    - Neutral
     - Agree
     - Strongly Agree
-  - question: 5. I consider how my money decisions impact the environment and society.
+  - question: I consider how my money decisions impact the environment and society.
     options:
     - Strongly Disagree
     - Disagree
-    - Neutral
     - Agree
     - Strongly Agree
-  - question: 6. I am excited and ready to play the GAMIFIRE game.
+  - question: I am excited and ready to play the GAMI.FI.RE game.
     options:
     - Strongly Disagree
     - Disagree
-    - Neutral
     - Agree
     - Strongly Agree

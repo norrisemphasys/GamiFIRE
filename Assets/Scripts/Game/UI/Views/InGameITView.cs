@@ -59,7 +59,8 @@ public class InGameITView : BasicView
     public void SetJob(int idx)
     {
         JobType job = (JobType)idx;
-        textJob.text = UserManager.GetJobName(job);
+        string jobTranslate = LanguageManager.instance.GetUITranslatedText(UserManager.GetJobName(job));
+        textJob.text = jobTranslate;
     }
 
     public void SetTimeTraveled(float time, bool init = false)

@@ -25,7 +25,9 @@ public class SurveyController : BasicController
 		else
 			currrentSurvey = 0;
 
-		return surveySO[_currentSurveyIndex];
+		Debug.LogError("currrentSurvey" + currrentSurvey);
+
+		return surveySO[currrentSurvey];
 	}
 
 	void Awake()
@@ -51,8 +53,7 @@ public class SurveyController : BasicController
 
 	public override void Initialize()
 	{
-		if(gameManager.currentScene == SCENE_TYPE.ISLAND_SCENE)
-			currrentSurvey = (int)gameManager.IslandType + 1;
+		GetCurrentSurvey();
 
 		_surveyAnswer = string.Empty;
 		surveyQuestions = surveySO[currrentSurvey].surveyQuestion;
@@ -88,7 +89,10 @@ public class SurveyController : BasicController
 	{
 		_maxSurveyCount = surveyQuestions.Length;
 
-		view.textQuestion.text = surveyQuestions[_currentSurveyIndex].question;
+		string questionTranslate = LanguageManager.instance.GetUITranslatedText(surveyQuestions[_currentSurveyIndex].question);
+
+		string questionText = string.Format("{0}. {1}", _currentSurveyIndex + 1, questionTranslate);
+		view.textQuestion.text = questionText;
 		int optionsCount = surveyQuestions[_currentSurveyIndex].options.Length;
 
 		foreach (Transform t in view.rectContent)
@@ -117,7 +121,8 @@ public class SurveyController : BasicController
 			Toggle toggle = transformSurvey.GetComponent<Toggle>();
 			toggle.isOn = false;
 
-			toggle.GetComponentInChildren<TextMeshProUGUI>().text = surveyQuestions[_currentSurveyIndex].options[i];
+			string optionTranslate = LanguageManager.instance.GetUITranslatedText(surveyQuestions[_currentSurveyIndex].options[i]);
+			toggle.GetComponentInChildren<TextMeshProUGUI>().text = optionTranslate;
 
 			ToggleGroup toggleGroup = view.rectContent.GetComponent<ToggleGroup>();
 			toggle.group = toggleGroup;
@@ -186,8 +191,10 @@ public class SurveyController : BasicController
 				if(sucess)
                 {
 					LoadingManager.instance.ShowLoader(false);
-					PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("Thank you for completing the survey¡ªwe really appreciate your time and input!.", () =>
+					PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("Thank you for completing the survey¡ªwe really appreciate your time and input!", () =>
 					{
+						if (!DBManager.allUsersSurvey.Contains(survey))
+							DBManager.allUsersSurvey.Add(survey);
 						OnClickBack();
 					}));
 				}

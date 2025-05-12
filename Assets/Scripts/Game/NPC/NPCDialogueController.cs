@@ -34,7 +34,13 @@ public class NPCDialogueController : MonoBehaviour
         dialoguePanel.gameObject.SetActive(show);
 
         GameInfo info = so.infos[Random.Range(0, so.infos.Count)];
-        string message = string.Format("Did you know that {0} {1} {2}", info.Title, ext[Random.Range(0, ext.Length)], info.Content);
+
+        string titleTranslate = LanguageManager.instance.GetUITranslatedText(info.Title);
+        string descriptionTranslate = LanguageManager.instance.GetUITranslatedText(info.Content);
+        string didyouKnowTranslate = LanguageManager.instance.GetUITranslatedText("Did you know that");
+        string extensionTranslate = LanguageManager.instance.GetUITranslatedText(ext[Random.Range(0, ext.Length)]);
+
+        string message = string.Format("{0} {1} {2} {3}", didyouKnowTranslate, titleTranslate, extensionTranslate, descriptionTranslate);
 
         dialogueText.text = message;//dialogueMessages[Random.Range(0, dialogueMessages.Length)];
     }

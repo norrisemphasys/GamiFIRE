@@ -23,13 +23,20 @@ public class BadgeListView : MonoBehaviour
 
     public void SetBadgeData(BadgeInfoSO info)
     {
-        textTitle.text = info.title;
-        textDescription.text = info.description;
+
+        string titleTranslate = LanguageManager.instance.GetUITranslatedText(info.title);
+        string descriptionTranslate = LanguageManager.instance.GetUITranslatedText(info.description);
+        string pointOfAttentionTranslate = LanguageManager.instance.GetUITranslatedText(info.pointOfAttention);
+
+        string poaTranslate = LanguageManager.instance.GetUITranslatedText("Point of Attention");
+
+        textTitle.text = titleTranslate;
+        textDescription.text = descriptionTranslate;
 
         if(info.badgeID.Equals("67ed253c4dc5c989a8cf5cf5"))
-            content = info.description;
+            content = descriptionTranslate;
         else
-            content = info.description + "\n\n" + "<b>Point of Attention : </b>" + info.pointOfAttention;
+            content = descriptionTranslate + "\n\n" + "<b>" + poaTranslate + " : </b>" + pointOfAttentionTranslate;
 
         icon.sprite = info.icon;
 

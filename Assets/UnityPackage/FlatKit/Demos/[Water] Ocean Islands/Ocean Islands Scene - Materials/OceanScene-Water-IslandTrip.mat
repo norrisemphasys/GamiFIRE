@@ -105,7 +105,7 @@ Material:
     - _FoamProcedural: 1
     - _FoamScale: 0.29
     - _FoamSharpness: 0.88
-    - _FoamSpeed: -5
+    - _FoamSpeed: -7
     - _FoamStretchX: 1
     - _FoamStretchY: 1
     - _FoamTexture: 1

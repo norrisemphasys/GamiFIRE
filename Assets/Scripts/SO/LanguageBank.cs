@@ -40,7 +40,7 @@ public class LanguageBank : ScriptableObject
                     LanguageType type = (LanguageType)i;
                     translation.Add(type, language);
 #if UNITY_EDITOR
-                    Debug.Log("idx " + idx + " type " + type + " text " + language.text);
+                    //Debug.Log("idx " + idx + " type " + type + " text " + language.text);
 #endif
                 }
             }

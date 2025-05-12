@@ -88,7 +88,8 @@ public class IslandUIView : BasicView
         JobType job = (JobType)user.JobType;
 
         textUserName.text = user.Username;
-        textJobType.text = UserManager.GetJobName(job);
+        string jobTranslate = LanguageManager.instance.GetUITranslatedText(UserManager.GetJobName(job));
+        textJobType.text = jobTranslate;
 
         tempScore = ScoreManager.instance.tempScore;
 
@@ -110,7 +111,8 @@ public class IslandUIView : BasicView
 
     public void SetIslandName(string name)
     {
-        textIslandName.text = name + " ISLAND";
+        string islandTranslate = LanguageManager.instance.GetUITranslatedText("ISLAND");
+        textIslandName.text = name + " " + islandTranslate;
     }
     
     public void UpdateTestScore()

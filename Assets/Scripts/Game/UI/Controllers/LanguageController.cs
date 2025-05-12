@@ -54,13 +54,15 @@ public class LanguageController : BasicController
 
 	void OnSelectLanguage(int idx)
     {
-		LanguageType type = (LanguageType)idx;
+		LanguageType type = (LanguageType)idx + 1;
 
 		for (int i = 0; i < view.buttonLanguage.Length; i++)
         {
 			bool focus = i == idx;
 			view.buttonLanguage[i].transform.Find("Focus").gameObject.SetActive(focus);
         }
+		Debug.LogError("TYPE " + type + " IDX " + idx);
+		LanguageManager.instance.SetCurrentLanguage(type);
 
 		OnClickDefault(UIState.SPLASH_MENU);
 	}

@@ -15,6 +15,8 @@ public static class GameEvents
 
     public static readonly Evt OnShowBuilding = new Evt();
 
+    public static readonly Evt OnChangeLanguage = new Evt();
+
 
     //MINI GAME CONTROLLS
 
@@ -38,6 +40,8 @@ public static class GameEvents
 
     public static readonly Evt<int, bool> OnDropCollected = new Evt<int, bool>();
     public static readonly Evt<int, bool> OnLifeRemove = new Evt<int, bool>();
+
+
 }
 
 public class Evt
@@ -46,6 +50,11 @@ public class Evt
     public void Invoke() { _action?.Invoke(); }
     public void AddListener(Action listener) { _action += listener; }
     public void RemoveListener(Action listener) { _action -= listener; }
+
+    public void RemoveAllListener()
+    {
+        _action = null;
+    }
 }
 
 public class Evt<T>

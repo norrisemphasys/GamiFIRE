@@ -41,8 +41,8 @@ public class IslandUIController : BasicController
 		Audio.PlayBGMSea();
 
 		Time.timeScale = 1;
-
-		view.SetIslandName( UserManager.GetJobName( gameManager.IslandType ));
+		string jobTranslate = LanguageManager.instance.GetUITranslatedText(UserManager.GetJobName(gameManager.IslandType));
+		view.SetIslandName(jobTranslate);
 		//view.buttonBuilding.interactable = false;
 
 		sceneController = gameManager.sceneController;

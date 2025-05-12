@@ -33,7 +33,11 @@ public class BuildingListView : MonoBehaviour
     void UpdateView()
     {
         textPrice.text = data.Price.ToString();
-        textName.text = data.Name + "\n" + "<#1eb7fd><size=28>" + data.Description;
+
+        string nameTranslate = LanguageManager.instance.GetUITranslatedText(data.Name);
+        string descriptionTranslate = LanguageManager.instance.GetUITranslatedText(data.Description);
+
+        textName.text = nameTranslate + "\n" + "<#1eb7fd><size=28>" + descriptionTranslate;
 
         buttonBuy.gameObject.SetActive(data.IsLock);
         buttonSelect.gameObject.SetActive(!data.IsLock);

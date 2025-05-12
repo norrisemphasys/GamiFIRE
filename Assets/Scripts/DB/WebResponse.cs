@@ -30,9 +30,10 @@ public class Token
 
 public class CredentialRequest
 {
+    public string offerId;
     public string userID;
-    public string templeteID;
-    public string emailTempleteID;
+    public string templateID;
+    public string emailTemplateID;
     public string badgeID;
 
     public CredentialPayload credentialPayload;
@@ -71,8 +72,8 @@ public class AchievementCriteria
 public class UserBadge
 {
     public string userID;
-    public string templeteID;
-    public string emailTempleteID;
+    public string templateID;
+    public string emailTemplateID;
 
     public Badge badges;
 }

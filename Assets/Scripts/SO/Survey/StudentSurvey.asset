@@ -15,48 +15,42 @@ MonoBehaviour:
   id: c4ca4238a0b923820dcc509a6f75849b
   title: Student Survey
   surveyQuestion:
-  - question: 1. I can use budgeting, income, and expenses in real-life situations.
+  - question: I can use budgeting, income, and expenses in real-life situations.
     options:
     - Strongly Disagree
     - Disagree
-    - Neutral
     - Agree
     - Strongly Agree
-  - question: 2. The game helped me understandhow to make decisionsthat lead to financialgrowth.
+  - question: The game helped me understandhow to make decisionsthat lead to financialgrowth.
     options:
     - Strongly Disagree
     - Disagree
-    - Neutral
     - Agree
     - Strongly Agree
-  - question: 3. The game encouraged me to try new and creative ways to solve money
+  - question: The game encouraged me to try new and creative ways to solve money
       problems.
     options:
     - Strongly Disagree
     - Disagree
-    - Neutral
     - Agree
     - Strongly Agree
-  - question: 4. I learnedhow to balance things like income vs. costs and today vs.
+  - question: I learnedhow to balance things like income vs. costs and today vs.
       the future when making decisions.
     options:
     - Strongly Disagree
     - Disagree
-    - Neutral
     - Agree
     - Strongly Agree
-  - question: 5. I nowseehowmy money choices can affect the environment and society.
+  - question: I nowseehowmy money choices can affect the environment and society.
     options:
     - Strongly Disagree
     - Disagree
-    - Neutral
     - Agree
     - Strongly Agree
-  - question: 6. I feel more confident in making financialdecisions and explainingthem
+  - question: I feel more confident in making financialdecisions and explainingthem
       to others.
     options:
     - Strongly Disagree
     - Disagree
-    - Neutral
     - Agree
     - Strongly Agree

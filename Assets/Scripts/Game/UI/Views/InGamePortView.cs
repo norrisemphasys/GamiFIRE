@@ -37,7 +37,8 @@ public class InGamePortView : BasicView
         profilePicture.sprite = icons[idx];
 
         textUserName.text = user.Username;
-        textJobType.text = UserManager.GetJobName( job );
+        string jobTranslate = LanguageManager.instance.GetUITranslatedText(UserManager.GetJobName(job));
+        textJobType.text = jobTranslate;
 
         textCoin.text = user.Coin != 0 ? string.Format("{0:#,#}", user.Coin) : "0";
         //textGrowthPoint.text = user.GrowthPoint != 0 ? string.Format("{0:#,#}", user.GrowthPoint) : "0";

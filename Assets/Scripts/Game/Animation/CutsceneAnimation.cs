@@ -50,9 +50,21 @@ public class CutsceneAnimation : MonoBehaviour
         }
 
         islandType = GameManager.instance.IslandType;
-        currentIsland =  UserManager.GetJobName( islandType );
+        string jobTranslate = LanguageManager.instance.GetUITranslatedText(UserManager.GetJobName(islandType));
+        currentIsland = jobTranslate;
 
-        textMessage.text = "You have arrived on the\n" + currentIsland + " ISLAND";
+        LanguageType type = LanguageManager.instance.currentLanguage;
+
+        string message = "";
+        if (type == LanguageType.ENGLISH)
+            message = "You have arrived on the \n" + UserManager.GetJobName(islandType) + " ISLAND";
+        else
+            message = "You have arrived on the " + UserManager.GetJobName(islandType) + " ISLAND";
+
+        Debug.LogError("MESSAGE  " + message);
+        string messageTranslate = LanguageManager.instance.GetUITranslatedText(message);
+
+        textMessage.text = messageTranslate;
 
         speedBoatParent.DOMove(targetDestination.position, 15f).SetUpdate(true);
         cameraTransform.DOMove(targetCameraDest.position, 20f).OnComplete(()=> 
@@ -80,7 +92,10 @@ public class CutsceneAnimation : MonoBehaviour
                         else
                             text = "Career Challenge!";
 
-                        textMessage.text = "Each choice you make will influence your path. Manage your time, money, and opportunities to thrive in this new " + text;
+                        string message = "Each choice you make will influence your path. Manage your time, money, and opportunities to thrive in this new " + text;
+                        string messageTranslate = LanguageManager.instance.GetUITranslatedText(message);
+
+                        textMessage.text = messageTranslate;
                         ShowText(false);
                     });
                 }, 4f);

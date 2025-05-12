@@ -54,7 +54,7 @@ public class BadgeManager : MonoSingleton<BadgeManager>
                 BadgeToken = res.token;
                 callback?.Invoke(res.token);
 
-                Debug.Log("New Token Generated");
+                Debug.Log("New Token Generated " + BadgeToken);
             }
         })
         .Catch(error =>
@@ -96,11 +96,47 @@ public class BadgeManager : MonoSingleton<BadgeManager>
             {
                 if (res != null)
                 {
-                    var achievement = JObject.Parse(res.Text)["credential"]
-                    ["batch"]["template"]["credentialTemplateJson"]
+
+                    Debug.LogError("response " + res.Text);
+#if OLD_VERSION
+                    /* var achievement = JObject.Parse(res.Text)["credential"]
+                     ["batch"]["template"]["credentialTemplateJson"]
+                     ["credentialSubject"]["achievement"];
+
+                     var claimLink = JObject.Parse(res.Text)["claimLink"];
+
+                     Debug.Log(claimLink.ToString());
+
+                     Achievement achievment = JsonConvert.DeserializeObject<Achievement>(achievement.ToString());
+
+                     Badge newBadge = new Badge
+                     {
+                         id = credentialRequest.badgeID,
+                         name = achievment.name,
+                         imgURL = achievment.image.id,
+                         criteria = achievment.criteria.narrative,
+                         description = achievment.description,
+                         claimLink = claimLink.ToString()
+                     };
+
+                     if(!HasUserBadge(badgeID))
+                     {
+                         // Add new badge.
+                         DBManager.AddNewBadge(credentialRequest.userID, newBadge, (sucess)=> 
+                         {
+                             if(sucess)
+                                 AddUserBadge(newBadge);
+
+                             Debug.Log("Successfully added badge " + sucess);
+
+                             callback?.Invoke(sucess);
+                         });
+                     } */
+#else
+                    var achievement = JObject.Parse(res.Text)["template"]["credentialTemplateJson"]
                     ["credentialSubject"]["achievement"];
 
-                    var claimLink = JObject.Parse(res.Text)["claimLink"];
+                    var claimLink = JObject.Parse(res.Text)["offerString"];
 
                     Debug.Log(claimLink.ToString());
 
@@ -116,19 +152,20 @@ public class BadgeManager : MonoSingleton<BadgeManager>
                         claimLink = claimLink.ToString()
                     };
 
-                    if(!HasUserBadge(badgeID))
+                    if (!HasUserBadge(badgeID))
                     {
                         // Add new badge.
-                        DBManager.AddNewBadge(credentialRequest.userID, newBadge, (sucess)=> 
+                        DBManager.AddNewBadge(credentialRequest.userID, newBadge, (sucess) =>
                         {
-                            if(sucess)
+                            if (sucess)
                                 AddUserBadge(newBadge);
 
                             Debug.Log("Successfully added badge " + sucess);
 
                             callback?.Invoke(sucess);
                         });
-                    } 
+                    }
+#endif
                 }
             })
             .Catch(error =>
@@ -148,13 +185,15 @@ public class BadgeManager : MonoSingleton<BadgeManager>
     {
         credentialRequest = new CredentialRequest();
 
+        credentialRequest.offerId = "001";
+
         if (user != null)
             credentialRequest.userID = user.ID;
         else
             credentialRequest.userID = "66d87eaa5465196d8f2c67a9";
 
-        credentialRequest.templeteID = "67b8a1ded984f83708f57577";
-        credentialRequest.emailTempleteID = "67b8a2c3d984f83708f57655";
+        credentialRequest.templateID = "67b8a1ded984f83708f57577";
+        credentialRequest.emailTemplateID = "67b8a2c3d984f83708f57655";
 
         CredentialPayload payload = new CredentialPayload();
 

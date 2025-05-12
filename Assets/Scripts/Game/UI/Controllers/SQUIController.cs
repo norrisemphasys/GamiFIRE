@@ -38,8 +38,11 @@ public class SQUIController : BasicController
 
 		QuestionSO question = gameManager.sceneController.GetCurrentQuestion();
 
-		view.SetTextTitle(question.questionTitle);
-		view.SetTextQuestion(question.question);
+		string titleTranslate = LanguageManager.instance.GetUITranslatedText(question.questionTitle);
+		string questionTranslate = LanguageManager.instance.GetUITranslatedText(question.question);
+
+		view.SetTextTitle(titleTranslate);
+		view.SetTextQuestion(questionTranslate);
 		view.SetPoint(gameManager.SelectedPointIndex);
 
 		question.answerData.Shuffle();
@@ -49,7 +52,9 @@ public class SQUIController : BasicController
 			AnswerView av = view.btnAnswers[i].GetComponent<AnswerView>();
 			AnswerData data = question.answerData[i];
 
-			av.SetData(data.answer, data.growthPoint, data.innovationPoint, 
+			string answerTranslate = LanguageManager.instance.GetUITranslatedText(data.answer);
+
+			av.SetData(answerTranslate, data.growthPoint, data.innovationPoint, 
 				data.satisfactionPoint, data.moneyCurrencyPoints);
 		}
 	}

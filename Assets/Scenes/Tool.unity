@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   csvFile: {fileID: 0}
-  inpuText: 4
-  outputText: a87ff679a2f3e71d9181a67b7542122c
+  inpuText: Subscribe to our newsletter to get the latest updates about GAMI.FI.RE
+  outputText: e380035c9825d1b1bafb4d55e27adbf7
 --- !u!4 &242326307
 Transform:
   m_ObjectHideFlags: 0

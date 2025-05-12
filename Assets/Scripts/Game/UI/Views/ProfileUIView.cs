@@ -71,7 +71,8 @@ public class ProfileUIView : BasicView
         int idx = (int)user.JobType;
         jobImage.sprite = jobIcons[idx];
 
-        textJob.text = UserManager.GetJobName(job);
+        string jobTranslate = LanguageManager.instance.GetUITranslatedText(UserManager.GetJobName(job));
+        textJob.text = jobTranslate;
     }
 
     public void ShowRequestEmailPopup(bool show)
