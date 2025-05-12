@@ -223,7 +223,8 @@ public class ProfileUIController : BasicController
         {
 			view.buttonClaimLink.onClick.AddListener(() =>
 			{
-				Application.OpenURL(BadgeManager.badgeList[index].claimLink);
+				//Application.OpenURL(BadgeManager.badgeList[index].claimLink);
+				QRCodeManager.instance.ShowQRCode(true, BadgeManager.badgeList[index].claimLink);
 			});
 		}
 

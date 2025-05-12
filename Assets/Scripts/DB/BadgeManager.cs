@@ -68,6 +68,8 @@ public class BadgeManager : MonoSingleton<BadgeManager>
     {
         try
         {
+            credentialRequest.offerId = System.Guid.NewGuid().ToString();
+
             if (credentialRequest != null)
                 credentialRequest.badgeID =  string.IsNullOrEmpty(badgeID) ? "66cdde692d72d391079b4faa" : badgeID;
             else
@@ -184,8 +186,6 @@ public class BadgeManager : MonoSingleton<BadgeManager>
     public static void CreateCredentialRequest(User user)
     {
         credentialRequest = new CredentialRequest();
-
-        credentialRequest.offerId = "001";
 
         if (user != null)
             credentialRequest.userID = user.ID;
