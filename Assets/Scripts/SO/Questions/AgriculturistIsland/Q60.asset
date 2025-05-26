@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q60
+  m_EditorClassIdentifier: 
+  questionTitle: Land Purchase
+  question: You have the opportunity to purchase new land at a favorable price. What
+    will you do?
+  answerData:
+  - answer: Take out a loan.
+    growthPoint: 4
+    satisfactionPoint: 1
+    innovationPoint: 3
+    moneyCurrencyPoints: 2
+  - answer: Use long-term savings.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 2
+    moneyCurrencyPoints: 1
+  - answer: Do not buy the land.
+    growthPoint: 2
+    satisfactionPoint: 3
+    innovationPoint: 1
+    moneyCurrencyPoints: 4
+  - answer: Borrow money from a friend.
+    growthPoint: 1
+    satisfactionPoint: 4
+    innovationPoint: 3
+    moneyCurrencyPoints: 2

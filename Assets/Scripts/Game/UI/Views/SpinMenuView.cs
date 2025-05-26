@@ -55,9 +55,14 @@ public class SpinMenuView : BasicView
     public void SetResultData(PrizeData data)
     {
         iconImage.sprite = data.sprite;
-        textShortDescription.text = data.shortDescription;
-        textDescription.text = data.description;
-        textName.text = data.name;
+
+        string shortDescritionTranslate = LanguageManager.instance.GetUITranslatedText(data.shortDescription);
+        string descritionTranslate = LanguageManager.instance.GetUITranslatedText(data.description);
+        string nameTranslate = LanguageManager.instance.GetUITranslatedText(data.name);
+
+        textShortDescription.text = shortDescritionTranslate;
+        textDescription.text = descritionTranslate;
+        textName.text = nameTranslate;
 
         iconImage.rectTransform.sizeDelta = new Vector2(data.sprite.rect.size.x * 1.2f, data.sprite.rect.size.y * 1.2f);
 

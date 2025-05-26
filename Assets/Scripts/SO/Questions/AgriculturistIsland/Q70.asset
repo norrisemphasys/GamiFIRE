@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694129435d697a4a828a42c2c8d1088, type: 3}
+  m_Name: Q70
+  m_EditorClassIdentifier: 
+  questionTitle: Sustainable Farming
+  question: You have received guidelines from the EU Commission regarding the transition
+    to sustainable farming. What will you do?
+  answerData:
+  - answer: I will read the guidelines and throw them in the trash.
+    growthPoint: 1
+    satisfactionPoint: 2
+    innovationPoint: 4
+    moneyCurrencyPoints: 3
+  - answer: I will not read the guidelines, as I don't intend to farm sustainably.
+    growthPoint: 2
+    satisfactionPoint: 1
+    innovationPoint: 3
+    moneyCurrencyPoints: 4
+  - answer: I will carefully read the guidelines and learn about sustainable farming
+      options.
+    growthPoint: 4
+    satisfactionPoint: 3
+    innovationPoint: 1
+    moneyCurrencyPoints: 2
+  - answer: I will not read the guidelines, but I will consult with a friend on the
+      matter.
+    growthPoint: 3
+    satisfactionPoint: 4
+    innovationPoint: 2
+    moneyCurrencyPoints: 1

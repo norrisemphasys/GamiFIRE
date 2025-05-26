@@ -4907,8 +4907,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 16.9}
-  m_SizeDelta: {x: 1307, y: 351.4}
+  m_AnchoredPosition: {x: 0, y: 9}
+  m_SizeDelta: {x: 1307, y: 312.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &288447544
 MonoBehaviour:
@@ -7131,7 +7131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &482501341
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20457,12 +20457,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 49.45
   m_fontSizeBase: 50
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 35
+  m_fontSizeMax: 50
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -20493,7 +20493,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -254.77496, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -27768,7 +27768,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -59.8}
-  m_SizeDelta: {x: -160, y: 737}
+  m_SizeDelta: {x: -80, y: 737}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2053970119
 MonoBehaviour:
@@ -27790,12 +27790,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<b><size=50><align=\"center\">Welcome to GAMI.FI.RE: The Ultimate Financial
-    Adventure!</align></size></b>\n\n\n\n\n\n\n\nStep into a world where financial
-    literacy meets adventure! In <b>GAMI.FI.RE</b>., you will embark on an exciting
-    journey through real-life financial scenarios in a fun and interactive 3D game.
-    Learn how to make smart economic decisions while exploring vibrant islands and
-    completing challenges that test your financial skills.\r"
+  m_text: '<b><size=50><align="center">Welcome to GAMI.FI.RE: The Ultimate Financial
+    Adventure!</align></size></b><br><br><br><br><br><br><br><br>Step into a world
+    where financial literacy meets adventure! In <b>GAMI.FI.RE</b>., you will embark
+    on an exciting journey through real-life financial scenarios in a fun and interactive
+    3D game. Learn how to make smart economic decisions while exploring vibrant islands
+    and completing challenges that test your financial skills.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e0962d31f1f084fa3ba7147d76f5b6e8, type: 2}
   m_sharedMaterial: {fileID: 1653631458307283989, guid: e0962d31f1f084fa3ba7147d76f5b6e8,
@@ -27826,9 +27826,9 @@ MonoBehaviour:
   m_fontSize: 43
   m_fontSizeBase: 43
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 38
+  m_fontSizeMax: 43
   m_fontStyle: 0
   m_HorizontalAlignment: 8
   m_VerticalAlignment: 512

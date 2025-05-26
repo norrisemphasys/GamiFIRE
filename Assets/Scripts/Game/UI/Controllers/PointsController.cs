@@ -119,8 +119,12 @@ public class PointsController : BasicController
 		view.ShowPointsPanel(false);
 
 		view.SetDescription(idx);
-		view.SetDescription(descriptions[idx]);
-		view.SetTitle(titles[idx]);
+
+		string descriptionTranslate = LanguageManager.instance.GetUITranslatedText(descriptions[idx]);
+		string titleTranslate = LanguageManager.instance.GetUITranslatedText(titles[idx]);
+
+		view.SetDescription(descriptionTranslate);
+		view.SetTitle(titleTranslate);
 
 		selectedIndex = idx;
 	}
