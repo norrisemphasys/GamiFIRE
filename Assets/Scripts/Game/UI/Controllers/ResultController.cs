@@ -122,7 +122,7 @@ public class ResultController : BasicController
             }
             else
             {
-				ShowSurveyMenu();
+				Utils.Delay(this, ShowSurveyMenu, 1f);
 			}
         }
         

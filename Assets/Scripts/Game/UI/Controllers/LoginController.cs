@@ -385,6 +385,14 @@ public class LoginController : BasicController
                 }
                 else
                 {
+
+#if UNITY_EDITOR
+                    // Temp
+                    DBManager.GetAllUsersWithBadge();
+                    DBManager.GetAllUsersWithSurvey();
+
+#endif
+
                     DBManager.GetAllUsersSurvey(res, (surveys) =>
                     {
                         SurveySO surveySO = gameManager.surveyController.GetCurrentSurvey();

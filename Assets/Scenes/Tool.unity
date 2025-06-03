@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   csvFile: {fileID: 0}
-  inpuText: Subscribe to our newsletter to get the latest updates about GAMI.FI.RE
-  outputText: e380035c9825d1b1bafb4d55e27adbf7
+  inpuText: You are required to plan your monthly budget with your current income.
+  outputText: 84bd1f9d5cdaf6130537e6ef409fc801
 --- !u!4 &242326307
 Transform:
   m_ObjectHideFlags: 0

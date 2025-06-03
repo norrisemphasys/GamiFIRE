@@ -10,6 +10,9 @@ using Newtonsoft.Json;
 public class DBManager : MonoSingleton<DBManager>
 {
     public static List<Survey> allUsersSurvey = new List<Survey>();
+    public static List<UserBadge> allUsersBadge = new List<UserBadge>();
+
+    public static List<UserSurvey> allUsersWithSurvey = new List<UserSurvey>();
 
     private static string _idToken;
     private static string _localID;
@@ -320,9 +323,43 @@ public class DBManager : MonoSingleton<DBManager>
         });
     }
 
+    public static void GetAllUsersWithBadge(UnityAction<UserBadge[]> callback = null)
+    {
+        RestClient.Get(GameConstants.USERS_BADGE_URL + ".json?auth=" + _idToken).Then(res =>
+        {
+            Dictionary<string, UserBadge> users = JsonConvert.DeserializeObject<Dictionary<string, UserBadge>>(res.Text);
+            Debug.Log("All users with badge count " + users.Count);
+            callback?.Invoke(users.Values.ToArray());
+
+            allUsersBadge = users.Values.ToList();
+
+        }).Catch(err =>
+        {
+            Debug.Log("Error " + err.Message);
+            callback?.Invoke(null);
+        });
+    }
+
     #endregion
 
     #region SURVEY
+
+    public static void GetAllUsersWithSurvey(UnityAction<UserSurvey[]> callback = null)
+    {
+        RestClient.Get(GameConstants.USERS_SURVEY_URL + ".json?auth=" + _idToken).Then(res =>
+        {
+            Dictionary<string, UserSurvey> users = JsonConvert.DeserializeObject<Dictionary<string, UserSurvey>>(res.Text);
+            Debug.Log("All users with survey count " + users.Count);
+            callback?.Invoke(users.Values.ToArray());
+
+            allUsersWithSurvey = users.Values.ToList();
+        }).Catch(err =>
+        {
+            Debug.Log("Error " + err.Message);
+            callback?.Invoke(null);
+        });
+    }
+
     public static void GetAllUsersSurvey(User user, UnityAction<Survey[]> callback = null)
     {
         allUsersSurvey.Clear();

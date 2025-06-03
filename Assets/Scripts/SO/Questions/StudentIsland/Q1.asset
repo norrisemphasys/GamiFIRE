@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: Q1
   m_EditorClassIdentifier: 
   questionTitle: Managing Monthly Budget
-  question: You are assigned a challenging project that will significantly impact
-    your overall grade, requiring a deep understanding of the subject, extensive
-    research, and the application of various skills.
+  question: You are required to plan your monthly budget with your current income.
   answerData:
   - answer: I avoid spending and try to live on as little as possible.
     growthPoint: 4

@@ -96,3 +96,8 @@ public class Survey
     public string title;
     public string answer;
 }
+
+public class UserSurvey
+{
+    public Survey survey;
+}

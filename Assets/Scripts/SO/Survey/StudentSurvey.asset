@@ -34,14 +34,14 @@ MonoBehaviour:
     - Disagree
     - Agree
     - Strongly Agree
-  - question: I learnedhow to balance things like income vs. costs and today vs.
+  - question: I learned how to balance things like income vs. costs and today vs.
       the future when making decisions.
     options:
     - Strongly Disagree
     - Disagree
     - Agree
     - Strongly Agree
-  - question: I nowseehowmy money choices can affect the environment and society.
+  - question: I now see how my money choices can affect the environment and society.
     options:
     - Strongly Disagree
     - Disagree

@@ -103,11 +103,55 @@ public class ProfileUIController : BasicController
 			LoadingManager.instance.ShowLoader(true);
 			DBManager.GetAllUsersByToken((users) =>
 			{
+#if UNITY_EDITOR
+				// Temp implementation
+				sb.Append("Registered Users: " + users.Length);
+				sb.Append("\n\n");
+
+				int countNewsLetter = 0;
+				foreach (User user in users)
+				{
+					if (user.IsNewsletterSubscriber)
+						countNewsLetter++;
+				}
+
+				sb.Append("\n\n");
+				sb.Append("Registered Users Subscribe for Newsletter: " + countNewsLetter);
+				sb.Append("\n\n");
+
 				foreach (User user in users)
                 {
 					if (user.IsNewsletterSubscriber)
-						sb.Append(currentUser.Username + " : " + currentUser.Email);
+						sb.Append(user.Username + " : " + user.Email);
                 }
+
+				int badgeCount = 0;
+				foreach(UserBadge badge in DBManager.allUsersBadge)
+                {
+					if (badge.badges != null )
+						badgeCount += 1;
+                }
+
+				sb.Append("\n\n");
+				sb.Append("Number of badges given: " + badgeCount);
+
+				int surveyCount = 0;
+				foreach (UserSurvey survey in DBManager.allUsersWithSurvey)
+				{
+					if (survey.survey != null)
+						surveyCount += 1;
+				}
+
+				sb.Append("\n\n");
+				sb.Append("Number of users that answer a survey: " + DBManager.allUsersWithSurvey.Count);
+
+#else
+				foreach (User user in users)
+                {
+					if (user.IsNewsletterSubscriber)
+						sb.Append(user.Username + " : " + user.Email);
+                }
+#endif
 
 				sb.Append("\n\n");
 				sb.Append("Best Regards,");
