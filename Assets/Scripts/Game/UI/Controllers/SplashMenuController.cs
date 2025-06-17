@@ -18,6 +18,8 @@ public class SplashMenuController : BasicController
 
 		AddListener();
 		Initialize();
+
+		Test();
 	}
 
 	public override void OnExit()
@@ -47,7 +49,29 @@ public class SplashMenuController : BasicController
 		OnClickDefault(UIState.GAME_INTRO_MENU);
 	}
 
-	void OnCancel()
+    void Test()
+    {
+        string totalScore = LanguageManager.instance.GetUITranslatedText("TOTAL SCORE:");
+        string pointTranslate = LanguageManager.instance.GetUITranslatedText("CURRENCY");
+
+        string stringPoint = string.Format("<size=60>{0}</size>", pointTranslate);
+        string defaultText = "For this island you focused on {0} and you reached {1} Points!";
+
+        string defaultTextTranslate = LanguageManager.instance.GetUITranslatedText(defaultText);
+
+        string badText = "You have scored BAD, next time try to select answers that are more focused on {0} so you can achieve more points and get the open badge.";
+        string badTextTranslate = LanguageManager.instance.GetUITranslatedText(badText);
+
+        string averageText = "You have scored AVERAGE, next time try to select answers that are more focused on {0} so you can achieve more points and get the open badge.";
+        string averageTextTranslate = LanguageManager.instance.GetUITranslatedText(averageText);
+
+        Debug.Log(string.Format(defaultTextTranslate, stringPoint, 10));
+        Debug.Log(string.Format(badTextTranslate, stringPoint));
+        Debug.Log(string.Format(averageTextTranslate, stringPoint));
+        Debug.Log(totalScore);
+    }
+
+    void OnCancel()
     {
 		OnClickDefault(UIState.GAME_INTRO_MENU);
 	}

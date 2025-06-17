@@ -38,7 +38,8 @@ public class LanguageManager : MonoSingleton<LanguageManager>
         if (string.IsNullOrEmpty(translatedText))
             return text;
 
-        return translatedText;
+        string cleanText = translatedText.Replace("\r", "");
+        return cleanText;
     }
 
     private void OnDestroy()

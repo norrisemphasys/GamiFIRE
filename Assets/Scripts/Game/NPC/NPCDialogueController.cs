@@ -41,7 +41,8 @@ public class NPCDialogueController : MonoBehaviour
         string extensionTranslate = LanguageManager.instance.GetUITranslatedText(ext[Random.Range(0, ext.Length)]);
 
         string message = string.Format("{0} {1} {2} {3}", didyouKnowTranslate, titleTranslate, extensionTranslate, descriptionTranslate);
-
+        //string cleanText = message.Replace("\r", "");
         dialogueText.text = message;//dialogueMessages[Random.Range(0, dialogueMessages.Length)];
+        dialogueText.ForceMeshUpdate();
     }
 }

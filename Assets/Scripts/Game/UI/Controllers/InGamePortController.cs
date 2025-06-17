@@ -76,6 +76,8 @@ public class InGamePortController : BasicController
 					user.IsNewsletterSubscriber = true;
 					PlayerPrefs.SetInt("NewsLetter", user.IsNewsletterSubscriber ? 1 : 0);
 					UserManager.instance.SetCurrentUser(user);
+					LoadingManager.instance.ShowLoader(true);
+					UserManager.instance.SaveUser(()=> { LoadingManager.instance.ShowLoader(false); });
 				}));
 			}
 		}

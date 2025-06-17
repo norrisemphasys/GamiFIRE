@@ -230,6 +230,7 @@ public class LoginController : BasicController
         (res) => 
         {
             LoadingManager.instance.ShowLoader(false);
+
             string popupMessage = "Your account has been successfully created. Please login to your email app and click on the activation link to enable your new Gamifire Player Account.";
             PopupManager.instance.ShowPopup(PopupMessage.InfoPopup(popupMessage,
             () =>
@@ -365,7 +366,8 @@ public class LoginController : BasicController
             }
             else
             {
-                res.IsNewsletterSubscriber = isNewsLetter;
+                if (!res.IsNewsletterSubscriber)
+                    res.IsNewsletterSubscriber = isNewsLetter;
 
                 UserManager.instance.SetCurrentUser(res);
                 if (resetUserPoints)

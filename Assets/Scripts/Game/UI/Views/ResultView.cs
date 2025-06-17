@@ -66,13 +66,25 @@ public class ResultView : BasicView
 
     public void ShowTextResult(string point, int value, float rate)
     {
-        string stringPoint = string.Format("<size=60>{0}</size>", point);
-        textResult.text = string.Format("For this island you focused on {0} and you reached {1} Points!", stringPoint, value);
+        string pointTranslate = LanguageManager.instance.GetUITranslatedText(point);
+
+        string stringPoint = string.Format("<size=60>{0}</size>", pointTranslate);
+        string defaultText = "For this island you focused on {0} and you reached {1} Points!";
+
+        string defaultTextTranslate = LanguageManager.instance.GetUITranslatedText(defaultText);
+
+        textResult.text = string.Format(defaultTextTranslate, stringPoint, value);
+
+        string badText = "You have scored BAD, next time try to select answers that are more focused on {0} so you can achieve more points and get the open badge.";
+        string badTextTranslate = LanguageManager.instance.GetUITranslatedText(badText);
+
+        string averageText = "You have scored AVERAGE, next time try to select answers that are more focused on {0} so you can achieve more points and get the open badge.";
+        string averageTextTranslate = LanguageManager.instance.GetUITranslatedText(averageText);
 
         if (rate < 50)
-            textRating.text = string.Format("You have scored BAD, next time try to select answers that are more focused on {0} so you can achieve more points and get the open badge.", stringPoint);
+            textRating.text = string.Format(badTextTranslate, stringPoint);
         else if(rate >= 50 && rate < 80)
-            textRating.text = string.Format("You have scored AVERAGE, next time try to select answers that are more focused on {0} so you can achieve more points and get the open badge.", stringPoint);
+            textRating.text = string.Format(averageTextTranslate, stringPoint);
         else if(rate >= 80)
             textRating.text = string.Format("You have scored GOOD. Well done!");
     }
