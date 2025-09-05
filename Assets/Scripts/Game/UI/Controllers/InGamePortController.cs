@@ -53,6 +53,7 @@ public class InGamePortController : BasicController
 		view.buttonProfile.onClick.AddListener(OnClickProfile);
 
 		view.buttonVolume.onClick.AddListener(OnClickVolume);
+		view.buttonExport.onClick.AddListener(OnClickExport);
 	}
 
 	void RemoveListener()
@@ -61,6 +62,34 @@ public class InGamePortController : BasicController
 		view.buttonProfile.onClick.RemoveListener(OnClickProfile);
 
 		view.buttonVolume.onClick.RemoveListener(OnClickVolume);
+		view.buttonExport.onClick.RemoveListener(OnClickExport);
+	}
+
+	void OnClickExport()
+    {
+		User user = UserManager.instance.currentUser;
+		if(user != null &&  user. IsAdministrator)
+        {
+			LoadingManager.instance.ShowLoader(true);
+			DBManager.GetAllUsersByToken((users) =>
+			{
+				if (users.Length > 0)
+				{
+					DBManager.GetAllUsersWithBadge((content) =>
+					{
+						if (!string.IsNullOrEmpty(content))
+						{
+							PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("Export CSV Badge information", () =>
+							{
+								WebGLExternalManager.instance.ExportCSV("BadgeData.csv", content);
+							}));
+						}
+
+						LoadingManager.instance.ShowLoader(false);
+					});
+				}
+			});
+		}
 	}
 
 	void ShowSubscribeOption()

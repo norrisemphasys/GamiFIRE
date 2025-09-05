@@ -11,6 +11,8 @@ public class InGamePortView : BasicView
     public Button buttonProfile;
     public Button buttonVolume;
 
+    public Button buttonExport;
+
     [SerializeField] Image profilePicture;
     [SerializeField] TextMeshProUGUI textCoin;
     [SerializeField] TextMeshProUGUI textGrowthPoint;

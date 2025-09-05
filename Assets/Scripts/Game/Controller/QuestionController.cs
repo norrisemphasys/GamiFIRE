@@ -30,11 +30,12 @@ public class QuestionController : MonoBehaviour
         return questionBank.ContainsKey(type) ? questionBank[type] : null;
     }
 
-    public List<QuestionSO> GetShuffledQuestionByType(JobType type)
+    public List<QuestionSO> GetShuffledQuestionByType(JobType type, bool shuffle = true)
     {
         if (questionBank.ContainsKey(type))
         {
-            questionBank[type].Shuffle();
+            if(shuffle)
+                questionBank[type].Shuffle();
             return questionBank[type];
         }
         return null;

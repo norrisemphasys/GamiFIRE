@@ -43,4 +43,19 @@ mergeInto(LibraryManager.library, {
 //      window.SendEmailJS(UTF8ToString(serviceID), UTF8ToString(templateID), UTF8ToString(etitle), UTF8ToString(ename), UTF8ToString(etime), UTF8ToString(emessage), UTF8ToString(eemail));
     },
 
+    DownloadFile: function (content, filename) {
+        const contentStr = UTF8ToString(content);
+        const filenameStr = UTF8ToString(filename);
+
+        const blob = new Blob([contentStr], { type: "text/csv;charset=utf-8;" });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filenameStr;
+        document.body.appendChild(a); // Append to body to ensure it's clickable
+        a.click();
+        document.body.removeChild(a); // Clean up
+        URL.revokeObjectURL(url); // Revoke the temporary URL
+    },
 });

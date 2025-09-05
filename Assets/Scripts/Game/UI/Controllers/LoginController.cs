@@ -39,6 +39,7 @@ public class LoginController : BasicController
 
     private void Update()
     {
+#if UNITY_EDITOR
         if(Input.GetKeyDown(KeyCode.P))
             Audio.PlayBGMLogin();
 
@@ -59,6 +60,12 @@ public class LoginController : BasicController
                 }
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.F10))
+        {
+            OnClickDefault(UIState.SURVEY_MENU);
+        }
+#endif
     }
 
     public override void OnExit()
@@ -389,10 +396,16 @@ public class LoginController : BasicController
                 {
 
 #if UNITY_EDITOR
-                    // Temp
-                    DBManager.GetAllUsersWithBadge();
-                    DBManager.GetAllUsersWithSurvey();
 
+                    DBManager.GetAllUsersByToken((users) => 
+                    {
+                        if(users.Length > 0)
+                        {
+                            // Temp
+                            //DBManager.GetAllUsersWithBadge();
+                            DBManager.GetAllUsersWithSurvey();
+                        }
+                    });
 #endif
 
                     DBManager.GetAllUsersSurvey(res, (surveys) =>

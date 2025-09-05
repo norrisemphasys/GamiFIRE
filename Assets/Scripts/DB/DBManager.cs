@@ -6,9 +6,12 @@ using System;
 using System.Linq;
 using Unity.VisualScripting.FullSerializer;
 using Newtonsoft.Json;
+using System.Text;
+using Newtonsoft.Json.Linq;
 
 public class DBManager : MonoSingleton<DBManager>
 {
+    public static List<User> allUsers = new List<User>();
     public static List<Survey> allUsersSurvey = new List<Survey>();
     public static List<UserBadge> allUsersBadge = new List<UserBadge>();
 
@@ -128,6 +131,18 @@ public class DBManager : MonoSingleton<DBManager>
             Dictionary<string, User> users = JsonConvert.DeserializeObject<Dictionary<string, User>>(res.Text);
             Debug.Log("All users count " + users.Count);
             callback?.Invoke(users.Values.ToArray());
+
+            allUsers.Clear();
+            allUsers = users.Values.ToList();
+
+#if UNITY_EDITOR
+            foreach(User u in allUsers)
+            {
+                Debug.Log("Email " + u.Email + " ID " + u.ID + "\n");
+                if (u.Email.Equals("gerard@gear-up.nl"))
+                    Debug.Log("User ID " + u.ID);
+            }
+#endif
 
         }).Catch(err =>
         {
@@ -323,15 +338,43 @@ public class DBManager : MonoSingleton<DBManager>
         });
     }
 
-    public static void GetAllUsersWithBadge(UnityAction<UserBadge[]> callback = null)
+    public static void GetAllUsersWithBadge(UnityAction<string> callback = null)
     {
         RestClient.Get(GameConstants.USERS_BADGE_URL + ".json?auth=" + _idToken).Then(res =>
         {
-            Dictionary<string, UserBadge> users = JsonConvert.DeserializeObject<Dictionary<string, UserBadge>>(res.Text);
-            Debug.Log("All users with badge count " + users.Count);
-            callback?.Invoke(users.Values.ToArray());
+            StringBuilder sb = new StringBuilder();
+            //Debug.Log("Badge " + res.Text);
+            foreach (User user in allUsers)
+            {
+                var userID = JObject.Parse(res.Text)[user.ID];
+                if(userID != null)
+                {
+                    var badges = JObject.Parse(userID.ToString())["badges"];
+                    if (badges != null)
+                    {
+                        Dictionary<string, Badge> userBadges = JsonConvert.DeserializeObject<Dictionary<string, Badge>>(badges.ToString());
 
-            allUsersBadge = users.Values.ToList();
+                        int badgeCount = 1;
+                        string row = user.Email + ",";
+
+                        foreach (var badge in userBadges)
+                        {
+                            //Debug.Log("user id " + user.ID + " badge id " + badge.Value.id);
+                            row += badge.Value.claimLink + (badgeCount < userBadges.Count ? "," : "");
+                            badgeCount++;
+                        }
+                        sb.AppendLine(row);
+                    }
+                }
+            }
+
+            Debug.Log(sb.ToString());
+            callback?.Invoke(sb.ToString());
+           
+            //Dictionary<string, UserBadge> users = JsonConvert.DeserializeObject<Dictionary<string, UserBadge>>(res.Text);
+            //Debug.Log("All users with badge count " + users.Count);
+            //callback?.Invoke(users.Values.ToArray());
+            //allUsersBadge = users.Values.ToList();
 
         }).Catch(err =>
         {
@@ -348,11 +391,12 @@ public class DBManager : MonoSingleton<DBManager>
     {
         RestClient.Get(GameConstants.USERS_SURVEY_URL + ".json?auth=" + _idToken).Then(res =>
         {
-            Dictionary<string, UserSurvey> users = JsonConvert.DeserializeObject<Dictionary<string, UserSurvey>>(res.Text);
-            Debug.Log("All users with survey count " + users.Count);
-            callback?.Invoke(users.Values.ToArray());
+            Debug.Log("Survey " + res.Text);
+            //Dictionary<string, UserSurvey> users = JsonConvert.DeserializeObject<Dictionary<string, UserSurvey>>(res.Text);
+            //Debug.Log("All users with survey count " + users.Count);
+            //callback?.Invoke(users.Values.ToArray());
 
-            allUsersWithSurvey = users.Values.ToList();
+            //allUsersWithSurvey = users.Values.ToList();
         }).Catch(err =>
         {
             Debug.Log("Error " + err.Message);
@@ -407,6 +451,19 @@ public class DBManager : MonoSingleton<DBManager>
                 Debug.Log("Error " + err.Message);
                 callback?.Invoke(false);
             });
+    }
+    #endregion
+
+    #region CSV_IMPORTER
+    public static void SaveToCSFString()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.AppendLine("Header1,Header2,Header3");
+        sb.AppendLine("Value1,Value2,Value3");
+        sb.AppendLine("MoreDataA,MoreDataB,MoreDataC");
+
+        Debug.Log(sb.ToString());
+
     }
     #endregion
 }

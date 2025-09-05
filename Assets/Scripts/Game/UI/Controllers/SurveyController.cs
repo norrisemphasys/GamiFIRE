@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Text;
 
 public class SurveyController : BasicController
 {
@@ -186,30 +187,69 @@ public class SurveyController : BasicController
 				answer = _surveyAnswer,
 			};
 
-			DBManager.AddNewSurvey(currentUser, survey, (sucess) => 
-			{
-				if(sucess)
+            DBManager.AddNewSurvey(currentUser, survey, (sucess) =>
+            {
+                if (sucess)
                 {
+                    /*SendSurveyEmail(currentUser, "norris@emphasyscentre.com");
+					SendSurveyEmail(currentUser, "nicholas@emphasyscentre.com");*/
+
 					LoadingManager.instance.ShowLoader(false);
-					PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("Thank you for completing the survey¡ªwe really appreciate your time and input!", () =>
-					{
-						if (!DBManager.allUsersSurvey.Contains(survey))
-							DBManager.allUsersSurvey.Add(survey);
-						OnClickBack();
-					}));
-				}
+                    PopupManager.instance.ShowPopup(PopupMessage.InfoPopup("Thank you for completing the survey¡ªwe really appreciate your time and input!", () =>
+                    {
+                        if (!DBManager.allUsersSurvey.Contains(survey))
+                            DBManager.allUsersSurvey.Add(survey);
+                        OnClickBack();
+                    }));
+                }
                 else
                 {
-					LoadingManager.instance.ShowLoader(false);
-					PopupManager.instance.ShowPopup(PopupMessage.ErrorPopup("There was an error in the server.", () =>
-					{
-						OnClickBack();
-					}));
-				}
-			});
-		}
+                    LoadingManager.instance.ShowLoader(false);
+                    PopupManager.instance.ShowPopup(PopupMessage.ErrorPopup("There was an error in the server.", () =>
+                    {
+                        OnClickBack();
+                    }));
+                }
+            });
+        }
     }
 
+	void SendSurveyEmail(User user, string email)
+	{
+		StringBuilder sb = new StringBuilder();
+
+		SurveySO so = surveySO[currrentSurvey];
+		string[] answers = _surveyAnswer.Split(',');
+
+		sb.Append("Username:  " + user.Username);
+		sb.Append("\n");
+		sb.Append("Email: " + user.Email);
+		sb.Append("\n\n");
+
+		sb.Append("Survey Title: " + so.title);
+		sb.Append("\n\n");
+
+		for (int i = 0; i < so.surveyQuestion.Length; i++)
+        {
+			int answerIdx = int.Parse(answers[i]);
+
+			string question = so.surveyQuestion[i].question;
+			string answer = so.surveyQuestion[i].options[answerIdx];
+
+			sb.Append("Question: " + question);
+			sb.Append("\n");
+			sb.Append("Answer: " + answer);
+			sb.Append("\n");
+		}
+
+#if UNITY_EDITOR
+		Debug.Log(sb.ToString());
+#endif
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+		EmailManager.instance.SendEmail(email, "GAMIFIRE Newsletter Info", sb.ToString());
+#endif
+	}
 
 	void OnClickBack()
     {

@@ -93,78 +93,12 @@ public class ProfileUIController : BasicController
 		string email = view.inputFieldEmail.text;
 		if(Utils.IsValidEmail(email))
         {
-			StringBuilder sb = new StringBuilder();
-
-			sb.Append("Hi " + currentUser.Username);
-			sb.Append("\n\n");
-			sb.Append("Below is the list of all the users who subscribe to the newsletter:");
-			sb.Append("\n\n");
-
+			
 			LoadingManager.instance.ShowLoader(true);
 			DBManager.GetAllUsersByToken((users) =>
 			{
-#if UNITY_EDITOR
-				// Temp implementation
-				sb.Append("Registered Users: " + users.Length);
-				sb.Append("\n\n");
+				SendInfoEmail(users, email);
 
-				int countNewsLetter = 0;
-				foreach (User user in users)
-				{
-					if (user.IsNewsletterSubscriber)
-						countNewsLetter++;
-				}
-
-				sb.Append("\n\n");
-				sb.Append("Registered Users Subscribe for Newsletter: " + countNewsLetter);
-				sb.Append("\n\n");
-
-				foreach (User user in users)
-                {
-					if (user.IsNewsletterSubscriber)
-						sb.Append(user.Username + " : " + user.Email);
-                }
-
-				int badgeCount = 0;
-				foreach(UserBadge badge in DBManager.allUsersBadge)
-                {
-					if (badge.badges != null )
-						badgeCount += 1;
-                }
-
-				sb.Append("\n\n");
-				sb.Append("Number of badges given: " + badgeCount);
-
-				int surveyCount = 0;
-				foreach (UserSurvey survey in DBManager.allUsersWithSurvey)
-				{
-					if (survey.survey != null)
-						surveyCount += 1;
-				}
-
-				sb.Append("\n\n");
-				sb.Append("Number of users that answer a survey: " + DBManager.allUsersWithSurvey.Count);
-
-#else
-				foreach (User user in users)
-                {
-					if (user.IsNewsletterSubscriber)
-						sb.Append(user.Username + " : " + user.Email);
-                }
-#endif
-
-				sb.Append("\n\n");
-				sb.Append("Best Regards,");
-				sb.Append("\n");
-				sb.Append("GamiFIRE");
-
-#if UNITY_EDITOR
-				Debug.Log(sb.ToString());
-#endif
-
-#if UNITY_WEBGL && !UNITY_EDITOR
-				EmailManager.instance.SendEmail(email, "GAMIFIRE NEWS LETTER EMAILS", sb.ToString());
-#endif
 				LoadingManager.instance.ShowLoader(false);
 				view.ShowRequestEmailPopup(false);
 			});
@@ -174,6 +108,72 @@ public class ProfileUIController : BasicController
 			PopupManager.instance.ShowPopup(PopupMessage.ErrorPopup("You entered and invalid Email."));
         }
     }
+
+	void SendInfoEmail(User[] users, string email)
+    {
+		StringBuilder sb = new StringBuilder();
+
+		sb.Append("Hi " + currentUser.Username);
+		sb.Append("\n\n");
+		sb.Append("Below is the list of all the users who subscribe to the newsletter:");
+		sb.Append("\n\n");
+
+		sb.Append("Registered Users: " + users.Length);
+		sb.Append("\n\n");
+
+		int countNewsLetter = 0;
+		foreach (User user in users)
+		{
+			if (user.IsNewsletterSubscriber)
+				countNewsLetter++;
+		}
+
+		sb.Append("\n\n");
+		sb.Append("Registered Users Subscribed to Newsletter: " + countNewsLetter);
+		sb.Append("\n\n");
+
+		foreach (User user in users)
+		{
+			if (user.IsNewsletterSubscriber)
+			{
+				sb.Append(user.Username + " : " + user.Email);
+				sb.Append("\n");
+			}
+		}
+
+		int badgeCount = 0;
+		foreach (UserBadge badge in DBManager.allUsersBadge)
+		{
+			if (badge.badges != null)
+				badgeCount += 1;
+		}
+
+		sb.Append("\n\n");
+		sb.Append("Number of badges given: " + badgeCount);
+
+		int surveyCount = 0;
+		foreach (UserSurvey survey in DBManager.allUsersWithSurvey)
+		{
+			if (survey.survey != null)
+				surveyCount += 1;
+		}
+
+		sb.Append("\n\n");
+		sb.Append("Number of users that answered the survey: " + DBManager.allUsersWithSurvey.Count);
+
+		sb.Append("\n\n");
+		sb.Append("Best Regards,");
+		sb.Append("\n");
+		sb.Append("GamiFIRE");
+
+#if UNITY_EDITOR
+		Debug.Log(sb.ToString());
+#endif
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+		EmailManager.instance.SendEmail(email, "GAMIFIRE Newsletter Info", sb.ToString());
+#endif
+	}
 
 	void OnClickCloseBadge()
     {

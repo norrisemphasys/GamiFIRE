@@ -35,6 +35,7 @@ public class MGGOView : BasicView
 
     public void SetMessage(string message)
     {
-        textMessage.text = message;
+        string translatedMessage = LanguageManager.instance.GetUITranslatedText(message);
+        textMessage.text = translatedMessage;
     }
 }
